@@ -1,0 +1,31 @@
+{
+  "size": "2954519",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1164",
+      "brand": "피렐리",
+      "model": "PZERO",
+      "desc": "최고 성능의 한계치 실현과 High-End의 결정판",
+      "comment": "마세라티",
+      "strength": "핸들링, 빗길주행성, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2012/20124316419.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "526452640",
+      "fseq": "5264",
+      "rseq": "5264",
+      "front": {
+        "size": "295/45R19",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 891000,
+        "salePrice": 446000,
+        "cashPrice": 432000,
+        "discountText": "↓최대52% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

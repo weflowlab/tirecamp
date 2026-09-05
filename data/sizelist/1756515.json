@@ -1,0 +1,56 @@
+{
+  "size": "1756515",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1621",
+      "brand": "콘티넨탈",
+      "model": "컴포트 컨택 CC7",
+      "desc": "최소의 소음수준과 부드럽고 편안한 승차감을 제공",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230614035955999869.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "481548150",
+      "fseq": "4815",
+      "rseq": "4815",
+      "front": {
+        "size": "175/65R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 157000,
+        "salePrice": 71000,
+        "cashPrice": 69000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1627",
+      "brand": "콘티넨탈",
+      "model": "올시즌 컨택 2",
+      "desc": "마일리지 및 마모 성능 극대화, 최적의 연료 효율성 실현",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2024/20240321055905474623.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "467946791",
+      "fseq": "4679",
+      "rseq": "4679",
+      "front": {
+        "size": "175/65R15",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 224000,
+        "salePrice": 112000,
+        "cashPrice": 109000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

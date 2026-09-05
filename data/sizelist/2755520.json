@@ -1,0 +1,81 @@
+{
+  "size": "2755520",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "262626260",
+      "fseq": "2626",
+      "rseq": "2626",
+      "front": {
+        "size": "275/55R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 336000,
+        "salePrice": 153000,
+        "cashPrice": 148000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "220322031",
+      "fseq": "2203",
+      "rseq": "2203",
+      "front": {
+        "size": "275/55R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 386000,
+        "salePrice": 186000,
+        "cashPrice": 183000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1598",
+      "brand": "한국타이어",
+      "model": "다이나프로 HPX",
+      "desc": "최고의 핸들링을 제공하는 SUV전용 프리미엄 컴포트 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220719035629465705.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "115711572",
+      "fseq": "1157",
+      "rseq": "1157",
+      "front": {
+        "size": "275/55R20",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 405000,
+        "salePrice": 221000,
+        "cashPrice": 214000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

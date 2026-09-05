@@ -1,0 +1,106 @@
+{
+  "size": "2454521",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1664",
+      "brand": "금호타이어",
+      "model": "크루젠 GT PRO",
+      "desc": "동급 최고 승차감에 마일리지까지 갖춘 SUV용 프리미엄 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260323114847538149.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "211621160",
+      "fseq": "2116",
+      "rseq": "2116",
+      "front": {
+        "size": "245/45R21",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 372000,
+        "salePrice": 193000,
+        "cashPrice": 187000,
+        "discountText": "↓최대50% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1598",
+      "brand": "한국타이어",
+      "model": "다이나프로 HPX",
+      "desc": "최고의 핸들링을 제공하는 SUV전용 프리미엄 컴포트 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220719035629465705.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "115211521",
+      "fseq": "1152",
+      "rseq": "1152",
+      "front": {
+        "size": "245/45R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 380000,
+        "salePrice": 208000,
+        "cashPrice": 201000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "545554552",
+      "fseq": "5455",
+      "rseq": "5455",
+      "front": {
+        "size": "245/45R21",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 422000,
+        "salePrice": 230000,
+        "cashPrice": 223000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1641",
+      "brand": "피렐리",
+      "model": "스콜피온 MS",
+      "desc": "최신형 SUV를 위한 사계절용 고성능 타이어",
+      "comment": "저소음 싼타페",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250314043753672199.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "356935693",
+      "fseq": "3569",
+      "rseq": "3569",
+      "front": {
+        "size": "245/45R21",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 481000,
+        "salePrice": 241000,
+        "cashPrice": 233000,
+        "discountText": "↓최대52% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

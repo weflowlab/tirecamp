@@ -1,0 +1,81 @@
+{
+  "size": "2157015",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "204620460",
+      "fseq": "2046",
+      "rseq": "2046",
+      "front": {
+        "size": "215/70R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 134000,
+        "salePrice": 61000,
+        "cashPrice": 59000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1549",
+      "brand": "넥센타이어",
+      "model": "i.Q series1",
+      "desc": "경제성타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "239623961",
+      "fseq": "2396",
+      "rseq": "2396",
+      "front": {
+        "size": "215/70R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 119000,
+        "salePrice": 65000,
+        "cashPrice": 63000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1599",
+      "brand": "한국타이어",
+      "model": "라우펜 G FIT as",
+      "desc": "합리적이고 가성비 좋은 컴포트 성능의 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220727032901899497.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "117311732",
+      "fseq": "1173",
+      "rseq": "1173",
+      "front": {
+        "size": "215/70R15",
+        "speedGrade": "T",
+        "speedTitle": "속도등급:T ()",
+        "marketPrice": 155000,
+        "salePrice": 74000,
+        "cashPrice": 72000,
+        "discountText": "↓최대54% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

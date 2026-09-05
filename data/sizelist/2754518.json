@@ -1,0 +1,106 @@
+{
+  "size": "2754518",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1528",
+      "brand": "금호타이어",
+      "model": "마제스티9",
+      "desc": "탁월한 컴포트 성능, 최적의 사계절 주행성능",
+      "comment": "",
+      "strength": "승차감, 정숙성",
+      "imageUrl": "/prodimg/tire/listimg/2018/20180604100745707276.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "186918690",
+      "fseq": "1869",
+      "rseq": "1869",
+      "front": {
+        "size": "275/45R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 351000,
+        "salePrice": 170000,
+        "cashPrice": 164000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1596",
+      "brand": "금호타이어",
+      "model": "마제스티X",
+      "desc": "국내 시장에 최적화된 최상의 승차감을 구현한 럭셔리 제품 최신 주행기술과 안전기술이 적용된 사계절용 프리미엄 제품",
+      "comment": "",
+      "strength": "승차감, 정숙성, 고속주행성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220624022959602702.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "196119611",
+      "fseq": "1961",
+      "rseq": "1961",
+      "front": {
+        "size": "275/45R18",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 388000,
+        "salePrice": 187000,
+        "cashPrice": 181000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1633",
+      "brand": "한국타이어",
+      "model": "VENTUS air S",
+      "desc": "프리미엄이 제공하는 품격 있는 정숙성과 승차감",
+      "comment": "",
+      "strength": "정숙성",
+      "imageUrl": "/prodimg/tire/listimg/2024/20240701052617437177.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "163116312",
+      "fseq": "1631",
+      "rseq": "1631",
+      "front": {
+        "size": "275/45R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 393000,
+        "salePrice": 214000,
+        "cashPrice": 207000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1164",
+      "brand": "피렐리",
+      "model": "PZERO",
+      "desc": "최고 성능의 한계치 실현과 High-End의 결정판",
+      "comment": "마세라티",
+      "strength": "핸들링, 빗길주행성, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2012/20124316419.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "408640863",
+      "fseq": "4086",
+      "rseq": "4086",
+      "front": {
+        "size": "275/45ZR18",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 906000,
+        "salePrice": 453000,
+        "cashPrice": 439000,
+        "discountText": "↓최대52% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

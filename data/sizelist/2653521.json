@@ -1,0 +1,106 @@
+{
+  "size": "2653521",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1610",
+      "brand": "한국타이어",
+      "model": "아이온 윈터",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005055115897770.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "529852980",
+      "fseq": "5298",
+      "rseq": "5298",
+      "front": {
+        "size": "265/35R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 533000,
+        "salePrice": 291000,
+        "cashPrice": 291000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "108410841",
+      "fseq": "1084",
+      "rseq": "1084",
+      "front": {
+        "size": "265/35R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 541000,
+        "salePrice": 296000,
+        "cashPrice": 286000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1608",
+      "brand": "한국타이어",
+      "model": "아이온 evo AS",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 사계절 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005053019537929.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "130813082",
+      "fseq": "1308",
+      "rseq": "1308",
+      "front": {
+        "size": "265/35R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 662000,
+        "salePrice": 374000,
+        "cashPrice": 362000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1635",
+      "brand": "한국타이어",
+      "model": "아이온 evo",
+      "desc": "EV 특화 기술로 완성된 최초의 전기차 전용 퍼포먼스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2024/20240920020824879485.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "129812983",
+      "fseq": "1298",
+      "rseq": "1298",
+      "front": {
+        "size": "265/35R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 696000,
+        "salePrice": 393000,
+        "cashPrice": 380000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

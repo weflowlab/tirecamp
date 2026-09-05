@@ -1,0 +1,131 @@
+{
+  "size": "2256517",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "259425940",
+      "fseq": "2594",
+      "rseq": "2594",
+      "front": {
+        "size": "225/65R17",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 216000,
+        "salePrice": 98000,
+        "cashPrice": 95000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "217021701",
+      "fseq": "2170",
+      "rseq": "2170",
+      "front": {
+        "size": "225/65R17",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 218000,
+        "salePrice": 105000,
+        "cashPrice": 103000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1653",
+      "brand": "피렐리",
+      "model": "CINTURATO P9 AS",
+      "desc": "제동력과 내구성 뛰어난 사계절 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250729095125214369.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "373537352",
+      "fseq": "3735",
+      "rseq": "3735",
+      "front": {
+        "size": "225/65R17",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 246000,
+        "salePrice": 123000,
+        "cashPrice": 120000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1641",
+      "brand": "피렐리",
+      "model": "스콜피온 MS",
+      "desc": "최신형 SUV를 위한 사계절용 고성능 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250314043753672199.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "359835983",
+      "fseq": "3598",
+      "rseq": "3598",
+      "front": {
+        "size": "225/65R17",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 285000,
+        "salePrice": 143000,
+        "cashPrice": 138000,
+        "discountText": "↓최대52% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "549454944",
+      "fseq": "5494",
+      "rseq": "5494",
+      "front": {
+        "size": "225/65R17",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 252000,
+        "salePrice": 149000,
+        "cashPrice": 149000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

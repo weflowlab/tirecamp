@@ -1,0 +1,131 @@
+{
+  "size": "2356518",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1652",
+      "brand": "한국타이어",
+      "model": "웨더플렉스 GT",
+      "desc": "사계절 교체 없이 안전한, 한국형 프리미엄 올웨더 타이어",
+      "comment": "",
+      "strength": "빗길주행성",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250716011750482225.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "560456040",
+      "fseq": "5604",
+      "rseq": "5604",
+      "front": {
+        "size": "235/65R18",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 326000,
+        "salePrice": 0,
+        "cashPrice": 0,
+        "discountText": "↓최대100% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "263026301",
+      "fseq": "2630",
+      "rseq": "2630",
+      "front": {
+        "size": "235/65R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 245000,
+        "salePrice": 112000,
+        "cashPrice": 108000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "548954892",
+      "fseq": "5489",
+      "rseq": "5489",
+      "front": {
+        "size": "235/65R18",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 287000,
+        "salePrice": 157000,
+        "cashPrice": 152000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1598",
+      "brand": "한국타이어",
+      "model": "다이나프로 HPX",
+      "desc": "최고의 핸들링을 제공하는 SUV전용 프리미엄 컴포트 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220719035629465705.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "115811583",
+      "fseq": "1158",
+      "rseq": "1158",
+      "front": {
+        "size": "235/65R18",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 318000,
+        "salePrice": 173000,
+        "cashPrice": 168000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1561",
+      "brand": "미쉐린",
+      "model": "크로스 클라이밋2 SUV",
+      "desc": "어떠한 기후조건에도 안전한 프리미엄 사계절 SUV용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2020/20200103030624192855.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "267426744",
+      "fseq": "2674",
+      "rseq": "2674",
+      "front": {
+        "size": "235/65R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 355000,
+        "salePrice": 216000,
+        "cashPrice": 210000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

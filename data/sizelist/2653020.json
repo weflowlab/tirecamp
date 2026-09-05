@@ -1,0 +1,56 @@
+{
+  "size": "2653020",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "538153810",
+      "fseq": "5381",
+      "rseq": "5381",
+      "front": {
+        "size": "265/30R20",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 435000,
+        "salePrice": 237000,
+        "cashPrice": 230000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "100510051",
+      "fseq": "1005",
+      "rseq": "1005",
+      "front": {
+        "size": "265/30R20",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 543000,
+        "salePrice": 296000,
+        "cashPrice": 286000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

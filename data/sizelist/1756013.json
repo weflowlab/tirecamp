@@ -1,0 +1,81 @@
+{
+  "size": "1756013",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1549",
+      "brand": "넥센타이어",
+      "model": "i.Q series1",
+      "desc": "경제성타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "240324030",
+      "fseq": "2403",
+      "rseq": "2403",
+      "front": {
+        "size": "175/60R13",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 73000,
+        "salePrice": 40000,
+        "cashPrice": 39000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "207720771",
+      "fseq": "2077",
+      "rseq": "2077",
+      "front": {
+        "size": "175/60R13",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 88000,
+        "salePrice": 40000,
+        "cashPrice": 39000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1599",
+      "brand": "한국타이어",
+      "model": "라우펜 G FIT as",
+      "desc": "합리적이고 가성비 좋은 컴포트 성능의 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220727032901899497.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "117111712",
+      "fseq": "1171",
+      "rseq": "1171",
+      "front": {
+        "size": "175/60R13",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 91000,
+        "salePrice": 44000,
+        "cashPrice": 43000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

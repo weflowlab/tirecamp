@@ -1,0 +1,31 @@
+{
+  "size": "3053521",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "544354430",
+      "fseq": "5443",
+      "rseq": "5443",
+      "front": {
+        "size": "305/35R21",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 618000,
+        "salePrice": 337000,
+        "cashPrice": 327000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

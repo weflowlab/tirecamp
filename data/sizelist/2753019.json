@@ -1,0 +1,81 @@
+{
+  "size": "2753019",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1665",
+      "brand": "브리지스톤",
+      "model": "POTENZA RE005",
+      "desc": "RE004 후속, 정교한 핸들링과 강력한 접지력으로 드라이빙의 즐거움을 극대화한 고성능 스포츠 썸머 타이어",
+      "comment": "",
+      "strength": "핸들링",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260330031619990947.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "349734970",
+      "fseq": "3497",
+      "rseq": "3497",
+      "front": {
+        "size": "275/30R19",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 424000,
+        "salePrice": 197000,
+        "cashPrice": 191000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "101310131",
+      "fseq": "1013",
+      "rseq": "1013",
+      "front": {
+        "size": "275/30R19",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 474000,
+        "salePrice": 259000,
+        "cashPrice": 250000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1595",
+      "brand": "콘티넨탈",
+      "model": "익스트림컨택 DWS06+",
+      "desc": "올시즌 타이어와 올웨더 타이어가 합쳐진 것 같은 독특한 패턴을 갖고 있어, 어떠한 환경에서도 뛰어난 퍼포먼스를 제공하는 프리미엄 타이어",
+      "comment": "장착 비용 포함 된 가격 입니다.",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220623114321338173.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "477347732",
+      "fseq": "4773",
+      "rseq": "4773",
+      "front": {
+        "size": "275/30R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 592000,
+        "salePrice": 286000,
+        "cashPrice": 286000,
+        "discountText": "↓최대52% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

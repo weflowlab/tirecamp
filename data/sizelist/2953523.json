@@ -1,0 +1,31 @@
+{
+  "size": "2953523",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "104410440",
+      "fseq": "1044",
+      "rseq": "1044",
+      "front": {
+        "size": "295/35R23",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 754000,
+        "salePrice": 412000,
+        "cashPrice": 398000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

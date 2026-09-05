@@ -1,0 +1,31 @@
+{
+  "size": "3054022",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "219521950",
+      "fseq": "2195",
+      "rseq": "2195",
+      "front": {
+        "size": "305/40R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 438000,
+        "salePrice": 211000,
+        "cashPrice": 207000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

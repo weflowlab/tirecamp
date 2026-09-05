@@ -1,0 +1,131 @@
+{
+  "size": "1656514",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "207220721",
+      "fseq": "2072",
+      "rseq": "2072",
+      "front": {
+        "size": "165/65R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 88000,
+        "salePrice": 40000,
+        "cashPrice": 39000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1334",
+      "brand": "넥센타이어",
+      "model": "N'Priz AH5",
+      "desc": "넥센타이어 신제품, 정숙성과 뛰어난 마일리지 특징인 사계절타이어 입니다.",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/2012926143630.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "252425242",
+      "fseq": "2524",
+      "rseq": "2524",
+      "front": {
+        "size": "165/65R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 94000,
+        "salePrice": 51000,
+        "cashPrice": 50000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1622",
+      "brand": "한국타이어",
+      "model": "KINERGY ST AS",
+      "desc": "완벽을 추구하는 당신을 위한 사계절용 밸런스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230822112201920856.jpg",
+      "isBest": true,
+      "bestSection": false,
+      "calcId": "159915993",
+      "fseq": "1599",
+      "rseq": "1599",
+      "front": {
+        "size": "165/65R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 96000,
+        "salePrice": 56000,
+        "cashPrice": 54000,
+        "discountText": "↓최대44% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1621",
+      "brand": "콘티넨탈",
+      "model": "컴포트 컨택 CC7",
+      "desc": "최소의 소음수준과 부드럽고 편안한 승차감을 제공",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230614035955999869.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "480848084",
+      "fseq": "4808",
+      "rseq": "4808",
+      "front": {
+        "size": "165/65R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 129000,
+        "salePrice": 59000,
+        "cashPrice": 57000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1473",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT IZ2 A",
+      "desc": "비대칭 패턴 디자인을 적용하여 주행 성능을 향상시켰습니다.",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2016/2016092012392491050.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "550455045",
+      "fseq": "5504",
+      "rseq": "5504",
+      "front": {
+        "size": "165/65R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 120000,
+        "salePrice": 71000,
+        "cashPrice": 71000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

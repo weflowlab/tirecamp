@@ -1,0 +1,131 @@
+{
+  "size": "2254519",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "107510750",
+      "fseq": "1075",
+      "rseq": "1075",
+      "front": {
+        "size": "225/45R19",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 322000,
+        "salePrice": 176000,
+        "cashPrice": 170000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "540354031",
+      "fseq": "5403",
+      "rseq": "5403",
+      "front": {
+        "size": "225/45R19",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 361000,
+        "salePrice": 197000,
+        "cashPrice": 191000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1561",
+      "brand": "미쉐린",
+      "model": "크로스 클라이밋2 SUV",
+      "desc": "어떠한 기후조건에도 안전한 프리미엄 사계절 SUV용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2020/20200103030624192855.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "269026902",
+      "fseq": "2690",
+      "rseq": "2690",
+      "front": {
+        "size": "225/45R19",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 370000,
+        "salePrice": 225000,
+        "cashPrice": 219000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1658",
+      "brand": "미쉐린",
+      "model": "CROSS 클라이밋 3",
+      "desc": "모든 것을 갖춘, 그 이상의 타이어",
+      "comment": "",
+      "strength": "빗길주행성",
+      "imageUrl": "/prodimg/tire/listimg/2025/20251017114537395175.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "270427043",
+      "fseq": "2704",
+      "rseq": "2704",
+      "front": {
+        "size": "225/45R19",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 388000,
+        "salePrice": 236000,
+        "cashPrice": 229000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1590",
+      "brand": "미쉐린",
+      "model": "PILOT Sport 5",
+      "desc": "오래 지속되는 퍼포먼스 향상된 드라이빙 고품격 외관 디자인 젖은노면 및 마른노면에서 모두 최적의 접지력과 견인력 동급 프리미엄 경쟁사 대비 33.5% 더 긴 트레드 수명!",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516101824184161.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "307330734",
+      "fseq": "3073",
+      "rseq": "3073",
+      "front": {
+        "size": "225/45R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 437000,
+        "salePrice": 267000,
+        "cashPrice": 259000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

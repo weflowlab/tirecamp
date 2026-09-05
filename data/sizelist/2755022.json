@@ -1,0 +1,106 @@
+{
+  "size": "2755022",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "221722170",
+      "fseq": "2217",
+      "rseq": "2217",
+      "front": {
+        "size": "275/50R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 343000,
+        "salePrice": 165000,
+        "cashPrice": 162000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "263526351",
+      "fseq": "2635",
+      "rseq": "2635",
+      "front": {
+        "size": "275/50R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 386000,
+        "salePrice": 176000,
+        "cashPrice": 171000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1598",
+      "brand": "한국타이어",
+      "model": "다이나프로 HPX",
+      "desc": "최고의 핸들링을 제공하는 SUV전용 프리미엄 컴포트 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220719035629465705.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "115611562",
+      "fseq": "1156",
+      "rseq": "1156",
+      "front": {
+        "size": "275/50R22",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 460000,
+        "salePrice": 251000,
+        "cashPrice": 243000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "554955493",
+      "fseq": "5549",
+      "rseq": "5549",
+      "front": {
+        "size": "275/50R22",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 625000,
+        "salePrice": 341000,
+        "cashPrice": 330000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

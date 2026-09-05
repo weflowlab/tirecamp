@@ -1,0 +1,56 @@
+{
+  "size": "2354521",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1609",
+      "brand": "한국타이어",
+      "model": "아이온 evo AS SUV",
+      "desc": "EV 특화 기술로 완성된 SUV 전기차 전용 사계절 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/2022100505350096322.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "135213520",
+      "fseq": "1352",
+      "rseq": "1352",
+      "front": {
+        "size": "235/45R21",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 401000,
+        "salePrice": 219000,
+        "cashPrice": 219000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1611",
+      "brand": "한국타이어",
+      "model": "아이온 윈터 SUV",
+      "desc": "EV 특화 기술로 완성된 SUV 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005060259811459.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "535153511",
+      "fseq": "5351",
+      "rseq": "5351",
+      "front": {
+        "size": "235/45R21",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 493000,
+        "salePrice": 269000,
+        "cashPrice": 269000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

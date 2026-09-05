@@ -1,0 +1,81 @@
+{
+  "size": "2253519",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "538853880",
+      "fseq": "5388",
+      "rseq": "5388",
+      "front": {
+        "size": "225/35R19",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 318000,
+        "salePrice": 173000,
+        "cashPrice": 168000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "102210221",
+      "fseq": "1022",
+      "rseq": "1022",
+      "front": {
+        "size": "225/35R19",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 383000,
+        "salePrice": 209000,
+        "cashPrice": 202000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1164",
+      "brand": "피렐리",
+      "model": "PZERO",
+      "desc": "최고 성능의 한계치 실현과 High-End의 결정판",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2012/20124316419.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "409540952",
+      "fseq": "4095",
+      "rseq": "4095",
+      "front": {
+        "size": "225/35R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 753000,
+        "salePrice": 377000,
+        "cashPrice": 366000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

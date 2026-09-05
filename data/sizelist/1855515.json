@@ -1,0 +1,106 @@
+{
+  "size": "1855515",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1334",
+      "brand": "넥센타이어",
+      "model": "N'Priz AH5",
+      "desc": "넥센타이어 신제품, 정숙성과 뛰어난 마일리지 특징인 사계절타이어 입니다.",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/2012926143630.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "252325231",
+      "fseq": "2523",
+      "rseq": "2523",
+      "front": {
+        "size": "185/55R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 132000,
+        "salePrice": 72000,
+        "cashPrice": 70000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1621",
+      "brand": "콘티넨탈",
+      "model": "컴포트 컨택 CC7",
+      "desc": "최소의 소음수준과 부드럽고 편안한 승차감을 제공",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230614035955999869.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "481648162",
+      "fseq": "4816",
+      "rseq": "4816",
+      "front": {
+        "size": "185/55R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 189000,
+        "salePrice": 86000,
+        "cashPrice": 84000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1622",
+      "brand": "한국타이어",
+      "model": "KINERGY ST AS",
+      "desc": "완벽을 추구하는 당신을 위한 사계절용 밸런스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230822112201920856.jpg",
+      "isBest": true,
+      "bestSection": false,
+      "calcId": "159015903",
+      "fseq": "1590",
+      "rseq": "1590",
+      "front": {
+        "size": "185/55R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 149000,
+        "salePrice": 86000,
+        "cashPrice": 83000,
+        "discountText": "↓최대44% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1582",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT RS3",
+      "desc": "겨울철 일상의 안전을 지키는 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/20211022111208511187.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "552055204",
+      "fseq": "5520",
+      "rseq": "5520",
+      "front": {
+        "size": "185/55R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 207000,
+        "salePrice": 123000,
+        "cashPrice": 123000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

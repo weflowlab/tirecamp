@@ -1,0 +1,131 @@
+{
+  "size": "2653518",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "541154110",
+      "fseq": "5411",
+      "rseq": "5411",
+      "front": {
+        "size": "265/35R18",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 348000,
+        "salePrice": 190000,
+        "cashPrice": 184000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1665",
+      "brand": "브리지스톤",
+      "model": "POTENZA RE005",
+      "desc": "RE004 후속, 정교한 핸들링과 강력한 접지력으로 드라이빙의 즐거움을 극대화한 고성능 스포츠 썸머 타이어",
+      "comment": "",
+      "strength": "핸들링",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260330031619990947.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "349134911",
+      "fseq": "3491",
+      "rseq": "3491",
+      "front": {
+        "size": "265/35R18",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 428000,
+        "salePrice": 199000,
+        "cashPrice": 193000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "103110312",
+      "fseq": "1031",
+      "rseq": "1031",
+      "front": {
+        "size": "265/35R18",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 367000,
+        "salePrice": 200000,
+        "cashPrice": 194000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1633",
+      "brand": "한국타이어",
+      "model": "VENTUS air S",
+      "desc": "프리미엄이 제공하는 품격 있는 정숙성과 승차감",
+      "comment": "",
+      "strength": "정숙성",
+      "imageUrl": "/prodimg/tire/listimg/2024/20240701052617437177.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "166616663",
+      "fseq": "1666",
+      "rseq": "1666",
+      "front": {
+        "size": "265/35R18",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 382000,
+        "salePrice": 208000,
+        "cashPrice": 201000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1590",
+      "brand": "미쉐린",
+      "model": "PILOT Sport 5",
+      "desc": "오래 지속되는 퍼포먼스 향상된 드라이빙 고품격 외관 디자인 젖은노면 및 마른노면에서 모두 최적의 접지력과 견인력 동급 프리미엄 경쟁사 대비 33.5% 더 긴 트레드 수명!",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516101824184161.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "306930694",
+      "fseq": "3069",
+      "rseq": "3069",
+      "front": {
+        "size": "265/35R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 511000,
+        "salePrice": 312000,
+        "cashPrice": 302000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

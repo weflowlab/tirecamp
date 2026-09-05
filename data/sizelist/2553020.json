@@ -1,0 +1,56 @@
+{
+  "size": "2553020",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "100610060",
+      "fseq": "1006",
+      "rseq": "1006",
+      "front": {
+        "size": "255/30R20",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 526000,
+        "salePrice": 287000,
+        "cashPrice": 277000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1164",
+      "brand": "피렐리",
+      "model": "PZERO",
+      "desc": "최고 성능의 한계치 실현과 High-End의 결정판",
+      "comment": "람보르기니",
+      "strength": "핸들링, 빗길주행성, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2012/20124316419.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "412241221",
+      "fseq": "4122",
+      "rseq": "4122",
+      "front": {
+        "size": "255/30R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 1025000,
+        "salePrice": 513000,
+        "cashPrice": 498000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "size": "2954019",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1591",
+      "brand": "한국타이어",
+      "model": "벤투스 S1 evo Z",
+      "desc": "모터스포츠 기술로 입증된 최고의 스포츠 주행 퍼포먼스를 느껴보세요!",
+      "comment": "",
+      "strength": "핸들링, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516105600437316.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "121812180",
+      "fseq": "1218",
+      "rseq": "1218",
+      "front": {
+        "size": "295/40R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 570000,
+        "salePrice": 311000,
+        "cashPrice": 301000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

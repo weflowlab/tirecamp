@@ -1,0 +1,56 @@
+{
+  "size": "2055016",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1622",
+      "brand": "한국타이어",
+      "model": "KINERGY ST AS",
+      "desc": "완벽을 추구하는 당신을 위한 사계절용 밸런스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230822112201920856.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "158015800",
+      "fseq": "1580",
+      "rseq": "1580",
+      "front": {
+        "size": "205/50R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 154000,
+        "salePrice": 90000,
+        "cashPrice": 86000,
+        "discountText": "↓최대44% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1665",
+      "brand": "브리지스톤",
+      "model": "POTENZA RE005",
+      "desc": "RE004 후속, 정교한 핸들링과 강력한 접지력으로 드라이빙의 즐거움을 극대화한 고성능 스포츠 썸머 타이어",
+      "comment": "",
+      "strength": "핸들링",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260330031619990947.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "347034701",
+      "fseq": "3470",
+      "rseq": "3470",
+      "front": {
+        "size": "205/50R16",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 219000,
+        "salePrice": 102000,
+        "cashPrice": 99000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

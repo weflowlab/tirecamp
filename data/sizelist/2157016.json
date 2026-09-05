@@ -1,0 +1,81 @@
+{
+  "size": "2157016",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "261126110",
+      "fseq": "2611",
+      "rseq": "2611",
+      "front": {
+        "size": "215/70R16",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 155000,
+        "salePrice": 71000,
+        "cashPrice": 69000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1652",
+      "brand": "한국타이어",
+      "model": "웨더플렉스 GT",
+      "desc": "사계절 교체 없이 안전한, 한국형 프리미엄 올웨더 타이어",
+      "comment": "",
+      "strength": "빗길주행성",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250716011750482225.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "139313931",
+      "fseq": "1393",
+      "rseq": "1393",
+      "front": {
+        "size": "215/70R16",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 183000,
+        "salePrice": 102000,
+        "cashPrice": 98000,
+        "discountText": "↓최대46% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1348",
+      "brand": "한국타이어",
+      "model": "WINTER I PIKE RW15",
+      "desc": "한국타이어 겨울용입니다.",
+      "comment": "6P",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/20121226155517.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "536353632",
+      "fseq": "5363",
+      "rseq": "5363",
+      "front": {
+        "size": "215/70R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 186000,
+        "salePrice": 110000,
+        "cashPrice": 110000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "size": "2454017",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1665",
+      "brand": "브리지스톤",
+      "model": "POTENZA RE005",
+      "desc": "RE004 후속, 정교한 핸들링과 강력한 접지력으로 드라이빙의 즐거움을 극대화한 고성능 스포츠 썸머 타이어",
+      "comment": "",
+      "strength": "핸들링",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260330031619990947.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "348034800",
+      "fseq": "3480",
+      "rseq": "3480",
+      "front": {
+        "size": "245/40R17",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 311000,
+        "salePrice": 144000,
+        "cashPrice": 140000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1472",
+      "brand": "한국타이어",
+      "model": "VENTUS S2 AS",
+      "desc": "퍼스트 클래스에서 경험할 수 있는 최고의 안락함과 정숙성, 다이나믹한 고속주행까지 갖춘 최고의 프리미엄 타이어입니다.",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2016/2016122111474480882.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "178517851",
+      "fseq": "1785",
+      "rseq": "1785",
+      "front": {
+        "size": "245/40R17",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 291000,
+        "salePrice": 167000,
+        "cashPrice": 167000,
+        "discountText": "↓최대43% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

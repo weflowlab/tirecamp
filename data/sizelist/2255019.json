@@ -1,0 +1,31 @@
+{
+  "size": "2255019",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1658",
+      "brand": "미쉐린",
+      "model": "CROSS 클라이밋 3",
+      "desc": "모든 것을 갖춘, 그 이상의 타이어",
+      "comment": "",
+      "strength": "빗길주행성",
+      "imageUrl": "/prodimg/tire/listimg/2025/20251017114537395175.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "271127110",
+      "fseq": "2711",
+      "rseq": "2711",
+      "front": {
+        "size": "225/50R19",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 351000,
+        "salePrice": 214000,
+        "cashPrice": 208000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

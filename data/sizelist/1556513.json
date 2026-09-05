@@ -1,0 +1,56 @@
+{
+  "size": "1556513",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "206920690",
+      "fseq": "2069",
+      "rseq": "2069",
+      "front": {
+        "size": "155/65R13",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 78000,
+        "salePrice": 36000,
+        "cashPrice": 35000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1334",
+      "brand": "넥센타이어",
+      "model": "N'Priz AH5",
+      "desc": "넥센타이어 신제품, 정숙성과 뛰어난 마일리지 특징인 사계절타이어 입니다.",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/2012926143630.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "251925191",
+      "fseq": "2519",
+      "rseq": "2519",
+      "front": {
+        "size": "155/65R13",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 72000,
+        "salePrice": 39000,
+        "cashPrice": 38000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

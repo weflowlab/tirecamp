@@ -1,0 +1,56 @@
+{
+  "size": "1557014",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "207520750",
+      "fseq": "2075",
+      "rseq": "2075",
+      "front": {
+        "size": "155/70R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 80000,
+        "salePrice": 37000,
+        "cashPrice": 36000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1622",
+      "brand": "한국타이어",
+      "model": "KINERGY ST AS",
+      "desc": "완벽을 추구하는 당신을 위한 사계절용 밸런스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230822112201920856.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "160016001",
+      "fseq": "1600",
+      "rseq": "1600",
+      "front": {
+        "size": "155/70R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 86000,
+        "salePrice": 50000,
+        "cashPrice": 49000,
+        "discountText": "↓최대43% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

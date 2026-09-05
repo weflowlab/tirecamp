@@ -1,0 +1,106 @@
+{
+  "size": "2156516",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "258925890",
+      "fseq": "2589",
+      "rseq": "2589",
+      "front": {
+        "size": "215/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 157000,
+        "salePrice": 71000,
+        "cashPrice": 69000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "205020501",
+      "fseq": "2050",
+      "rseq": "2050",
+      "front": {
+        "size": "215/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 161000,
+        "salePrice": 74000,
+        "cashPrice": 71000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1597",
+      "brand": "금호타이어",
+      "model": "크루젠 HP51",
+      "desc": "노면 소음 저감 패턴 설계 기술 내구력 및 주행 안전성 강화 구조 설계 마모 및 주행성능 강화 컴파운드 적용 기존 제품대비 향상된 성능 밸런스",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220624040616777772.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "215421542",
+      "fseq": "2154",
+      "rseq": "2154",
+      "front": {
+        "size": "215/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 176000,
+        "salePrice": 96000,
+        "cashPrice": 93000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1348",
+      "brand": "한국타이어",
+      "model": "WINTER I PIKE RW15",
+      "desc": "한국타이어 겨울용입니다.",
+      "comment": "8P",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/20121226155517.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "536953693",
+      "fseq": "5369",
+      "rseq": "5369",
+      "front": {
+        "size": "215/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 241000,
+        "salePrice": 143000,
+        "cashPrice": 143000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "size": "3053020",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1595",
+      "brand": "콘티넨탈",
+      "model": "익스트림컨택 DWS06+",
+      "desc": "올시즌 타이어와 올웨더 타이어가 합쳐진 것 같은 독특한 패턴을 갖고 있어, 어떠한 환경에서도 뛰어난 퍼포먼스를 제공하는 프리미엄 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220623114321338173.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "478547850",
+      "fseq": "4785",
+      "rseq": "4785",
+      "front": {
+        "size": "305/30R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 810000,
+        "salePrice": 368000,
+        "cashPrice": 357000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1591",
+      "brand": "한국타이어",
+      "model": "벤투스 S1 evo Z",
+      "desc": "모터스포츠 기술로 입증된 최고의 스포츠 주행 퍼포먼스를 느껴보세요!",
+      "comment": "",
+      "strength": "핸들링, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516105600437316.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "122512251",
+      "fseq": "1225",
+      "rseq": "1225",
+      "front": {
+        "size": "305/30R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 741000,
+        "salePrice": 404000,
+        "cashPrice": 391000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1164",
+      "brand": "피렐리",
+      "model": "PZERO",
+      "desc": "최고 성능의 한계치 실현과 High-End의 결정판",
+      "comment": "람보르기니",
+      "strength": "핸들링, 빗길주행성, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2012/20124316419.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "412641262",
+      "fseq": "4126",
+      "rseq": "4126",
+      "front": {
+        "size": "305/30R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 1213000,
+        "salePrice": 607000,
+        "cashPrice": 589000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

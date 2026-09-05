@@ -1,0 +1,106 @@
+{
+  "size": "2953522",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1611",
+      "brand": "한국타이어",
+      "model": "아이온 윈터 SUV",
+      "desc": "EV 특화 기술로 완성된 SUV 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005060259811459.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "535453540",
+      "fseq": "5354",
+      "rseq": "5354",
+      "front": {
+        "size": "295/35R22",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 679000,
+        "salePrice": 371000,
+        "cashPrice": 371000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "554755471",
+      "fseq": "5547",
+      "rseq": "5547",
+      "front": {
+        "size": "295/35R22",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 716000,
+        "salePrice": 391000,
+        "cashPrice": 378000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1594",
+      "brand": "콘티넨탈",
+      "model": "크로스컨택 RX",
+      "desc": "승차감, 정숙성이 뛰어난 사계절용 타이어",
+      "comment": "포르쉐",
+      "strength": "정숙성",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220615052957569875.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "486348632",
+      "fseq": "4863",
+      "rseq": "4863",
+      "front": {
+        "size": "295/35R22",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 1296000,
+        "salePrice": 590000,
+        "cashPrice": 572000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1176",
+      "brand": "피렐리",
+      "model": "SCORPION-ZERO",
+      "desc": "첨단 트레드 디자인, 배리어블피치블록, 넓은중앙홀, 첨단컴파운드",
+      "comment": "올시즌 재규어",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/201243155125.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "447244723",
+      "fseq": "4472",
+      "rseq": "4472",
+      "front": {
+        "size": "295/35R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 1198000,
+        "salePrice": 599000,
+        "cashPrice": 581000,
+        "discountText": "↓최대52% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "size": "2853019",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1528",
+      "brand": "금호타이어",
+      "model": "마제스티9",
+      "desc": "탁월한 컴포트 성능, 최적의 사계절 주행성능",
+      "comment": "",
+      "strength": "승차감, 정숙성",
+      "imageUrl": "/prodimg/tire/listimg/2018/20180604100745707276.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "187818780",
+      "fseq": "1878",
+      "rseq": "1878",
+      "front": {
+        "size": "285/30R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 455000,
+        "salePrice": 220000,
+        "cashPrice": 213000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "539153911",
+      "fseq": "5391",
+      "rseq": "5391",
+      "front": {
+        "size": "285/30R19",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 424000,
+        "salePrice": 232000,
+        "cashPrice": 225000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1596",
+      "brand": "금호타이어",
+      "model": "마제스티X",
+      "desc": "국내 시장에 최적화된 최상의 승차감을 구현한 럭셔리 제품 최신 주행기술과 안전기술이 적용된 사계절용 프리미엄 제품",
+      "comment": "",
+      "strength": "승차감, 정숙성, 고속주행성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220624022959602702.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "196019602",
+      "fseq": "1960",
+      "rseq": "1960",
+      "front": {
+        "size": "285/30R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 482000,
+        "salePrice": 233000,
+        "cashPrice": 226000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "101210123",
+      "fseq": "1012",
+      "rseq": "1012",
+      "front": {
+        "size": "285/30R19",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 477000,
+        "salePrice": 261000,
+        "cashPrice": 252000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1595",
+      "brand": "콘티넨탈",
+      "model": "익스트림컨택 DWS06+",
+      "desc": "올시즌 타이어와 올웨더 타이어가 합쳐진 것 같은 독특한 패턴을 갖고 있어, 어떠한 환경에서도 뛰어난 퍼포먼스를 제공하는 프리미엄 타이어",
+      "comment": "장착 비용 포함 된 가격 입니다.",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220623114321338173.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "478147814",
+      "fseq": "4781",
+      "rseq": "4781",
+      "front": {
+        "size": "285/30R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 642000,
+        "salePrice": 295000,
+        "cashPrice": 295000,
+        "discountText": "↓최대54% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

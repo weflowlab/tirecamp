@@ -1,0 +1,81 @@
+{
+  "size": "2257016",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "205220520",
+      "fseq": "2052",
+      "rseq": "2052",
+      "front": {
+        "size": "225/70R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 152000,
+        "salePrice": 69000,
+        "cashPrice": 67000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1549",
+      "brand": "넥센타이어",
+      "model": "i.Q series1",
+      "desc": "경제성타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "238623861",
+      "fseq": "2386",
+      "rseq": "2386",
+      "front": {
+        "size": "225/70R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 130000,
+        "salePrice": 71000,
+        "cashPrice": 69000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1597",
+      "brand": "금호타이어",
+      "model": "크루젠 HP51",
+      "desc": "노면 소음 저감 패턴 설계 기술 내구력 및 주행 안전성 강화 구조 설계 마모 및 주행성능 강화 컴파운드 적용 기존 제품대비 향상된 성능 밸런스",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220624040616777772.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "216421642",
+      "fseq": "2164",
+      "rseq": "2164",
+      "front": {
+        "size": "225/70R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 167000,
+        "salePrice": 92000,
+        "cashPrice": 89000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

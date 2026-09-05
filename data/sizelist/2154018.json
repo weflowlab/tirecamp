@@ -1,0 +1,106 @@
+{
+  "size": "2154018",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1647",
+      "brand": "금호타이어",
+      "model": "솔루스 어드밴스",
+      "desc": "더 나은 기술력으로 완성된 사계절 프리미엄 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250421104622819902.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "201320130",
+      "fseq": "2013",
+      "rseq": "2013",
+      "front": {
+        "size": "215/40R18",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 224000,
+        "salePrice": 119000,
+        "cashPrice": 115000,
+        "discountText": "↓최대49% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "103810381",
+      "fseq": "1038",
+      "rseq": "1038",
+      "front": {
+        "size": "215/40R18",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 292000,
+        "salePrice": 160000,
+        "cashPrice": 154000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1659",
+      "brand": "미쉐린",
+      "model": "CROSS 클라이밋 3 스포츠",
+      "desc": "계절의 경계를 넘어, 다이내믹한 주행의 즐거움",
+      "comment": "",
+      "strength": "빗길주행성",
+      "imageUrl": "/prodimg/tire/listimg/2025/20251017115950685670.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "271227122",
+      "fseq": "2712",
+      "rseq": "2712",
+      "front": {
+        "size": "215/40R18",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 330000,
+        "salePrice": 201000,
+        "cashPrice": 195000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1590",
+      "brand": "미쉐린",
+      "model": "PILOT Sport 5",
+      "desc": "오래 지속되는 퍼포먼스 향상된 드라이빙 고품격 외관 디자인 젖은노면 및 마른노면에서 모두 최적의 접지력과 견인력 동급 프리미엄 경쟁사 대비 33.5% 더 긴 트레드 수명!",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516101824184161.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "305830583",
+      "fseq": "3058",
+      "rseq": "3058",
+      "front": {
+        "size": "215/40R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 337000,
+        "salePrice": 205000,
+        "cashPrice": 199000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

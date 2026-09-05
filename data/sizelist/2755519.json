@@ -1,0 +1,131 @@
+{
+  "size": "2755519",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "262926290",
+      "fseq": "2629",
+      "rseq": "2629",
+      "front": {
+        "size": "275/55R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 298000,
+        "salePrice": 136000,
+        "cashPrice": 132000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "221122111",
+      "fseq": "2211",
+      "rseq": "2211",
+      "front": {
+        "size": "275/55R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 337000,
+        "salePrice": 163000,
+        "cashPrice": 160000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "555855582",
+      "fseq": "5558",
+      "rseq": "5558",
+      "front": {
+        "size": "275/55R19",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 357000,
+        "salePrice": 195000,
+        "cashPrice": 189000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1176",
+      "brand": "피렐리",
+      "model": "SCORPION-ZERO",
+      "desc": "첨단 트레드 디자인, 배리어블피치블록, 넓은중앙홀, 첨단컴파운드",
+      "comment": "올시즌 벤츠",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/201243155125.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "446944693",
+      "fseq": "4469",
+      "rseq": "4469",
+      "front": {
+        "size": "275/55R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 562000,
+        "salePrice": 281000,
+        "cashPrice": 273000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1176",
+      "brand": "피렐리",
+      "model": "SCORPION-ZERO",
+      "desc": "첨단 트레드 디자인, 배리어블피치블록, 넓은중앙홀, 첨단컴파운드",
+      "comment": "벤츠",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/201243155125.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "444644464",
+      "fseq": "4446",
+      "rseq": "4446",
+      "front": {
+        "size": "275/55R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 806000,
+        "salePrice": 403000,
+        "cashPrice": 391000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

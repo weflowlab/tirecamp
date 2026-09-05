@@ -1,0 +1,31 @@
+{
+  "size": "2355017",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1472",
+      "brand": "한국타이어",
+      "model": "VENTUS S2 AS",
+      "desc": "퍼스트 클래스에서 경험할 수 있는 최고의 안락함과 정숙성, 다이나믹한 고속주행까지 갖춘 최고의 프리미엄 타이어입니다.",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2016/2016122111474480882.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "179517950",
+      "fseq": "1795",
+      "rseq": "1795",
+      "front": {
+        "size": "235/50R17",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 258000,
+        "salePrice": 148000,
+        "cashPrice": 148000,
+        "discountText": "↓최대43% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "size": "2953019",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1164",
+      "brand": "피렐리",
+      "model": "PZERO",
+      "desc": "최고 성능의 한계치 실현과 High-End의 결정판",
+      "comment": "람보르기니",
+      "strength": "핸들링, 빗길주행성, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2012/20124316419.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "413441340",
+      "fseq": "4134",
+      "rseq": "4134",
+      "front": {
+        "size": "295/30R19",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 984000,
+        "salePrice": 492000,
+        "cashPrice": 478000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

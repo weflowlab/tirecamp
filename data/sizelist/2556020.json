@@ -1,0 +1,81 @@
+{
+  "size": "2556020",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "547354730",
+      "fseq": "5473",
+      "rseq": "5473",
+      "front": {
+        "size": "255/60R20",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 364000,
+        "salePrice": 199000,
+        "cashPrice": 193000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1125",
+      "brand": "미쉐린",
+      "model": "LATITUDE Tour HP",
+      "desc": "온로드 위주의 SUV 차량을 위한 타이어이며, 동급 최고의 긴 수명과 부드러운 승차감을 자랑합니다.",
+      "comment": "LR",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/201243121752.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "279927991",
+      "fseq": "2799",
+      "rseq": "2799",
+      "front": {
+        "size": "255/60R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 590000,
+        "salePrice": 359000,
+        "cashPrice": 349000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1176",
+      "brand": "피렐리",
+      "model": "SCORPION-ZERO",
+      "desc": "첨단 트레드 디자인, 배리어블피치블록, 넓은중앙홀, 첨단컴파운드",
+      "comment": "올시즌 랜드로버",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/201243155125.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "445844582",
+      "fseq": "4458",
+      "rseq": "4458",
+      "front": {
+        "size": "255/60R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 771000,
+        "salePrice": 386000,
+        "cashPrice": 374000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

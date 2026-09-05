@@ -1,0 +1,31 @@
+{
+  "size": "2355516",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1647",
+      "brand": "금호타이어",
+      "model": "솔루스 어드밴스",
+      "desc": "더 나은 기술력으로 완성된 사계절 프리미엄 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250421104622819902.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "200120010",
+      "fseq": "2001",
+      "rseq": "2001",
+      "front": {
+        "size": "235/55R16",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 203000,
+        "salePrice": 107000,
+        "cashPrice": 104000,
+        "discountText": "↓최대49% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

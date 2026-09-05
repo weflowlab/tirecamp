@@ -1,0 +1,56 @@
+{
+  "size": "2154520",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1610",
+      "brand": "한국타이어",
+      "model": "아이온 윈터",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005055115897770.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "531253120",
+      "fseq": "5312",
+      "rseq": "5312",
+      "front": {
+        "size": "215/45R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 322000,
+        "salePrice": 176000,
+        "cashPrice": 176000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1635",
+      "brand": "한국타이어",
+      "model": "아이온 evo",
+      "desc": "EV 특화 기술로 완성된 최초의 전기차 전용 퍼포먼스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2024/20240920020824879485.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "130613061",
+      "fseq": "1306",
+      "rseq": "1306",
+      "front": {
+        "size": "215/45R20",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 468000,
+        "salePrice": 264000,
+        "cashPrice": 255000,
+        "discountText": "↓최대46% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

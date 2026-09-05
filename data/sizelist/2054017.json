@@ -1,0 +1,31 @@
+{
+  "size": "2054017",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1544",
+      "brand": "한국타이어",
+      "model": "VENTUS S1 evo 3",
+      "desc": "최고의 고속주행 안정성(핸들링, 제동력)을 갖춘 프리미엄타이어",
+      "comment": "BMW",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190415092623266711.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "560856080",
+      "fseq": "5608",
+      "rseq": "5608",
+      "front": {
+        "size": "205/40R17",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 256000,
+        "salePrice": 0,
+        "cashPrice": 0,
+        "discountText": "↓최대100% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

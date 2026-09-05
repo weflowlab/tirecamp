@@ -1,0 +1,81 @@
+{
+  "size": "1956015",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "204920490",
+      "fseq": "2049",
+      "rseq": "2049",
+      "front": {
+        "size": "195/60R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 136000,
+        "salePrice": 62000,
+        "cashPrice": 60000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1549",
+      "brand": "넥센타이어",
+      "model": "i.Q series1",
+      "desc": "경제성타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "239023901",
+      "fseq": "2390",
+      "rseq": "2390",
+      "front": {
+        "size": "195/60R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 124000,
+        "salePrice": 68000,
+        "cashPrice": 66000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1621",
+      "brand": "콘티넨탈",
+      "model": "컴포트 컨택 CC7",
+      "desc": "최소의 소음수준과 부드럽고 편안한 승차감을 제공",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230614035955999869.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "481948192",
+      "fseq": "4819",
+      "rseq": "4819",
+      "front": {
+        "size": "195/60R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 190000,
+        "salePrice": 87000,
+        "cashPrice": 84000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

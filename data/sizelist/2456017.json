@@ -1,0 +1,56 @@
+{
+  "size": "2456017",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1598",
+      "brand": "한국타이어",
+      "model": "다이나프로 HPX",
+      "desc": "최고의 핸들링을 제공하는 SUV전용 프리미엄 컴포트 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220719035629465705.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "556255620",
+      "fseq": "5562",
+      "rseq": "5562",
+      "front": {
+        "size": "245/60R17",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 298000,
+        "salePrice": 0,
+        "cashPrice": 0,
+        "discountText": "↓최대100% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "무쏘EV",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "222122211",
+      "fseq": "2221",
+      "rseq": "2221",
+      "front": {
+        "size": "245/60R17",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 250000,
+        "salePrice": 121000,
+        "cashPrice": 118000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

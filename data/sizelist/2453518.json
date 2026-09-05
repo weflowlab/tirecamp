@@ -1,0 +1,81 @@
+{
+  "size": "2453518",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "541754170",
+      "fseq": "5417",
+      "rseq": "5417",
+      "front": {
+        "size": "245/35R18",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 316000,
+        "salePrice": 173000,
+        "cashPrice": 168000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "103310331",
+      "fseq": "1033",
+      "rseq": "1033",
+      "front": {
+        "size": "245/35R18",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 333000,
+        "salePrice": 182000,
+        "cashPrice": 176000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1590",
+      "brand": "미쉐린",
+      "model": "PILOT Sport 5",
+      "desc": "오래 지속되는 퍼포먼스 향상된 드라이빙 고품격 외관 디자인 젖은노면 및 마른노면에서 모두 최적의 접지력과 견인력 동급 프리미엄 경쟁사 대비 33.5% 더 긴 트레드 수명!",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516101824184161.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "306330632",
+      "fseq": "3063",
+      "rseq": "3063",
+      "front": {
+        "size": "245/35R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 411000,
+        "salePrice": 250000,
+        "cashPrice": 243000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

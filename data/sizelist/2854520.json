@@ -1,0 +1,131 @@
+{
+  "size": "2854520",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "105810580",
+      "fseq": "1058",
+      "rseq": "1058",
+      "front": {
+        "size": "285/45R20",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 453000,
+        "salePrice": 247000,
+        "cashPrice": 239000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "546554651",
+      "fseq": "5465",
+      "rseq": "5465",
+      "front": {
+        "size": "285/45R20",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 489000,
+        "salePrice": 267000,
+        "cashPrice": 259000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1611",
+      "brand": "한국타이어",
+      "model": "아이온 윈터 SUV",
+      "desc": "EV 특화 기술로 완성된 SUV 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005060259811459.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "535753572",
+      "fseq": "5357",
+      "rseq": "5357",
+      "front": {
+        "size": "285/45R20",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 539000,
+        "salePrice": 294000,
+        "cashPrice": 294000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1595",
+      "brand": "콘티넨탈",
+      "model": "익스트림컨택 DWS06+",
+      "desc": "올시즌 타이어와 올웨더 타이어가 합쳐진 것 같은 독특한 패턴을 갖고 있어, 어떠한 환경에서도 뛰어난 퍼포먼스를 제공하는 프리미엄 타이어",
+      "comment": "장착 비용 포함 된 가격 입니다.",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220623114321338173.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "479747973",
+      "fseq": "4797",
+      "rseq": "4797",
+      "front": {
+        "size": "285/45R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 723000,
+        "salePrice": 329000,
+        "cashPrice": 319000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1659",
+      "brand": "미쉐린",
+      "model": "CROSS 클라이밋 3 스포츠",
+      "desc": "계절의 경계를 넘어, 다이내믹한 주행의 즐거움",
+      "comment": "",
+      "strength": "빗길주행성",
+      "imageUrl": "/prodimg/tire/listimg/2025/20251017115950685670.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "273327334",
+      "fseq": "2733",
+      "rseq": "2733",
+      "front": {
+        "size": "285/45R20",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 624000,
+        "salePrice": 380000,
+        "cashPrice": 369000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

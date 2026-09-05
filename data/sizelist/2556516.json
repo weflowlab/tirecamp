@@ -1,0 +1,131 @@
+{
+  "size": "2556516",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "206020600",
+      "fseq": "2060",
+      "rseq": "2060",
+      "front": {
+        "size": "255/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 210000,
+        "salePrice": 96000,
+        "cashPrice": 93000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "263226321",
+      "fseq": "2632",
+      "rseq": "2632",
+      "front": {
+        "size": "255/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 216000,
+        "salePrice": 98000,
+        "cashPrice": 95000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1549",
+      "brand": "넥센타이어",
+      "model": "i.Q series1",
+      "desc": "경제성타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "238323832",
+      "fseq": "2383",
+      "rseq": "2383",
+      "front": {
+        "size": "255/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 183000,
+        "salePrice": 100000,
+        "cashPrice": 97000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "216921693",
+      "fseq": "2169",
+      "rseq": "2169",
+      "front": {
+        "size": "255/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 238000,
+        "salePrice": 115000,
+        "cashPrice": 113000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1597",
+      "brand": "금호타이어",
+      "model": "크루젠 HP51",
+      "desc": "노면 소음 저감 패턴 설계 기술 내구력 및 주행 안전성 강화 구조 설계 마모 및 주행성능 강화 컴파운드 적용 기존 제품대비 향상된 성능 밸런스",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220624040616777772.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "216121614",
+      "fseq": "2161",
+      "rseq": "2161",
+      "front": {
+        "size": "255/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 233000,
+        "salePrice": 127000,
+        "cashPrice": 123000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "size": "2954021",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "109010900",
+      "fseq": "1090",
+      "rseq": "1090",
+      "front": {
+        "size": "295/40R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 507000,
+        "salePrice": 277000,
+        "cashPrice": 268000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1611",
+      "brand": "한국타이어",
+      "model": "아이온 윈터 SUV",
+      "desc": "EV 특화 기술로 완성된 SUV 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005060259811459.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "535253521",
+      "fseq": "5352",
+      "rseq": "5352",
+      "front": {
+        "size": "295/40R21",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 630000,
+        "salePrice": 344000,
+        "cashPrice": 344000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1641",
+      "brand": "피렐리",
+      "model": "스콜피온 MS",
+      "desc": "최신형 SUV를 위한 사계절용 고성능 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250314043753672199.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "357235722",
+      "fseq": "3572",
+      "rseq": "3572",
+      "front": {
+        "size": "295/40R21",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 711000,
+        "salePrice": 356000,
+        "cashPrice": 345000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1176",
+      "brand": "피렐리",
+      "model": "SCORPION-ZERO",
+      "desc": "첨단 트레드 디자인, 배리어블피치블록, 넓은중앙홀, 첨단컴파운드",
+      "comment": "올시즌 재규어",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/201243155125.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "444944493",
+      "fseq": "4449",
+      "rseq": "4449",
+      "front": {
+        "size": "295/40R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 1025000,
+        "salePrice": 513000,
+        "cashPrice": 498000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

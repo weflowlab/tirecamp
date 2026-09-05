@@ -1,0 +1,31 @@
+{
+  "size": "2555021",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1611",
+      "brand": "한국타이어",
+      "model": "아이온 윈터 SUV",
+      "desc": "EV 특화 기술로 완성된 SUV 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005060259811459.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "535653560",
+      "fseq": "5356",
+      "rseq": "5356",
+      "front": {
+        "size": "255/50R21",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 440000,
+        "salePrice": 240000,
+        "cashPrice": 240000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

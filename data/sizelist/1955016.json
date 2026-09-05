@@ -1,0 +1,31 @@
+{
+  "size": "1955016",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1600",
+      "brand": "한국타이어",
+      "model": "라우펜 S FIT as",
+      "desc": "합리적이고 가성비 좋은 컴포트, 고속주행안정감",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220727033130381533.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "556555650",
+      "fseq": "5565",
+      "rseq": "5565",
+      "front": {
+        "size": "195/50R16",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 177000,
+        "salePrice": 0,
+        "cashPrice": 0,
+        "discountText": "↓최대100% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

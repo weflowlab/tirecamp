@@ -1,0 +1,81 @@
+{
+  "size": "2954520",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1609",
+      "brand": "한국타이어",
+      "model": "아이온 evo AS SUV",
+      "desc": "EV 특화 기술로 완성된 SUV 전기차 전용 사계절 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/2022100505350096322.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "559455940",
+      "fseq": "5594",
+      "rseq": "5594",
+      "front": {
+        "size": "295/45R20",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 599000,
+        "salePrice": 0,
+        "cashPrice": 0,
+        "discountText": "↓최대100% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "555455541",
+      "fseq": "5554",
+      "rseq": "5554",
+      "front": {
+        "size": "295/45R20",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 475000,
+        "salePrice": 259000,
+        "cashPrice": 251000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1591",
+      "brand": "한국타이어",
+      "model": "벤투스 S1 evo Z",
+      "desc": "모터스포츠 기술로 입증된 최고의 스포츠 주행 퍼포먼스를 느껴보세요!",
+      "comment": "",
+      "strength": "핸들링, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516105600437316.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "122912292",
+      "fseq": "1229",
+      "rseq": "1229",
+      "front": {
+        "size": "295/45R20",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 637000,
+        "salePrice": 348000,
+        "cashPrice": 336000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

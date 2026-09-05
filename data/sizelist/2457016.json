@@ -1,0 +1,106 @@
+{
+  "size": "2457016",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1549",
+      "brand": "넥센타이어",
+      "model": "i.Q series1",
+      "desc": "경제성타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "238523850",
+      "fseq": "2385",
+      "rseq": "2385",
+      "front": {
+        "size": "245/70R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 166000,
+        "salePrice": 91000,
+        "cashPrice": 88000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "205820581",
+      "fseq": "2058",
+      "rseq": "2058",
+      "front": {
+        "size": "245/70R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 212000,
+        "salePrice": 97000,
+        "cashPrice": 94000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1601",
+      "brand": "한국타이어",
+      "model": "라우펜 X FIT HT",
+      "desc": "SUV의 합리적이고 가성비 좋은 컴포트 성능의 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220727033300286347.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "120712072",
+      "fseq": "1207",
+      "rseq": "1207",
+      "front": {
+        "size": "245/70R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 207000,
+        "salePrice": 98000,
+        "cashPrice": 96000,
+        "discountText": "↓최대54% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1597",
+      "brand": "금호타이어",
+      "model": "크루젠 HP51",
+      "desc": "노면 소음 저감 패턴 설계 기술 내구력 및 주행 안전성 강화 구조 설계 마모 및 주행성능 강화 컴파운드 적용 기존 제품대비 향상된 성능 밸런스",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220624040616777772.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "215021503",
+      "fseq": "2150",
+      "rseq": "2150",
+      "front": {
+        "size": "245/70R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 190000,
+        "salePrice": 104000,
+        "cashPrice": 101000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

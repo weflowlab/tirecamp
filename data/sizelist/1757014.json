@@ -1,0 +1,81 @@
+{
+  "size": "1757014",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1334",
+      "brand": "넥센타이어",
+      "model": "N'Priz AH5",
+      "desc": "넥센타이어 신제품, 정숙성과 뛰어난 마일리지 특징인 사계절타이어 입니다.",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/2012926143630.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "252225220",
+      "fseq": "2522",
+      "rseq": "2522",
+      "front": {
+        "size": "175/70R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 96000,
+        "salePrice": 53000,
+        "cashPrice": 51000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1582",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT RS3",
+      "desc": "겨울철 일상의 안전을 지키는 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/20211022111208511187.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "552455241",
+      "fseq": "5524",
+      "rseq": "5524",
+      "front": {
+        "size": "175/70R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 94000,
+        "salePrice": 56000,
+        "cashPrice": 56000,
+        "discountText": "↓최대40% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1621",
+      "brand": "콘티넨탈",
+      "model": "컴포트 컨택 CC7",
+      "desc": "최소의 소음수준과 부드럽고 편안한 승차감을 제공",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230614035955999869.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "481048102",
+      "fseq": "4810",
+      "rseq": "4810",
+      "front": {
+        "size": "175/70R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 131000,
+        "salePrice": 60000,
+        "cashPrice": 58000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

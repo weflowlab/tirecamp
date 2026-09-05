@@ -1,0 +1,81 @@
+{
+  "size": "3254022",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1664",
+      "brand": "금호타이어",
+      "model": "크루젠 GT PRO",
+      "desc": "동급 최고 승차감에 마일리지까지 갖춘 SUV용 프리미엄 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260323114847538149.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "209720970",
+      "fseq": "2097",
+      "rseq": "2097",
+      "front": {
+        "size": "325/40R22",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 520000,
+        "salePrice": 269000,
+        "cashPrice": 261000,
+        "discountText": "↓최대50% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "543954391",
+      "fseq": "5439",
+      "rseq": "5439",
+      "front": {
+        "size": "325/40R22",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 628000,
+        "salePrice": 343000,
+        "cashPrice": 333000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1593",
+      "brand": "한국타이어",
+      "model": "벤투스 S1 evo Z AS X",
+      "desc": "Ventus S1 evo Z AS X 1년 내내 모터스포츠 기술로 입증된 최고의 스포츠 주행 퍼포먼스를 느껴보세요!",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220517101921299201.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "128312832",
+      "fseq": "1283",
+      "rseq": "1283",
+      "front": {
+        "size": "325/40R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 655000,
+        "salePrice": 358000,
+        "cashPrice": 346000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

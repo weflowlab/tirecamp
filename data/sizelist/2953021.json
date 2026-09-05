@@ -1,0 +1,81 @@
+{
+  "size": "2953021",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1610",
+      "brand": "한국타이어",
+      "model": "아이온 윈터",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005055115897770.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "531953190",
+      "fseq": "5319",
+      "rseq": "5319",
+      "front": {
+        "size": "295/30R21",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 599000,
+        "salePrice": 327000,
+        "cashPrice": 327000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "100010001",
+      "fseq": "1000",
+      "rseq": "1000",
+      "front": {
+        "size": "295/30R21",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 602000,
+        "salePrice": 329000,
+        "cashPrice": 318000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1608",
+      "brand": "한국타이어",
+      "model": "아이온 evo AS",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 사계절 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005053019537929.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "132213222",
+      "fseq": "1322",
+      "rseq": "1322",
+      "front": {
+        "size": "295/30R21",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 730000,
+        "salePrice": 412000,
+        "cashPrice": 398000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

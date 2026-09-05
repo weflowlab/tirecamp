@@ -1,0 +1,56 @@
+{
+  "size": "1956016",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1582",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT RS3",
+      "desc": "겨울철 일상의 안전을 지키는 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/20211022111208511187.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "561256120",
+      "fseq": "5612",
+      "rseq": "5612",
+      "front": {
+        "size": "195/60R16",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 207000,
+        "salePrice": 0,
+        "cashPrice": 0,
+        "discountText": "↓최대100% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1624",
+      "brand": "한국타이어",
+      "model": "아이온 ST AS SUV",
+      "desc": "전기차 전용 롱 마일리지 타이어",
+      "comment": "아이온 GT",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20231122041949550500.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "559655961",
+      "fseq": "5596",
+      "rseq": "5596",
+      "front": {
+        "size": "195/60R16",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 213000,
+        "salePrice": 0,
+        "cashPrice": 0,
+        "discountText": "↓최대100% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

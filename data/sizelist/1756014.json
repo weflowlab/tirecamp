@@ -1,0 +1,56 @@
+{
+  "size": "1756014",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1647",
+      "brand": "금호타이어",
+      "model": "솔루스 어드밴스",
+      "desc": "더 나은 기술력으로 완성된 사계절 프리미엄 타이어",
+      "comment": "레이 EV",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250421104622819902.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "199119910",
+      "fseq": "1991",
+      "rseq": "1991",
+      "front": {
+        "size": "175/60R14",
+        "speedGrade": "T",
+        "speedTitle": "속도등급:T ()",
+        "marketPrice": 132000,
+        "salePrice": 70000,
+        "cashPrice": 68000,
+        "discountText": "↓최대48% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1622",
+      "brand": "한국타이어",
+      "model": "KINERGY ST AS",
+      "desc": "완벽을 추구하는 당신을 위한 사계절용 밸런스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230822112201920856.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "160116011",
+      "fseq": "1601",
+      "rseq": "1601",
+      "front": {
+        "size": "175/60R14",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 122000,
+        "salePrice": 71000,
+        "cashPrice": 69000,
+        "discountText": "↓최대43% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

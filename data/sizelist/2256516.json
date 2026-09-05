@@ -1,0 +1,56 @@
+{
+  "size": "2256516",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "259025900",
+      "fseq": "2590",
+      "rseq": "2590",
+      "front": {
+        "size": "225/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 181000,
+        "salePrice": 82000,
+        "cashPrice": 80000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1597",
+      "brand": "금호타이어",
+      "model": "크루젠 HP51",
+      "desc": "노면 소음 저감 패턴 설계 기술 내구력 및 주행 안전성 강화 구조 설계 마모 및 주행성능 강화 컴파운드 적용 기존 제품대비 향상된 성능 밸런스",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220624040616777772.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "216021601",
+      "fseq": "2160",
+      "rseq": "2160",
+      "front": {
+        "size": "225/65R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 187000,
+        "salePrice": 102000,
+        "cashPrice": 99000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "size": "2754522",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "221822180",
+      "fseq": "2218",
+      "rseq": "2218",
+      "front": {
+        "size": "275/45R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 424000,
+        "salePrice": 205000,
+        "cashPrice": 197000,
+        "discountText": "↓최대54% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1598",
+      "brand": "한국타이어",
+      "model": "다이나프로 HPX",
+      "desc": "최고의 핸들링을 제공하는 SUV전용 프리미엄 컴포트 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220719035629465705.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "115111511",
+      "fseq": "1151",
+      "rseq": "1151",
+      "front": {
+        "size": "275/45R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 455000,
+        "salePrice": 249000,
+        "cashPrice": 240000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

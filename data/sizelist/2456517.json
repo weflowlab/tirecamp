@@ -1,0 +1,56 @@
+{
+  "size": "2456517",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "259725970",
+      "fseq": "2597",
+      "rseq": "2597",
+      "front": {
+        "size": "245/65R17",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 230000,
+        "salePrice": 105000,
+        "cashPrice": 102000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1498",
+      "brand": "금호타이어",
+      "model": "크루젠 HP71",
+      "desc": "고성능 프리미엄 컴포트 SUV타이어 동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "217421741",
+      "fseq": "2174",
+      "rseq": "2174",
+      "front": {
+        "size": "245/65R17",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 254000,
+        "salePrice": 123000,
+        "cashPrice": 120000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

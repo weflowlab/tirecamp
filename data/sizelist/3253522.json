@@ -1,0 +1,106 @@
+{
+  "size": "3253522",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1664",
+      "brand": "금호타이어",
+      "model": "크루젠 GT PRO",
+      "desc": "동급 최고 승차감에 마일리지까지 갖춘 SUV용 프리미엄 타이어",
+      "comment": "",
+      "strength": "승차감, 정숙성, 긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260323114847538149.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "209820980",
+      "fseq": "2098",
+      "rseq": "2098",
+      "front": {
+        "size": "325/35R22",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 532000,
+        "salePrice": 276000,
+        "cashPrice": 267000,
+        "discountText": "↓최대50% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "543454341",
+      "fseq": "5434",
+      "rseq": "5434",
+      "front": {
+        "size": "325/35R22",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 658000,
+        "salePrice": 359000,
+        "cashPrice": 348000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "104610462",
+      "fseq": "1046",
+      "rseq": "1046",
+      "front": {
+        "size": "325/35R22",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 745000,
+        "salePrice": 406000,
+        "cashPrice": 393000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1593",
+      "brand": "한국타이어",
+      "model": "벤투스 S1 evo Z AS X",
+      "desc": "Ventus S1 evo Z AS X 1년 내내 모터스포츠 기술로 입증된 최고의 스포츠 주행 퍼포먼스를 느껴보세요!",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220517101921299201.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "128612863",
+      "fseq": "1286",
+      "rseq": "1286",
+      "front": {
+        "size": "325/35R22",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 804000,
+        "salePrice": 439000,
+        "cashPrice": 424000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

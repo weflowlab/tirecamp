@@ -1,0 +1,81 @@
+{
+  "size": "2954022",
+  "total": 3,
+  "tires": [
+    {
+      "tinfoseq": "1567",
+      "brand": "한국타이어",
+      "model": "VENTUS S1 evo 3 SUV",
+      "desc": "유렵 명차가 선택한 SUV 전용 고성능 타이어",
+      "comment": "아우디",
+      "strength": "핸들링, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2020/20200514102607851743.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "175617560",
+      "fseq": "1756",
+      "rseq": "1756",
+      "front": {
+        "size": "295/40R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 700000,
+        "salePrice": 382000,
+        "cashPrice": 369000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "107910791",
+      "fseq": "1079",
+      "rseq": "1079",
+      "front": {
+        "size": "295/40R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 713000,
+        "salePrice": 389000,
+        "cashPrice": 376000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1176",
+      "brand": "피렐리",
+      "model": "SCORPION-ZERO",
+      "desc": "첨단 트레드 디자인, 배리어블피치블록, 넓은중앙홀, 첨단컴파운드",
+      "comment": "벤츠",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/201243155125.JPG",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "447344732",
+      "fseq": "4473",
+      "rseq": "4473",
+      "front": {
+        "size": "295/40R22",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 913000,
+        "salePrice": 457000,
+        "cashPrice": 443000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

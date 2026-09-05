@@ -1,0 +1,131 @@
+{
+  "size": "2453521",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "537653760",
+      "fseq": "5376",
+      "rseq": "5376",
+      "front": {
+        "size": "245/35R21",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 393000,
+        "salePrice": 214000,
+        "cashPrice": 208000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1610",
+      "brand": "한국타이어",
+      "model": "아이온 윈터",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005055115897770.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "530253021",
+      "fseq": "5302",
+      "rseq": "5302",
+      "front": {
+        "size": "245/35R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 428000,
+        "salePrice": 233000,
+        "cashPrice": 233000,
+        "discountText": "↓최대46% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "100210022",
+      "fseq": "1002",
+      "rseq": "1002",
+      "front": {
+        "size": "245/35R21",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 511000,
+        "salePrice": 279000,
+        "cashPrice": 270000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1608",
+      "brand": "한국타이어",
+      "model": "아이온 evo AS",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 사계절 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005053019537929.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "130913093",
+      "fseq": "1309",
+      "rseq": "1309",
+      "front": {
+        "size": "245/35R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 609000,
+        "salePrice": 344000,
+        "cashPrice": 332000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1635",
+      "brand": "한국타이어",
+      "model": "아이온 evo",
+      "desc": "EV 특화 기술로 완성된 최초의 전기차 전용 퍼포먼스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2024/20240920020824879485.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "130213024",
+      "fseq": "1302",
+      "rseq": "1302",
+      "front": {
+        "size": "245/35R21",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 670000,
+        "salePrice": 378000,
+        "cashPrice": 365000,
+        "discountText": "↓최대46% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

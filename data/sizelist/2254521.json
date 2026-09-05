@@ -1,0 +1,31 @@
+{
+  "size": "2254521",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1546",
+      "brand": "미쉐린",
+      "model": "PRIMACY TOUR A/S",
+      "desc": "사계절용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/201904170518105483.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "331133110",
+      "fseq": "3311",
+      "rseq": "3311",
+      "front": {
+        "size": "225/45R21",
+        "speedGrade": "W",
+        "speedTitle": "속도등급:W (270km까지)",
+        "marketPrice": 566000,
+        "salePrice": 345000,
+        "cashPrice": 334000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

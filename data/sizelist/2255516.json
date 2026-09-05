@@ -1,0 +1,131 @@
+{
+  "size": "2255516",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1647",
+      "brand": "금호타이어",
+      "model": "솔루스 어드밴스",
+      "desc": "더 나은 기술력으로 완성된 사계절 프리미엄 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250421104622819902.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "199919990",
+      "fseq": "1999",
+      "rseq": "1999",
+      "front": {
+        "size": "225/55R16",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 167000,
+        "salePrice": 89000,
+        "cashPrice": 86000,
+        "discountText": "↓최대49% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1622",
+      "brand": "한국타이어",
+      "model": "KINERGY ST AS",
+      "desc": "완벽을 추구하는 당신을 위한 사계절용 밸런스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230822112201920856.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "158115811",
+      "fseq": "1581",
+      "rseq": "1581",
+      "front": {
+        "size": "225/55R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 166000,
+        "salePrice": 97000,
+        "cashPrice": 94000,
+        "discountText": "↓최대43% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1528",
+      "brand": "금호타이어",
+      "model": "마제스티9",
+      "desc": "탁월한 컴포트 성능, 최적의 사계절 주행성능",
+      "comment": "",
+      "strength": "승차감, 정숙성",
+      "imageUrl": "/prodimg/tire/listimg/2018/20180604100745707276.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "184318432",
+      "fseq": "1843",
+      "rseq": "1843",
+      "front": {
+        "size": "225/55R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 228000,
+        "salePrice": 110000,
+        "cashPrice": 107000,
+        "discountText": "↓최대53% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1542",
+      "brand": "브리지스톤",
+      "model": "세레니티 플러스",
+      "desc": "가성비 좋은 사계절타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190409044202654847.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "333033303",
+      "fseq": "3330",
+      "rseq": "3330",
+      "front": {
+        "size": "225/55R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 241000,
+        "salePrice": 110000,
+        "cashPrice": 107000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1472",
+      "brand": "한국타이어",
+      "model": "VENTUS S2 AS",
+      "desc": "퍼스트 클래스에서 경험할 수 있는 최고의 안락함과 정숙성, 다이나믹한 고속주행까지 갖춘 최고의 프리미엄 타이어입니다.",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2016/2016122111474480882.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "177517754",
+      "fseq": "1775",
+      "rseq": "1775",
+      "front": {
+        "size": "225/55R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급: ()",
+        "marketPrice": 216000,
+        "salePrice": 124000,
+        "cashPrice": 124000,
+        "discountText": "↓최대43% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

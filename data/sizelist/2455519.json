@@ -1,0 +1,31 @@
+{
+  "size": "2455519",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1641",
+      "brand": "피렐리",
+      "model": "스콜피온 MS",
+      "desc": "최신형 SUV를 위한 사계절용 고성능 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250314043753672199.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "358835880",
+      "fseq": "3588",
+      "rseq": "3588",
+      "front": {
+        "size": "245/55R19",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 385000,
+        "salePrice": 193000,
+        "cashPrice": 187000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "size": "1957014",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "206120610",
+      "fseq": "2061",
+      "rseq": "2061",
+      "front": {
+        "size": "195/70R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 86000,
+        "salePrice": 40000,
+        "cashPrice": 38000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1549",
+      "brand": "넥센타이어",
+      "model": "i.Q series1",
+      "desc": "경제성타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "240224021",
+      "fseq": "2402",
+      "rseq": "2402",
+      "front": {
+        "size": "195/70R14",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 79000,
+        "salePrice": 43000,
+        "cashPrice": 42000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

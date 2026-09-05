@@ -1,0 +1,31 @@
+{
+  "size": "2057016",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "258825880",
+      "fseq": "2588",
+      "rseq": "2588",
+      "front": {
+        "size": "205/70R16",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 134000,
+        "salePrice": 61000,
+        "cashPrice": 59000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

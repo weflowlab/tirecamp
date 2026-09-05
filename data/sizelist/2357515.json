@@ -1,0 +1,31 @@
+{
+  "size": "2357515",
+  "total": 1,
+  "tires": [
+    {
+      "tinfoseq": "1560",
+      "brand": "넥센타이어",
+      "model": "ROADIAN GTX",
+      "desc": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "258725870",
+      "fseq": "2587",
+      "rseq": "2587",
+      "front": {
+        "size": "235/75R15",
+        "speedGrade": "H",
+        "speedTitle": "속도등급:H (210km까지)",
+        "marketPrice": 152000,
+        "salePrice": 69000,
+        "cashPrice": 67000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

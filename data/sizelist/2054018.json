@@ -1,0 +1,56 @@
+{
+  "size": "2054018",
+  "total": 2,
+  "tires": [
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "103910390",
+      "fseq": "1039",
+      "rseq": "1039",
+      "front": {
+        "size": "205/40R18",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 267000,
+        "salePrice": 146000,
+        "cashPrice": 141000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1590",
+      "brand": "미쉐린",
+      "model": "PILOT Sport 5",
+      "desc": "오래 지속되는 퍼포먼스 향상된 드라이빙 고품격 외관 디자인 젖은노면 및 마른노면에서 모두 최적의 접지력과 견인력 동급 프리미엄 경쟁사 대비 33.5% 더 긴 트레드 수명!",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516101824184161.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "305730571",
+      "fseq": "3057",
+      "rseq": "3057",
+      "front": {
+        "size": "205/40R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 355000,
+        "salePrice": 216000,
+        "cashPrice": 210000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

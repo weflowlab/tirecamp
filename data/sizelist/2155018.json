@@ -1,0 +1,106 @@
+{
+  "size": "2155018",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1670",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT EVO 4",
+      "desc": "전작 모델 대비 회전저항 및 주행소음을 개선",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "542454240",
+      "fseq": "5424",
+      "rseq": "5424",
+      "front": {
+        "size": "215/50R18",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 264000,
+        "salePrice": 144000,
+        "cashPrice": 140000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1566",
+      "brand": "미쉐린",
+      "model": "PRIMACY SUV",
+      "desc": "내 가족 안전을 지켜주는 미쉐린 프라이머시 SUV 타이어",
+      "comment": "플러스",
+      "strength": "승차감, 정숙성",
+      "imageUrl": "/prodimg/tire/listimg/2020/2020041410314365231.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "327232721",
+      "fseq": "3272",
+      "rseq": "3272",
+      "front": {
+        "size": "215/50R18",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 293000,
+        "salePrice": 179000,
+        "cashPrice": 174000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1627",
+      "brand": "콘티넨탈",
+      "model": "올시즌 컨택 2",
+      "desc": "마일리지 및 마모 성능 극대화, 최적의 연료 효율성 실현",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2024/20240321055905474623.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "468346832",
+      "fseq": "4683",
+      "rseq": "4683",
+      "front": {
+        "size": "215/50R18",
+        "speedGrade": "T",
+        "speedTitle": "속도등급:T ()",
+        "marketPrice": 360000,
+        "salePrice": 180000,
+        "cashPrice": 175000,
+        "discountText": "↓최대51% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1561",
+      "brand": "미쉐린",
+      "model": "크로스 클라이밋2 SUV",
+      "desc": "어떠한 기후조건에도 안전한 프리미엄 사계절 SUV용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2020/20200103030624192855.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "267126713",
+      "fseq": "2671",
+      "rseq": "2671",
+      "front": {
+        "size": "215/50R18",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 304000,
+        "salePrice": 185000,
+        "cashPrice": 180000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "size": "2057015",
+  "total": 4,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "204420440",
+      "fseq": "2044",
+      "rseq": "2044",
+      "front": {
+        "size": "205/70R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 128000,
+        "salePrice": 58000,
+        "cashPrice": 57000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1461",
+      "brand": "한국타이어",
+      "model": "MILEAGE PLUS 3",
+      "desc": "승용타이어의 마일리지를 극대화한 타이어",
+      "comment": "",
+      "strength": "긴수명",
+      "imageUrl": "/prodimg/tire/listimg/2016/2016040410153450615.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "160216021",
+      "fseq": "1602",
+      "rseq": "1602",
+      "front": {
+        "size": "205/70R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 111000,
+        "salePrice": 63000,
+        "cashPrice": 61000,
+        "discountText": "↓최대45% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1549",
+      "brand": "넥센타이어",
+      "model": "i.Q series1",
+      "desc": "경제성타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "239723972",
+      "fseq": "2397",
+      "rseq": "2397",
+      "front": {
+        "size": "205/70R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 117000,
+        "salePrice": 64000,
+        "cashPrice": 62000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1348",
+      "brand": "한국타이어",
+      "model": "WINTER I PIKE RW15",
+      "desc": "한국타이어 겨울용입니다.",
+      "comment": "8P",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2012/20121226155517.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "536553653",
+      "fseq": "5365",
+      "rseq": "5365",
+      "front": {
+        "size": "205/70R15",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 161000,
+        "salePrice": 96000,
+        "cashPrice": 96000,
+        "discountText": "↓최대40% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

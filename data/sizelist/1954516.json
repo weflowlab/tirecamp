@@ -1,0 +1,131 @@
+{
+  "size": "1954516",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1580",
+      "brand": "금호타이어",
+      "model": "솔루스 TA21",
+      "desc": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현 균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상 트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "204120410",
+      "fseq": "2041",
+      "rseq": "2041",
+      "front": {
+        "size": "195/45R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 146000,
+        "salePrice": 67000,
+        "cashPrice": 65000,
+        "discountText": "↓최대55% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1647",
+      "brand": "금호타이어",
+      "model": "솔루스 어드밴스",
+      "desc": "더 나은 기술력으로 완성된 사계절 프리미엄 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2025/20250421104622819902.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "199219921",
+      "fseq": "1992",
+      "rseq": "1992",
+      "front": {
+        "size": "195/45R16",
+        "speedGrade": "V",
+        "speedTitle": "속도등급:V (240km까지)",
+        "marketPrice": 158000,
+        "salePrice": 83000,
+        "cashPrice": 81000,
+        "discountText": "↓최대49% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1621",
+      "brand": "콘티넨탈",
+      "model": "컴포트 컨택 CC7",
+      "desc": "최소의 소음수준과 부드럽고 편안한 승차감을 제공",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230614035955999869.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "482248222",
+      "fseq": "4822",
+      "rseq": "4822",
+      "front": {
+        "size": "195/45R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 192000,
+        "salePrice": 87000,
+        "cashPrice": 85000,
+        "discountText": "↓최대56% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1622",
+      "brand": "한국타이어",
+      "model": "KINERGY ST AS",
+      "desc": "완벽을 추구하는 당신을 위한 사계절용 밸런스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2023/20230822112201920856.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "157915793",
+      "fseq": "1579",
+      "rseq": "1579",
+      "front": {
+        "size": "195/45R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 158000,
+        "salePrice": 91000,
+        "cashPrice": 88000,
+        "discountText": "↓최대44% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1582",
+      "brand": "한국타이어",
+      "model": "Winter I*CEPT RS3",
+      "desc": "겨울철 일상의 안전을 지키는 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2021/20211022111208511187.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "551455144",
+      "fseq": "5514",
+      "rseq": "5514",
+      "front": {
+        "size": "195/45R16",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 198000,
+        "salePrice": 117000,
+        "cashPrice": 117000,
+        "discountText": "↓최대41% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}

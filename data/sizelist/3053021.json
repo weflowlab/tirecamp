@@ -1,0 +1,131 @@
+{
+  "size": "3053021",
+  "total": 5,
+  "tires": [
+    {
+      "tinfoseq": "1608",
+      "brand": "한국타이어",
+      "model": "아이온 evo AS",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 사계절 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005053019537929.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "557555750",
+      "fseq": "5575",
+      "rseq": "5575",
+      "front": {
+        "size": "305/30R21",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 765000,
+        "salePrice": 0,
+        "cashPrice": 0,
+        "discountText": "↓최대100% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1610",
+      "brand": "한국타이어",
+      "model": "아이온 윈터",
+      "desc": "EV 특화 기술로 완성된 전기차 전용 겨울용 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2022/20221005055115897770.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "529752971",
+      "fseq": "5297",
+      "rseq": "5297",
+      "front": {
+        "size": "305/30R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 613000,
+        "salePrice": 334000,
+        "cashPrice": 334000,
+        "discountText": "↓최대46% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1640",
+      "brand": "한국타이어",
+      "model": "VENTUS evo",
+      "desc": "고성능 퍼포먼스 스포츠 타이어",
+      "comment": "",
+      "strength": "핸들링, 빗길주행성, 고속주행성, 접지력",
+      "imageUrl": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "553855382",
+      "fseq": "5538",
+      "rseq": "5538",
+      "front": {
+        "size": "305/30R21",
+        "speedGrade": "Y",
+        "speedTitle": "속도등급:Y (300km까지)",
+        "marketPrice": 632000,
+        "salePrice": 345000,
+        "cashPrice": 334000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1591",
+      "brand": "한국타이어",
+      "model": "벤투스 S1 evo Z",
+      "desc": "모터스포츠 기술로 입증된 최고의 스포츠 주행 퍼포먼스를 느껴보세요!",
+      "comment": "",
+      "strength": "핸들링, 고속주행성",
+      "imageUrl": "/prodimg/tire/listimg/2022/20220516105600437316.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "122412243",
+      "fseq": "1224",
+      "rseq": "1224",
+      "front": {
+        "size": "305/30R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 779000,
+        "salePrice": 425000,
+        "cashPrice": 411000,
+        "discountText": "↓최대47% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    },
+    {
+      "tinfoseq": "1635",
+      "brand": "한국타이어",
+      "model": "아이온 evo",
+      "desc": "EV 특화 기술로 완성된 최초의 전기차 전용 퍼포먼스 타이어",
+      "comment": "",
+      "strength": "",
+      "imageUrl": "/prodimg/tire/listimg/2024/20240920020824879485.jpg",
+      "isBest": false,
+      "bestSection": false,
+      "calcId": "129912994",
+      "fseq": "1299",
+      "rseq": "1299",
+      "front": {
+        "size": "305/30R21",
+        "speedGrade": "",
+        "speedTitle": "속도등급:  ()",
+        "marketPrice": 802000,
+        "salePrice": 452000,
+        "cashPrice": 437000,
+        "discountText": "↓최대46% 할인",
+        "defaultQty": 4
+      },
+      "rear": null
+    }
+  ]
+}
