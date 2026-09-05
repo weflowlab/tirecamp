@@ -1,0 +1,3888 @@
+{
+  "1023": {
+    "seq": "1023",
+    "image": "/prodimg/tire/listimg/2015/20151022034609874992.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "Winter Radial DW04",
+    "descHtml": "넓은 트레드폭 채용으로 눈길에서 탁월한 제동력 발휘합니다.",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "0 ~ 0",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "5.8",
+    "strongPoint": "접지력",
+    "typeLevel": "겨울용(스노우) / 일반형",
+    "contentHtml": ""
+  },
+  "1125": {
+    "seq": "1125",
+    "image": "/prodimg/tire/listimg/2012/201243121752.JPG",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "미쉐린",
+    "model": "LATITUDE Tour HP",
+    "descHtml": "온로드 위주의 SUV 차량을 위한 타이어이며, 동급 최고의 긴 수명과\r\n부드러운 승차감을 자랑합니다.",
+    "speedRating": ",H",
+    "treadwear": "440",
+    "priceRange": "233,000 ~ 463,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "6.8",
+    "strongPoint": "",
+    "typeLevel": "SUV/RV / 프리미엄",
+    "contentHtml": "<CENTER><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201305/201352414051.jpg\" width=670></CENTER><BR><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201305/201352414051_1.jpg\" width=670></CENTER><BR><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201305/201352414051_2.jpg\" width=670></CENTER><BR></CENTER>"
+  },
+  "1155": {
+    "seq": "1155",
+    "image": "/prodimg/tire/listimg/2014/201437134343.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "크루젠 프리미엄",
+    "descHtml": "탁월한 승차감과저소음,우수한 마모성능 및 제동력,빗길 주행성능 향상\r\n프로미엄 SUV 타이어의 새 장을 열다",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "115,000 ~ 120,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "8.0",
+    "strongPoint": "승차감, 정숙성, 긴수명",
+    "typeLevel": "SUV/RV / 프리미엄",
+    "contentHtml": "<CENTER><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201403/201437134427.jpg\"></CENTER><BR><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201403/201437134428.jpg\" width=670></CENTER><BR></CENTER><BR>"
+  },
+  "1164": {
+    "seq": "1164",
+    "image": "/prodimg/tire/listimg/2012/20124316419.JPG",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "피렐리",
+    "model": "PZERO",
+    "descHtml": "최고 성능의 한계치 실현과 High-End의 결정판",
+    "speedRating": ",H,V,W,Y",
+    "treadwear": "220",
+    "priceRange": "134,000 ~ 1,383,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "7.9",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "승용차용 / 프리미엄",
+    "contentHtml": "<P align=center><BR>&nbsp;</P>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201305/20135251459.jpg\" width=670 height=1840></CENTER>\r\n<P align=center><BR>&nbsp;</P>"
+  },
+  "1175": {
+    "seq": "1175",
+    "image": "/prodimg/tire/listimg/2012/201243155225.JPG",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "피렐리",
+    "model": "SCORPION-VERDE",
+    "descHtml": "빗길, 마른 노면 어디든 향상된 접지력",
+    "speedRating": ",W,Y",
+    "treadwear": "600",
+    "priceRange": "537,000 ~ 537,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "6.4",
+    "strongPoint": "긴수명",
+    "typeLevel": "SUV/RV / 프리미엄",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/201204/201243155234.JPG\" width=670 height=429></CENTER><BR>"
+  },
+  "1176": {
+    "seq": "1176",
+    "image": "/prodimg/tire/listimg/2012/201243155125.JPG",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "피렐리",
+    "model": "SCORPION-ZERO",
+    "descHtml": "첨단 트레드 디자인, 배리어블피치블록, 넓은중앙홀, 첨단컴파운드",
+    "speedRating": ",H,W,Y",
+    "treadwear": "400",
+    "priceRange": "156,000 ~ 700,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "7.3",
+    "strongPoint": "핸들링, 고속주행성, 접지력",
+    "typeLevel": "SUV/RV / 프리미엄",
+    "contentHtml": "<P align=center><BR>&nbsp;</P>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201305/201352514135.jpg\" width=670 height=2047></CENTER>\r\n<P align=center><BR>&nbsp;</P>"
+  },
+  "1273": {
+    "seq": "1273",
+    "image": "/prodimg/tire/listimg/2012/20124912638.JPG",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "콘티넨탈",
+    "model": "Pro Contact",
+    "descHtml": "사계절 모든 조건을 만족시켜주는 타이어",
+    "speedRating": ",H,W",
+    "treadwear": "0",
+    "priceRange": "228,000 ~ 304,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "6.6",
+    "strongPoint": "핸들링, 빗길주행성",
+    "typeLevel": "승용차용 / 프리미엄",
+    "contentHtml": "<CENTER><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201305/20135241477.jpg\" width=670 height=620></CENTER><BR></CENTER>"
+  },
+  "1334": {
+    "seq": "1334",
+    "image": "/prodimg/tire/listimg/2012/2012926143630.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "넥센타이어",
+    "model": "N'Priz AH5",
+    "descHtml": "넥센타이어 신제품, 정숙성과 뛰어난 마일리지 특징인 \r\n사계절타이어 입니다.",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "39,000 ~ 152,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "6.0",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 최고급형",
+    "contentHtml": "<CENTER><IMG border=0 hspace=0 alt=\"\" src=\"/ext/otire.co.kr/prodimg/tire/content/201209/2012926144531.jpg\" width=720 height=2534></CENTER><BR>"
+  },
+  "1348": {
+    "seq": "1348",
+    "image": "/prodimg/tire/listimg/2012/20121226155517.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "WINTER I PIKE RW15",
+    "descHtml": "한국타이어 겨울용입니다.",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "64,000 ~ 143,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "5.4",
+    "strongPoint": "",
+    "typeLevel": "겨울용(스노우) / 윈터용",
+    "contentHtml": ""
+  },
+  "1387": {
+    "seq": "1387",
+    "image": "/prodimg/tire/listimg/2014/2014517104731.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "Dynapro HP2",
+    "descHtml": "강인함과 편안함의 완벽한 밸런스를 갖춘 슈퍼 프리미엄 SUV용 타이어. 강력한 주행 및 제동 성능을 갖추는 동시에 탁월한 정숙감과 배수 성능을 높였습니다.",
+    "speedRating": ",H",
+    "treadwear": "0",
+    "priceRange": "128,000 ~ 176,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "8.1",
+    "strongPoint": "승차감, 정숙성, 고속주행성",
+    "typeLevel": "SUV/RV / 프리미엄",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/201405/201451710489.jpg\" width=670 height=446></CENTER><BR>"
+  },
+  "1408": {
+    "seq": "1408",
+    "image": "/prodimg/tire/listimg/2015/20150714093507757361.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "KINERGY GT",
+    "descHtml": "유럽형 수출형 모델",
+    "speedRating": ",H",
+    "treadwear": "0",
+    "priceRange": "135,000 ~ 135,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "5.4",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 일반형",
+    "contentHtml": ""
+  },
+  "1443": {
+    "seq": "1443",
+    "image": "/prodimg/tire/listimg/2015/2015120905193671169.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "콘티넨탈",
+    "model": "크로스컨택 LX 스포츠",
+    "descHtml": "SUV 차량을 위한 최적의 타이어",
+    "speedRating": ",H,T,W,Y",
+    "treadwear": "0",
+    "priceRange": "174,000 ~ 552,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "6.3",
+    "strongPoint": "핸들링, 접지력",
+    "typeLevel": "SUV/RV / 최고급형",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201512/20151209052039797597.jpg\" width=670 height=633></CENTER><BR>"
+  },
+  "1461": {
+    "seq": "1461",
+    "image": "/prodimg/tire/listimg/2016/2016040410153450615.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "MILEAGE PLUS 3",
+    "descHtml": "승용타이어의 마일리지를 극대화한 타이어",
+    "speedRating": ",H",
+    "treadwear": "0",
+    "priceRange": "63,000 ~ 98,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "5.5",
+    "strongPoint": "긴수명",
+    "typeLevel": "승용차용 / 일반형",
+    "contentHtml": ""
+  },
+  "1467": {
+    "seq": "1467",
+    "image": "/prodimg/tire/listimg/2016/20160707055545193583.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "피렐리",
+    "model": "S-VERDE 올시즌",
+    "descHtml": "고성능 4계절 SUV타이어",
+    "speedRating": ",H,W,Y",
+    "treadwear": "0",
+    "priceRange": "158,000 ~ 823,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 120
+      }
+    ],
+    "reviewScore": "6.9",
+    "strongPoint": "접지력",
+    "typeLevel": "SUV/RV / 최고급형",
+    "contentHtml": ""
+  },
+  "1472": {
+    "seq": "1472",
+    "image": "/prodimg/tire/listimg/2016/2016122111474480882.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "VENTUS S2 AS",
+    "descHtml": "퍼스트 클래스에서 경험할 수 있는 최고의 안락함과 정숙성, 다이나믹한 고속주행까지 갖춘 최고의 프리미엄 타이어입니다.",
+    "speedRating": ",W",
+    "treadwear": "0",
+    "priceRange": "99,000 ~ 259,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "7.0",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "승용차용 / 프리미엄",
+    "contentHtml": "<BR>\r\n<CENTER><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201612/20161221114252172712.jpg\" width=670 height=5135></CENTER><BR></CENTER><BR>"
+  },
+  "1473": {
+    "seq": "1473",
+    "image": "/prodimg/tire/listimg/2016/2016092012392491050.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "Winter I*CEPT IZ2 A",
+    "descHtml": "비대칭 패턴 디자인을 적용하여 주행 성능을 향상시켰습니다.",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "68,000 ~ 88,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "6.5",
+    "strongPoint": "핸들링, 접지력",
+    "typeLevel": "겨울용(스노우) / 고급형",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201609/20160920123951258416.jpg\" width=670 height=767></CENTER><BR>"
+  },
+  "1486": {
+    "seq": "1486",
+    "image": "/prodimg/tire/listimg/2017/20170216104101855880.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "콘티넨탈",
+    "model": "울트라 컨택 UC6",
+    "descHtml": "자동차 제어를 위한 최고의 접지력",
+    "speedRating": ",Y",
+    "treadwear": "0",
+    "priceRange": "69,000 ~ 187,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 120
+      }
+    ],
+    "reviewScore": "7.3",
+    "strongPoint": "빗길주행성, 접지력",
+    "typeLevel": "승용차용 / 최고급형",
+    "contentHtml": "<LI>젖은 노면에서 완벽한 제어력 \r\n<LI>젖은 노면과 마른 노면 모두에서 매우 짧은 제동 거리 \r\n<LI>높은 그립력과 긴 내구성 \r\n<LI>적은 소음 수준</LI>"
+  },
+  "1498": {
+    "seq": "1498",
+    "image": "/prodimg/tire/listimg/2017/20170329094154124593.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "크루젠 HP71",
+    "descHtml": "고성능 프리미엄 컴포트 SUV타이어\r\n동급 최고의 저소음 컴포트 성능, 첨단 기술이 집약된 주행안정성 및 제동 성능",
+    "speedRating": ",H,V",
+    "treadwear": "0",
+    "priceRange": "87,000 ~ 315,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "8.0",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "SUV/RV / 프리미엄",
+    "contentHtml": "<IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/201703/20170329094836106935.jpg\" width=670><BR>\r\n<CENTER><IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/201703/20170329094836153366.1.jpg\" width=670><BR></CENTER>\r\n<CENTER><IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/201703/2017032909483616817.jpg\" width=670></CENTER><BR>"
+  },
+  "1528": {
+    "seq": "1528",
+    "image": "/prodimg/tire/listimg/2018/20180604100745707276.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "마제스티9",
+    "descHtml": "탁월한 컴포트 성능, 최적의 사계절 주행성능",
+    "speedRating": ",W",
+    "treadwear": "0",
+    "priceRange": "93,000 ~ 222,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "7.6",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "승용차용 / 프리미엄",
+    "contentHtml": ""
+  },
+  "1542": {
+    "seq": "1542",
+    "image": "/prodimg/tire/listimg/2019/20190409044202654847.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "브리지스톤",
+    "model": "세레니티 플러스",
+    "descHtml": "가성비 좋은 사계절타이어",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "90,000 ~ 198,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "7.0",
+    "strongPoint": "승차감, 긴수명",
+    "typeLevel": "승용차용 / 고급형",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201904/20190409044421463932.jpg\" width=670 height=228></CENTER><BR>"
+  },
+  "1544": {
+    "seq": "1544",
+    "image": "/prodimg/tire/listimg/2019/20190415092623266711.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "VENTUS S1 evo 3",
+    "descHtml": "최고의 고속주행 안정성(핸들링, 제동력)을 갖춘 프리미엄타이어",
+    "speedRating": ",H,T,W,Y",
+    "treadwear": "0",
+    "priceRange": "0 ~ 418,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 120
+      }
+    ],
+    "reviewScore": "7.8",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "승용차용 / 프리미엄",
+    "contentHtml": ""
+  },
+  "1546": {
+    "seq": "1546",
+    "image": "/prodimg/tire/listimg/2019/201904170518105483.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "미쉐린",
+    "model": "PRIMACY TOUR A/S",
+    "descHtml": "사계절용 타이어",
+    "speedRating": ",H,V,W,Y",
+    "treadwear": "0",
+    "priceRange": "212,000 ~ 535,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "7.4",
+    "strongPoint": "정숙성, 긴수명",
+    "typeLevel": "SUV/RV / 고급형",
+    "contentHtml": ""
+  },
+  "1549": {
+    "seq": "1549",
+    "image": "/prodimg/tire/listimg/2019/20190508100315496162.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "넥센타이어",
+    "model": "i.Q series1",
+    "descHtml": "경제성타이어",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "35,000 ~ 100,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "6.3",
+    "strongPoint": "긴수명",
+    "typeLevel": "승용차용 / 일반형",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201905/20190508100350830104.JPG\" width=670 height=189></CENTER><BR>"
+  },
+  "1560": {
+    "seq": "1560",
+    "image": "/prodimg/tire/listimg/2019/20191218012847801874.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "넥센타이어",
+    "model": "ROADIAN GTX",
+    "descHtml": "국내 최고 수준의 마일리지 성능을 가진 사계절용 타이어",
+    "speedRating": ",H,W",
+    "treadwear": "0",
+    "priceRange": "61,000 ~ 182,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "6.5",
+    "strongPoint": "긴수명",
+    "typeLevel": "SUV/RV / 최고급형",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/201912/2019121801313381629.jpg\" width=670 height=926></CENTER><BR>"
+  },
+  "1561": {
+    "seq": "1561",
+    "image": "/prodimg/tire/listimg/2020/20200103030624192855.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "미쉐린",
+    "model": "크로스 클라이밋2 SUV",
+    "descHtml": "어떠한 기후조건에도 안전한\r\n프리미엄 사계절 SUV용 타이어",
+    "speedRating": ",H,W,Y",
+    "treadwear": "0",
+    "priceRange": "185,000 ~ 365,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "6.4",
+    "strongPoint": "",
+    "typeLevel": "SUV/RV / 최고급형",
+    "contentHtml": ""
+  },
+  "1566": {
+    "seq": "1566",
+    "image": "/prodimg/tire/listimg/2020/2020041410314365231.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "미쉐린",
+    "model": "PRIMACY SUV",
+    "descHtml": "내 가족 안전을 지켜주는 미쉐린 프라이머시 SUV 타이어",
+    "speedRating": ",H,V",
+    "treadwear": "0",
+    "priceRange": "179,000 ~ 281,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "7.4",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "SUV/RV / 프리미엄",
+    "contentHtml": ""
+  },
+  "1567": {
+    "seq": "1567",
+    "image": "/prodimg/tire/listimg/2020/20200514102607851743.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "VENTUS S1 evo 3 SUV",
+    "descHtml": "유렵 명차가 선택한 SUV 전용 고성능 타이어",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "305,000 ~ 382,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 120
+      }
+    ],
+    "reviewScore": "7.9",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "SUV/RV / 최고급형",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/202005/20200514102941946573.jpg\" width=670></CENTER><BR><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/202005/20200514102942164597.jpg\" width=670></CENTER><BR><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/202005/2020051410294232063.jpg\" width=670></CENTER><BR><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/202005/20200514102942523436.jpg\" width=670></CENTER><BR>"
+  },
+  "1576": {
+    "seq": "1576",
+    "image": "/prodimg/tire/listimg/2021/20210302014848446846.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "VENTUS S1 evo 3 런플랫",
+    "descHtml": "한국타이어의 프리미엄급 런플랫타이어",
+    "speedRating": ",Y",
+    "treadwear": "0",
+    "priceRange": "0 ~ 376,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 120
+      }
+    ],
+    "reviewScore": "7.8",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "승용차용 / 프리미엄",
+    "contentHtml": ""
+  },
+  "1580": {
+    "seq": "1580",
+    "image": "/prodimg/tire/listimg/2021/2021092701340339993.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "솔루스 TA21",
+    "descHtml": "소음억제/분산 설계로 우수한 승차감 및 저소음 성능 구현\r\n균일한 접지형상과 뜯김방지 블럭엣지 설계기술로 마모 향상\r\n트레드 Rib형상 최적화 기술로 고속주행 안정성 강화",
+    "speedRating": ",H",
+    "treadwear": "0",
+    "priceRange": "32,000 ~ 105,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 48
+      }
+    ],
+    "reviewScore": "4.5",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1582": {
+    "seq": "1582",
+    "image": "/prodimg/tire/listimg/2021/20211022111208511187.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "Winter I*CEPT RS3",
+    "descHtml": "겨울철 일상의 안전을 지키는 타이어",
+    "speedRating": ",H",
+    "treadwear": "0",
+    "priceRange": "0 ~ 151,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "6.8",
+    "strongPoint": "핸들링, 빗길주행성, 접지력",
+    "typeLevel": "겨울용(스노우) / 고급형",
+    "contentHtml": "<BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/202110/202110221112568221.png\"></CENTER><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/202110/20211022111256901359.png\"></CENTER><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/202110/20211022111256963851.png\"></CENTER><BR>\r\n<CENTER><IMG border=0 src=\"/ext/www.otire.co.kr/prodimg/tire/content/202110/202110221112571075.png\"></CENTER>"
+  },
+  "1587": {
+    "seq": "1587",
+    "image": "/prodimg/tire/listimg/2022/20220426025008640174.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "피렐리",
+    "model": "P7 AS+ 3",
+    "descHtml": "고성능 차량에 맞게 개발된 사계절 타이어",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "189,000 ~ 189,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "6.9",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 고급형",
+    "contentHtml": ""
+  },
+  "1590": {
+    "seq": "1590",
+    "image": "/prodimg/tire/listimg/2022/20220516101824184161.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "미쉐린",
+    "model": "PILOT Sport 5",
+    "descHtml": "오래 지속되는 퍼포먼스 향상된 드라이빙 고품격 외관 디자인\r\n젖은노면 및 마른노면에서 모두 최적의 접지력과 견인력\r\n동급 프리미엄 경쟁사 대비 33.5% 더 긴 트레드 수명!",
+    "speedRating": ",Y",
+    "treadwear": "0",
+    "priceRange": "205,000 ~ 597,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "7.4",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "승용차용 / 고성능",
+    "contentHtml": "<IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/202205/20220516101954824424.jpg\" width=779 height=460><IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/202205/20220516101954902841.jpg\" width=779 height=549><IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/202205/20220516101954980439.jpg\" width=779 height=557><IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/202205/2022051610195542126.jpg\" width=779 height=624>"
+  },
+  "1591": {
+    "seq": "1591",
+    "image": "/prodimg/tire/listimg/2022/20220516105600437316.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "벤투스 S1 evo Z",
+    "descHtml": "모터스포츠 기술로 입증된 최고의 스포츠 주행 퍼포먼스를 느껴보세요!",
+    "speedRating": ",Y",
+    "treadwear": "0",
+    "priceRange": "0 ~ 425,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "7.5",
+    "strongPoint": "핸들링, 고속주행성, 접지력",
+    "typeLevel": "승용차용 / 고성능",
+    "contentHtml": ""
+  },
+  "1592": {
+    "seq": "1592",
+    "image": "/prodimg/tire/listimg/2022/20220516105911372960.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "벤투스 S1 evo Z AS",
+    "descHtml": "Ventus S1 evo Z AS\r\n1년 내내 모터스포츠 기술로 입증된 최고의 스포츠 주행 퍼포먼스를 느껴보세요!",
+    "speedRating": ",Y",
+    "treadwear": "0",
+    "priceRange": "179,000 ~ 365,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "7.8",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1593": {
+    "seq": "1593",
+    "image": "/prodimg/tire/listimg/2022/20220517101921299201.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "벤투스 S1 evo Z AS X",
+    "descHtml": "Ventus S1 evo Z AS X\r\n1년 내내 모터스포츠 기술로 입증된 최고의 스포츠 주행 \r\n퍼포먼스를 느껴보세요!",
+    "speedRating": ",Y",
+    "treadwear": "0",
+    "priceRange": "165,000 ~ 460,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "7.8",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "SUV/RV / 사계절용",
+    "contentHtml": ""
+  },
+  "1594": {
+    "seq": "1594",
+    "image": "/prodimg/tire/listimg/2022/20220615052957569875.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "콘티넨탈",
+    "model": "크로스컨택 RX",
+    "descHtml": "승차감, 정숙성이 뛰어난 사계절용 타이어",
+    "speedRating": ",V",
+    "treadwear": "0",
+    "priceRange": "174,000 ~ 590,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "7.5",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "SUV/RV / 사계절용",
+    "contentHtml": ""
+  },
+  "1595": {
+    "seq": "1595",
+    "image": "/prodimg/tire/listimg/2022/20220623114321338173.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "콘티넨탈",
+    "model": "익스트림컨택 DWS06+",
+    "descHtml": "올시즌 타이어와 올웨더 타이어가 합쳐진 것 같은 독특한 패턴을 갖고 있어, 어떠한 환경에서도 뛰어난 퍼포먼스를 제공하는 프리미엄 타이어",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "150,000 ~ 493,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "7.0",
+    "strongPoint": "빗길주행성",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1596": {
+    "seq": "1596",
+    "image": "/prodimg/tire/listimg/2022/20220624022959602702.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "마제스티X",
+    "descHtml": "국내 시장에 최적화된 최상의 승차감을 구현한 럭셔리 제품\r\n최신 주행기술과 안전기술이 적용된 사계절용 프리미엄 제품",
+    "speedRating": ",W,Y",
+    "treadwear": "0",
+    "priceRange": "129,000 ~ 272,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "9.1",
+    "strongPoint": "승차감, 정숙성, 핸들링, 빗길주행성, 고속주행성, 긴수명",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1597": {
+    "seq": "1597",
+    "image": "/prodimg/tire/listimg/2022/20220624040616777772.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "크루젠 HP51",
+    "descHtml": "노면 소음 저감 패턴 설계 기술\r\n내구력 및 주행 안전성 강화 구조 설계\r\n마모 및 주행성능 강화 컴파운드 적용\r\n기존 제품대비 향상된 성능 밸런스",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "92,000 ~ 169,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "6.8",
+    "strongPoint": "",
+    "typeLevel": "SUV/RV / 사계절용",
+    "contentHtml": ""
+  },
+  "1598": {
+    "seq": "1598",
+    "image": "/prodimg/tire/listimg/2022/20220719035629465705.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "다이나프로 HPX",
+    "descHtml": "최고의 핸들링을 제공하는 SUV전용 프리미엄 컴포트 타이어",
+    "speedRating": ",H,V",
+    "treadwear": "0",
+    "priceRange": "0 ~ 300,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "8.5",
+    "strongPoint": "승차감, 정숙성, 긴수명",
+    "typeLevel": "SUV/RV / 사계절용",
+    "contentHtml": ""
+  },
+  "1599": {
+    "seq": "1599",
+    "image": "/prodimg/tire/listimg/2022/20220727032901899497.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "라우펜 G FIT as",
+    "descHtml": "합리적이고 가성비 좋은 컴포트 성능의 타이어",
+    "speedRating": ",H,T",
+    "treadwear": "0",
+    "priceRange": "0 ~ 107,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 48
+      }
+    ],
+    "reviewScore": "4.4",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 일반형",
+    "contentHtml": ""
+  },
+  "1600": {
+    "seq": "1600",
+    "image": "/prodimg/tire/listimg/2022/20220727033130381533.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "라우펜 S FIT as",
+    "descHtml": "합리적이고 가성비 좋은 컴포트, 고속주행안정감",
+    "speedRating": ",H,V",
+    "treadwear": "0",
+    "priceRange": "0 ~ 150,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "4.6",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 일반형",
+    "contentHtml": ""
+  },
+  "1601": {
+    "seq": "1601",
+    "image": "/prodimg/tire/listimg/2022/20220727033300286347.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "라우펜 X FIT HT",
+    "descHtml": "SUV의 합리적이고 가성비 좋은 컴포트 성능의 타이어",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "77,000 ~ 135,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 48
+      }
+    ],
+    "reviewScore": "4.3",
+    "strongPoint": "",
+    "typeLevel": "SUV/RV / 일반형",
+    "contentHtml": ""
+  },
+  "1608": {
+    "seq": "1608",
+    "image": "/prodimg/tire/listimg/2022/20221005053019537929.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "아이온 evo AS",
+    "descHtml": "EV 특화 기술로 완성된 전기차 전용 사계절 타이어",
+    "speedRating": ",W,Y",
+    "treadwear": "0",
+    "priceRange": "0 ~ 412,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "7.0",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1609": {
+    "seq": "1609",
+    "image": "/prodimg/tire/listimg/2022/2022100505350096322.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "아이온 evo AS SUV",
+    "descHtml": "EV 특화 기술로 완성된 SUV 전기차 전용 사계절 타이어",
+    "speedRating": ",V,W,Y",
+    "treadwear": "0",
+    "priceRange": "0 ~ 370,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "7.0",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "SUV/RV / 사계절용",
+    "contentHtml": ""
+  },
+  "1610": {
+    "seq": "1610",
+    "image": "/prodimg/tire/listimg/2022/20221005055115897770.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "아이온 윈터",
+    "descHtml": "EV 특화 기술로 완성된 전기차 전용 겨울용 타이어",
+    "speedRating": ",H,V",
+    "treadwear": "0",
+    "priceRange": "0 ~ 334,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "6.3",
+    "strongPoint": "",
+    "typeLevel": "겨울용(스노우) / 윈터용",
+    "contentHtml": ""
+  },
+  "1611": {
+    "seq": "1611",
+    "image": "/prodimg/tire/listimg/2022/20221005060259811459.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "아이온 윈터 SUV",
+    "descHtml": "EV 특화 기술로 완성된 SUV 전기차 전용 겨울용 타이어",
+    "speedRating": ",H,V",
+    "treadwear": "0",
+    "priceRange": "0 ~ 371,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "6.3",
+    "strongPoint": "",
+    "typeLevel": "겨울용(스노우) / 윈터용",
+    "contentHtml": ""
+  },
+  "1614": {
+    "seq": "1614",
+    "image": "/prodimg/tire/listimg/2022/20221123035213475249.png",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "크루젠 HP71 EV",
+    "descHtml": "노면 소음 저감 패턴 설계 기술\r\n가속 초기 高토크 감안한 접지력 마모 최적화",
+    "speedRating": ",V",
+    "treadwear": "0",
+    "priceRange": "108,000 ~ 198,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "7.4",
+    "strongPoint": "정숙성",
+    "typeLevel": "SUV/RV / 전기차용",
+    "contentHtml": ""
+  },
+  "1615": {
+    "seq": "1615",
+    "image": "/prodimg/tire/listimg/2022/20221123035600754518.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "마제스티9 EV",
+    "descHtml": "국내,수입 고급 세단 전기차 전용 타이어",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "126,000 ~ 187,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "7.4",
+    "strongPoint": "정숙성",
+    "typeLevel": "승용차용 / 전기차용",
+    "contentHtml": ""
+  },
+  "1621": {
+    "seq": "1621",
+    "image": "/prodimg/tire/listimg/2023/20230614035955999869.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "콘티넨탈",
+    "model": "컴포트 컨택 CC7",
+    "descHtml": "최소의 소음수준과 부드럽고 편안한 승차감을 제공",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "59,000 ~ 92,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "6.3",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1622": {
+    "seq": "1622",
+    "image": "/prodimg/tire/listimg/2023/20230822112201920856.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "KINERGY ST AS",
+    "descHtml": "완벽을 추구하는 당신을 위한 사계절용 밸런스 타이어",
+    "speedRating": ",H",
+    "treadwear": "0",
+    "priceRange": "50,000 ~ 204,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "5.6",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1624": {
+    "seq": "1624",
+    "image": "/prodimg/tire/listimg/2023/20231122041949550500.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "아이온 ST AS SUV",
+    "descHtml": "전기차 전용 롱 마일리지 타이어",
+    "speedRating": ",H,V",
+    "treadwear": "0",
+    "priceRange": "0 ~ 170,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "6.1",
+    "strongPoint": "긴수명",
+    "typeLevel": "SUV/RV / 전기차",
+    "contentHtml": ""
+  },
+  "1627": {
+    "seq": "1627",
+    "image": "/prodimg/tire/listimg/2024/20240321055905474623.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "콘티넨탈",
+    "model": "올시즌 컨택 2",
+    "descHtml": "마일리지 및 마모 성능 극대화, 최적의 연료 효율성 실현",
+    "speedRating": ",H,T,V,W,Y",
+    "treadwear": "0",
+    "priceRange": "112,000 ~ 466,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "6.5",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 올웨더",
+    "contentHtml": ""
+  },
+  "1633": {
+    "seq": "1633",
+    "image": "/prodimg/tire/listimg/2024/20240701052617437177.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "VENTUS air S",
+    "descHtml": "프리미엄이 제공하는 품격 있는 정숙성과 승차감",
+    "speedRating": ",W",
+    "treadwear": "0",
+    "priceRange": "128,000 ~ 336,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "7.5",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": "<IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/202407/20240701052754764149.jpg\" width=750 height=8182>"
+  },
+  "1635": {
+    "seq": "1635",
+    "image": "/prodimg/tire/listimg/2024/20240920020824879485.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "아이온 evo",
+    "descHtml": "EV 특화 기술로 완성된 최초의 전기차 전용 퍼포먼스 타이어",
+    "speedRating": ",Y",
+    "treadwear": "0",
+    "priceRange": "233,000 ~ 452,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "7.0",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 전기차",
+    "contentHtml": ""
+  },
+  "1640": {
+    "seq": "1640",
+    "image": "/prodimg/tire/listimg/2025/2025031101144935384.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "VENTUS evo",
+    "descHtml": "고성능 퍼포먼스 스포츠 타이어",
+    "speedRating": ",W,Y",
+    "treadwear": "0",
+    "priceRange": "132,000 ~ 441,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 120
+      }
+    ],
+    "reviewScore": "8.0",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "승용/SUV / 고성능",
+    "contentHtml": ""
+  },
+  "1641": {
+    "seq": "1641",
+    "image": "/prodimg/tire/listimg/2025/20250314043753672199.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "피렐리",
+    "model": "스콜피온 MS",
+    "descHtml": "최신형 SUV를 위한 사계절용 고성능 타이어",
+    "speedRating": ",H,V,W,Y",
+    "treadwear": "0",
+    "priceRange": "138,000 ~ 453,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "7.4",
+    "strongPoint": "승차감",
+    "typeLevel": "SUV/RV / 사계절용",
+    "contentHtml": ""
+  },
+  "1647": {
+    "seq": "1647",
+    "image": "/prodimg/tire/listimg/2025/20250421104622819902.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "솔루스 어드밴스",
+    "descHtml": "더 나은 기술력으로 완성된 사계절 프리미엄 타이어",
+    "speedRating": "H,T,V,W",
+    "treadwear": "0",
+    "priceRange": "70,000 ~ 186,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "6.1",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1652": {
+    "seq": "1652",
+    "image": "/prodimg/tire/listimg/2025/20250716011750482225.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "웨더플렉스 GT",
+    "descHtml": "사계절 교체 없이 안전한, 한국형 프리미엄 올웨더 타이어",
+    "speedRating": ",H,V",
+    "treadwear": "0",
+    "priceRange": "0 ~ 209,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "6.5",
+    "strongPoint": "빗길주행성, 긴수명",
+    "typeLevel": "승용차용 / 올웨더",
+    "contentHtml": "<IMG style=\"HEIGHT: 465px; WIDTH: 820px\" border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/202507/2025071601212889911.png\" width=1099 height=620><IMG style=\"HEIGHT: 453px; WIDTH: 820px\" border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/202507/20250716012129227900.png\" width=1100 height=619>"
+  },
+  "1653": {
+    "seq": "1653",
+    "image": "/prodimg/tire/listimg/2025/20250729095125214369.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "피렐리",
+    "model": "CINTURATO P9 AS",
+    "descHtml": "제동력과 내구성 뛰어난 사계절 타이어",
+    "speedRating": ",H,V,W,Y",
+    "treadwear": "0",
+    "priceRange": "105,000 ~ 295,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 60
+      }
+    ],
+    "reviewScore": "6.5",
+    "strongPoint": "",
+    "typeLevel": "승용차용 / 사계절용",
+    "contentHtml": ""
+  },
+  "1658": {
+    "seq": "1658",
+    "image": "/prodimg/tire/listimg/2025/20251017114537395175.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "미쉐린",
+    "model": "CROSS 클라이밋 3",
+    "descHtml": "모든 것을 갖춘, 그 이상의 타이어",
+    "speedRating": ",H,V,W,Y",
+    "treadwear": "0",
+    "priceRange": "173,000 ~ 347,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "6.8",
+    "strongPoint": "빗길주행성",
+    "typeLevel": "승용차용 / 올웨더",
+    "contentHtml": ""
+  },
+  "1659": {
+    "seq": "1659",
+    "image": "/prodimg/tire/listimg/2025/20251017115950685670.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "미쉐린",
+    "model": "CROSS 클라이밋 3 스포츠",
+    "descHtml": "계절의 경계를 넘어, 다이내믹한 주행의 즐거움",
+    "speedRating": "Y",
+    "treadwear": "0",
+    "priceRange": "201,000 ~ 433,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 84
+      }
+    ],
+    "reviewScore": "7.1",
+    "strongPoint": "빗길주행성",
+    "typeLevel": "승용차용 / 올웨더",
+    "contentHtml": ""
+  },
+  "1664": {
+    "seq": "1664",
+    "image": "/prodimg/tire/listimg/2026/20260323114847538149.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "크루젠 GT PRO",
+    "descHtml": "동급 최고 승차감에 마일리지까지 갖춘\r\nSUV용 프리미엄 타이어",
+    "speedRating": "V,W",
+    "treadwear": "0",
+    "priceRange": "110,000 ~ 279,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 96
+      }
+    ],
+    "reviewScore": "8.5",
+    "strongPoint": "승차감, 정숙성, 긴수명",
+    "typeLevel": "SUV/RV / 사계절용",
+    "contentHtml": ""
+  },
+  "1665": {
+    "seq": "1665",
+    "image": "/prodimg/tire/listimg/2026/20260330031619990947.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "브리지스톤",
+    "model": "POTENZA RE005",
+    "descHtml": "RE004 후속, 정교한 핸들링과 강력한 접지력으로 드라이빙의 즐거움을 극대화한 고성능 스포츠 썸머 타이어",
+    "speedRating": "W,Y",
+    "treadwear": "0",
+    "priceRange": "100,000 ~ 213,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 48
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 36
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 108
+      }
+    ],
+    "reviewScore": "6.6",
+    "strongPoint": "핸들링, 고속주행성, 접지력",
+    "typeLevel": "승용차용 / 고성능",
+    "contentHtml": "<IMG border=0 src=\"/ext/otire.co.kr/prodimg/tire/content/202603/20260330034859852819.jpg\" width=800 height=1515>"
+  },
+  "1666": {
+    "seq": "1666",
+    "image": "/prodimg/tire/listimg/2026/202604160505474894.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "금호타이어",
+    "model": "마제스티 솔루스 엣지",
+    "descHtml": "마제스티9(TA91) 후속 제품으로 승차감, 정숙성 위주의 프리미엄 컴포트 타이어",
+    "speedRating": "",
+    "treadwear": "0",
+    "priceRange": "100,000 ~ 214,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "8.0",
+    "strongPoint": "승차감, 정숙성",
+    "typeLevel": "승용차용 / 프리미엄",
+    "contentHtml": ""
+  },
+  "1668": {
+    "seq": "1668",
+    "image": "/prodimg/tire/listimg/2026/20260709014644980642.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "아이온 플렉스클라이밋",
+    "descHtml": "EV 특화 기술로 완성된 전기차 전용 올웨더 타이어",
+    "speedRating": "V,W,Y",
+    "treadwear": "0",
+    "priceRange": "173,000 ~ 260,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 60
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 108
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 72
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 72
+      }
+    ],
+    "reviewScore": "7.3",
+    "strongPoint": "빗길주행성, 긴수명",
+    "typeLevel": "승용/SUV / 전기차",
+    "contentHtml": ""
+  },
+  "1670": {
+    "seq": "1670",
+    "image": "/prodimg/tire/listimg/2026/20260713114716114502.jpg",
+    "imageWidth": 194,
+    "imageHeight": 243,
+    "brandName": "한국타이어",
+    "model": "Winter I*CEPT EVO 4",
+    "descHtml": "전작 모델 대비 회전저항 및 주행소음을 개선",
+    "speedRating": ",H,T,V,W",
+    "treadwear": "0",
+    "priceRange": "120,000 ~ 396,000",
+    "scores": [
+      {
+        "label": "승차감",
+        "height": 9,
+        "width": 1
+      },
+      {
+        "label": "고속주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "정숙성",
+        "height": 12,
+        "width": 96
+      },
+      {
+        "label": "제품수명",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "핸들링",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "저연비",
+        "height": 12,
+        "width": 84
+      },
+      {
+        "label": "빗길주행성",
+        "height": 12,
+        "width": 120
+      },
+      {
+        "label": "접지력",
+        "height": 12,
+        "width": 120
+      }
+    ],
+    "reviewScore": "8.6",
+    "strongPoint": "핸들링, 빗길주행성, 고속주행성, 접지력",
+    "typeLevel": "겨울용(스노우) / 윈터용",
+    "contentHtml": ""
+  }
+}

@@ -1,26 +1,114 @@
+/* 원본 사이트 /style/text.css 를 옮긴 전역 스타일 (Nanum Gothic 웹폰트 사용)
+   - 웹폰트 @import 는 tailwind 보다 먼저 와야 함 (CSS @import 규칙 순서 제약) */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;400;700;900&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * 원본 리셋/기본 스타일은 모두 @layer base 안에 둔다.
+ * - 레이어 밖(unlayered)에 두면 Tailwind 유틸리티(mx-auto, pt-*, text-* …)보다 항상 우선해 버려
+ *   컴포넌트의 클래스가 먹지 않으므로, preflight 와 같은 base 레이어에 넣어 유틸리티가 이기게 함.
+ */
+@layer base {
+  /* 원본은 html * 에 margin/padding 0 + box-sizing 을 강제함 */
+  html,
+  html * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nanum Gothic", "Cambria", "Hoefler Text", Times, serif;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  body {
+    background: #ffffff;
+    color: #666666;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* 링크 기본색(회색) / hover 시 orangered + 밑줄 */
+  a:link,
+  a:visited {
+    color: #757575;
+    text-decoration: none;
+  }
+  a:hover {
+    color: orangered;
+    text-decoration: underline;
+  }
+
+  /* 원본 TD/TH/P 기본 글꼴 (9pt, 굴림, 회색) */
+  td,
+  th,
+  p {
+    color: #666666;
+    font-family: 굴림, "Nanum Gothic", sans-serif;
+    font-size: 9pt;
+  }
+
+  /* 원본 <table border=0 cellspacing=0 cellpadding=0> 과 동일하게 */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  /* Tailwind preflight 의 img { height:auto; max-width:100% } 를 되돌려
+     원본처럼 <img width/height> 속성값이 그대로 적용되게 함 (막대그래프 1px gif 등) */
+  img {
+    height: revert-layer;
+    max-width: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---- 원본 text.css 의 유틸 클래스 (컴포넌트에서 className 으로 사용) ---- */
+
+/* 상단 사이즈 검색 입력창 (원본 .insbox1) */
+.insbox1 {
+  width: 100%;
+  height: 29px;
+  border: 1px solid #9d9d9d;
+  font-size: 22px;
+  overflow: hidden;
+  color: #000;
+  border-radius: 1px;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: inset 0 3px 5px #ddd;
+}
+
+/* 메뉴 글자 자간 (원본 .lword) */
+.lword {
+  letter-spacing: -1px;
+  word-spacing: 1px;
+}
+
+.font11px {
+  font-size: 11px;
+  font-family: 돋움, "Nanum Gothic", sans-serif;
+}
+
+/* 본문 select 공통 스타일 (원본 inline style: 굴림 10pt) */
+select.sel10 {
+  font-family: 굴림, "Nanum Gothic", sans-serif;
+  font-size: 10pt;
+  border: 1px solid #a9a9a9;
+  background: #fff;
+  height: 22px;
+}
+
+/* 원본 홈/타이어 페이지의 텍스트 클래스 */
+.ptxt {
+  font-size: 9pt;
+  font-family: 돋움, "Nanum Gothic", sans-serif;
+  color: #666666;
+  line-height: 18px;
+}
+.mst {
+  font-size: 10pt;
+  font-family: 돋움, "Nanum Gothic", sans-serif;
+  color: #666666;
+  line-height: 20px;
+}
+
+/* 점선 구분선 (원본 /images/findsize/dotline.gif 배경) */
+.dotline {
+  height: 10px;
+  background: url("/images/findsize/dotline.gif") repeat-x left center;
 }

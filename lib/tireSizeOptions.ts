@@ -1,0 +1,65 @@
+/* 타이어 사이즈 select 옵션 (원본 메인/타이어 페이지 <select> 값 그대로) */
+export const WIDTHS = [155, 165, 175, 185, 195, 205, 215, 225, 235, 245, 255, 265, 275, 285, 295, 305, 315, 325];
+export const RATIOS = [30, 35, 40, 45, 50, 55, 60, 65, 70, 75];
+export const INCHES = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+
+/* 자동차 회사 목록 (원본 selmaker option value/label) */
+export const MAKERS: { code: string; name: string }[] = [
+  { code: "10", name: "현대" },
+  { code: "15", name: "기아" },
+  { code: "17", name: "제네시스" },
+  { code: "20", name: "쉐보레" },
+  { code: "25", name: "르노삼성" },
+  { code: "30", name: "KGM (쌍용)" },
+  { code: "40", name: "BMW" },
+  { code: "45", name: "벤츠" },
+  { code: "50", name: "아우디" },
+  { code: "55", name: "폭스바겐" },
+  { code: "56", name: "캐딜락" },
+  { code: "57", name: "재규어" },
+  { code: "58", name: "토요타" },
+  { code: "59", name: "링컨" },
+  { code: "60", name: "렉서스" },
+  { code: "61", name: "미쓰비시" },
+  { code: "63", name: "포르쉐" },
+  { code: "64", name: "랜드로버" },
+  { code: "65", name: "혼다" },
+  { code: "66", name: "시트로엥" },
+  { code: "67", name: "벤틀리" },
+  { code: "68", name: "마세라티" },
+  { code: "69", name: "로터스" },
+  { code: "70", name: "인피니티" },
+  { code: "71", name: "닛산" },
+  { code: "72", name: "스바루" },
+  { code: "73", name: "롤스로이스" },
+  { code: "75", name: "볼보" },
+  { code: "76", name: "람보르기니" },
+  { code: "77", name: "애스턴마틴" },
+  { code: "80", name: "푸조" },
+  { code: "85", name: "크라이슬러" },
+  { code: "86", name: "JEEP(지프)" },
+  { code: "87", name: "닷지" },
+  { code: "88", name: "테슬라" },
+  { code: "89", name: "폴스타" },
+  { code: "90", name: "포드" },
+  { code: "91", name: "GMC" },
+  { code: "92", name: "이네오스" },
+  { code: "95", name: "미니" },
+  { code: "97", name: "BYD" },
+  { code: "98", name: "피아트" },
+  { code: "99", name: "페라리" },
+];
+
+/* 타이어 브랜드 코드 (원본 brandop 체크박스 값) */
+export const BRANDS: { code: string; name: string }[] = [
+  { code: "10", name: "한국타이어" },
+  { code: "14", name: "금호타이어" },
+  { code: "16", name: "넥센타이어" },
+  { code: "20", name: "미쉐린" },
+  { code: "22", name: "피렐리" },
+  { code: "23", name: "콘티넨탈" },
+  { code: "21", name: "브리지스톤" },
+  { code: "28", name: "던롭" },
+  { code: "24", name: "요코하마" },
+  { code: "26", name: "굳이어" },
+];
