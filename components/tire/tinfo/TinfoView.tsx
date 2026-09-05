@@ -26,10 +26,8 @@ function DotLine() {
  *      성능 그래프 8항목 (subgrapicon.gif 폭으로 점수 표현) / 점선 / 리뷰평점 · 주장점
  *  - 이미지 아래 "타입 / 등급"
  *  - 회색 구분바(gubunbg.gif) 아래 상세 내용 HTML
- *
- * @param imagePrefix JSON 에 없어 원본 서버에서 실시간으로 가져온 경우 이미지 경로 앞에 붙일 origin
  */
-export default function TinfoView({ tinfo: t, imagePrefix = "" }: { tinfo: Tinfo; imagePrefix?: string }) {
+export default function TinfoView({ tinfo: t }: { tinfo: Tinfo }) {
   /* 그래프는 좌/우 2열 × 4행 (DOM 순서대로 2개씩) */
   const scoreRows: Tinfo["scores"][] = [];
   for (let i = 0; i < t.scores.length; i += 2) scoreRows.push(t.scores.slice(i, i + 2));
@@ -43,7 +41,7 @@ export default function TinfoView({ tinfo: t, imagePrefix = "" }: { tinfo: Tinfo
         <tbody>
           <tr>
             <td className="h-[199px] w-[200px] text-center align-top">
-              <img src={imagePrefix + t.image} width={t.imageWidth} height={t.imageHeight} alt={t.model} className="inline-block" />
+              <img src={t.image} width={t.imageWidth} height={t.imageHeight} alt={t.model} className="inline-block" />
             </td>
             <td rowSpan={2} className="h-[293px] w-[31px] text-right align-top">
 

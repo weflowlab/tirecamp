@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { fetchSizeList, parseSizeListQuery } from "@/lib/sizelist";
+import { getSizeList, parseSizeListQuery } from "@/lib/sizelist";
 import SizeListFilter from "@/components/tire/sizelist/SizeListFilter";
 import SizeListTabs from "@/components/tire/sizelist/SizeListTabs";
 import TireCard from "@/components/tire/sizelist/TireCard";
@@ -27,11 +27,11 @@ function Spacer({ w, h }: { w: number; h: number }) {
 /**
  * 타이어 사이즈 검색 결과 페이지 (원본 /product/tire/sizelist.aspx)
  * URL query(find_ftsize, find_rtsize, seltireg, sorttireop, brandop, spage, lpage) 가 원본 form 필드 역할.
- * 서버 컴포넌트: query → 원본 서버 POST(lib/sizelist.ts) → 카드 목록 렌더.
+ * 서버 컴포넌트: query → 정적 데이터 조회(lib/sizelist.ts, data/sizelist/*.json) → 카드 목록 렌더. 네트워크 호출 없음.
  */
 export default async function SizeListPage({ searchParams }: PageProps<"/product/tire/sizelist">) {
   const query = parseSizeListQuery(await searchParams);
-  const result = query.ftsize ? await fetchSizeList(query) : { query, total: 0, tires: [], pages: [], source: "live" as const };
+  const result = await getSizeList(query);
 
   return (
     <>

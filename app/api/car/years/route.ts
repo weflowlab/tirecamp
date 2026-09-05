@@ -2,7 +2,7 @@ import { digitsOnly, getCarYears } from "@/lib/carfind";
 
 /**
  * GET /api/car/years?makercode=10
- * 원본 /common/ajaxmodule/getcaryear.aspx 프록시 — 데이터는 원본 사이트에서 실시간으로 가져온다.
+ * 원본 /common/ajaxmodule/getcaryear.aspx 에 해당 — 데이터는 data/carfind/makers.json (정적 스크랩본) 에서 읽는다.
  * 응답: { years: ["2026", "2025", ...] }
  */
 export async function GET(request: Request) {

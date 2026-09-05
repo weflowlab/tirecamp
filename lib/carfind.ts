@@ -1,15 +1,14 @@
 /**
  * 차량검색(차량 → 연식 → 차종 → 타이어사이즈) 데이터 서버 헬퍼
  *
- * 데이터는 원본 사이트(tirekongjang.com)의 AJAX 모듈에서 실시간으로 가져온다.
- *   /common/ajaxmodule/getcaryear.aspx?makercode=..
- *   /common/ajaxmodule/getcarname.aspx?makercode=..&syear=..
- *   /common/ajaxmodule/getcartsizelist.aspx?makercode=..&syear=..&carcode=..&imgtype=0
- * 원본은 XML 을 돌려주므로 여기서 정규식으로 파싱해 JSON 으로 변환한다. (외부 의존성 없음)
+ * 데이터는 scripts/scrape-carfind.mjs 가 원본 사이트에서 미리 긁어 둔 정적 JSON 에서만 읽는다.
+ * 런타임에 외부 네트워크 요청은 전혀 하지 않는다.
+ *   data/carfind/makers.json         { "<maker>": { years: [...], cars: { "<year>": [{code,name}] } } }
+ *   data/carfind/sizes/<maker>.json  { "<year>-<car>": { carimg: "/siteimg/..." | null, sizes: [...] } }
+ * 차량 사진은 public/siteimg/... 에 원본과 같은 경로로 저장되어 있어 carimg 경로를 그대로 <img src> 에 쓸 수 있다.
  */
-
-/* 원본 사이트 주소 */
-export const ORIGIN = "http://tirekongjang.com";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 /* 응답 타입 */
 export type CarName = { code: string; name: string };
@@ -23,122 +22,68 @@ export type TireSizeRow = {
 };
 export type SizeListResult = { carimg: string | null; sizes: TireSizeRow[] };
 
-/* 간단한 인메모리 캐시 (1시간 TTL) — 원본 서버 부하를 줄이기 위함 */
-const CACHE_TTL_MS = 60 * 60 * 1000;
-const cache = new Map<string, { at: number; value: unknown }>();
+/* JSON 파일 구조 */
+type MakerInfo = { years: string[]; cars: Record<string, CarName[]> };
+type MakersFile = Record<string, MakerInfo>;
+type SizesFile = Record<string, SizeListResult>;
 
-function cacheGet<T>(key: string): T | undefined {
-  const hit = cache.get(key);
-  if (!hit) return undefined;
-  if (Date.now() - hit.at > CACHE_TTL_MS) {
-    cache.delete(key);
-    return undefined;
+/* 데이터 디렉터리 */
+const DATA_DIR = path.join(process.cwd(), "data", "carfind");
+
+/* 파싱된 JSON 파일 인메모리 캐시 (프로세스 수명 동안 유지 — 정적 데이터라 TTL 불필요) */
+const fileCache = new Map<string, Promise<unknown>>();
+
+/** JSON 파일을 읽어 파싱. 같은 파일은 한 번만 읽는다. 없으면 fallback 반환 */
+function readJson<T>(file: string, fallback: T): Promise<T> {
+  let p = fileCache.get(file) as Promise<T> | undefined;
+  if (!p) {
+    p = fs
+      .readFile(file, "utf8")
+      .then((txt) => JSON.parse(txt) as T)
+      .catch((e: NodeJS.ErrnoException) => {
+        if (e.code === "ENOENT") return fallback;
+        fileCache.delete(file);
+        throw e;
+      });
+    fileCache.set(file, p);
   }
-  return hit.value as T;
-}
-function cacheSet(key: string, value: unknown) {
-  cache.set(key, { at: Date.now(), value });
+  return p;
 }
 
-/* 원본 XML 을 문자열로 가져온다. 인코딩 선언(euc-kr/ks_c_5601)에 맞춰 디코딩 */
-async function fetchXml(path: string): Promise<string> {
-  const res = await fetch(ORIGIN + path, {
-    headers: { "User-Agent": "Mozilla/5.0" },
-    cache: "no-store",
-  });
-  if (!res.ok) throw new Error(`원본 응답 오류 ${res.status}`);
-  const buf = await res.arrayBuffer();
-  // 앞부분(ASCII)만 먼저 읽어 encoding 선언을 확인
-  const head = new TextDecoder("utf-8", { fatal: false }).decode(buf.slice(0, 120));
-  const enc = /encoding=["']([^"']+)["']/i.exec(head)?.[1]?.toLowerCase() ?? "utf-8";
-  const label = enc.includes("5601") || enc.includes("euc-kr") ? "euc-kr" : "utf-8";
-  try {
-    return new TextDecoder(label).decode(buf);
-  } catch {
-    return new TextDecoder("utf-8").decode(buf);
-  }
+/** makers.json 전체 */
+function loadMakers(): Promise<MakersFile> {
+  return readJson<MakersFile>(path.join(DATA_DIR, "makers.json"), {});
 }
 
-/* XML 엔티티 복원 */
-function unescapeXml(s: string): string {
-  return s
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'")
-    .replace(/&amp;/g, "&");
+/** sizes/<maker>.json 전체 */
+function loadSizes(makercode: string): Promise<SizesFile> {
+  return readJson<SizesFile>(path.join(DATA_DIR, "sizes", `${makercode}.json`), {});
 }
 
-/* <tag attr="v" .../> 의 속성 목록을 객체로 */
-function parseAttrs(attrText: string): Record<string, string> {
-  const out: Record<string, string> = {};
-  const re = /([\w:-]+)\s*=\s*(?:"([^"]*)"|'([^']*)')/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(attrText))) out[m[1]] = unescapeXml(m[2] ?? m[3] ?? "");
-  return out;
-}
-
-/* 숫자 파라미터만 통과 (원본 쿼리에 그대로 붙이므로 검증) */
+/* 숫자 파라미터만 통과 (파일명/키로 쓰이므로 검증) */
 export function digitsOnly(v: string | null): string | null {
   if (!v) return null;
   return /^\d{1,8}$/.test(v) ? v : null;
 }
 
-/** 연식 목록: <years><year>2026</year>... → ["2026", ...] (원본 yearCallback) */
+/** 연식 목록: ["2026", ...] (원본 yearCallback 에 해당) */
 export async function getCarYears(makercode: string): Promise<string[]> {
-  const key = `years:${makercode}`;
-  const hit = cacheGet<string[]>(key);
-  if (hit) return hit;
-  const xml = await fetchXml(`/common/ajaxmodule/getcaryear.aspx?makercode=${makercode}`);
-  const years = [...xml.matchAll(/<year>\s*([^<]+?)\s*<\/year>/g)].map((m) => m[1]);
-  cacheSet(key, years);
-  return years;
+  const makers = await loadMakers();
+  return makers[makercode]?.years ?? [];
 }
 
-/** 차종 목록: <cars><car code="133" name="그랜저"/>... (원본 carCallback) */
+/** 차종 목록: [{ code: "133", name: "그랜저" }, ...] (원본 carCallback 에 해당) */
 export async function getCarNames(makercode: string, syear: string): Promise<CarName[]> {
-  const key = `names:${makercode}:${syear}`;
-  const hit = cacheGet<CarName[]>(key);
-  if (hit) return hit;
-  const xml = await fetchXml(`/common/ajaxmodule/getcarname.aspx?makercode=${makercode}&syear=${syear}`);
-  const cars = [...xml.matchAll(/<car\b([^>]*?)\/?>/g)]
-    .map((m) => parseAttrs(m[1]))
-    .filter((a) => a.code && a.name)
-    .map((a) => ({ code: a.code, name: a.name }));
-  cacheSet(key, cars);
-  return cars;
+  const makers = await loadMakers();
+  return makers[makercode]?.cars[syear] ?? [];
 }
 
 /**
- * 타이어사이즈 목록 + 차량 사진 (원본 tsizeCallback)
- * <tirelist><tlist frtype=".." ftsize=".." .../>...<carimg imgtype='0'>/siteimg/...</carimg></tirelist>
- * carimg 는 원본 서버의 상대경로이므로 절대 URL 로 바꿔 돌려준다.
+ * 타이어사이즈 목록 + 차량 사진 (원본 tsizeCallback 에 해당)
+ * carimg 는 public/ 아래 로컬 경로("/siteimg/...") 이므로 그대로 <img src> 에 쓴다.
  */
 export async function getCarSizeList(makercode: string, syear: string, carcode: string): Promise<SizeListResult> {
-  const key = `sizes:${makercode}:${syear}:${carcode}`;
-  const hit = cacheGet<SizeListResult>(key);
-  if (hit) return hit;
-  const xml = await fetchXml(
-    `/common/ajaxmodule/getcartsizelist.aspx?makercode=${makercode}&syear=${syear}&carcode=${carcode}&imgtype=0`,
-  );
-  const sizes: TireSizeRow[] = [...xml.matchAll(/<tlist\b([^>]*?)\/?>/g)].map((m) => {
-    const a = parseAttrs(m[1]);
-    return {
-      frtype: a.frtype ?? "1",
-      oesize: a.oesize ?? "",
-      ftsize: a.ftsize ?? "",
-      rtsize: a.rtsize ?? "",
-      ftsizev: a.ftsizev ?? "",
-      rtsizev: a.rtsizev ?? "",
-    };
-  });
-  const imgMatch = /<carimg\b[^>]*>\s*([^<]+?)\s*<\/carimg>/.exec(xml);
-  let carimg: string | null = null;
-  if (imgMatch) {
-    const raw = unescapeXml(imgMatch[1]);
-    carimg = /^https?:\/\//i.test(raw) ? raw : ORIGIN + (raw.startsWith("/") ? raw : "/" + raw);
-  }
-  const result = { carimg, sizes };
-  cacheSet(key, result);
-  return result;
+  const sizes = await loadSizes(makercode);
+  const hit = sizes[`${syear}-${carcode}`];
+  return hit ? { carimg: hit.carimg ?? null, sizes: hit.sizes ?? [] } : { carimg: null, sizes: [] };
 }

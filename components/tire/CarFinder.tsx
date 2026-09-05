@@ -11,6 +11,7 @@ const SEL_FONT = { fontFamily: "굴림, 'Nanum Gothic', sans-serif", fontSize: "
 /**
  * 차량검색 (원본 form name="frmsize" + ajaxcarfind_mainonly.js)
  * - 자동차회사 선택 → 연식 select 표시 → 차종 select 표시 → 차량사진 + 타이어사이즈 목록
+ * - /api/car/* 는 미리 긁어 둔 정적 JSON(data/carfind) 을 돌려주고, 차량사진도 public/siteimg 의 로컬 파일이다 (외부 요청 없음)
  * - 각 단계의 select 는 데이터가 도착하기 전까지 숨김 (원본 display:none 과 동일)
  * - 상위 단계를 바꾸면 하위 단계는 모두 초기화 (deleteCarYears/deleteCarNames/cftblvisible_off)
  */

@@ -1,14 +1,11 @@
 /**
  * 타이어 상세 팝업(/product/tinfo/view.aspx?tinfoseq=N) HTML 파서 + 타입 정의
  *
- * - scripts/scrape-tinfo.mjs (Node, 정적 JSON 생성) 와
- *   app/product/tinfo/view/page.tsx (JSON에 없을 때 원본 서버에서 실시간 파싱) 가 공유한다.
+ * - scripts/scrape-tinfo.mjs (Node, 정적 JSON 생성) 가 파서를 사용하고,
+ *   app/product/tinfo/view/page.tsx 는 타입만 사용한다 (런타임 네트워크 호출 없음 — fetch 는 스크립트 안에만 있다).
  * - Node 22 의 TypeScript 타입 제거(strip-types)로 직접 import 하므로
  *   enum / namespace / parameter property 등 "지워지지 않는" 문법은 쓰지 않는다.
  */
-
-/** 원본 서버 주소 (실시간 fetch 및 이미지 다운로드 기준) */
-export const ORIGIN = "http://tirekongjang.com";
 
 /** 성능 그래프 한 항목 (원본 subgrapicon.gif 의 width/height 속성 그대로) */
 export type TinfoScore = {
@@ -94,8 +91,7 @@ export function externalToLocal(url: string): string {
 }
 
 /**
- * contentHtml 안의 절대 URL 이미지를 /ext/... 로 치환하고, 내려받아야 할 목록을 돌려준다.
- * (스크립트가 사용. 페이지 실시간 fallback 시에는 치환하지 않고 원본 URL 그대로 표시)
+ * contentHtml 안의 절대 URL 이미지를 /ext/... 로 치환하고, 내려받아야 할 목록을 돌려준다. (스크립트가 사용)
  */
 export function localizeContentImages(t: Tinfo): { tinfo: Tinfo; downloads: { url: string; local: string }[] } {
   const downloads: { url: string; local: string }[] = [];
@@ -105,13 +101,4 @@ export function localizeContentImages(t: Tinfo): { tinfo: Tinfo; downloads: { ur
     return `src="${local}"`;
   });
   return { tinfo: { ...t, contentHtml }, downloads };
-}
-
-/** 원본 서버에서 팝업 HTML 을 가져온다 (UTF-8 응답) */
-export async function fetchTinfoHtml(seq: string | number): Promise<string> {
-  const res = await fetch(`${ORIGIN}/product/tinfo/view.aspx?tinfoseq=${encodeURIComponent(String(seq))}`, {
-    headers: { "User-Agent": "Mozilla/5.0" },
-  });
-  if (!res.ok) throw new Error(`tinfo ${seq}: HTTP ${res.status}`);
-  return res.text();
 }
