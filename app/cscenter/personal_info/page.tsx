@@ -240,9 +240,10 @@ const SECTIONS: { title: string; body: ReactNode }[] = [
  */
 export default function PersonalInfoPage() {
   return (
-    <div style={{ width: 672 }}>
+    /* 모바일: 폭 100%, 테이블은 유동(.m-fluid) — 셀 폭(11/640)은 선호 폭이라 자동 축소 */
+    <div className="w-[672px] max-pc:w-full">
       {/* 타이틀 */}
-      <table style={{ width: 672, height: 74 }}>
+      <table style={{ width: 672, height: 74 }} className="m-fluid">
         <tbody>
           <tr>
             <td style={{ height: 62, width: 672, verticalAlign: "middle" }}>
@@ -258,7 +259,7 @@ export default function PersonalInfoPage() {
       </table>
 
       {/* 본문 테이블 */}
-      <table style={{ width: 672, border: "1px solid rgb(192, 192, 192)", fontFamily: "굴림, 'Nanum Gothic', sans-serif" }}>
+      <table style={{ width: 672, border: "1px solid rgb(192, 192, 192)", fontFamily: "굴림, 'Nanum Gothic', sans-serif" }} className="m-fluid">
         <tbody>
           {/* 머리말 */}
           <tr>

@@ -18,7 +18,8 @@ export default function CsSideMenu() {
   const pathname = usePathname();
 
   return (
-    <table style={{ width: 180 }}>
+    /* 모바일: 각 행(tr)이 flex 가 되어 메뉴 박스가 가로로 나란히 (tbody 도 flex 로 묶음) */
+    <table style={{ width: 180 }} className="m-wrap max-pc:[&>tbody]:flex max-pc:[&>tbody]:flex-wrap max-pc:[&>tbody]:gap-[8px]">
       <tbody>
         {ITEMS.map((item, i) => {
           const active = pathname.startsWith(item.match);

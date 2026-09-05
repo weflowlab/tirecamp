@@ -86,21 +86,21 @@ function TprodIntroInner({ items, models }: Props) {
   for (let i = 0; i < pageItems.length; i += 4) rows.push(pageItems.slice(i, i + 4));
 
   return (
-    <div className="w-[900px] flex flex-col items-center">
-      {/* 타이틀 이미지 행 (896 x 55) */}
-      <table className="w-[896px]">
+    <div className="w-full flex flex-col items-center">
+      {/* 타이틀 이미지 행 (896 x 55) — 모바일은 타이틀만 */}
+      <table className="w-[896px] m-stack">
         <tbody>
           <tr>
-            <td className="h-[55px] w-[317px] text-center">
+            <td className="h-[55px] w-[317px] text-center max-pc:py-[10px]">
               <img src="/images/tbrandintro/introtitle.gif" width={317} height={31} alt="타이어소개" />
             </td>
-            <td className="h-[55px] w-[328px]">　</td>
-            <td className="h-[55px] w-[251px] text-center">　</td>
+            <td className="h-[55px] w-[328px] max-pc:hidden">　</td>
+            <td className="h-[55px] w-[251px] text-center max-pc:hidden">　</td>
           </tr>
         </tbody>
       </table>
       {/* 연한 회색 5px 바 + 12px 여백 */}
-      <table className="w-[896px]">
+      <table className="w-[896px] m-fluid">
         <tbody>
           <tr>
             <td className="h-[5px] w-[896px] bg-[#F2F2F2]"></td>
@@ -117,17 +117,17 @@ function TprodIntroInner({ items, models }: Props) {
       {/* 5px + 5px 여백 */}
       <div className="h-[10px] w-[286px]"></div>
 
-      {/* 상품수/페이지 + 브랜드명 검색 (896 x 39) */}
-      <table className="w-[896px]">
+      {/* 상품수/페이지 + 브랜드명 검색 (896 x 39) — 모바일(.m-wrap): 상품수 왼쪽, 브랜드명 검색 오른쪽 */}
+      <table className="w-[896px] m-wrap">
         <tbody>
-          <tr>
+          <tr className="max-pc:gap-y-[6px] max-pc:py-[6px]">
             <td className="h-[39px] w-[216px] text-center">
               <span className="text-[8pt] text-[#A4A4A4]">
                 상품수 : {filtered.length}개,&nbsp; 페이지 : {page}/{totalPages}
               </span>
             </td>
-            <td className="h-[39px] w-[218px] text-center">　</td>
-            <td className="h-[39px] w-[346px] text-right">
+            <td className="h-[39px] w-[218px] text-center max-pc:hidden">　</td>
+            <td className="h-[39px] w-[346px] text-right max-pc:ml-auto">
               <b>브랜드명&nbsp;&nbsp; </b>
             </td>
             <td className="h-[39px] w-[155px] text-left">
@@ -144,7 +144,7 @@ function TprodIntroInner({ items, models }: Props) {
                     reset({ q: (e.target as HTMLInputElement).value });
                   }
                 }}
-                className="border-2 border-[#D5D5D5] text-[10pt] px-[2px] py-[1px] outline-none"
+                className="border-2 border-[#D5D5D5] text-[10pt] px-[2px] py-[1px] outline-none max-pc:w-[130px]"
                 style={{ fontFamily: "굴림, 'Nanum Gothic', sans-serif" }}
               />
             </td>
@@ -153,8 +153,8 @@ function TprodIntroInner({ items, models }: Props) {
       </table>
       <div className="h-[5px] w-[167px]"></div>
 
-      {/* 카드 그리드 (896폭, 4열, 각 셀 224 x 364) */}
-      <table className="w-[896px]">
+      {/* 카드 그리드 (896폭, 4열, 각 셀 224 x 364) — 모바일(.m-wrap): 2열 */}
+      <table className="w-[896px] m-wrap">
         <tbody>
           {rows.map((row, ri) => (
             <tr key={ri}>

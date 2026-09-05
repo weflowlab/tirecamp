@@ -7,19 +7,20 @@ import CsSideMenu from "@/components/cscenter/CsSideMenu";
  */
 export default function CsCenterLayout({ children }: LayoutProps<"/cscenter">) {
   return (
-    <table style={{ width: 900, minHeight: 479 }}>
+    /* 모바일(.m-stack): [타이틀 + 가로 서브메뉴] 위, 내용 아래. 세로 구분선은 숨김 */
+    <table style={{ width: 900, minHeight: 479 }} className="m-stack">
       <tbody>
         <tr>
           {/* 좌측: 고객센터 타이틀 + 서브메뉴 */}
           <td style={{ width: 201, verticalAlign: "top", textAlign: "left" }}>
-            <table style={{ width: 195, height: 469 }}>
+            <table style={{ width: 195, height: 469 }} className="m-stack">
               <tbody>
                 <tr>
                   <td style={{ width: 193, verticalAlign: "top", textAlign: "left" }}>
-                    <table style={{ width: 193 }}>
+                    <table style={{ width: 193 }} className="m-stack">
                       <tbody>
                         <tr>
-                          <td style={{ height: 93, textAlign: "center" }}>
+                          <td style={{ height: 93, textAlign: "center" }} className="max-pc:text-left">
                             <img src="/images/cscenter/cstitle.gif" width={193} height={93} alt="고객센터" className="inline" />
                           </td>
                         </tr>
@@ -27,8 +28,8 @@ export default function CsCenterLayout({ children }: LayoutProps<"/cscenter">) {
                           <td style={{ height: 15 }} />
                         </tr>
                         <tr>
-                          <td style={{ height: 265, verticalAlign: "top" }}>
-                            <div className="flex justify-end">
+                          <td style={{ height: 265, verticalAlign: "top" }} className="max-pc:pb-[16px]">
+                            <div className="flex justify-end max-pc:justify-start">
                               <CsSideMenu />
                             </div>
                           </td>
@@ -37,8 +38,8 @@ export default function CsCenterLayout({ children }: LayoutProps<"/cscenter">) {
                     </table>
                   </td>
                   {/* 세로 구분선 rline.gif (2x412) */}
-                  <td style={{ width: 2, verticalAlign: "top", textAlign: "left" }}>
-                    <img src="/images/cscenter/rline.gif" width={2} height={412} alt="" />
+                  <td style={{ width: 2, verticalAlign: "top", textAlign: "left" }} className="max-pc:hidden">
+                    <img src="/images/cscenter/rline.gif" width={2} height={412} alt="" className="img-fixed" />
                   </td>
                 </tr>
               </tbody>
@@ -46,7 +47,7 @@ export default function CsCenterLayout({ children }: LayoutProps<"/cscenter">) {
           </td>
           {/* 우측: 페이지별 내용 (원본 align=center valign=top) */}
           <td style={{ width: 699, verticalAlign: "top", textAlign: "center" }}>
-            <div className="inline-block text-left">{children}</div>
+            <div className="inline-block text-left max-pc:block">{children}</div>
           </td>
         </tr>
       </tbody>

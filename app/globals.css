@@ -4,6 +4,15 @@
 @import "tailwindcss";
 
 /*
+ * 반응형 브레이크포인트
+ * - 원본 사이트는 900px 고정폭이므로 920px(57.5rem) 이상을 "PC", 미만을 "모바일" 로 본다.
+ * - 컴포넌트에서는 `max-pc:` 변형으로 모바일 전용 스타일을 덧씌운다 (PC 레이아웃은 그대로 유지).
+ */
+@theme {
+  --breakpoint-pc: 57.5rem;
+}
+
+/*
  * 원본 리셋/기본 스타일은 모두 @layer base 안에 둔다.
  * - 레이어 밖(unlayered)에 두면 Tailwind 유틸리티(mx-auto, pt-*, text-* …)보다 항상 우선해 버려
  *   컴포넌트의 클래스가 먹지 않으므로, preflight 와 같은 base 레이어에 넣어 유틸리티가 이기게 함.
@@ -111,4 +120,78 @@ select.sel10 {
 .dotline {
   height: 10px;
   background: url("/images/findsize/dotline.gif") repeat-x left center;
+}
+
+/* =====================================================================
+ * 모바일 (< 920px) 공통 규칙
+ * ---------------------------------------------------------------------
+ * 원본 마크업이 대부분 고정폭 <table> 이라 모바일에서는 테이블을 블록/유동으로 바꿔야 한다.
+ * 아래 헬퍼 클래스를 테이블에 붙여 사용한다 (직계 tbody > tr > td 에만 적용, 중첩 테이블은 각자 지정).
+ *
+ *   .m-stack : 셀을 세로로 쌓는다 (table/tbody/tr/td → block). 폭/높이 강제 해제.
+ *   .m-fluid : 셀 배치는 유지하고 테이블 폭만 100% 로 (셀 폭 속성은 "선호 폭"이 되어 자동 축소).
+ *   .m-wrap  : tr 을 flex-wrap 으로 바꿔 셀이 줄바꿈되게 한다 (셀 폭은 내용 기준, max-pc:basis-* 로 조절).
+ *
+ * - Tailwind 유틸리티가 이길 수 있도록 components 레이어에 둔다 (max-pc:hidden 등으로 셀 숨김 가능).
+ * - 폭/높이는 인라인 style 을 이겨야 하므로 !important.
+ * ===================================================================== */
+@layer components {
+  @media (max-width: 919.98px) {
+    /* 가로 스크롤 방지 + 이미지 축소 (subgrapicon 같은 막대그래프는 .img-fixed 로 제외) */
+    html,
+    body {
+      overflow-x: hidden;
+    }
+    img:not(.img-fixed) {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .m-stack,
+    .m-stack > tbody,
+    .m-stack > tbody > tr,
+    .m-stack > tbody > tr > td,
+    .m-stack > tbody > tr > th {
+      display: block;
+      width: auto !important;
+      height: auto !important;
+    }
+
+    .m-fluid {
+      width: 100% !important;
+    }
+
+    .m-wrap,
+    .m-wrap > tbody {
+      display: block;
+      width: auto !important;
+      height: auto !important;
+    }
+    .m-wrap > tbody > tr {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .m-wrap > tbody > tr > td,
+    .m-wrap > tbody > tr > th {
+      display: block;
+      flex: 0 0 auto;
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+}
+
+/* 모바일 폼 컨트롤: iOS 자동 확대 방지(16px 이상) + 터치하기 쉬운 높이 */
+@media (max-width: 919.98px) {
+  select,
+  input[type="text"] {
+    font-size: 16px !important;
+  }
+  select.sel10 {
+    height: 30px;
+  }
+  .insbox1 {
+    height: 34px;
+  }
 }

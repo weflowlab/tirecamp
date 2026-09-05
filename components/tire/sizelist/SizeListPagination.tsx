@@ -19,10 +19,10 @@ export default function SizeListPagination({ query, pages }: Props) {
           </tr>
         </tbody>
       </table>
-      <table border={0} width={900} style={{ height: 40 }} cellSpacing={0} cellPadding={0}>
+      <table border={0} width={900} style={{ height: 40 }} cellSpacing={0} cellPadding={0} className="m-fluid">
         <tbody>
           <tr>
-            <td height={40} width={900} align="center">
+            <td height={40} width={900} align="center" className="max-pc:leading-[32px]">
               {pages.map((p) => (
                 <span key={`${p.spage}-${p.lpage}`}>
                   <Link href={buildSizeListHref({ ...query, spage: p.spage, lpage: p.lpage })}>

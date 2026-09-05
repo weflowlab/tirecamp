@@ -16,11 +16,12 @@ export default function TireCard({ item }: { item: TireListItem }) {
   };
 
   return (
-    <td className="h-[364px] w-[224px] text-center align-top">
-      <table className="w-[209px] mx-auto border border-[#DBDBDB]">
+    /* 모바일: 부모 .m-wrap 안에서 2열(basis-1/2), 카드 테이블은 셀 폭에 맞춰 축소 */
+    <td className="h-[364px] w-[224px] text-center align-top max-pc:basis-1/2 max-pc:px-[4px] max-pc:pb-[10px]">
+      <table className="w-[209px] mx-auto border border-[#DBDBDB] max-pc:w-full">
         <tbody>
           <tr>
-            <td className="h-[246px] w-[208px] text-center align-top">
+            <td className="h-[246px] w-[208px] text-center align-top max-pc:h-auto max-pc:pt-[6px]">
               <a href={`/product/tinfo/view?tinfoseq=${item.seq}`} onClick={open}>
                 <img src={item.image} alt="" className="inline-block" />
               </a>
@@ -28,12 +29,12 @@ export default function TireCard({ item }: { item: TireListItem }) {
           </tr>
           <tr>
             <td className="h-[45px] w-[208px] text-center align-middle">
-              <img src={`/images/companylogo/${item.brandCode}.gif`} alt={item.brandName} className="inline-block" />
+              <img src={`/images/companylogo/${item.brandCode}.gif`} alt={item.brandName} className="inline-block img-fixed" />
             </td>
           </tr>
           <tr>
             <td className="h-[52px] w-[208px] text-center bg-[#EEEEEE]">
-              <table className="w-[197px] mx-auto">
+              <table className="w-[197px] mx-auto max-pc:w-full">
                 <tbody>
                   <tr>
                     <td className="h-[21px] w-[197px] text-center">

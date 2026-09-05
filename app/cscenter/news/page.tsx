@@ -26,19 +26,20 @@ export default async function NewsListPage({ searchParams }: Props) {
   const notices = NEWS.filter((n) => n.notice);
 
   return (
-    <div style={{ width: 675 }}>
+    /* 모바일: 고정폭(675/658/640) 을 모두 100% 로 */
+    <div className="w-[675px] max-pc:w-full">
       {/* 타이틀 이미지 */}
-      <div style={{ height: 60 }}>
+      <div className="h-[60px] max-pc:h-auto">
         <img src="/images/cscenter/newstitle.gif" width={500} height={60} alt="소식 & 공지사항" />
       </div>
-      <div style={{ width: 676, height: 2, backgroundColor: "#E4E4E4" }} />
+      <div className="w-[676px] h-[2px] bg-[#E4E4E4] max-pc:w-full" />
       <div style={{ height: 28 }} />
 
       {/* 목록 영역 (658px, 우측 정렬) */}
-      <div style={{ width: 658 }} className="flex flex-col items-end">
+      <div className="w-[658px] flex flex-col items-end max-pc:w-full max-pc:items-stretch">
         {/* 상단 공지 박스 */}
         {notices.map((n) => (
-          <table key={`notice-${n.seq}`} style={{ width: 642, height: 26, border: "3px solid #EEEEEE" }}>
+          <table key={`notice-${n.seq}`} style={{ width: 642, height: 26, border: "3px solid #EEEEEE" }} className="m-fluid">
             <tbody>
               <tr>
                 <td style={{ height: 20, width: 49, textAlign: "center", verticalAlign: "middle" }}>
@@ -57,22 +58,22 @@ export default async function NewsListPage({ searchParams }: Props) {
           </table>
         ))}
 
-        <div style={{ width: 640, height: 30 }} />
+        <div className="w-[640px] h-[30px] max-pc:w-full" />
 
-        {/* 이미지가 있는 일반 목록 */}
+        {/* 이미지가 있는 일반 목록 — 모바일: 썸네일(100px) | 제목/날짜/요약 세로 */}
         {rows.map((n) => (
-          <div key={n.seq} style={{ width: 640 }}>
-            <table style={{ width: 640, height: 82 }}>
+          <div key={n.seq} className="w-[640px] max-pc:w-full">
+            <table style={{ width: 640, height: 82 }} className="m-fluid">
               <tbody>
                 <tr>
-                  <td style={{ width: 103, verticalAlign: "top", textAlign: "left" }}>
+                  <td style={{ width: 103, verticalAlign: "top", textAlign: "left" }} className="max-pc:pr-[10px]">
                     <Link href={newsViewHref(n.seq, page, lpage)}>
-                      {n.thumb && <img src={n.thumb} width={100} height={150} alt="" />}
+                      {n.thumb && <img src={n.thumb} width={100} height={150} alt="" className="img-fixed" />}
                     </Link>
                   </td>
-                  <td style={{ width: 20, verticalAlign: "top" }}>　</td>
+                  <td style={{ width: 20, verticalAlign: "top" }} className="max-pc:hidden">　</td>
                   <td style={{ width: 517, verticalAlign: "top" }}>
-                    <table style={{ width: 515, height: 79 }}>
+                    <table style={{ width: 515, height: 79 }} className="m-stack">
                       <tbody>
                         <tr>
                           <td style={{ height: 23, width: 416, verticalAlign: "middle" }}>
@@ -80,7 +81,10 @@ export default async function NewsListPage({ searchParams }: Props) {
                               {n.title}
                             </Link>
                           </td>
-                          <td style={{ height: 23, width: 99, verticalAlign: "middle", textAlign: "center", color: "#ADADAD", fontSize: "8pt" }}>
+                          <td
+                            style={{ height: 23, width: 99, verticalAlign: "middle", textAlign: "center", color: "#ADADAD", fontSize: "8pt" }}
+                            className="max-pc:!text-left max-pc:py-[2px]"
+                          >
                             {n.date} | {n.views}
                           </td>
                         </tr>
@@ -96,7 +100,7 @@ export default async function NewsListPage({ searchParams }: Props) {
               </tbody>
             </table>
             <div style={{ height: 5 }} />
-            <div style={{ width: 640, height: 8, backgroundImage: "url(/images/findsize/dotline.gif)" }} />
+            <div className="w-[640px] h-[8px] max-pc:w-full" style={{ backgroundImage: "url(/images/findsize/dotline.gif)" }} />
             <div style={{ height: 20 }} />
           </div>
         ))}
@@ -104,7 +108,7 @@ export default async function NewsListPage({ searchParams }: Props) {
 
       {/* 페이지 번호 */}
       <div style={{ height: 14 }} />
-      <div style={{ width: 663, height: 29, textAlign: "center" }}>
+      <div className="w-[663px] h-[29px] text-center max-pc:w-full">
         <BoardPager page={page} totalPages={totalPages} basePath="/cscenter/news" />
       </div>
     </div>

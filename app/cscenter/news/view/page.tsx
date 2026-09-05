@@ -34,22 +34,23 @@ export default async function NewsViewPage({ searchParams }: Props) {
   const cellBorder = { borderBottom: "1px dotted #666666" } as const;
 
   return (
-    <div style={{ width: 675 }}>
+    /* 모바일: 고정폭(675/658/657/638) 을 모두 100% 로, 제목/날짜는 세로 배치 */
+    <div className="w-[675px] max-pc:w-full">
       {/* 타이틀 이미지 */}
-      <div style={{ height: 60 }}>
+      <div className="h-[60px] max-pc:h-auto">
         <img src="/images/cscenter/newstitle.gif" width={500} height={60} alt="소식 & 공지사항" />
       </div>
-      <div style={{ width: 656, height: 2, backgroundColor: "#E4E4E4" }} />
+      <div className="w-[656px] h-[2px] bg-[#E4E4E4] max-pc:w-full" />
       <div style={{ height: 28 }} />
 
       {/* 제목 / 날짜 | 조회수 (원본은 열람 시 조회수 +1 되어 표시) */}
-      <table style={{ width: 657 }}>
+      <table style={{ width: 657 }} className="m-stack">
         <tbody>
           <tr>
-            <td style={{ height: 43, width: 512, textAlign: "left" }}>
+            <td style={{ height: 43, width: 512, textAlign: "left" }} className="max-pc:py-[6px]">
               <b style={{ fontSize: "16px", fontFamily: DOTUM }}>{item.title}</b>
             </td>
-            <td style={{ height: 43, width: 145, textAlign: "center" }}>
+            <td style={{ height: 43, width: 145, textAlign: "center" }} className="max-pc:!text-left max-pc:pb-[8px]">
               <span style={{ color: "#969696", fontSize: "8pt" }}>{item.date}</span> <span style={{ color: "#808080" }}>|</span>{" "}
               <span style={{ color: "#969696", fontSize: "8pt" }}>{item.views + 1}</span>
             </td>
@@ -58,14 +59,14 @@ export default async function NewsViewPage({ searchParams }: Props) {
       </table>
 
       {/* 본문 */}
-      <div style={{ width: 658 }}>
-        <div style={{ width: 657, height: 8, backgroundImage: "url(/images/findsize/dotline.gif)" }} />
+      <div className="w-[658px] max-pc:w-full">
+        <div className="w-[657px] h-[8px] max-pc:w-full" style={{ backgroundImage: "url(/images/findsize/dotline.gif)" }} />
         <div className="flex justify-center">
-          <div style={{ width: 638 }}>
+          <div className="w-[638px] max-pc:w-full">
             <div style={{ height: 10 }} />
             <div
               /* Tailwind preflight 가 img 를 block 으로 만들므로 원본 <center><img> 정렬을 위해 inline 복원 */
-              className="news-content [&_img]:inline [&_center]:text-center"
+              className="news-content [&_img]:inline [&_center]:text-center max-pc:[&_table]:max-w-full max-pc:[&_table]:!w-auto max-pc:overflow-x-auto"
               style={{ fontSize: "9pt" }}
               dangerouslySetInnerHTML={{ __html: sanitizeHtml(item.content) }}
             />
@@ -76,10 +77,10 @@ export default async function NewsViewPage({ searchParams }: Props) {
       <div style={{ height: 20 }} />
 
       {/* 이전글 / 다음글 */}
-      <table style={{ width: 658, height: 23 }}>
+      <table style={{ width: 658, height: 23 }} className="m-fluid">
         <tbody>
           <tr>
-            <td style={{ width: 77, height: 25, textAlign: "left", ...cellBorder }}>
+            <td style={{ width: 77, height: 25, textAlign: "left", ...cellBorder }} className="whitespace-nowrap">
               &nbsp;
               <img src={`${BOARD_IMG}/point_pre.gif`} width={11} height={11} alt="" className="inline" /> 이전글 :
             </td>
@@ -88,7 +89,7 @@ export default async function NewsViewPage({ searchParams }: Props) {
             </td>
           </tr>
           <tr>
-            <td style={{ width: 77, height: 25, textAlign: "left" }}>
+            <td style={{ width: 77, height: 25, textAlign: "left" }} className="whitespace-nowrap">
               &nbsp;
               <img src={`${BOARD_IMG}/point_next.gif`} width={11} height={11} alt="" className="inline" /> 다음글 :
             </td>
@@ -101,7 +102,7 @@ export default async function NewsViewPage({ searchParams }: Props) {
       <div style={{ height: 15 }} />
 
       {/* 이전 / 목록 / 다음 버튼 (없으면 회색 버튼) */}
-      <div style={{ width: 658, height: 42 }} className="flex justify-end items-center gap-[4px]">
+      <div className="w-[658px] h-[42px] flex justify-end items-center gap-[4px] max-pc:w-full">
         {prev ? (
           <Link href={newsViewHref(prev.seq, spage, lpage)}>
             <img src={`${BOARD_IMG}/board_txt_pre_but.gif`} width={58} height={22} alt="이전" />

@@ -38,16 +38,17 @@ export default async function EventListPage({ searchParams }: Props) {
   const rows = EVENTS.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   return (
-    <div className="w-[900px]">
+    /* 모바일: 타이틀 바는 세로 배치(.m-stack), 목록/구분바는 폭 100% */
+    <div className="w-full">
       {/* 타이틀 바 */}
-      <table style={{ width: 900, height: 54, border: "1px solid #EBEBEB" }}>
+      <table style={{ width: 900, height: 54, border: "1px solid #EBEBEB" }} className="m-stack">
         <tbody>
           <tr>
-            <td style={{ height: 52, width: 21 }}>　</td>
-            <td style={{ height: 52, width: 277, verticalAlign: "middle" }}>
+            <td style={{ height: 52, width: 21 }} className="max-pc:hidden">　</td>
+            <td style={{ height: 52, width: 277, verticalAlign: "middle" }} className="max-pc:p-[10px]">
               <img src="/images/main/eventtitle.gif" width={259} height={27} alt="이벤트" />
             </td>
-            <td style={{ height: 52, width: 602, textAlign: "right", verticalAlign: "middle", color: "#B7B7B7" }}>
+            <td style={{ height: 52, width: 602, textAlign: "right", verticalAlign: "middle", color: "#B7B7B7" }} className="max-pc:!text-left max-pc:px-[10px] max-pc:pb-[10px]">
               <b>타이어공장</b>의 특별한 이벤트를 만나보세요.&nbsp;&nbsp;
             </td>
           </tr>
@@ -55,11 +56,11 @@ export default async function EventListPage({ searchParams }: Props) {
       </table>
 
       {/* 구분 바 (aibtbar.gif 배경) */}
-      <div style={{ width: 900, height: 10, backgroundImage: "url(/images/main/aibtbar.gif)" }} />
+      <div className="w-full h-[10px]" style={{ backgroundImage: "url(/images/main/aibtbar.gif)" }} />
       <div style={{ height: 15 }} />
 
       {/* 목록 */}
-      <table style={{ width: 900 }}>
+      <table style={{ width: 900 }} className="m-fluid">
         <tbody>
           {rows.length === 0 ? (
             <tr>
@@ -68,8 +69,8 @@ export default async function EventListPage({ searchParams }: Props) {
           ) : (
             rows.map((ev) => (
               <tr key={ev.seq}>
-                <td style={{ width: 900, height: 82, padding: "0 20px" }}>
-                  <table style={{ width: 860 }}>
+                <td style={{ width: 900, height: 82, padding: "0 20px" }} className="max-pc:!px-[4px]">
+                  <table style={{ width: 860 }} className="m-fluid">
                     <tbody>
                       <tr>
                         {ev.thumb && (
@@ -101,7 +102,7 @@ export default async function EventListPage({ searchParams }: Props) {
       <div style={{ height: 25 }} />
 
       {/* 페이지 번호 (데이터가 없으면 원본처럼 빈 영역) */}
-      <div style={{ width: 900, height: 29, textAlign: "center" }}>
+      <div className="w-full h-[29px] text-center">
         <BoardPager page={page} totalPages={totalPages} basePath="/comevent/oevent" />
       </div>
     </div>

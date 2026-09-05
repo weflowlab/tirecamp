@@ -87,13 +87,14 @@ export default function BookingCheckForm() {
 
   return (
     <form ref={formRef} name="frm" method="post" onSubmit={onSubmit}>
-      <table style={{ width: 632, height: 333, border: "2px solid #E3E3E3" }}>
+      {/* 모바일: 바깥/안쪽 테이블 모두 유동, 안내문/입력 박스는 폭 100% */}
+      <table style={{ width: 632, height: 333, border: "2px solid #E3E3E3" }} className="m-fluid">
         <tbody>
           <tr>
-            <td style={{ height: 329, width: 626, textAlign: "center" }}>
-              <div className="inline-block">
+            <td style={{ height: 329, width: 626, textAlign: "center" }} className="max-pc:px-[8px]">
+              <div className="inline-block max-pc:block">
                 {/* 안내 문구 */}
-                <table style={{ width: 453, height: 32 }}>
+                <table style={{ width: 453, height: 32 }} className="m-fluid">
                   <tbody>
                     <tr>
                       <td style={{ height: 32, width: 453, verticalAlign: "top", textAlign: "left" }}>▼ 예약시 입력한 핸드폰과 성함을 입력하세요</td>
@@ -102,7 +103,7 @@ export default function BookingCheckForm() {
                 </table>
 
                 {/* 입력 박스 (3px #EFEFEF 테두리) */}
-                <table style={{ width: 451, height: 134, border: "3px solid #EFEFEF" }}>
+                <table style={{ width: 451, height: 134, border: "3px solid #EFEFEF" }} className="m-fluid">
                   <tbody>
                     <tr>
                       <td style={{ height: 48, width: 140, textAlign: "center" }}>
@@ -126,8 +127,8 @@ export default function BookingCheckForm() {
                           <option value="019">019</option>
                         </select>{" "}
                         -{" "}
-                        <input ref={hp1Ref} type="text" name="hp1" size={4} maxLength={4} onKeyUp={hp1_onkeyup} style={INPUT_STYLE} /> -{" "}
-                        <input ref={hp2Ref} type="text" name="hp2" size={4} maxLength={4} onKeyUp={hp2_onkeyup} style={INPUT_STYLE} />
+                        <input ref={hp1Ref} type="text" name="hp1" size={4} maxLength={4} onKeyUp={hp1_onkeyup} style={INPUT_STYLE} className="max-pc:w-[56px]" /> -{" "}
+                        <input ref={hp2Ref} type="text" name="hp2" size={4} maxLength={4} onKeyUp={hp2_onkeyup} style={INPUT_STYLE} className="max-pc:w-[56px]" />
                       </td>
                     </tr>
                     <tr>
@@ -142,6 +143,7 @@ export default function BookingCheckForm() {
                           size={16}
                           maxLength={4}
                           style={{ fontFamily: "돋움, 'Nanum Gothic', sans-serif", fontSize: "11pt", border: "1px solid #DFDFDF", fontWeight: "bold" }}
+                          className="max-pc:w-[160px]"
                         />
                       </td>
                     </tr>
@@ -162,7 +164,7 @@ export default function BookingCheckForm() {
                     </tr>
                   </tbody>
                 </table>
-                <div style={{ width: 453, height: 30 }} />
+                <div className="w-[453px] h-[30px] max-pc:w-full" />
               </div>
             </td>
           </tr>

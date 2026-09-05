@@ -60,9 +60,10 @@ export default function TireCard({ tire }: Props) {
   const sizeRow = (b: SizeBlock, isRear: boolean, qty: number, setQty: (n: number) => void) => {
     const h = isRear ? 79 : 78;
     return (
-      <table border={0} width={470} style={{ height: h }} cellSpacing={0} cellPadding={0}>
+      /* 모바일(.m-wrap): [사이즈 속도등급 가격] 한 줄, [할인율/수량] 은 다음 줄 전체 폭 */
+      <table border={0} width={470} style={{ height: h }} cellSpacing={0} cellPadding={0} className="m-wrap">
         <tbody>
-          <tr>
+          <tr className="max-pc:gap-x-[8px] max-pc:py-[4px]">
             <td height={h} width={isRear ? 128 : 126} valign="middle" align="left">
               <b>
                 <span style={{ fontFamily: "Tahoma", color: "#000", fontSize: "12pt" }}>{b.size}</span>
@@ -75,7 +76,7 @@ export default function TireCard({ tire }: Props) {
                 </a>
               </span>
             </td>
-            <td height={h} width={isRear ? 191 : 190} valign="middle" align="center">
+            <td height={h} width={isRear ? 191 : 190} valign="middle" align="center" className="max-pc:ml-auto">
               <table border={0} width={isRear ? 166 : 164} style={{ height: 10 }} cellSpacing={0} cellPadding={0}>
                 <tbody>
                   <tr>
@@ -100,7 +101,7 @@ export default function TireCard({ tire }: Props) {
                 </tbody>
               </table>
             </td>
-            <td height={h} width={isRear ? 107 : 108} align="center">
+            <td height={h} width={isRear ? 107 : 108} align="center" className="max-pc:basis-full max-pc:pt-[4px]">
               {!isRear && (
                 <>
                   <span style={{ color: "#FF0000", fontFamily: DOTUM, fontSize: 11 }}>{b.discountText}</span>
@@ -129,7 +130,7 @@ export default function TireCard({ tire }: Props) {
 
   /* 앞뒤 사이즈가 다를 때 "Front Size (앞쪽타이어)" / "Rear Size (뒤쪽타이어)" 회색 헤더 */
   const frHeader = (en: string, ko: string, w: number) => (
-    <table border={0} width={w} style={{ height: 3 }} cellSpacing={0} cellPadding={0}>
+    <table border={0} width={w} style={{ height: 3 }} cellSpacing={0} cellPadding={0} className="m-fluid">
       <tbody>
         <tr>
           <td height={15} width={w} style={{ backgroundColor: "#EAEAEA" }}>
@@ -144,7 +145,7 @@ export default function TireCard({ tire }: Props) {
   );
 
   const spacer = (w: number, h: number) => (
-    <table border={0} width={w} style={{ height: h }} cellSpacing={0} cellPadding={0}>
+    <table border={0} width={w} style={{ height: h }} cellSpacing={0} cellPadding={0} className="m-fluid">
       <tbody>
         <tr>
           <td height={h} width={w}></td>
@@ -155,7 +156,8 @@ export default function TireCard({ tire }: Props) {
 
   return (
     <>
-      <table border={0} width={900} style={{ height: 10 }} cellSpacing={0} cellPadding={0}>
+      {/* 모바일(.m-stack): [이미지] → [브랜드/설명/사이즈·가격·수량] → [총수량/총금액/예약] 세로 배치 */}
+      <table border={0} width={900} style={{ height: 10 }} cellSpacing={0} cellPadding={0} className="m-stack">
         <tbody>
           <tr>
             <td height={10} width={900} align="center">
@@ -166,12 +168,13 @@ export default function TireCard({ tire }: Props) {
                 cellSpacing={0}
                 cellPadding={0}
                 style={best ? { height: 10, border: "1px solid #c44b1c" } : { height: 10 }}
+                className="m-stack"
               >
                 <tbody>
                   <tr>
                     {/* 좌: 제품 이미지 + 베스트 뱃지 */}
                     <td height="100%" width={best ? 209 : 210} align="left" valign="top">
-                      <table border={0} width={194} style={{ height: 10 }} cellSpacing={0} cellPadding={0}>
+                      <table border={0} width={194} style={{ height: 10 }} cellSpacing={0} cellPadding={0} className="m-fluid">
                         <tbody>
                           <tr>
                             <td height={best ? 154 : 155} width={best ? 193 : 194} align="center" valign="top">
@@ -196,8 +199,8 @@ export default function TireCard({ tire }: Props) {
                     </td>
 
                     {/* 중: 브랜드/모델명, 설명, 점선, 사이즈·가격·수량 */}
-                    <td height="100%" width={488} valign="top" align="center">
-                      <table border={0} width={468} style={{ height: 5 }} cellSpacing={0} cellPadding={0}>
+                    <td height="100%" width={488} valign="top" align="center" className="max-pc:px-[8px]">
+                      <table border={0} width={468} style={{ height: 5 }} cellSpacing={0} cellPadding={0} className="m-fluid">
                         <tbody>
                           <tr>
                             <td height={best ? 40 : 30} width={468} valign="top" align="left">
@@ -210,7 +213,7 @@ export default function TireCard({ tire }: Props) {
                           </tr>
                         </tbody>
                       </table>
-                      <table border={0} width={468} style={{ height: 10 }} cellSpacing={0} cellPadding={0}>
+                      <table border={0} width={468} style={{ height: 10 }} cellSpacing={0} cellPadding={0} className="m-fluid">
                         <tbody>
                           <tr>
                             <td height={25} width={468} valign="top" align="left">
@@ -227,7 +230,7 @@ export default function TireCard({ tire }: Props) {
                         </tbody>
                       </table>
                       {/* 점선 (dotline.gif) */}
-                      <table border={0} width={467} style={{ height: 3 }} cellSpacing={0} cellPadding={0} className="dotline">
+                      <table border={0} width={467} style={{ height: 3 }} cellSpacing={0} cellPadding={0} className="dotline m-fluid">
                         <tbody>
                           <tr>
                             <td height={10} width={467}></td>
@@ -235,7 +238,7 @@ export default function TireCard({ tire }: Props) {
                         </tbody>
                       </table>
                       {/* 주장점 행 (있을 때만, 원본 td h30 8pt 돋움 회색 + 굵은 글씨) + 7px 여백 */}
-                      <table border={0} width={468} style={{ height: 10 }} cellSpacing={0} cellPadding={0}>
+                      <table border={0} width={468} style={{ height: 10 }} cellSpacing={0} cellPadding={0} className="m-fluid">
                         <tbody>
                           {tire.strength && (
                             <tr>
@@ -267,7 +270,7 @@ export default function TireCard({ tire }: Props) {
                     {/* 우: 총수량/총금액/예약 버튼 (회색 배경) */}
                     <td height="100%" width={best ? 204 : 202} valign="top" align="center" style={{ backgroundColor: "#F7F7F7" }}>
                       {spacer(50, 10)}
-                      <table border={0} width={183} style={{ height: 196 }} cellSpacing={0} cellPadding={0}>
+                      <table border={0} width={183} style={{ height: 196 }} cellSpacing={0} cellPadding={0} className="m-fluid">
                         <tbody>
                           <tr>
                             <td height={28} width={183} valign="bottom" align="left">
@@ -342,6 +345,7 @@ export default function TireCard({ tire }: Props) {
         cellSpacing={0}
         cellPadding={0}
         style={{ height: best ? 10 : 3, background: "url(/images/main/aibtbar.gif)" }}
+        className="m-fluid"
       >
         <tbody>
           <tr>

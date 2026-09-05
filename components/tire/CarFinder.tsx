@@ -95,8 +95,12 @@ export default function CarFinder() {
   /* 차량사진/사이즈 영역 표시 여부 (원본 idtrcarpic / idpcartbl) */
   const showCarTable = car !== "NO";
 
+  /* 모바일: select 를 한 줄씩 블록으로 (폭은 셀 폭에 맞춤) */
+  const SEL_MOBILE = "max-pc:block max-pc:w-full max-pc:mb-[6px]";
+
   return (
-    <table width={870} cellSpacing={0} cellPadding={0} style={{ border: 0 }}>
+    /* 모바일(.m-stack): 타이틀 → select 들 → 차량사진 → 사이즈 목록 순으로 세로 배치 */
+    <table width={870} cellSpacing={0} cellPadding={0} style={{ border: 0 }} className="m-stack">
       <tbody>
         {/* 1행: 차량검색 타이틀 + 회사/연식/차종 select */}
         <tr>
@@ -104,15 +108,15 @@ export default function CarFinder() {
             <img src="/images/main/new/title/carfindtitle.gif" alt="차량검색" width={197} height={45} />
           </td>
           <td height={50} width={658} align="left">
-            <table width={648} style={{ height: 36 }} cellSpacing={0} cellPadding={0}>
+            <table width={648} style={{ height: 36 }} cellSpacing={0} cellPadding={0} className="m-stack">
               <tbody>
                 <tr>
-                  <td height={34} width={455} valign="middle" className="whitespace-nowrap">
+                  <td height={34} width={455} valign="middle" className="whitespace-nowrap max-pc:whitespace-normal max-pc:pb-[4px]">
                     {/* 자동차회사 select (원본 selmaker, 150px) */}
                     <select
                       name="selmaker"
-                      className="sel10"
-                      style={{ width: 150, ...SEL_FONT }}
+                      className={`sel10 w-[150px] ${SEL_MOBILE}`}
+                      style={SEL_FONT}
                       value={maker}
                       onChange={(e) => onMakerChange(e.target.value)}
                     >
@@ -126,8 +130,8 @@ export default function CarFinder() {
                     {/* 연식 select (원본 selsyear, 80px) — 데이터 도착 후 표시 */}
                     <select
                       name="selsyear"
-                      className="sel10"
-                      style={{ width: 80, ...SEL_FONT, display: years.length ? "" : "none" }}
+                      className={`sel10 w-[80px] ${SEL_MOBILE}`}
+                      style={{ ...SEL_FONT, display: years.length ? "" : "none" }}
                       value={year}
                       onChange={(e) => onYearChange(e.target.value)}
                     >
@@ -137,13 +141,12 @@ export default function CarFinder() {
                           {y}
                         </option>
                       ))}
-                    </select>
-                    &nbsp;&nbsp;
-                    {/* 차종 select (원본 selcar, 200px) — 데이터 도착 후 표시 */}
+                    </select>{" "}
+                    {/* 차종 select (원본 selcar, 200px, 앞 &nbsp;&nbsp; 간격은 ml 로) — 데이터 도착 후 표시 */}
                     <select
                       name="selcar"
-                      className="sel10"
-                      style={{ width: 200, ...SEL_FONT, display: cars.length ? "" : "none" }}
+                      className={`sel10 w-[200px] ml-[7px] max-pc:ml-0 ${SEL_MOBILE}`}
+                      style={{ ...SEL_FONT, display: cars.length ? "" : "none" }}
                       value={car}
                       onChange={(e) => onCarChange(e.target.value)}
                     >
@@ -167,20 +170,20 @@ export default function CarFinder() {
           <tr>
             <td height={10} width={212} align="center" />
             <td height={10} width={658} align="left">
-              <table width={621} style={{ height: 137 }} cellSpacing={0} cellPadding={0}>
+              <table width={621} style={{ height: 137 }} cellSpacing={0} cellPadding={0} className="m-stack">
                 <tbody>
                   <tr>
                     {/* 차량사진 (원본 pcarphoto, 221x165) */}
-                    <td height={124} width={227} align="center" valign="top">
+                    <td height={124} width={227} align="center" valign="top" className="max-pc:pb-[8px]">
                       {carimg && <img src={carimg} alt="" width={221} height={165} />}
                     </td>
                     <td height={124} width={12} align="center" valign="top">
 
                     </td>
                     {/* 타이어사이즈 목록 (원본 idsizelisttd, tsizeCallback 이 생성하는 table) */}
-                    <td height={124} width={385} align="left" valign="top">
+                    <td height={124} width={385} align="left" valign="top" className="max-pc:pb-[8px]">
                       {sizes.length > 0 && (
-                        <table width={306} style={{ height: 35 }} cellSpacing={0} cellPadding={0}>
+                        <table width={306} style={{ height: 35 }} cellSpacing={0} cellPadding={0} className="m-fluid">
                           <tbody>
                             {sizes.map((s, i) => (
                               <SizeRow key={`${s.ftsize}-${s.rtsize}-${s.oesize}-${i}`} row={s} />

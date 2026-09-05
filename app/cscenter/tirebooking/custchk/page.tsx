@@ -11,15 +11,15 @@ export const metadata: Metadata = {
  */
 export default function BookingCheckPage() {
   return (
-    <div style={{ width: 632 }}>
+    <div className="w-[632px] max-pc:w-full">
       {/* 타이틀 */}
-      <table style={{ width: 629, height: 70 }}>
+      <table style={{ width: 629, height: 70 }} className="m-fluid">
         <tbody>
           <tr>
             <td style={{ height: 70, width: 410, textAlign: "left" }}>
               <img src="/images/cscenter/tirebookingtitle.gif" width={244} height={53} alt="타이어 예약확인" />
             </td>
-            <td style={{ height: 70, width: 219, textAlign: "right", verticalAlign: "bottom" }}>　</td>
+            <td style={{ height: 70, width: 219, textAlign: "right", verticalAlign: "bottom" }} className="max-pc:hidden">　</td>
           </tr>
         </tbody>
       </table>

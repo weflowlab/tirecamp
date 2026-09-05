@@ -59,7 +59,8 @@ export default function SizeFinder() {
 
   return (
     <>
-      <table width={871} style={{ height: 63 }} cellSpacing={0} cellPadding={0}>
+      {/* 모바일(.m-stack): 타이틀 → select/체크박스 → 검색버튼 → 사이즈 확인방법 버튼 순으로 세로 배치 */}
+      <table width={871} style={{ height: 63 }} cellSpacing={0} cellPadding={0} className="m-stack">
         <tbody>
           <tr>
             {/* 사이즈검색 타이틀 */}
@@ -68,11 +69,11 @@ export default function SizeFinder() {
             </td>
             {/* select 3개 x (1~2줄) + 체크박스 + 검색버튼 */}
             <td height={63} width={457} align="left">
-              <table width={407} style={{ height: 52 }} cellSpacing={0} cellPadding={0}>
+              <table width={407} style={{ height: 52 }} cellSpacing={0} cellPadding={0} className="m-stack">
                 <tbody>
                   <tr>
                     <td height={52} width={249} valign="top">
-                      <table width={237} style={{ height: 10 }} cellSpacing={0} cellPadding={0}>
+                      <table width={237} style={{ height: 10 }} cellSpacing={0} cellPadding={0} className="m-fluid">
                         <tbody>
                           {/* 1줄: 앞(또는 전체) 사이즈 */}
                           <tr>
@@ -108,7 +109,7 @@ export default function SizeFinder() {
                       </table>
                     </td>
                     {/* 검색 버튼 이미지 (134x44) */}
-                    <td height={52} width={158} valign="top" align="center">
+                    <td height={52} width={158} valign="top" align="center" className="max-pc:pt-[4px] max-pc:pb-[6px]">
                       <a
                         href="#"
                         onClick={(e) => {
@@ -124,7 +125,7 @@ export default function SizeFinder() {
               </table>
             </td>
             {/* 타이어사이즈 확인방법 버튼 (원본 idtiresizepds → jQuery UI dialog) */}
-            <td height={63} width={203} align="left" valign="top">
+            <td height={63} width={203} align="left" valign="top" className="max-pc:text-center max-pc:pb-[6px]">
               <div className="h-[3px]" />
               &nbsp;
               <a

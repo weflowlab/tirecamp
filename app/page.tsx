@@ -14,12 +14,13 @@ const BANNERS: { src: string; height: number; padY?: number }[] = [
 /**
  * 메인 페이지 (/) — 원본 default.aspx 본문
  * 타이틀 이미지 → 검색 박스(차량/사이즈검색) → aibtbar 바 → 배너 6장
+ * (본문 폭은 SiteChrome 의 <main> 이 900px / 모바일 100% 로 잡아 주므로 여기서는 w-full)
  */
 export default function HomePage() {
   return (
-    <div className="w-[900px]">
+    <div className="w-full">
       {/* 상단 타이틀 이미지 (900x190) */}
-      <div className="w-[900px] flex items-end">
+      <div className="w-full flex items-end">
         <img src="/jwtsm_comimg/tirekong2000/20260520053048712166.png" alt="" width={900} height={190} />
       </div>
 
@@ -27,13 +28,13 @@ export default function HomePage() {
       <FindTireBox variant="home" />
 
       {/* 박스 아래 바 이미지 (원본 aibtbar.gif 배경 10px) */}
-      <div className="w-[900px] h-[10px]" style={{ backgroundImage: "url(/images/main/aibtbar.gif)" }} />
+      <div className="w-full h-[10px]" style={{ backgroundImage: "url(/images/main/aibtbar.gif)" }} />
       {/* 10px 여백 */}
       <div className="h-[10px]" />
 
       {/* 메인 배너 이미지 6장 */}
       {BANNERS.map((b) => (
-        <div key={b.src} className="w-[900px]" style={b.padY ? { paddingTop: b.padY, paddingBottom: b.padY } : undefined}>
+        <div key={b.src} className="w-full" style={b.padY ? { paddingTop: b.padY, paddingBottom: b.padY } : undefined}>
           <img src={b.src} alt="" width={900} height={b.height} className="block" />
         </div>
       ))}

@@ -17,10 +17,10 @@ export default function Paginator({
 }) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
   return (
-    <table className="w-[900px]">
+    <table className="w-[900px] max-pc:w-full">
       <tbody>
         <tr>
-          <td className="h-[41px] w-[900px] text-center">
+          <td className="h-[41px] w-[900px] text-center max-pc:leading-[32px]">
             {pages.map((p) => (
               <span key={p}>
                 <a

@@ -14,7 +14,7 @@ export async function generateMetadata({ searchParams }: PageProps<"/product/tir
 /* 빈 줄 여백 테이블 (원본의 spacer table 패턴) */
 function Spacer({ w, h }: { w: number; h: number }) {
   return (
-    <table border={0} width={w} style={{ height: h }} cellSpacing={0} cellPadding={0}>
+    <table border={0} width={w} style={{ height: h }} cellSpacing={0} cellPadding={0} className="m-fluid">
       <tbody>
         <tr>
           <td height={h} width={w}></td>
@@ -35,22 +35,24 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
 
   return (
     <>
-      <table border={0} width={900} style={{ height: 10 }} cellSpacing={0} cellPadding={0}>
+      {/* 모바일(.m-stack): 타이틀 → 필터 → 탭/목록 세로 배치 */}
+      <table border={0} width={900} style={{ height: 10 }} cellSpacing={0} cellPadding={0} className="m-stack">
         <tbody>
-          {/* 타이틀 행: tirelisttitle.gif + orderproc.gif 배경 */}
+          {/* 타이틀 행: tirelisttitle.gif + orderproc.gif 배경 (주문절차 배경 이미지는 694px 고정이라 모바일에서 숨김) */}
           <tr>
             <td height={53} width={900} align="right" valign="top">
-              <table border={0} width={900} style={{ height: 64 }} cellSpacing={0} cellPadding={0}>
+              <table border={0} width={900} style={{ height: 64 }} cellSpacing={0} cellPadding={0} className="m-stack">
                 <tbody>
                   <tr>
-                    <td height={64} width={194} align="left">
+                    <td height={64} width={194} align="left" className="max-pc:pb-[6px]">
                       <img src="/images/findsize/carfind/tirelisttitle.gif" alt="타이어 리스트" width={183} height={52} style={{ border: 0 }} />
                     </td>
-                    <td height={64} width={12} align="center" valign="middle">　</td>
+                    <td height={64} width={12} align="center" valign="middle" className="max-pc:hidden">　</td>
                     <td
                       height={64}
                       width={694}
                       align="left"
+                      className="max-pc:hidden"
                       style={{ background: "url(/images/findsize/carfind/orderproc.gif)" }}
                     >
                       　

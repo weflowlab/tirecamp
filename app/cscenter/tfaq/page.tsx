@@ -10,7 +10,7 @@ export const metadata: Metadata = {
  */
 export default function FaqPage() {
   return (
-    <div style={{ width: 672 }}>
+    <div className="w-[672px] max-pc:w-full">
       {/* 타이틀 (개인정보취급방침 페이지의 텍스트 타이틀 스타일 준용) */}
       <div style={{ height: 62, display: "flex", alignItems: "center" }}>
         <span style={{ fontFamily: "돋움, 'Nanum Gothic', sans-serif", fontSize: "25pt", fontWeight: 700, letterSpacing: "-4px" }}>
@@ -18,8 +18,8 @@ export default function FaqPage() {
         </span>
       </div>
       <div style={{ height: 12 }} />
-      <div style={{ width: 672, height: 2, backgroundColor: "#E4E4E4" }} />
-      <div style={{ width: 672, height: 200, display: "flex", alignItems: "center", justifyContent: "center" }}>준비중입니다.</div>
+      <div className="w-[672px] h-[2px] bg-[#E4E4E4] max-pc:w-full" />
+      <div className="w-[672px] h-[200px] flex items-center justify-center max-pc:w-full">준비중입니다.</div>
     </div>
   );
 }

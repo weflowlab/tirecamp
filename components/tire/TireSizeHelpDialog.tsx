@@ -30,7 +30,7 @@ export default function TireSizeHelpDialog({ open, onClose }: { open: boolean; o
         role="dialog"
         aria-modal="true"
         aria-label="타이어사이즈 확인방법"
-        className="fixed left-1/2 top-1/2 z-[1001] w-[620px] -translate-x-1/2 -translate-y-1/2 bg-white border border-[#aaaaaa] rounded-[4px] p-[2px] shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
+        className="fixed left-1/2 top-1/2 z-[1001] w-[620px] -translate-x-1/2 -translate-y-1/2 bg-white border border-[#aaaaaa] rounded-[4px] p-[2px] shadow-[0_2px_12px_rgba(0,0,0,0.3)] max-pc:w-[calc(100%-20px)]"
       >
         {/* 타이틀바 (jQuery UI .ui-dialog-titlebar) */}
         <div className="relative h-[34px] leading-[34px] px-[10px] bg-[#e9e9e9] border border-[#dddddd] rounded-[3px] font-bold text-[11pt] text-[#333333]">
@@ -45,22 +45,17 @@ export default function TireSizeHelpDialog({ open, onClose }: { open: boolean; o
           </button>
         </div>
 
-        {/* 본문: 원본 600x430 테이블 + 배경 이미지 */}
+        {/* 본문: 원본 600x430 테이블 + 배경 이미지(600x434 gif).
+            모바일에서는 폭에 맞춰 같은 비율(600:430)로 축소되도록 aspect-ratio 박스 + background-size 100% */}
         <div className="flex justify-center py-[8px]">
-          <table
-            width={600}
-            cellSpacing={0}
-            cellPadding={0}
-            style={{ height: 430, backgroundImage: "url(/images/popup/tiresizetxt.gif)", backgroundRepeat: "no-repeat" }}
-          >
-            <tbody>
-              <tr>
-                <td height={430} width={500}>
-
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div
+            className="w-[600px] h-[430px] max-pc:w-full max-pc:h-auto max-pc:aspect-[600/430]"
+            style={{
+              backgroundImage: "url(/images/popup/tiresizetxt.gif)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100% auto",
+            }}
+          />
         </div>
 
         {/* 버튼 영역 (jQuery UI .ui-dialog-buttonpane): 닫기 */}

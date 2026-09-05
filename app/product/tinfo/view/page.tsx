@@ -23,7 +23,7 @@ export default async function TinfoViewPage({ searchParams }: { searchParams: Pr
 
   if (!tinfo || !tinfo.model) {
     return (
-      <div className="self-start w-[766px] p-[21px] text-[9pt]">
+      <div className="self-start w-[766px] p-[21px] text-[9pt] max-pc:w-full">
         해당 제품 정보를 찾을 수 없습니다.
       </div>
     );

@@ -48,11 +48,17 @@ function LinkRow({
   const cells = [{ code: "", name: "전체" }, ...options];
   while (cells.length < 6) cells.push({ code: "__empty" + cells.length, name: "" });
   return (
-    <table className="w-[734px]">
+    /* 모바일(.m-wrap): 한 줄에 3개씩, 빈 칸은 숨김 */
+    <table className="w-[734px] m-wrap">
       <tbody>
         <tr>
           {cells.map((c, i) => (
-            <td key={c.code} className={`h-[30px] text-center ${i === 0 ? "w-[79px]" : "w-[131px]"}`}>
+            <td
+              key={c.code}
+              className={`h-[30px] text-center ${i === 0 ? "w-[79px]" : "w-[131px]"} ${
+                c.code.startsWith("__empty") ? "max-pc:hidden" : "max-pc:basis-1/3 max-pc:py-[4px]"
+              }`}
+            >
               {c.code.startsWith("__empty") ? (
                 "　"
               ) : (
@@ -90,8 +96,8 @@ export default function FilterBox({ filter, onBrand, onType, onLevel }: Props) {
   const brandCellWidths = ["w-[130px]", "w-[129px]", "w-[131px]", "w-[131px]", "w-[131px]"];
 
   const brandCell = (b: { code: string; name: string }, i: number) => (
-    <td key={b.code} className={`h-[25px] text-center ${brandCellWidths[i]}`}>
-      <table className="w-[86px]">
+    <td key={b.code} className={`h-[25px] text-center ${brandCellWidths[i]} max-pc:basis-1/3 max-pc:py-[3px]`}>
+      <table className="w-[86px] max-pc:w-full">
         <tbody>
           <tr>
             <td className="h-[17px] w-[86px] text-left whitespace-nowrap">
@@ -105,18 +111,19 @@ export default function FilterBox({ filter, onBrand, onType, onLevel }: Props) {
   );
 
   return (
-    <table className="w-[900px]">
+    /* 모바일: 양옆 꺾쇠(높이 183px 고정)는 숨기고 내용 셀에 5px 갈색 좌우 선으로 대체, 라벨/내용은 세로 배치 */
+    <table className="w-[900px] m-fluid">
       <tbody>
         <tr>
-          <td className="h-[180px] w-[19px] align-middle">
+          <td className="h-[180px] w-[19px] align-middle max-pc:hidden">
             <Bracket side="left" />
           </td>
-          <td className="h-[180px] w-[865px] text-center align-middle">
-            <table className="w-[848px] mx-auto">
+          <td className="h-[180px] w-[865px] text-center align-middle max-pc:border-x-[5px] max-pc:border-[#c44b1c] max-pc:px-[6px] max-pc:py-[4px]">
+            <table className="w-[848px] mx-auto m-stack">
               <tbody>
                 {/* 제조사별 */}
                 <tr>
-                  <td className="h-[66px] w-[100px] text-center align-middle">
+                  <td className="h-[66px] w-[100px] text-center align-middle max-pc:pt-[6px]">
                     <table className="w-[85px] mx-auto">
                       <tbody>
                         <tr>
@@ -125,58 +132,63 @@ export default function FilterBox({ filter, onBrand, onType, onLevel }: Props) {
                           </td>
                         </tr>
                         <tr>
-                          <td className="h-[25px] w-[85px] text-center">　</td>
+                          <td className="h-[25px] w-[85px] text-center max-pc:hidden">　</td>
                         </tr>
                       </tbody>
                     </table>
                   </td>
-                  <td className="h-[66px] w-[748px] text-center align-middle">
-                    <table className="w-[734px] mx-auto">
+                  <td className="h-[66px] w-[748px] text-center align-middle max-pc:pb-[6px]">
+                    {/* 모바일(.m-wrap): 체크박스 한 줄에 3개씩 */}
+                    <table className="w-[734px] mx-auto m-wrap">
                       <tbody>
                         <tr>
-                          <td className="h-[25px] w-[79px] text-center whitespace-nowrap">
+                          <td className="h-[25px] w-[79px] text-center whitespace-nowrap max-pc:basis-1/3 max-pc:py-[3px]">
                             <input type="checkbox" name="brandop" value="all" checked={allChecked} onChange={() => onBrand("all")} className="align-middle" />
                             <span style={{ fontFamily: DOTUM }}>전체</span>
                           </td>
                           {row1.map(brandCell)}
                         </tr>
                         <tr>
-                          <td className="h-[25px] w-[79px] text-center">　</td>
+                          <td className="h-[25px] w-[79px] text-center max-pc:hidden">　</td>
                           {row2.map(brandCell)}
                         </tr>
                       </tbody>
                     </table>
                   </td>
                 </tr>
-                {/* 구분선 (botline.gif) */}
+                {/* 구분선 (botline.gif) — 모바일에서는 셀 높이가 0 이 되므로 안쪽 3px div 로 높이 확보 */}
                 <tr>
-                  <td colSpan={2} className="h-[3px] w-[848px]" style={{ background: "url(/images/findsize/botline.gif)" }}></td>
+                  <td colSpan={2} className="h-[3px] w-[848px]" style={{ background: "url(/images/findsize/botline.gif)" }}>
+                    <div className="h-[3px]" />
+                  </td>
                 </tr>
                 {/* 타입별 */}
                 <tr>
-                  <td className="h-[43px] w-[100px] text-center align-middle">
+                  <td className="h-[43px] w-[100px] text-center align-middle max-pc:pt-[8px]">
                     <b style={{ fontFamily: DOTUM, color: "#939393" }}>타입별</b>
                   </td>
-                  <td className="h-[43px] w-[748px] text-center align-middle">
+                  <td className="h-[43px] w-[748px] text-center align-middle max-pc:pb-[6px]">
                     <LinkRow options={TYPES} current={filter.type} onSelect={onType} />
                   </td>
                 </tr>
                 <tr>
-                  <td colSpan={2} className="h-[3px] w-[848px]" style={{ background: "url(/images/findsize/botline.gif)" }}></td>
+                  <td colSpan={2} className="h-[3px] w-[848px]" style={{ background: "url(/images/findsize/botline.gif)" }}>
+                    <div className="h-[3px]" />
+                  </td>
                 </tr>
                 {/* 등급별 */}
                 <tr>
-                  <td className="h-[43px] w-[100px] text-center align-middle">
+                  <td className="h-[43px] w-[100px] text-center align-middle max-pc:pt-[8px]">
                     <b style={{ fontFamily: DOTUM, color: "#939393" }}>등급별</b>
                   </td>
-                  <td className="h-[43px] w-[748px] text-center align-middle">
+                  <td className="h-[43px] w-[748px] text-center align-middle max-pc:pb-[6px]">
                     <LinkRow options={LEVELS} current={filter.level} onSelect={onLevel} />
                   </td>
                 </tr>
               </tbody>
             </table>
           </td>
-          <td className="h-[180px] w-[18px] align-middle">
+          <td className="h-[180px] w-[18px] align-middle max-pc:hidden">
             <Bracket side="right" />
           </td>
         </tr>

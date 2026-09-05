@@ -5,7 +5,7 @@ const DOTUM = "돋움, 'Nanum Gothic', sans-serif";
 /** 점선 구분선 (원본 508x8 테이블, dotline.gif 배경) */
 function DotLine() {
   return (
-    <table className="w-[508px]">
+    <table className="w-[508px] max-pc:w-full">
       <tbody>
         <tr>
           <td className="h-[8px] w-[508px]" style={{ background: "url(/images/findsize/dotline.gif)" }}></td>
@@ -34,21 +34,22 @@ export default function TinfoView({ tinfo: t }: { tinfo: Tinfo }) {
 
   return (
     // 원본 팝업 <body topmargin=0 leftmargin=0>, TD 9pt, P 상하 margin 1px
-    <div className="self-start text-[9pt] [&_p]:my-[1px] [&_td]:text-[9pt]">
-      <div className="h-[21px] w-[711px]"></div>
+    /* 모바일: 폭 100% + 좌우 10px, 이미지 → 정보 → 타입/등급 순으로 세로 배치 */
+    <div className="self-start text-[9pt] [&_p]:my-[1px] [&_td]:text-[9pt] max-pc:w-full max-pc:px-[10px]">
+      <div className="h-[21px] w-[711px] max-pc:w-auto"></div>
 
-      <table className="w-[766px]">
+      <table className="w-[766px] m-stack">
         <tbody>
           <tr>
             <td className="h-[199px] w-[200px] text-center align-top">
               <img src={t.image} width={t.imageWidth} height={t.imageHeight} alt={t.model} className="inline-block" />
             </td>
-            <td rowSpan={2} className="h-[293px] w-[31px] text-right align-top">
+            <td rowSpan={2} className="h-[293px] w-[31px] text-right align-top max-pc:hidden">
 
             </td>
-            <td rowSpan={2} className="h-[293px] w-[536px] text-left align-top">
+            <td rowSpan={2} className="h-[293px] w-[536px] text-left align-top max-pc:pt-[10px]">
               {/* 브랜드 / 모델 / 설명 */}
-              <table className="w-[530px]">
+              <table className="w-[530px] m-fluid">
                 <tbody>
                   <tr>
                     <td colSpan={2} className="h-[45px] w-[530px] text-left align-top">
@@ -64,7 +65,7 @@ export default function TinfoView({ tinfo: t }: { tinfo: Tinfo }) {
                     <td className="h-[20px] w-[441px] text-left align-top">
                       <span className="text-[#808080]" dangerouslySetInnerHTML={{ __html: t.descHtml }} />
                     </td>
-                    <td className="h-[20px] w-[89px] text-left align-top">　</td>
+                    <td className="h-[20px] w-[89px] text-left align-top max-pc:hidden">　</td>
                   </tr>
                   <tr>
                     <td colSpan={2} className="h-[15px] w-[530px]"></td>
@@ -74,26 +75,26 @@ export default function TinfoView({ tinfo: t }: { tinfo: Tinfo }) {
 
               <DotLine />
 
-              {/* 속도등급 / 트레드웨어 / 가격대 */}
-              <table className="w-[507px]">
+              {/* 속도등급 / 트레드웨어 / 가격대 — 모바일은 한 줄씩 */}
+              <table className="w-[507px] m-stack">
                 <tbody>
                   <tr>
-                    <td className="h-[22px] w-[109px] text-left align-middle">속도등급 : {t.speedRating}</td>
-                    <td className="h-[22px] w-[164px] text-center align-middle">
+                    <td className="h-[22px] w-[109px] text-left align-middle max-pc:leading-[22px]">속도등급 : {t.speedRating}</td>
+                    <td className="h-[22px] w-[164px] text-center align-middle max-pc:text-left max-pc:leading-[22px]">
                       트레드웨어 : {t.treadwear} <span className="text-[8pt]">(평균)</span>
                     </td>
-                    <td className="h-[22px] w-[234px] text-center align-middle">가격대 : {t.priceRange}원 까지</td>
+                    <td className="h-[22px] w-[234px] text-center align-middle max-pc:text-left max-pc:leading-[22px]">가격대 : {t.priceRange}원 까지</td>
                   </tr>
                 </tbody>
               </table>
 
               <DotLine />
 
-              {/* 타이어 점수 */}
-              <table className="w-[507px]">
+              {/* 타이어 점수 — 모바일(.m-wrap): 라벨(76px)+막대 한 쌍이 한 줄 */}
+              <table className="w-[507px] m-wrap">
                 <tbody>
                   <tr>
-                    <td colSpan={4} className="h-[10px] w-[507px]"></td>
+                    <td colSpan={4} className="h-[10px] w-[507px] max-pc:basis-full max-pc:pt-[6px]"></td>
                   </tr>
                   {scoreRows.map((row, ri) => (
                     <tr key={ri}>
@@ -103,16 +104,18 @@ export default function TinfoView({ tinfo: t }: { tinfo: Tinfo }) {
                     </tr>
                   ))}
                   <tr>
-                    <td colSpan={4} className="h-[10px] w-[507px]"></td>
+                    <td colSpan={4} className="h-[10px] w-[507px] max-pc:basis-full max-pc:pt-[6px]"></td>
                   </tr>
                   <tr>
-                    <td colSpan={4} className="h-[10px] w-[507px]" style={{ background: "url(/images/findsize/dotline.gif)" }}></td>
+                    <td colSpan={4} className="h-[10px] w-[507px] max-pc:basis-full" style={{ background: "url(/images/findsize/dotline.gif)" }}>
+                      <div className="max-pc:h-[10px]" />
+                    </td>
                   </tr>
                   <tr>
-                    <td colSpan={2} className="h-[28px] w-[215px] text-left align-middle">
+                    <td colSpan={2} className="h-[28px] w-[215px] text-left align-middle max-pc:basis-full max-pc:leading-[28px]">
                       <b>&nbsp;리뷰평점</b> : <b>{t.reviewScore}</b> 점
                     </td>
-                    <td colSpan={2} className="h-[28px] w-[292px] text-left align-middle">
+                    <td colSpan={2} className="h-[28px] w-[292px] text-left align-middle max-pc:basis-full max-pc:leading-[28px]">
                       {t.strongPoint && (
                         <>
                           주장점 : <b>{t.strongPoint}</b>
@@ -139,10 +142,10 @@ export default function TinfoView({ tinfo: t }: { tinfo: Tinfo }) {
         </tbody>
       </table>
 
-      <div className="h-[21px] w-[366px]"></div>
+      <div className="h-[21px] w-[366px] max-pc:w-auto"></div>
 
       {/* 회색 구분바 */}
-      <table className="w-[766px]">
+      <table className="w-[766px] m-fluid">
         <tbody>
           <tr>
             <td className="h-[17px] w-[766px]" style={{ background: "url(/images/findsize/view/gubunbg.gif)" }}></td>
@@ -150,8 +153,8 @@ export default function TinfoView({ tinfo: t }: { tinfo: Tinfo }) {
         </tbody>
       </table>
 
-      {/* 상세 내용 (원본 HTML 그대로: 주로 <CENTER><IMG width=670>) */}
-      <table className="w-[766px]">
+      {/* 상세 내용 (원본 HTML 그대로: 주로 <CENTER><IMG width=670>) — 이미지는 모바일에서 폭에 맞춰 축소 */}
+      <table className="w-[766px] m-fluid">
         <tbody>
           <tr>
             <td className="h-[21px] w-[766px] text-left [&_center]:text-center [&_img]:inline-block" dangerouslySetInnerHTML={{ __html: t.contentHtml }} />
@@ -168,14 +171,14 @@ function ScoreCell({ score, left, rowHeight }: { score: Tinfo["scores"][number];
   const h = { height: rowHeight };
   return (
     <>
-      <td style={h} className={`${left ? "w-[68px]" : "w-[76px]"} text-right align-middle`}>
+      <td style={h} className={`${left ? "w-[68px]" : "w-[76px]"} text-right align-middle max-pc:basis-[76px] max-pc:leading-[22px]`}>
         <span className="text-[8pt]" style={{ fontFamily: DOTUM }}>
           {left ? "" : " "}
           {score.label}&nbsp;&nbsp;{" "}
         </span>
       </td>
-      <td style={h} className={`${left ? "w-[147px]" : "w-[216px]"} align-middle`}>
-        <img src="/images/subgrapicon.gif" width={score.width} height={score.height} alt="" className="inline-block align-middle" />
+      <td style={h} className={`${left ? "w-[147px]" : "w-[216px]"} align-middle max-pc:basis-[calc(100%-76px)] max-pc:leading-[22px]`}>
+        <img src="/images/subgrapicon.gif" width={score.width} height={score.height} alt="" className="inline-block align-middle img-fixed" />
       </td>
     </>
   );

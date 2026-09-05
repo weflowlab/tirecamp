@@ -22,29 +22,31 @@ export default function SizeListTabs({ query, total }: Props) {
   const src = (img: string, g: string) => `/images/findsize/tab/${img}${query.seltireg === g ? "_select" : ""}.gif`;
 
   return (
-    <table border={0} width={900} style={{ height: 5 }} cellSpacing={0} cellPadding={0}>
+    /* 모바일(.m-wrap): 탭 이미지들이 화면 폭에 맞춰 줄바꿈, "총 : N 개" 는 오른쪽 끝으로 */
+    <table border={0} width={900} style={{ height: 5 }} cellSpacing={0} cellPadding={0} className="m-wrap">
       <tbody>
         <tr>
           {TABS.map((t) => (
-            <td key={t.g} height={18} width={t.tdw}>
+            <td key={t.g} height={18} width={t.tdw} className="max-pc:pb-[4px]">
               <Link href={href(t.g)}>
                 <img src={src(t.img, t.g)} alt="" width={t.w} height={26} style={{ border: 0 }} />
               </Link>
             </td>
           ))}
-          <td height={18} width={13}></td>
-          <td height={18} width={81}>
+          <td height={18} width={13} className="max-pc:hidden"></td>
+          <td height={18} width={81} className="max-pc:pb-[4px]">
             <Link href={href("snow")}>
               <img src={src("snow", "snow")} alt="" width={81} height={26} style={{ border: 0 }} />
             </Link>
           </td>
-          <td height={18} width={191} align="center"></td>
-          <td height={18} width={125} align="center">
+          <td height={18} width={191} align="center" className="max-pc:hidden"></td>
+          <td height={18} width={125} align="center" className="max-pc:ml-auto max-pc:pb-[4px]">
             총 : {total} 개
           </td>
         </tr>
         <tr>
-          <td height={2} width={675} style={{ backgroundColor: "#DDDDDD" }} colSpan={10}></td>
+          {/* 2px 회색 밑줄 (모바일에서는 셀 높이가 0 이 되므로 border 로 표현) */}
+          <td height={2} width={675} style={{ backgroundColor: "#DDDDDD" }} colSpan={10} className="max-pc:basis-full max-pc:border-t-2 max-pc:border-[#DDDDDD]"></td>
         </tr>
       </tbody>
     </table>
