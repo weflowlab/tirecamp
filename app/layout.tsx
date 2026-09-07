@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
+import { SITE, TITLE_SUFFIX } from "@/lib/site";
 
-/* 원본 <head> 메타 정보 그대로 반영 */
+/* 사이트 메타 정보 (타이어캠프) */
 export const metadata: Metadata = {
-  title: "타이어공장 - 전브랜드 인터넷가 판매",
+  title: TITLE_SUFFIX,
   description:
-    "양주·의정부 타이어 전문점 타이어공장. 한국, 금호, 넥센, 미쉐린, 피렐리, 콘티넨탈 등 전 브랜드 신품·이월·중고 타이어를 합리적인 가격에 판매합니다.",
-  keywords:
-    "양주타이어, 의정부타이어, 한국타이어, 금호타이어, 넥센타이어, 피렐리타이어, 미쉐린타이어, 콘티넨탈타이어, 타이어가격",
+    "양주 타이어 전문점 타이어캠프. 한국, 금호, 넥센, 미쉐린, 피렐리, 콘티넨탈 등 국산·수입 전 브랜드 신품 타이어와 중고 타이어를 합리적인 가격에 판매합니다.",
+  keywords: "양주타이어, 타이어캠프, 중고타이어, 소형타이어, 한국타이어, 금호타이어, 넥센타이어, 미쉐린타이어, 타이어가격, 타이어교체",
   openGraph: {
     type: "website",
-    title: "타이어공장 | 양주·의정부 타이어 전 브랜드 판매",
-    description:
-      "한국, 금호, 넥센, 미쉐린, 피렐리, 콘티넨탈 등 전 브랜드 신품·이월·중고 타이어를 합리적인 가격에 판매하는 양주·의정부 타이어 전문점입니다.",
-    url: "http://tirekongjang.com/",
+    title: `${SITE.name} | 양주 타이어 전문점`,
+    description: "국산·수입 전 브랜드 신품 타이어와 중고 타이어를 합리적인 가격에 판매하는 양주 타이어 전문점입니다.",
   },
 };
 

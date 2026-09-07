@@ -26,7 +26,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
     <>
       <SiteHeader />
       {/* 원본은 메뉴 아래 15px 여백 후 900px 폭 본문. 모바일은 화면 폭 - 좌우 10px */}
-      <main className="w-full max-w-[900px] pt-[15px] max-pc:px-[10px]">{children}</main>
+      <main className="w-full max-w-[900px] pt-[24px] max-pc:px-[16px] max-pc:pt-[20px]">{children}</main>
       <SiteFooter />
     </>
   );

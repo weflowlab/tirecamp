@@ -1,30 +1,31 @@
 import Link from "next/link";
 import QuickSizeSearch from "./QuickSizeSearch";
 import SiteNav from "./SiteNav";
+import { PHONE_TEL, SITE } from "@/lib/site";
 
 /**
- * 공통 헤더 (원본 모든 페이지 상단 900px 테이블 영역)
- * - 1행: home / 예약확인 / 고객센터 작은 링크 (우측 정렬)
- * - 2행: 로고(330x90) | 사이즈 빠른검색 | 전화번호 이미지
- * - 3행: 갈색 배경 메뉴바 (SiteNav)
+ * 공통 헤더 — 여백을 넓게, 요소는 작고 정갈하게
+ * - 1행: 작은 유틸 링크 (우측)
+ * - 2행: 텍스트 로고 | 사이즈 빠른검색 | 전화번호·영업시간
+ * - 3행: 메뉴바 (SiteNav)
  *
- * 모바일(<920px): 1행 유지 → [로고 | 전화 이미지] 한 줄 → 사이즈검색 한 줄 → 메뉴(3열 2행)
+ * 모바일(<920px): [로고 | 전화] 한 줄 → 사이즈검색 한 줄 → 가로 스크롤 메뉴
+ * 로고 이미지는 고객에게 파일을 받으면 텍스트 로고 자리에 교체한다.
  */
 export default function SiteHeader() {
   return (
-    <header className="w-full">
-      {/* 원본 table height=109 이지만 실제 행 높이 합(30+100)=130px 로 렌더링됨 */}
-      <div className="mx-auto w-[900px] h-[130px] max-pc:w-full max-pc:h-auto max-pc:px-[10px]">
+    <header className="w-full font-sans">
+      <div className="mx-auto w-[900px] max-pc:w-full max-pc:px-[16px]">
         {/* 상단 작은 유틸 링크 */}
-        <div className="h-[30px] flex justify-end items-center">
-          <ul className="flex w-[284px] text-[12px]">
+        <div className="h-[34px] flex justify-end items-center max-pc:h-[30px]">
+          <ul className="flex gap-[20px] text-[11px] tracking-[0.04em]">
             {[
-              { href: "/", label: "home" },
-              { href: "/cscenter/tirebooking/custchk", label: "예약확인" },
+              { href: "/", label: "HOME" },
               { href: "/cscenter/news", label: "고객센터" },
+              { href: "/contact", label: "문의하기" },
             ].map((l) => (
-              <li key={l.href} className="w-[95px] text-center h-[23px] leading-[23px]">
-                <Link href={l.href} className="!text-[#8F8F8F] font-[돋움,'Nanum_Gothic',sans-serif]">
+              <li key={l.href}>
+                <Link href={l.href} className="!text-muted hover:!text-ink hover:!no-underline">
                   {l.label}
                 </Link>
               </li>
@@ -32,30 +33,27 @@ export default function SiteHeader() {
           </ul>
         </div>
 
-        {/* 로고 / 사이즈검색 / 전화 이미지 */}
-        {/* 원본 td valign=top 이므로 items-start (flex stretch 로 이미지가 늘어나지 않게) */}
-        {/* 모바일: flex-wrap + order 로 [로고, 전화] → [검색] 순서로 재배치 */}
-        <div className="flex h-[100px] items-start max-pc:h-auto max-pc:flex-wrap max-pc:items-center max-pc:justify-between max-pc:pb-[10px]">
+        {/* 로고 / 사이즈검색 / 전화 */}
+        <div className="flex h-[96px] items-center max-pc:h-auto max-pc:flex-wrap max-pc:justify-between max-pc:pb-[14px]">
           <div className="w-[340px] max-pc:w-[56%] max-pc:order-1">
-            <Link href="/">
-              <img
-                src="/jwtsm_comimg/tirekong2000/20260520035452856411.png"
-                width={330}
-                height={90}
-                alt="타이어공장"
-              />
+            <Link href="/" className="inline-block hover:!no-underline">
+              <span className="block text-[26px] font-bold leading-[1] tracking-[-0.04em] !text-ink">{SITE.name}</span>
+              <span className="eyebrow mt-[6px] block !text-faint">{SITE.nameEn}</span>
             </Link>
           </div>
-          <div className="w-[325px] flex justify-center max-pc:w-full max-pc:order-3 max-pc:pt-[6px]">
+          <div className="w-[325px] flex justify-center max-pc:w-full max-pc:order-3 max-pc:pt-[10px]">
             <QuickSizeSearch />
           </div>
-          <div className="w-[235px] flex justify-center max-pc:w-[40%] max-pc:order-2 max-pc:justify-end">
-            <img
-              src="/jwtsm_comimg/tirekong2000/20260814060010935578.png"
-              width={220}
-              height={80}
-              alt="문의전화 031-863-0909"
-            />
+          <div className="w-[235px] flex flex-col items-end justify-center max-pc:w-[40%] max-pc:order-2">
+            <span className="eyebrow">Call</span>
+            <a
+              href={PHONE_TEL}
+              className="mt-[2px] text-[22px] font-semibold leading-[1.1] tracking-[-0.01em] !text-ink hover:!no-underline max-pc:text-[18px]"
+              style={{ fontFamily: "var(--font-num)" }}
+            >
+              {SITE.phone}
+            </a>
+            <span className="mt-[6px] text-[11px] leading-[15px] text-muted text-right max-pc:hidden">평일 09–19 · 토 09–18 · 일 휴무</span>
           </div>
         </div>
       </div>

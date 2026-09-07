@@ -1,34 +1,35 @@
 import Link from "next/link";
+import { PHONE_TEL, SITE } from "@/lib/site";
 
 /**
- * 공통 푸터 (원본 하단 900px 테이블)
- * - 좌: 푸터 로고 이미지 / 우: 사업자 정보, 주소, 저작권
- * - 모바일: 로고 위, 텍스트 아래로 세로 배치. 줄 높이 고정 해제해 자연스럽게 줄바꿈
+ * 공통 푸터 — 오프화이트 바탕, 얇은 상단 선, 회색 텍스트
+ * (본문 900px 밖으로 배경이 꽉 차도록 w-full, 안쪽만 900px)
  */
 export default function SiteFooter() {
   return (
-    <footer className="w-[900px] mt-[20px] mb-[20px] max-pc:w-full max-pc:px-[10px]">
-      <div className="flex items-center h-[131px] max-pc:h-auto max-pc:flex-col max-pc:items-start max-pc:gap-[10px] max-pc:py-[10px]">
-        <div className="w-[262px] max-pc:w-auto">
-          <img src="/jwtsm_comimg/tirekong2000/20260520041216143759.png" alt="타이어공장" />
-        </div>
-        <div className="w-[638px] flex justify-end max-pc:w-full max-pc:justify-start">
-          <div className="w-[611px] text-[8pt] text-[#A7A7A7] max-pc:w-full" style={{ fontFamily: "돋움, 'Nanum Gothic', sans-serif" }}>
-            <p className="h-[22px] leading-[22px] text-[8pt] text-[#A7A7A7] max-pc:h-auto max-pc:leading-[18px]">
-              타이어공장 &nbsp;대표: 유동균외 사업등록번호: 672-50-01100&nbsp; 문의전화:{" "}
-              <b className="text-[9pt] text-[#FF9900] whitespace-nowrap" style={{ fontFamily: "Tahoma, sans-serif" }}>
-                031-863-0909
-              </b>
-              &nbsp;&nbsp;
-              <Link href="/cscenter/personal_info" className="!text-[#ADADAD] font-bold tracking-[-1pt]">
+    <footer className="w-full mt-[72px] border-t border-line bg-surface font-sans max-pc:mt-[48px]">
+      <div className="mx-auto w-[900px] py-[40px] max-pc:w-full max-pc:px-[16px] max-pc:py-[28px]">
+        <div className="flex items-start max-pc:flex-col max-pc:gap-[18px]">
+          <div className="w-[262px] max-pc:w-auto">
+            <span className="block text-[18px] font-bold tracking-[-0.03em] text-ink">{SITE.name}</span>
+            <span className="eyebrow mt-[4px] block !text-faint">{SITE.nameEn}</span>
+          </div>
+          <div className="flex-1 text-[12px] leading-[22px] text-muted">
+            <p className="text-[12px] text-muted">
+              대표 {SITE.ceo} &nbsp;·&nbsp; 사업자등록번호 {SITE.bizNo} &nbsp;·&nbsp;{" "}
+              <a href={PHONE_TEL} className="!text-graphite" style={{ fontFamily: "var(--font-num)" }}>
+                {SITE.phone}
+              </a>
+            </p>
+            <p className="text-[12px] text-muted">
+              {SITE.address} &nbsp;·&nbsp; {SITE.email}
+            </p>
+            <p className="text-[12px] text-muted">{SITE.hours.map((h) => `${h.label} ${h.value}`).join(" · ")}</p>
+            <p className="mt-[12px] flex items-center gap-[14px] text-[11px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
+              <span>© {SITE.nameEn}. All rights reserved.</span>
+              <Link href="/cscenter/personal_info" className="!text-muted hover:!text-ink">
                 개인정보취급방침
               </Link>
-            </p>
-            <p className="h-[22px] leading-[22px] text-[8pt] text-[#A7A7A7] max-pc:h-auto max-pc:leading-[18px]">
-              경기도 양주시 봉양동 632-1&nbsp; 개인정보관리자: 유동균 (dstire119@naver.com)
-            </p>
-            <p className="h-[25px] leading-[25px] text-[8pt] text-[#A7A7A7] max-pc:h-auto max-pc:leading-[18px]" style={{ fontFamily: "Tahoma, sans-serif" }}>
-              COPYRIGHT &copy; <b>타이어공장</b> CORP. All Right Reserved.
             </p>
           </div>
         </div>

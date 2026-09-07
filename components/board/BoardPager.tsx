@@ -32,7 +32,7 @@ export default function BoardPager({ page, totalPages, basePath, blockSize = 10 
               style={{
                 fontFamily: "Arial, sans-serif",
                 fontSize: "16px",
-                color: p === page ? "#008000" : "#757575",
+                color: p === page ? "#000000" : "#9A9A9A",
               }}
             >
               {p}

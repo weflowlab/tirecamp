@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import type { CSSProperties, ReactNode } from "react";
+import { SITE, pageTitle } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "타이어공장 - 전브랜드 인터넷가 판매 :: 개인정보취급방침",
+  title: pageTitle("개인정보취급방침"),
 };
 
 /* 원본 모든 td 공통 인라인 스타일 (굴림 9pt, #666666) */
@@ -36,7 +37,7 @@ const SECTIONS: { title: string; body: ReactNode }[] = [
         <br />
         <br />
         모든 서비스는 별도의 사용자 등록이 없이 언제든지 사용할 수 있습니다. 그러나 회사는 이용자에게 문의사항에 대한 답변과 예약을
-        위해서 성명,연락처,이메일 차량번호, 차종명 등의 최소한의 이용자 개인의 정보를 수집하고 있습니다.
+        위해서 성명, 연락처, 차종명 등의 최소한의 이용자 개인의 정보를 문의하기·후기 작성 시 수집하고 있습니다.
         <br />
         <br />
         수집하는 개인정보 항목에 따른 구체적인 수집목적 및 이용목적은 다음과 같습니다.
@@ -211,13 +212,13 @@ const SECTIONS: { title: string; body: ReactNode }[] = [
         지정하고 있고, 연락처는 아래와 같습니다.&nbsp;
         <br />
         <br />
-        이　　　 름&nbsp; : 유동균
+        이　　　 름&nbsp; : {SITE.ceo}
         <br />
-        소속 / 직위　: 타이어공장 / 실장
+        소속 / 직위　: {SITE.name} / 대표
         <br />
-        E-M A I L 　 : dstire119@naver.com
+        E-M A I L 　 : {SITE.email}
         <br />
-        전 화 번 호　: 031-863-0909
+        전 화 번 호　: {SITE.phone}
       </>
     ),
   },
@@ -264,8 +265,8 @@ export default function PersonalInfoPage() {
           {/* 머리말 */}
           <tr>
             <td style={{ ...CELL, width: 660 }} colSpan={2}>
-              타이어공장 (이하 &quot;회사&quot;라 함)는 이용자들의 개인정보 보호를 매우 중요시하며, 이용자가 회사의
-              서비스(http://tirekongjang.com,이하 &quot;서비스&quot;라 함)를 이용함과 동시에 회사에 제공한 개인정보가 보호 받을 수
+              {SITE.name} (이하 &quot;회사&quot;라 함)는 이용자들의 개인정보 보호를 매우 중요시하며, 이용자가 회사의
+              홈페이지 서비스(이하 &quot;서비스&quot;라 함)를 이용함과 동시에 회사에 제공한 개인정보가 보호 받을 수
               있도록 최선을 다하고 있습니다. 이에 회사는 통신비밀보호법, 전기통신사업법, 정보통신망이용촉진등에관한법률등
               정보통신서비스제공자가 준수하여야 할 관련 법규상의 개인정보보호규정 및 정보통신부가 제정한 개인정보보호지침을 준수하고
               있습니다. 회사는 개인정보 보호정책을 통하여 이용자들이 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며

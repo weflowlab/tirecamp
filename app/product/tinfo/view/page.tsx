@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import TinfoView from "@/components/tire/tinfo/TinfoView";
 import type { Tinfo } from "@/lib/tinfo";
 import tinfoJson from "@/data/tinfo.json";
+import { pageTitle } from "@/lib/site";
 
-/* 원본 팝업 <title> */
+/* 팝업 <title> */
 export const metadata: Metadata = {
-  title: "타이어공장 - 전브랜드 인터넷가 판매 :: 타이어 제품정보",
+  title: pageTitle("타이어 제품정보"),
 };
 
 /**

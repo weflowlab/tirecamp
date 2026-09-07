@@ -5,8 +5,6 @@ import { useRef, useState } from "react";
 import { MAKERS } from "@/lib/tireSizeOptions";
 import type { CarName, TireSizeRow } from "@/lib/carfind";
 
-/* 굴림 10pt select 공통 스타일 (원본 inline style) */
-const SEL_FONT = { fontFamily: "굴림, 'Nanum Gothic', sans-serif", fontSize: "10pt" } as const;
 
 /**
  * 차량검색 (원본 form name="frmsize" + ajaxcarfind_mainonly.js)
@@ -104,8 +102,11 @@ export default function CarFinder() {
       <tbody>
         {/* 1행: 차량검색 타이틀 + 회사/연식/차종 select */}
         <tr>
-          <td height={50} width={212} align="left">
-            <img src="/images/main/new/title/carfindtitle.gif" alt="차량검색" width={197} height={45} />
+          <td height={50} width={212} align="left" valign="middle" className="max-pc:pb-[8px]">
+            <div className="font-sans">
+              <p className="eyebrow">By Car</p>
+              <p className="mt-[2px] text-[15px] font-semibold tracking-[-0.01em] text-ink">차종으로 타이어 검색</p>
+            </div>
           </td>
           <td height={50} width={658} align="left">
             <table width={648} style={{ height: 36 }} cellSpacing={0} cellPadding={0} className="m-stack">
@@ -115,8 +116,8 @@ export default function CarFinder() {
                     {/* 자동차회사 select (원본 selmaker, 150px) */}
                     <select
                       name="selmaker"
-                      className={`sel10 w-[150px] ${SEL_MOBILE}`}
-                      style={SEL_FONT}
+                      className={`field !h-[38px] !w-[160px] !px-[8px] !text-[13px] ${SEL_MOBILE}`}
+
                       value={maker}
                       onChange={(e) => onMakerChange(e.target.value)}
                     >
@@ -130,8 +131,8 @@ export default function CarFinder() {
                     {/* 연식 select (원본 selsyear, 80px) — 데이터 도착 후 표시 */}
                     <select
                       name="selsyear"
-                      className={`sel10 w-[80px] ${SEL_MOBILE}`}
-                      style={{ ...SEL_FONT, display: years.length ? "" : "none" }}
+                      className={`field !h-[38px] !w-[96px] !px-[8px] !text-[13px] ${SEL_MOBILE}`}
+                      style={{ display: years.length ? "" : "none" }}
                       value={year}
                       onChange={(e) => onYearChange(e.target.value)}
                     >
@@ -145,8 +146,8 @@ export default function CarFinder() {
                     {/* 차종 select (원본 selcar, 200px, 앞 &nbsp;&nbsp; 간격은 ml 로) — 데이터 도착 후 표시 */}
                     <select
                       name="selcar"
-                      className={`sel10 w-[200px] ml-[7px] max-pc:ml-0 ${SEL_MOBILE}`}
-                      style={{ ...SEL_FONT, display: cars.length ? "" : "none" }}
+                      className={`field !h-[38px] !w-[210px] !px-[8px] !text-[13px] ml-[4px] max-pc:ml-0 ${SEL_MOBILE}`}
+                      style={{ display: cars.length ? "" : "none" }}
                       value={car}
                       onChange={(e) => onCarChange(e.target.value)}
                     >
@@ -214,21 +215,24 @@ function SizeRow({ row }: { row: TireSizeRow }) {
     (differ ? `&find_rtsize=${encodeURIComponent(row.rtsize)}` : "");
 
   return (
-    <tr className="bg-white hover:bg-[#E4E4E4]">
-      <td height={35} width={193} align="center">
-        <span style={{ color: "#336699", fontFamily: "Arial", fontSize: "11pt" }}>
+    <tr className="border-b border-line font-sans hover:bg-surface">
+      <td height={38} width={193} align="left" className="pl-[8px]">
+        <span className="text-[14px] font-semibold text-ink" style={{ fontFamily: "var(--font-num)" }}>
           {differ ? (
             <>
-              F:{row.ftsizev}&nbsp;<label>&#8226;</label>&nbsp;R:{row.rtsizev}
+              <span className="mr-[4px] text-[10px] font-normal text-muted">F</span>
+              {row.ftsizev}
+              <span className="ml-[10px] mr-[4px] text-[10px] font-normal text-muted">R</span>
+              {row.rtsizev}
             </>
           ) : (
             row.ftsizev
           )}
         </span>
       </td>
-      <td height={35} width={109} align="center">
-        <Link href={href}>
-          <img src="/images/button/seetirebut.gif" alt="타이어보기" width={88} height={22} className="inline-block align-middle" />
+      <td height={38} width={109} align="right" className="pr-[8px]">
+        <Link href={href} className="btn-outline !h-[28px] !px-[12px] !text-[12px] !text-ink hover:bg-ink hover:!text-white hover:!no-underline">
+          타이어 보기
         </Link>
       </td>
     </tr>

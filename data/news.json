@@ -1,24 +1,13 @@
 [
   {
-    "seq": 2,
-    "bcode": "01",
-    "title": "서비스 공임 비용 안내",
-    "date": "2026.07.09",
-    "views": 10,
-    "notice": true,
-    "thumb": "/ext/boomcar.co.kr/jwtsm_comimg/tirekong2000/2026/list/2026070911253052926.png",
-    "summary": "",
-    "content": "<br>\n<center><img border=\"0\" src=\"/ext/boomcar.co.kr/jwtsm_comimg/tirekong2000/2026/2026070911253052926.png\" width=\"670\" height=\"1005\"></center><br>"
-  },
-  {
     "seq": 1,
     "bcode": "01",
-    "title": "타이어 교체 공임 비용 안내 ",
-    "date": "2026.07.09",
-    "views": 10,
+    "title": "타이어캠프 홈페이지가 새롭게 오픈했습니다.",
+    "date": "2026.09.07",
+    "views": 0,
     "notice": true,
-    "thumb": "/ext/boomcar.co.kr/jwtsm_comimg/tirekong2000/2026/list/20260709112508114261.png",
-    "summary": "",
-    "content": "<br>\n<center><img border=\"0\" src=\"/ext/boomcar.co.kr/jwtsm_comimg/tirekong2000/2026/20260709112508114261.png\" width=\"670\" height=\"1005\"></center><br>"
+    "thumb": "",
+    "summary": "차종·사이즈로 타이어를 검색하고 온라인으로 문의하실 수 있습니다.",
+    "content": "<p>안녕하세요, 타이어캠프입니다.</p><br><p>홈페이지를 새롭게 오픈했습니다. 타이어검색 메뉴에서 차종이나 사이즈로 타이어를 찾아보시고, 궁금한 점은 문의하기로 남겨 주세요.</p><br><p>전화 문의: 031-857-8255<br>영업시간: 평일 오전 9시 ~ 오후 7시 / 토요일 오전 9시 ~ 오후 6시 / 일요일 휴무</p>"
   }
 ]

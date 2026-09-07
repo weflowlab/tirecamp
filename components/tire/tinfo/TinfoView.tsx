@@ -1,185 +1,107 @@
 import type { Tinfo } from "@/lib/tinfo";
 
-const DOTUM = "돋움, 'Nanum Gothic', sans-serif";
-
-/** 점선 구분선 (원본 508x8 테이블, dotline.gif 배경) */
-function DotLine() {
-  return (
-    <table className="w-[508px] max-pc:w-full">
-      <tbody>
-        <tr>
-          <td className="h-[8px] w-[508px]" style={{ background: "url(/images/findsize/dotline.gif)" }}></td>
-        </tr>
-      </tbody>
-    </table>
-  );
-}
+const NUM = { fontFamily: "var(--font-num)" } as const;
 
 /**
- * 타이어 상세 팝업 본문 (원본 /product/tinfo/view.aspx, 766px 폭, 헤더/푸터 없음)
+ * 타이어 상세 팝업 본문 (766px 폭, 헤더/푸터 없음)
  *
- * 구조
- *  - 21px 상단 여백
- *  - [이미지 194x243 | 31px | 530px 정보]
- *      브랜드(검정 18pt 돋움) + 모델(#0066CC 20pt Arial) / 회색 설명
- *      점선 / 속도등급 · 트레드웨어 · 가격대 / 점선
- *      성능 그래프 8항목 (subgrapicon.gif 폭으로 점수 표현) / 점선 / 리뷰평점 · 주장점
- *  - 이미지 아래 "타입 / 등급"
- *  - 회색 구분바(gubunbg.gif) 아래 상세 내용 HTML
+ * 상단(우리 스타일): [이미지 | 브랜드·모델·설명 → 스펙 3칸 → 성능 그래프 → 리뷰평점·주장점]
+ * 하단: 제조사 제공 상세 이미지 HTML 그대로
  */
 export default function TinfoView({ tinfo: t }: { tinfo: Tinfo }) {
-  /* 그래프는 좌/우 2열 × 4행 (DOM 순서대로 2개씩) */
-  const scoreRows: Tinfo["scores"][] = [];
-  for (let i = 0; i < t.scores.length; i += 2) scoreRows.push(t.scores.slice(i, i + 2));
+  /* 성능 점수: 원본 막대 폭 = 점수 × 12px (0점이면 1px) → 0~10 점 */
+  const scores = t.scores.map((s) => ({ label: s.label, value: s.width <= 1 ? 0 : Math.min(10, Math.round(s.width / 12)) }));
+  const speed = t.speedRating.replace(/^[,\s]+/, "").replace(/,/g, " · ");
 
   return (
-    // 원본 팝업 <body topmargin=0 leftmargin=0>, TD 9pt, P 상하 margin 1px
-    /* 모바일: 폭 100% + 좌우 10px, 이미지 → 정보 → 타입/등급 순으로 세로 배치 */
-    <div className="self-start text-[9pt] [&_p]:my-[1px] [&_td]:text-[9pt] max-pc:w-full max-pc:px-[10px]">
-      <div className="h-[21px] w-[711px] max-pc:w-auto"></div>
+    <div className="w-[766px] self-start px-[8px] pb-[24px] pt-[28px] font-sans max-pc:w-full max-pc:px-[14px] max-pc:pt-[20px]">
+      {/* 상단: 이미지 | 정보 */}
+      <div className="grid grid-cols-[220px_1fr] gap-[32px] max-pc:grid-cols-1 max-pc:gap-[16px]">
+        <div>
+          <div className="flex h-[260px] items-center justify-center border border-line bg-white p-[12px] max-pc:h-[220px]">
+            <img src={t.image} alt={t.model} className="max-h-full w-auto" />
+          </div>
+          {t.typeLevel && <p className="mt-[10px] text-center text-[12px] text-muted">{t.typeLevel.replace(/\s*\/\s*/, " · ")}</p>}
+        </div>
 
-      <table className="w-[766px] m-stack">
-        <tbody>
-          <tr>
-            <td className="h-[199px] w-[200px] text-center align-top">
-              <img src={t.image} width={t.imageWidth} height={t.imageHeight} alt={t.model} className="inline-block" />
-            </td>
-            <td rowSpan={2} className="h-[293px] w-[31px] text-right align-top max-pc:hidden">
+        <div className="min-w-0">
+          <p className="eyebrow">{t.brandName}</p>
+          <h1 className="mt-[4px] text-[26px] font-bold leading-[1.2] tracking-[-0.02em] text-ink" style={NUM}>
+            {t.model}
+          </h1>
+          {t.descHtml && (
+            <p className="mt-[10px] text-[13px] leading-[22px] text-graphite [&_*]:text-[13px] [&_*]:text-graphite" dangerouslySetInnerHTML={{ __html: t.descHtml }} />
+          )}
 
-            </td>
-            <td rowSpan={2} className="h-[293px] w-[536px] text-left align-top max-pc:pt-[10px]">
-              {/* 브랜드 / 모델 / 설명 */}
-              <table className="w-[530px] m-fluid">
-                <tbody>
-                  <tr>
-                    <td colSpan={2} className="h-[45px] w-[530px] text-left align-top">
-                      <span className="text-[18pt] font-bold text-black" style={{ fontFamily: DOTUM }}>
-                        {t.brandName}
-                      </span>{" "}
-                      <span className="text-[20pt] font-bold text-[#0066CC]" style={{ fontFamily: "Arial, sans-serif" }}>
-                        {t.model}
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="h-[20px] w-[441px] text-left align-top">
-                      <span className="text-[#808080]" dangerouslySetInnerHTML={{ __html: t.descHtml }} />
-                    </td>
-                    <td className="h-[20px] w-[89px] text-left align-top max-pc:hidden">　</td>
-                  </tr>
-                  <tr>
-                    <td colSpan={2} className="h-[15px] w-[530px]"></td>
-                  </tr>
-                </tbody>
-              </table>
+          {/* 스펙 3칸 */}
+          <dl className="mt-[18px] grid grid-cols-3 border-y border-line max-pc:grid-cols-1">
+            <Spec label="속도등급" value={speed || "-"} />
+            <Spec label="트레드웨어" value={t.treadwear ? `${t.treadwear}` : "-"} sub="평균" className="border-x border-line max-pc:border-x-0 max-pc:border-y" />
+            <Spec label="가격대" value={t.priceRange ? `${t.priceRange}원` : "-"} />
+          </dl>
 
-              <DotLine />
+          {/* 성능 그래프 (2열) */}
+          {scores.length > 0 && (
+            <div className="mt-[18px]">
+              <p className="eyebrow mb-[10px]">Performance</p>
+              <ul className="grid grid-cols-2 gap-x-[24px] gap-y-[8px] max-pc:grid-cols-1">
+                {scores.map((s) => (
+                  <li key={s.label} className="flex items-center gap-[10px] text-[12px]">
+                    <span className="w-[64px] shrink-0 text-graphite">{s.label}</span>
+                    <span className="h-[6px] flex-1 bg-surface">
+                      <span className="block h-full bg-ink" style={{ width: `${s.value * 10}%` }} />
+                    </span>
+                    <span className="w-[22px] shrink-0 text-right text-ink" style={NUM}>
+                      {s.value}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-              {/* 속도등급 / 트레드웨어 / 가격대 — 모바일은 한 줄씩 */}
-              <table className="w-[507px] m-stack">
-                <tbody>
-                  <tr>
-                    <td className="h-[22px] w-[109px] text-left align-middle max-pc:leading-[22px]">속도등급 : {t.speedRating}</td>
-                    <td className="h-[22px] w-[164px] text-center align-middle max-pc:text-left max-pc:leading-[22px]">
-                      트레드웨어 : {t.treadwear} <span className="text-[8pt]">(평균)</span>
-                    </td>
-                    <td className="h-[22px] w-[234px] text-center align-middle max-pc:text-left max-pc:leading-[22px]">가격대 : {t.priceRange}원 까지</td>
-                  </tr>
-                </tbody>
-              </table>
+          {/* 리뷰평점 / 주장점 */}
+          <div className="mt-[18px] flex flex-wrap items-baseline gap-x-[28px] gap-y-[6px] border-t border-line pt-[14px] text-[13px]">
+            {t.reviewScore && (
+              <p className="text-graphite">
+                리뷰평점{" "}
+                <b className="ml-[4px] text-[18px] text-ink" style={NUM}>
+                  {t.reviewScore}
+                </b>
+                <span className="ml-[2px] text-[11px] text-muted">/ 10</span>
+              </p>
+            )}
+            {t.strongPoint && (
+              <p className="text-graphite">
+                주장점 <b className="ml-[4px] font-semibold text-ink">{t.strongPoint}</b>
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
 
-              <DotLine />
-
-              {/* 타이어 점수 — 모바일(.m-wrap): 라벨(76px)+막대 한 쌍이 한 줄 */}
-              <table className="w-[507px] m-wrap">
-                <tbody>
-                  <tr>
-                    <td colSpan={4} className="h-[10px] w-[507px] max-pc:basis-full max-pc:pt-[6px]"></td>
-                  </tr>
-                  {scoreRows.map((row, ri) => (
-                    <tr key={ri}>
-                      {row.map((s, ci) => (
-                        <ScoreCell key={s.label} score={s} left={ci === 0} rowHeight={ri === 0 ? 21 : 22} />
-                      ))}
-                    </tr>
-                  ))}
-                  <tr>
-                    <td colSpan={4} className="h-[10px] w-[507px] max-pc:basis-full max-pc:pt-[6px]"></td>
-                  </tr>
-                  <tr>
-                    <td colSpan={4} className="h-[10px] w-[507px] max-pc:basis-full" style={{ background: "url(/images/findsize/dotline.gif)" }}>
-                      <div className="max-pc:h-[10px]" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colSpan={2} className="h-[28px] w-[215px] text-left align-middle max-pc:basis-full max-pc:leading-[28px]">
-                      <b>&nbsp;리뷰평점</b> : <b>{t.reviewScore}</b> 점
-                    </td>
-                    <td colSpan={2} className="h-[28px] w-[292px] text-left align-middle max-pc:basis-full max-pc:leading-[28px]">
-                      {t.strongPoint && (
-                        <>
-                          주장점 : <b>{t.strongPoint}</b>
-                        </>
-                      )}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            {/* 이미지 아래 타입 / 등급 */}
-            <td className="h-[39px] w-[200px] text-center">
-              <table className="w-[174px] mx-auto">
-                <tbody>
-                  <tr>
-                    <td className="h-[25px] w-[174px] text-center align-middle">{t.typeLevel}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div className="h-[21px] w-[366px] max-pc:w-auto"></div>
-
-      {/* 회색 구분바 */}
-      <table className="w-[766px] m-fluid">
-        <tbody>
-          <tr>
-            <td className="h-[17px] w-[766px]" style={{ background: "url(/images/findsize/view/gubunbg.gif)" }}></td>
-          </tr>
-        </tbody>
-      </table>
-
-      {/* 상세 내용 (원본 HTML 그대로: 주로 <CENTER><IMG width=670>) — 이미지는 모바일에서 폭에 맞춰 축소 */}
-      <table className="w-[766px] m-fluid">
-        <tbody>
-          <tr>
-            <td className="h-[21px] w-[766px] text-left [&_center]:text-center [&_img]:inline-block" dangerouslySetInnerHTML={{ __html: t.contentHtml }} />
-          </tr>
-        </tbody>
-      </table>
+      {/* 상세 내용 (제조사 제공 이미지 HTML 그대로) */}
+      {t.contentHtml && (
+        <>
+          <div className="mt-[28px] mb-[20px] flex items-center gap-[12px]">
+            <p className="eyebrow shrink-0">Detail</p>
+            <span className="h-px flex-1 bg-line" />
+          </div>
+          <div className="[&_center]:text-center [&_img]:inline-block max-pc:[&_img]:max-w-full" dangerouslySetInnerHTML={{ __html: t.contentHtml }} />
+        </>
+      )}
     </div>
   );
 }
 
-/** 점수 한 항목: 라벨(우측정렬 8pt 돋움) + subgrapicon.gif 막대 (좌열 68/147px, 우열 76/216px) */
-function ScoreCell({ score, left, rowHeight }: { score: Tinfo["scores"][number]; left: boolean; rowHeight: number }) {
-  // 행 높이는 원본대로 1행 21px, 나머지 22px (동적 값이므로 Tailwind 클래스 대신 inline style)
-  const h = { height: rowHeight };
+function Spec({ label, value, sub, className = "" }: { label: string; value: string; sub?: string; className?: string }) {
   return (
-    <>
-      <td style={h} className={`${left ? "w-[68px]" : "w-[76px]"} text-right align-middle max-pc:basis-[76px] max-pc:leading-[22px]`}>
-        <span className="text-[8pt]" style={{ fontFamily: DOTUM }}>
-          {left ? "" : " "}
-          {score.label}&nbsp;&nbsp;{" "}
-        </span>
-      </td>
-      <td style={h} className={`${left ? "w-[147px]" : "w-[216px]"} align-middle max-pc:basis-[calc(100%-76px)] max-pc:leading-[22px]`}>
-        <img src="/images/subgrapicon.gif" width={score.width} height={score.height} alt="" className="inline-block align-middle img-fixed" />
-      </td>
-    </>
+    <div className={`px-[14px] py-[10px] first:pl-0 last:pr-0 max-pc:px-0 ${className}`}>
+      <dt className="text-[11px] text-muted">{label}</dt>
+      <dd className="mt-[2px] text-[14px] font-semibold text-ink" style={NUM}>
+        {value}
+        {sub && <span className="ml-[4px] text-[11px] font-normal text-muted">{sub}</span>}
+      </dd>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import BoardPager from "@/components/board/BoardPager";
 import eventsData from "@/data/events.json";
 
 export const metadata: Metadata = {
-  title: "이벤트 | 타이어공장 - 전브랜드 인터넷가 판매",
+  title: "이벤트 | 타이어캠프",
 };
 
 /* 이벤트 1건 (원본 목록에 데이터가 없어 항목 구조는 소식 목록을 참고해 정의) */
@@ -49,7 +49,7 @@ export default async function EventListPage({ searchParams }: Props) {
               <img src="/images/main/eventtitle.gif" width={259} height={27} alt="이벤트" />
             </td>
             <td style={{ height: 52, width: 602, textAlign: "right", verticalAlign: "middle", color: "#B7B7B7" }} className="max-pc:!text-left max-pc:px-[10px] max-pc:pb-[10px]">
-              <b>타이어공장</b>의 특별한 이벤트를 만나보세요.&nbsp;&nbsp;
+              <b>타이어캠프</b>의 특별한 이벤트를 만나보세요.&nbsp;&nbsp;
             </td>
           </tr>
         </tbody>

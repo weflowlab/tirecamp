@@ -2,55 +2,18 @@ import CsSideMenu from "@/components/cscenter/CsSideMenu";
 
 /**
  * 고객센터(/cscenter/*) 공통 2단 프레임
- * - 원본: <table width=900> 좌측 201px (cstitle.gif + 서브메뉴 + rline.gif) / 우측 699px (각 페이지 내용, 가운데 정렬)
- * - 우측 내용은 각 page.tsx 가 렌더링
+ * - 좌측 200px: 타이틀 + 서브메뉴 / 우측: 각 페이지 내용 (얇은 세로선으로 구분)
+ * - 모바일: 타이틀 + 가로 서브메뉴 위, 내용 아래
  */
 export default function CsCenterLayout({ children }: LayoutProps<"/cscenter">) {
   return (
-    /* 모바일(.m-stack): [타이틀 + 가로 서브메뉴] 위, 내용 아래. 세로 구분선은 숨김 */
-    <table style={{ width: 900, minHeight: 479 }} className="m-stack">
-      <tbody>
-        <tr>
-          {/* 좌측: 고객센터 타이틀 + 서브메뉴 */}
-          <td style={{ width: 201, verticalAlign: "top", textAlign: "left" }}>
-            <table style={{ width: 195, height: 469 }} className="m-stack">
-              <tbody>
-                <tr>
-                  <td style={{ width: 193, verticalAlign: "top", textAlign: "left" }}>
-                    <table style={{ width: 193 }} className="m-stack">
-                      <tbody>
-                        <tr>
-                          <td style={{ height: 93, textAlign: "center" }} className="max-pc:text-left">
-                            <img src="/images/cscenter/cstitle.gif" width={193} height={93} alt="고객센터" className="inline" />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style={{ height: 15 }} />
-                        </tr>
-                        <tr>
-                          <td style={{ height: 265, verticalAlign: "top" }} className="max-pc:pb-[16px]">
-                            <div className="flex justify-end max-pc:justify-start">
-                              <CsSideMenu />
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  {/* 세로 구분선 rline.gif (2x412) */}
-                  <td style={{ width: 2, verticalAlign: "top", textAlign: "left" }} className="max-pc:hidden">
-                    <img src="/images/cscenter/rline.gif" width={2} height={412} alt="" className="img-fixed" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-          {/* 우측: 페이지별 내용 (원본 align=center valign=top) */}
-          <td style={{ width: 699, verticalAlign: "top", textAlign: "center" }}>
-            <div className="inline-block text-left max-pc:block">{children}</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="flex w-full min-h-[480px] font-sans max-pc:flex-col">
+      <aside className="w-[200px] shrink-0 border-r border-line pr-[24px] pt-[8px] max-pc:w-full max-pc:border-r-0 max-pc:pr-0 max-pc:pt-0">
+        <p className="eyebrow">Customer Center</p>
+        <h2 className="mb-[24px] mt-[6px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:mb-[12px] max-pc:text-[20px]">고객센터</h2>
+        <CsSideMenu />
+      </aside>
+      <section className="flex-1 min-w-0 pl-[40px] pt-[8px] max-pc:pl-0 max-pc:pt-[20px]">{children}</section>
+    </div>
   );
 }

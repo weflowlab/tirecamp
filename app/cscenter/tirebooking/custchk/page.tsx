@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BookingCheckForm from "@/components/cscenter/BookingCheckForm";
 
 export const metadata: Metadata = {
-  title: "예약확인 | 타이어공장 - 전브랜드 인터넷가 판매",
+  title: "예약확인 | 타이어캠프",
 };
 
 /**

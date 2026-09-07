@@ -3,54 +3,44 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-/* 메뉴 항목 (원본 순서 그대로). 중고제품은 원본 링크만 유지 */
+/* 메뉴 7개 (고객 확정: 홈 / 타이어검색 / 타이어소개 / 회사소개 / 고객센터 / 후기 / 문의하기) */
 const MENU = [
-  { href: "/product/tire/searchbysize", label: "타이어", match: "/product/tire" },
+  { href: "/", label: "홈", match: "/", exact: true },
+  { href: "/product/tire/searchbysize", label: "타이어검색", match: "/product/tire" },
   { href: "/product/tprodintro", label: "타이어소개", match: "/product/tprodintro" },
-  { href: "/shop/shopintro", label: "매장소개", match: "/shop" },
-  "bar",
-  { href: "/comevent/oevent", label: "이벤트", match: "/comevent" },
-  { href: "http://tirekongjang.com/product/used/bmusedwt_list.aspx", label: "중고제품", match: "/product/used" },
-  "bar",
+  { href: "/company", label: "회사소개", match: "/company" },
   { href: "/cscenter/news", label: "고객센터", match: "/cscenter" },
+  { href: "/review", label: "후기", match: "/review" },
+  { href: "/contact", label: "문의하기", match: "/contact" },
 ] as const;
 
 /**
- * 갈색 배경 메뉴바 (원본 background gif 51px 높이, 900px 폭 테이블)
- * - 현재 탭은 bgcolor #c44b1c 로 강조 (원본 서브페이지 동작)
- * - 메뉴 사이 구분 이미지 menubar.png
- * - 모바일: 구분 이미지는 숨기고 6개 메뉴를 3열 2행 그리드로 (배경 gif 는 10x51 세로 그라데이션이라 행마다 반복)
+ * 메뉴바 — 흰 바탕에 위아래 얇은 선, 현재 탭은 글자 아래 2px 잉크색 밑줄
+ * - PC: 900px 폭, 7개 균등 분할
+ * - 모바일: 가로 스크롤되는 한 줄 탭
  */
 export default function SiteNav() {
   const pathname = usePathname();
 
   return (
-    <nav
-      className="w-full h-[51px] flex justify-center max-pc:h-auto"
-      style={{ backgroundImage: "url(/jwtsm_comimg/tirekong2000/20260520075104576318.gif)" }}
-    >
-      <ul className="w-[900px] h-[49px] flex items-center max-pc:w-full max-pc:h-auto max-pc:grid max-pc:grid-cols-3">
-        {MENU.map((m, i) =>
-          m === "bar" ? (
-            <li key={`bar-${i}`} className="flex items-center justify-center max-pc:hidden">
-              <img src="/images/menubar.png" alt="" className="img-fixed" />
-            </li>
-          ) : (
-            <li
-              key={m.href}
-              className="w-[150px] h-[49px] flex items-center justify-center max-pc:w-auto max-pc:h-[46px]"
-              style={pathname.startsWith(m.match) ? { backgroundColor: "#c44b1c" } : undefined}
-            >
+    <nav className="w-full border-y border-line bg-white flex justify-center">
+      <ul className="w-[900px] h-[54px] flex max-pc:w-full max-pc:h-[48px] max-pc:overflow-x-auto max-pc:px-[6px] max-pc:[scrollbar-width:none]">
+        {MENU.map((m) => {
+          const active = "exact" in m && m.exact ? pathname === m.match : pathname.startsWith(m.match);
+          return (
+            <li key={m.href} className="flex-1 max-pc:flex-none">
               <Link
                 href={m.href}
-                className="lword !text-white text-[12pt] font-bold hover:!no-underline max-pc:flex max-pc:w-full max-pc:h-full max-pc:items-center max-pc:justify-center"
-                style={{ fontFamily: "돋움, 'Nanum Gothic', sans-serif" }}
+                className={`relative flex h-full w-full items-center justify-center font-sans text-[14px] tracking-[-0.01em] hover:!no-underline max-pc:px-[14px] max-pc:whitespace-nowrap ${
+                  active ? "!text-ink font-bold" : "!text-graphite font-medium hover:!text-ink"
+                }`}
               >
                 {m.label}
+                {active && <span className="absolute bottom-0 left-1/2 h-[2px] w-[28px] -translate-x-1/2 bg-ink" />}
               </Link>
             </li>
-          ),
-        )}
+          );
+        })}
       </ul>
     </nav>
   );

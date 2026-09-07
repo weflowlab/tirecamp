@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "매장소개 | 타이어공장 - 전브랜드 인터넷가 판매",
+  title: "매장소개 | 타이어캠프",
 };
 
 /**

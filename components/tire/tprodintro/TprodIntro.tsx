@@ -4,6 +4,7 @@ import { Suspense, useCallback, useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import type { ListFilter, TireListItem } from "@/lib/tprodintro";
 import { PER_PAGE, filterItems } from "@/lib/tprodintro";
+import PageTitle from "@/components/layout/PageTitle";
 import FilterBox from "./FilterBox";
 import TireCard from "./TireCard";
 import Paginator from "./Paginator";
@@ -15,9 +16,8 @@ type Props = {
 };
 
 /**
- * 타이어소개 본문 (원본 form name="frm" 전체)
- * - 원본은 hidden(spage/lpage/htypecode/hlevelcode)+체크박스를 POST 로 다시 불러오지만,
- *   여기서는 정적 JSON 을 클라이언트에서 거르고 상태를 URL 쿼리(?brand=10,14&type=10&level=&q=&page=2)에 반영한다.
+ * 타이어소개 본문
+ * - 정적 JSON 을 클라이언트에서 거르고 상태를 URL 쿼리(?brand=10,14&type=10&level=&q=&page=2)에 반영
  */
 export default function TprodIntro(props: Props) {
   return (
@@ -45,7 +45,7 @@ function TprodIntroInner({ items, models }: Props) {
     [sp],
   );
 
-  /* 필터 상태 → URL 반영 (원본 frm.submit() 에 해당) */
+  /* 필터 상태 → URL 반영 */
   const apply = useCallback(
     (next: Partial<ListFilter>) => {
       const f = { ...filter, ...next };
@@ -61,10 +61,10 @@ function TprodIntroInner({ items, models }: Props) {
     [filter, pathname, router],
   );
 
-  /* 필터 변경 = 원본 beginpost() (findfristchk=pagereset → 1페이지로) */
+  /* 필터 변경 = 1페이지로 */
   const reset = (next: Partial<ListFilter>) => apply({ ...next, page: 1 });
 
-  /* 원본 selbrand(c): 전체 클릭 시 나머지 해제, 브랜드 클릭 시 전체 해제 */
+  /* 전체 클릭 시 나머지 해제, 브랜드 클릭 시 전체 해제 */
   const selBrand = (code: string) => {
     if (code === "all") {
       reset({ brands: [] });
@@ -81,97 +81,45 @@ function TprodIntroInner({ items, models }: Props) {
   const page = Math.min(filter.page, totalPages);
   const pageItems = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
-  /* 4열로 나눈다 (원본 <TR> 마다 4개 <TD>) */
-  const rows: TireListItem[][] = [];
-  for (let i = 0; i < pageItems.length; i += 4) rows.push(pageItems.slice(i, i + 4));
-
   return (
-    <div className="w-full flex flex-col items-center">
-      {/* 타이틀 이미지 행 (896 x 55) — 모바일은 타이틀만 */}
-      <table className="w-[896px] m-stack">
-        <tbody>
-          <tr>
-            <td className="h-[55px] w-[317px] text-center max-pc:py-[10px]">
-              <img src="/images/tbrandintro/introtitle.gif" width={317} height={31} alt="타이어소개" />
-            </td>
-            <td className="h-[55px] w-[328px] max-pc:hidden">　</td>
-            <td className="h-[55px] w-[251px] text-center max-pc:hidden">　</td>
-          </tr>
-        </tbody>
-      </table>
-      {/* 연한 회색 5px 바 + 12px 여백 */}
-      <table className="w-[896px] m-fluid">
-        <tbody>
-          <tr>
-            <td className="h-[5px] w-[896px] bg-[#F2F2F2]"></td>
-          </tr>
-          <tr>
-            <td className="h-[12px] w-[896px]"></td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="w-full font-sans">
+      <PageTitle eyebrow="Tires" title="타이어소개" sub="취급하는 타이어를 제조사·타입·등급별로 살펴보세요. 이미지를 누르면 상세 정보가 열립니다." />
 
-      {/* 제조사별 / 타입별 / 등급별 필터 박스 */}
+      {/* 제조사별 / 타입별 / 등급별 필터 */}
       <FilterBox filter={filter} onBrand={selBrand} onType={(c) => reset({ type: c })} onLevel={(c) => reset({ level: c })} />
 
-      {/* 5px + 5px 여백 */}
-      <div className="h-[10px] w-[286px]"></div>
+      {/* 상품수/페이지 + 모델명 검색 */}
+      <div className="mt-[28px] flex items-center justify-between gap-[12px] border-b border-line pb-[12px] max-pc:flex-col max-pc:items-stretch">
+        <p className="text-[12px] text-muted" style={{ fontFamily: "var(--font-num)" }}>
+          {filtered.length} tires · {page}/{totalPages}
+        </p>
+        <input
+          type="text"
+          name="findbrandname"
+          defaultValue={filter.q}
+          key={filter.q}
+          placeholder="모델명 검색 후 Enter"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              reset({ q: (e.target as HTMLInputElement).value });
+            }
+          }}
+          className="field !h-[36px] !w-[220px] !text-[13px] max-pc:!w-full"
+        />
+      </div>
 
-      {/* 상품수/페이지 + 브랜드명 검색 (896 x 39) — 모바일(.m-wrap): 상품수 왼쪽, 브랜드명 검색 오른쪽 */}
-      <table className="w-[896px] m-wrap">
-        <tbody>
-          <tr className="max-pc:gap-y-[6px] max-pc:py-[6px]">
-            <td className="h-[39px] w-[216px] text-center">
-              <span className="text-[8pt] text-[#A4A4A4]">
-                상품수 : {filtered.length}개,&nbsp; 페이지 : {page}/{totalPages}
-              </span>
-            </td>
-            <td className="h-[39px] w-[218px] text-center max-pc:hidden">　</td>
-            <td className="h-[39px] w-[346px] text-right max-pc:ml-auto">
-              <b>브랜드명&nbsp;&nbsp; </b>
-            </td>
-            <td className="h-[39px] w-[155px] text-left">
-              {/* 원본 findbrandname: Enter 로 submit (entersubmit → pagereset). 실제 매칭은 모델명 부분일치 */}
-              <input
-                type="text"
-                name="findbrandname"
-                size={15}
-                defaultValue={filter.q}
-                key={filter.q}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    e.preventDefault();
-                    reset({ q: (e.target as HTMLInputElement).value });
-                  }
-                }}
-                className="border-2 border-[#D5D5D5] text-[10pt] px-[2px] py-[1px] outline-none max-pc:w-[130px]"
-                style={{ fontFamily: "굴림, 'Nanum Gothic', sans-serif" }}
-              />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div className="h-[5px] w-[167px]"></div>
-
-      {/* 카드 그리드 (896폭, 4열, 각 셀 224 x 364) — 모바일(.m-wrap): 2열 */}
-      <table className="w-[896px] m-wrap">
-        <tbody>
-          {rows.map((row, ri) => (
-            <tr key={ri}>
-              {row.map((it) => (
-                <TireCard key={it.seq} item={it} />
-              ))}
-            </tr>
+      {/* 카드 그리드 (4열 / 모바일 2열) */}
+      {pageItems.length === 0 ? (
+        <p className="border-b border-line py-[48px] text-center text-[13px] text-muted">조건에 맞는 타이어가 없습니다.</p>
+      ) : (
+        <ul className="grid grid-cols-4 gap-[16px] pt-[20px] max-pc:grid-cols-2 max-pc:gap-[10px]">
+          {pageItems.map((it) => (
+            <TireCard key={it.seq} item={it} />
           ))}
-          {rows.length === 0 && (
-            <tr>
-              <td className="h-[364px] w-[896px] text-center align-top">　</td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+        </ul>
+      )}
 
-      {/* 페이지 번호 (원본 MovePage(spage,lpage)) */}
       <Paginator page={page} totalPages={totalPages} onMove={(p) => apply({ page: p })} />
     </div>
   );

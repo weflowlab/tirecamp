@@ -4,10 +4,10 @@ import type { TireList } from "@/lib/tprodintro";
 import type { Tinfo } from "@/lib/tinfo";
 import listJson from "@/data/tprodintro.json";
 import tinfoJson from "@/data/tinfo.json";
+import { pageTitle } from "@/lib/site";
 
-/* 원본 <title> */
 export const metadata: Metadata = {
-  title: "타이어소개 | 타이어공장 - 전브랜드 인터넷가 판매",
+  title: pageTitle("타이어소개"),
 };
 
 /**

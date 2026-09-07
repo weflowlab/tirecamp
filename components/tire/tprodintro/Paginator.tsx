@@ -1,45 +1,28 @@
 "use client";
 
 /**
- * 페이지 번호 (원본 900x41 테이블, MovePage(spage,lpage))
- * - 현재 페이지: Arial #3366CC 15pt bold
- * - 나머지: Arial #808080 14pt
- * - 각 번호 뒤 &nbsp;
+ * 페이지 번호 — 현재 페이지는 잉크색 밑줄 + 굵게, 나머지는 회색
  */
-export default function Paginator({
-  page,
-  totalPages,
-  onMove,
-}: {
-  page: number;
-  totalPages: number;
-  onMove: (p: number) => void;
-}) {
+export default function Paginator({ page, totalPages, onMove }: { page: number; totalPages: number; onMove: (p: number) => void }) {
+  if (totalPages <= 1) return null;
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
   return (
-    <table className="w-[900px] max-pc:w-full">
-      <tbody>
-        <tr>
-          <td className="h-[41px] w-[900px] text-center max-pc:leading-[32px]">
-            {pages.map((p) => (
-              <span key={p}>
-                <a
-                  href={`?page=${p}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onMove(p);
-                  }}
-                  className="hover:no-underline"
-                  style={{ fontFamily: "Arial, sans-serif", color: p === page ? "#3366CC" : "#808080" }}
-                >
-                  <span style={p === page ? { fontSize: "15pt", fontWeight: 700 } : { fontSize: "14pt" }}>{p}</span>
-                </a>
-                &nbsp;
-              </span>
-            ))}
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="mt-[32px] flex flex-wrap justify-center gap-[4px]" style={{ fontFamily: "var(--font-num)" }}>
+      {pages.map((p) => (
+        <a
+          key={p}
+          href={`?page=${p}`}
+          onClick={(e) => {
+            e.preventDefault();
+            onMove(p);
+          }}
+          className={`flex h-[34px] min-w-[34px] items-center justify-center px-[8px] text-[13px] hover:!no-underline ${
+            p === page ? "border-b-2 border-ink font-bold !text-ink" : "!text-muted hover:!text-ink"
+          }`}
+        >
+          {p}
+        </a>
+      ))}
+    </div>
   );
 }
