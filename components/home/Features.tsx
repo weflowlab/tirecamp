@@ -17,7 +17,7 @@ const STRENGTHS: { icon: string; title: string; desc: string }[] = [
 const PURPOSES: { icon: string; title: string; desc: string; href: string }[] = [
   { icon: "tireNew", title: "신품 타이어", desc: "최신 생산 타이어로\n최고의 성능과 안전", href: "/product/tire/searchbysize" },
   { icon: "tireCarry", title: "이월 타이어", desc: "출고 후 1~2년 이내\n이월 타이어로\n가격은 합리적으로", href: "/product/tire/searchbysize" },
-  { icon: "tireUsed", title: "중고 타이어", desc: "성능 좋은 중고 타이어를\n꼼꼼히 선별하여\n합리적인 가격", href: "/contact" },
+  { icon: "tireUsed", title: "중고 타이어", desc: "성능 좋은 중고 타이어를\n꼼꼼히 선별하여\n합리적인 가격", href: "/product/used" },
   { icon: "suv", title: "SUV / 4x4 타이어", desc: "SUV 및 4x4 차량에\n적합한 전용 타이어\n다양하게 보유", href: "/product/tprodintro?type=15" },
   { icon: "calendar", title: "장착 예약", desc: "원하는 날짜와 시간에\n간편하게\n장착 예약 신청하세요", href: "/contact" },
 ];

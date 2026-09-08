@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-/* 메뉴 7개 (고객 확정: 홈 / 타이어검색 / 타이어소개 / 회사소개 / 고객센터 / 후기 / 문의하기) */
+/* 메뉴 8개 (홈 / 타이어검색 / 타이어소개 / 중고제품 / 회사소개 / 고객센터 / 후기 / 문의하기) */
 const MENU = [
   { href: "/", label: "홈", match: "/", exact: true },
   { href: "/product/tire/searchbysize", label: "타이어검색", match: "/product/tire" },
   { href: "/product/tprodintro", label: "타이어소개", match: "/product/tprodintro" },
+  { href: "/product/used", label: "중고제품", match: "/product/used" },
   { href: "/company", label: "회사소개", match: "/company" },
   { href: "/cscenter/news", label: "고객센터", match: "/cscenter" },
   { href: "/review", label: "후기", match: "/review" },
@@ -16,7 +17,7 @@ const MENU = [
 
 /**
  * 메뉴바 — 흰 바탕에 위아래 얇은 선, 현재 탭은 글자 아래 2px 잉크색 밑줄
- * - PC: 900px 폭, 7개 균등 분할
+ * - PC: 900px 폭, 8개 균등 분할
  * - 모바일: 가로 스크롤되는 한 줄 탭
  */
 export default function SiteNav() {

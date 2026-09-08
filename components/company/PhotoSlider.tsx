@@ -2,9 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-/* 매장 사진 (네이버 플레이스 등록 사진, 1400px 리사이즈 + EXIF 제거) */
-/* 순서: 외관(02,03) → 진열대(09,10) → 나머지 */
-const PHOTOS = ["02", "03", "09", "10", "04", "05", "06", "01"].map((n) => `/images/company/gallery-${n}.webp`);
+/* 매장 사진 18장 (사장님 제공, 1200px WebP 리사이즈 + EXIF 제거) — public/images/company/store-NN.webp */
+const PHOTOS = Array.from({ length: 18 }, (_, i) => `/images/company/store-${String(i + 1).padStart(2, "0")}.webp`);
 
 const AUTOPLAY_MS = 4000;
 

@@ -215,7 +215,8 @@ export default function CarManager() {
           </Card>
         ) : !maker || !year ? (
           <div className="border border-dashed border-line bg-white px-[20px] py-[40px] text-center text-[13px] leading-[22px] text-muted">
-            제조사와 연식을 고르거나, 위 검색칸에 차종명을 입력하세요.
+            제조사와 연식을 고르거나,
+            <br />위 검색칸에 차종명을 입력하세요.
           </div>
         ) : (
           <Card eyebrow="Cars" title={`${makerName(maker)} ${year} 차종`} action={<span className="text-[12px] text-muted">{loadingCars ? "불러오는 중" : `${cars.length}종`}</span>}>
