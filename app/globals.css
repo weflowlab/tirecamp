@@ -120,6 +120,8 @@ select.field {
 
   html {
     scroll-behavior: smooth; /* #앵커 이동 시 부드럽게 (후기 작성하기 버튼 등) */
+    /* 끝까지 내렸을 때 튕기며 바탕(흰색)이 보이는 오버스크롤 방지 — 푸터에서 멈춤 */
+    overscroll-behavior-y: none;
   }
 
   /* 누를 수 있는 것은 전부 손가락 커서 (링크는 브라우저 기본이 이미 pointer) */

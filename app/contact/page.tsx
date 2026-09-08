@@ -34,7 +34,7 @@ export default function ContactPage() {
 
       {/* 폼 + 안내 */}
       <div className="grid grid-cols-[260px_1fr] gap-[12px] max-pc:grid-cols-1">
-        <aside className="flex flex-col gap-[12px]">
+        <aside className="flex flex-col gap-[12px] max-pc:hidden">
           <div className="flex flex-1 flex-col border border-line bg-white px-[24px] py-[32px] max-pc:flex-none max-pc:p-[18px]">
             <p className="eyebrow">How it works</p>
             <h3 className="mt-[4px] text-[16px] font-bold tracking-[-0.01em] text-ink">이렇게 진행돼요</h3>

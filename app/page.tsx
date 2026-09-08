@@ -31,21 +31,32 @@ export default async function HomePage() {
           <h1 className="mt-[12px] text-[30px] font-light leading-[1.3] tracking-[-0.02em] text-white max-pc:text-[24px]">
             타이어의 모든 것을 <span className="font-bold">한 곳에서, 정직하게.</span>
           </h1>
-          <p className="mt-[12px] whitespace-nowrap text-[13px] leading-[22px] tracking-[-0.01em] text-[#C4C4C4] max-pc:whitespace-normal">
+          {/* PC: 2줄 */}
+          <p className="mt-[12px] whitespace-nowrap text-[13px] leading-[22px] tracking-[-0.01em] text-[#C4C4C4] max-pc:hidden">
             국산·수입 전 브랜드 신품 타이어와 중고 타이어를 합리적인 가격에 제안합니다.
             <br />
             차종과 사이즈로 검색하고, 상담이 필요하면 언제든 연락 주세요.
           </p>
-          <div className="mt-[20px] flex items-center gap-[10px] max-pc:flex-wrap">
-            <Link href="/contact" className="btn-fill !bg-white !text-ink hover:!bg-[#E8E8E8]">
+          {/* 모바일: 4줄 (줄바꿈 고정) */}
+          <p className="mt-[12px] hidden whitespace-nowrap text-[13px] leading-[22px] tracking-[-0.02em] text-[#C4C4C4] max-pc:block">
+            국산·수입 전 브랜드 신품 타이어와 중고 타이어를
+            <br />
+            합리적인 가격에 제안합니다.
+            <br />
+            차종과 사이즈로 검색하고,
+            <br />
+            상담이 필요하면 언제든 연락 주세요.
+          </p>
+          <div className="mt-[20px] flex items-center gap-[10px] max-pc:justify-center">
+            <Link href="/contact" className="btn-fill !bg-white !text-ink hover:!bg-[#E8E8E8] max-pc:flex-1 max-pc:!px-0">
               문의하기
             </Link>
-            <Link href="/product/tire/searchbysize" className="btn-outline !text-white hover:bg-white hover:!text-ink hover:!no-underline">
+            <Link href="/product/tire/searchbysize" className="btn-outline !text-white hover:bg-white hover:!text-ink hover:!no-underline max-pc:flex-1 max-pc:!px-0">
               타이어 검색
             </Link>
             <a
               href={PHONE_TEL}
-              className="ml-[6px] text-[15px] tracking-[0.02em] !text-[#C4C4C4] hover:!text-white hover:!no-underline"
+              className="ml-[6px] text-[15px] tracking-[0.02em] !text-[#C4C4C4] hover:!text-white hover:!no-underline max-pc:hidden"
               style={{ fontFamily: "var(--font-num)" }}
             >
               {SITE.phone}
@@ -147,15 +158,16 @@ export default async function HomePage() {
 }
 
 /* 매장 정보 3칸 공통: 메인 줄 / 보조 줄 */
-const MAIN = "block whitespace-nowrap text-[17px] font-semibold leading-[24px] tracking-[-0.01em] text-ink";
+const MAIN = "block whitespace-nowrap text-[17px] font-semibold leading-[24px] tracking-[-0.01em] text-ink max-pc:text-[15px] max-pc:leading-[22px]";
 const SUB = "mt-[4px] block whitespace-nowrap text-[12px] leading-[18px] text-muted";
 
 function InfoCell({ eyebrow, title, className = "", children }: { eyebrow: string; title: string; className?: string; children: React.ReactNode }) {
   return (
-    <div className={`px-[28px] py-[26px] text-[13px] leading-[22px] text-graphite max-pc:px-[4px] ${className}`}>
-      <p className="eyebrow">{eyebrow}</p>
-      <h3 className="mb-[4px] mt-[2px] text-[15px] font-bold leading-[22px] tracking-[-0.01em] text-ink">{title}</h3>
-      {children}
+    /* 모바일: 영문 라벨 숨기고 [제목 | 내용] 가로 2단, 위아래 여백 축소 */
+    <div className={`px-[28px] py-[26px] text-[13px] leading-[22px] text-graphite max-pc:grid max-pc:grid-cols-[80px_1fr] max-pc:items-center max-pc:gap-[12px] max-pc:px-[4px] max-pc:py-[14px] ${className}`}>
+      <p className="eyebrow max-pc:hidden">{eyebrow}</p>
+      <h3 className="mb-[4px] mt-[2px] text-[15px] font-bold leading-[22px] tracking-[-0.01em] text-ink max-pc:m-0 max-pc:text-[14px]">{title}</h3>
+      <div className="max-pc:min-w-0">{children}</div>
     </div>
   );
 }

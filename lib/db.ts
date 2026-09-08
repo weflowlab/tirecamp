@@ -48,13 +48,53 @@ export function ensureSchema(): Promise<void> {
       max_scroll INTEGER
     )`;
     await sql`CREATE INDEX IF NOT EXISTS page_views_day_idx ON page_views (day)`;
-    // 업로드 이미지(팝업/공지) — 파일시스템 대신 DB 에 보관하고 /api/files/:id 로 서빙
+    // 업로드 이미지(팝업/공지/타이어) — 파일시스템 대신 DB 에 보관하고 /api/files/:id 로 서빙
     await sql`CREATE TABLE IF NOT EXISTS files (
       id TEXT PRIMARY KEY,
       mime TEXT NOT NULL,
       data BYTEA NOT NULL,
       created_at TIMESTAMPTZ NOT NULL DEFAULT now()
     )`;
+    // 타이어 제품 (관리자 > 타이어 관리). 컬럼 순서는 lib/tires.ts 의 TireRow 와 같아야 한다 (jsonb_populate_recordset)
+    await sql`CREATE TABLE IF NOT EXISTS tires (
+      seq TEXT PRIMARY KEY,
+      brand_code TEXT NOT NULL DEFAULT '',
+      brand_name TEXT NOT NULL DEFAULT '',
+      model TEXT NOT NULL DEFAULT '',
+      image TEXT NOT NULL DEFAULT '',
+      images JSONB NOT NULL DEFAULT '[]'::jsonb,
+      type_label TEXT NOT NULL DEFAULT '',
+      level_label TEXT NOT NULL DEFAULT '',
+      type_code TEXT NOT NULL DEFAULT '',
+      level_code TEXT NOT NULL DEFAULT '',
+      tagline TEXT NOT NULL DEFAULT '',
+      note_desc TEXT NOT NULL DEFAULT '',
+      desc_html TEXT NOT NULL DEFAULT '',
+      speed_rating TEXT NOT NULL DEFAULT '',
+      treadwear TEXT NOT NULL DEFAULT '',
+      price_range TEXT NOT NULL DEFAULT '',
+      scores JSONB NOT NULL DEFAULT '[]'::jsonb,
+      visible BOOLEAN NOT NULL DEFAULT true,
+      sort_order INTEGER NOT NULL DEFAULT 0,
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    )`;
+    // 사이즈별 가격 (검색 결과 카드 1장 = 1행)
+    await sql`CREATE TABLE IF NOT EXISTS tire_prices (
+      id TEXT PRIMARY KEY,
+      size TEXT NOT NULL,
+      tire_seq TEXT NOT NULL,
+      speed_grade TEXT NOT NULL DEFAULT '',
+      market_price INTEGER NOT NULL DEFAULT 0,
+      sale_price INTEGER NOT NULL DEFAULT 0,
+      cash_price INTEGER NOT NULL DEFAULT 0,
+      comment TEXT NOT NULL DEFAULT '',
+      strength TEXT NOT NULL DEFAULT '',
+      is_best BOOLEAN NOT NULL DEFAULT false,
+      visible BOOLEAN NOT NULL DEFAULT true,
+      updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    )`;
+    await sql`CREATE INDEX IF NOT EXISTS tire_prices_size_idx ON tire_prices (size)`;
+    await sql`CREATE INDEX IF NOT EXISTS tire_prices_tire_idx ON tire_prices (tire_seq)`;
   })().catch((e) => {
     schemaReady = null; // 실패하면 다음 요청에서 다시 시도
     throw e;

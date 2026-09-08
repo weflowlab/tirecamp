@@ -8,8 +8,8 @@ import type { CarName, TireSizeRow } from "@/lib/carfind";
 
 /**
  * 차량검색 (원본 form name="frmsize" + ajaxcarfind_mainonly.js)
- * - 자동차회사 선택 → 연식 select 표시 → 차종 select 표시 → 차량사진 + 타이어사이즈 목록
- * - /api/car/* 는 미리 긁어 둔 정적 JSON(data/carfind) 을 돌려주고, 차량사진도 public/siteimg 의 로컬 파일이다 (외부 요청 없음)
+ * - 자동차회사 선택 → 연식 select 표시 → 차종 select 표시 → 타이어사이즈 목록
+ * - /api/car/* 는 미리 긁어 둔 정적 JSON(data/carfind) 을 돌려준다 (외부 요청 없음). 차량 사진은 쓰지 않는다
  * - 각 단계의 select 는 데이터가 도착하기 전까지 숨김 (원본 display:none 과 동일)
  * - 상위 단계를 바꾸면 하위 단계는 모두 초기화 (deleteCarYears/deleteCarNames/cftblvisible_off)
  */
@@ -19,7 +19,6 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
   const [year, setYear] = useState("NO");
   const [cars, setCars] = useState<CarName[]>([]);
   const [car, setCar] = useState("NO");
-  const [carimg, setCarimg] = useState<string | null>(null);
   const [sizes, setSizes] = useState<TireSizeRow[]>([]);
 
   /* 늦게 도착한 이전 요청 응답을 무시하기 위한 카운터 */
@@ -37,7 +36,6 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
     resetSizes();
   }
   function resetSizes() {
-    setCarimg(null);
     setSizes([]);
   }
 
@@ -81,9 +79,8 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
     const seq = ++reqSeq.current;
     try {
       const res = await fetch(`/api/car/sizes?makercode=${maker}&syear=${year}&carcode=${c}`);
-      const data = (await res.json()) as { carimg: string | null; sizes: TireSizeRow[] };
+      const data = (await res.json()) as { sizes: TireSizeRow[] };
       if (seq !== reqSeq.current) return;
-      setCarimg(data.carimg ?? null);
       setSizes(data.sizes ?? []);
     } catch {
       /* 무시 */
@@ -169,22 +166,16 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
         {/* 2행: 차량사진 + 타이어사이즈 목록 (원본 idtrcarpic, 차종 선택 시에만 표시) */}
         {showCarTable && (
           <tr>
-            <td height={10} width={212} align="center" />
-            <td height={10} width={658} align="left">
-              <table width={621} style={{ height: 137 }} cellSpacing={0} cellPadding={0} className="m-stack">
+            <td width={212} align="center" />
+            <td width={658} align="left">
+              <table width={621} cellSpacing={0} cellPadding={0} className="m-stack">
                 <tbody>
                   <tr>
-                    {/* 차량사진 (원본 pcarphoto, 221x165) */}
-                    <td height={124} width={227} align="center" valign="top" className="max-pc:pb-[8px]">
-                      {carimg && <img src={carimg} alt="" width={221} height={165} />}
-                    </td>
-                    <td height={124} width={12} align="center" valign="top">
-
-                    </td>
+                    {/* 차량사진 칸은 뺌 — 원본 서버 이미지(/siteimg/carimg)는 수집하지 않았고 저작권상 쓰지 않는다 */}
                     {/* 타이어사이즈 목록 (원본 idsizelisttd, tsizeCallback 이 생성하는 table) */}
-                    <td height={124} width={385} align="left" valign="top" className="max-pc:pb-[8px]">
+                    <td width={621} align="left" valign="top" className="pt-[10px]">
                       {sizes.length > 0 && (
-                        <table width={306} style={{ height: 35 }} cellSpacing={0} cellPadding={0} className="m-fluid">
+                        <table width={470} style={{ height: 35 }} cellSpacing={0} cellPadding={0} className="m-fluid border-t border-line">
                           <tbody>
                             {sizes.map((s, i) => (
                               <SizeRow key={`${s.ftsize}-${s.rtsize}-${s.oesize}-${i}`} row={s} tinfo={tinfo} />
@@ -213,11 +204,12 @@ function SizeRow({ row, tinfo }: { row: TireSizeRow; tinfo?: string }) {
   const href =
     `/product/tire/sizelist?find_ftsize=${encodeURIComponent(row.ftsize)}` +
     (differ ? `&find_rtsize=${encodeURIComponent(row.rtsize)}` : "") +
-    (tinfo ? `&tinfo=${tinfo}` : "");
+    (tinfo ? `&tinfo=${tinfo}` : "") +
+    "#results";
 
   return (
     <tr className="border-b border-line font-sans hover:bg-surface">
-      <td height={38} width={193} align="left" className="pl-[8px]">
+      <td height={42} width={330} align="left" className="pl-[12px]">
         <span className="text-[14px] font-semibold text-ink" style={{ fontFamily: "var(--font-num)" }}>
           {differ ? (
             <>
@@ -231,8 +223,8 @@ function SizeRow({ row, tinfo }: { row: TireSizeRow; tinfo?: string }) {
           )}
         </span>
       </td>
-      <td height={38} width={109} align="right" className="pr-[8px]">
-        <Link href={href} className="btn-outline !h-[28px] !px-[12px] !text-[12px] !text-ink hover:bg-ink hover:!text-white hover:!no-underline">
+      <td height={42} width={140} align="right" className="whitespace-nowrap pr-[12px]">
+        <Link href={href} className="btn-outline !h-[28px] whitespace-nowrap !px-[12px] !text-[12px] !text-ink hover:bg-ink hover:!text-white hover:!no-underline">
           타이어 보기
         </Link>
       </td>

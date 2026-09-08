@@ -38,8 +38,9 @@ export default async function FaqPage() {
         ))}
       </ul>
 
-      <p className="mt-[24px] text-[13px] text-muted">
-        찾는 답이 없으신가요?{" "}
+      <p className="mt-[24px] text-[13px] leading-[22px] text-muted max-pc:text-center">
+        찾는 답이 없으신가요?
+        <br className="hidden max-pc:inline" />{" "}
         <Link href="/contact" className="!text-ink underline underline-offset-4">
           문의하기
         </Link>{" "}

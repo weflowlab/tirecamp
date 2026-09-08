@@ -41,8 +41,9 @@ function readJson<T>(file: string, fallback: T): Promise<T> {
       .readFile(file, "utf8")
       .then((txt) => JSON.parse(txt) as T)
       .catch((e: NodeJS.ErrnoException) => {
-        if (e.code === "ENOENT") return fallback;
+        /* 실패(파일 없음 포함)는 캐시하지 않는다 — 수집 스크립트가 나중에 파일을 만들면 재시작 없이 읽히도록 */
         fileCache.delete(file);
+        if (e.code === "ENOENT") return fallback;
         throw e;
       });
     fileCache.set(file, p);

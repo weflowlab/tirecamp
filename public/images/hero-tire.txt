@@ -1,1 +1,3 @@
 hero-tire.jpg — Unsplash (https://unsplash.com/photos/close-up-of-a-rugged-tire-tread-CTwQiFlpgrM), Rob Wingate. Unsplash License (상업적 사용 가능, 저작자 표시 불필요). 흑백 변환 + 와이드 크롭.
+home/stock.jpg — Unsplash (https://unsplash.com/photos/a-bunch-of-tires-stacked-on-top-of-each-other-IkpseSg-68E), Markus Winkler. Unsplash License. 흑백 변환 + 3:2 크롭.
+home/service.jpg — Unsplash (https://unsplash.com/photos/atQQaZYC4z0). Unsplash License. 흑백 변환 + 3:2 크롭.

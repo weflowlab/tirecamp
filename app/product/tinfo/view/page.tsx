@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { TireDetailContent } from "@/components/tire/TireDetailModal";
-import type { Tinfo } from "@/lib/tinfo";
-import { toTireDetail, type TireNote } from "@/lib/tireDetail";
-import tinfoJson from "@/data/tinfo.json";
-import notesJson from "@/data/tireNotes.json";
+import { toTireDetail } from "@/lib/tireDetail";
+import { displayPriceRange, getTire } from "@/lib/tires";
 import { pageTitle } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: pageTitle("타이어 제품정보"),
 };
+
+/* 관리자 수정이 바로 보이도록 요청마다 읽는다 */
+export const dynamic = "force-dynamic";
 
 /**
  * 타이어 상세 페이지 (/product/tinfo/view?tinfoseq=N)
@@ -20,15 +21,14 @@ export default async function TinfoViewPage({ searchParams }: { searchParams: Pr
   const raw = Array.isArray(sp.tinfoseq) ? sp.tinfoseq[0] : sp.tinfoseq;
   const seq = (raw ?? "").trim();
 
-  const t = (tinfoJson as Record<string, Tinfo>)[seq];
+  const t = await getTire(seq);
   if (!t || !t.model) {
     return <div className="w-[960px] self-start p-[40px] font-sans text-[13px] text-muted max-pc:w-full">해당 제품 정보를 찾을 수 없습니다.</div>;
   }
-  const note = (notesJson as Record<string, TireNote>)[seq];
 
   return (
     <div className="w-[960px] self-start max-pc:w-full">
-      <TireDetailContent data={toTireDetail(t, note)} />
+      <TireDetailContent data={toTireDetail(t, await displayPriceRange(t))} />
     </div>
   );
 }

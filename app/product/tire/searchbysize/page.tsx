@@ -3,13 +3,15 @@ import FindTireBox from "@/components/tire/FindTireBox";
 import OrderSteps from "@/components/tire/OrderSteps";
 import PageTitle from "@/components/layout/PageTitle";
 import Link from "next/link";
-import tinfoJson from "@/data/tinfo.json";
-import type { Tinfo } from "@/lib/tinfo";
+import { getTire } from "@/lib/tires";
 import { pageTitle } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: pageTitle("타이어검색"),
 };
+
+/* 선택 타이어 정보는 DB 에서 읽는다 */
+export const dynamic = "force-dynamic";
 
 /**
  * 타이어검색 탭 (/product/tire/searchbysize)
@@ -19,7 +21,7 @@ export default async function SearchBySizePage({ searchParams }: { searchParams:
   const sp = await searchParams;
   const raw = Array.isArray(sp.tire) ? sp.tire[0] : sp.tire;
   const tinfo = raw && /^\d+$/.test(raw) ? raw : undefined;
-  const picked = tinfo ? (tinfoJson as Record<string, Tinfo>)[tinfo] : undefined;
+  const picked = tinfo ? await getTire(tinfo) : undefined;
 
   return (
     <div className="w-full font-sans">

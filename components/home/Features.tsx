@@ -29,10 +29,10 @@ export function Strengths() {
       <SectionHead eyebrow="Why Tire Camp" title={`${SITE.name}의 장점`} />
       <ul className="grid grid-cols-6 border-y border-line max-pc:grid-cols-3">
         {STRENGTHS.map((s, i) => (
-          <li key={s.title} className={`flex flex-col items-center px-[8px] py-[28px] text-center ${i < 5 ? "border-r border-line" : ""} max-pc:[&:nth-child(3)]:border-r-0 max-pc:[&:nth-child(-n+3)]:border-b max-pc:[&:nth-child(-n+3)]:border-line`}>
+          <li key={s.title} className={`flex flex-col items-center px-[8px] py-[28px] text-center max-pc:px-[2px] max-pc:py-[18px] ${i < 5 ? "border-r border-line" : ""} max-pc:[&:nth-child(3)]:border-r-0 max-pc:[&:nth-child(-n+3)]:border-b max-pc:[&:nth-child(-n+3)]:border-line`}>
             <span className="flex h-[96px] items-center text-ink max-pc:[&>svg]:h-[72px] max-pc:[&>svg]:w-[72px]">{HOME_ICONS[s.icon]}</span>
-            <p className="mt-[14px] text-[16px] font-bold tracking-[-0.02em] text-ink max-pc:text-[14px]">{s.title}</p>
-            <p className="mt-[4px] text-[13px] text-muted">{s.desc}</p>
+            <p className="mt-[14px] whitespace-nowrap text-[16px] font-bold tracking-[-0.02em] text-ink max-pc:mt-[10px] max-pc:text-[12.5px] max-pc:tracking-[-0.04em]">{s.title}</p>
+            <p className="mt-[4px] whitespace-nowrap text-[13px] text-muted max-pc:text-[10.5px] max-pc:tracking-[-0.03em]">{s.desc}</p>
           </li>
         ))}
       </ul>
@@ -45,9 +45,10 @@ export function Purposes() {
   return (
     <section className="w-full font-sans">
       <SectionHead eyebrow="Find by Purpose" title="용도에 맞는 타이어 찾기" />
-      <ul className="grid grid-cols-5 gap-[10px] max-pc:grid-cols-2">
+      {/* 모바일: 가로 스와이프, 카드 1.4장 보임 (스냅) */}
+      <ul className="grid grid-cols-5 gap-[10px] max-pc:flex max-pc:snap-x max-pc:snap-mandatory max-pc:overflow-x-auto max-pc:pb-[4px] max-pc:[scrollbar-width:none]">
         {PURPOSES.map((p) => (
-          <li key={p.title}>
+          <li key={p.title} className="max-pc:w-[68%] max-pc:shrink-0 max-pc:snap-start">
             <Link href={p.href} className="group flex h-full flex-col items-center border border-line px-[10px] py-[26px] text-center transition-colors hover:border-ink hover:!no-underline">
               <span className="flex h-[96px] items-center !text-ink transition-transform group-hover:scale-[1.06] max-pc:[&>svg]:h-[72px] max-pc:[&>svg]:w-[72px]">{HOME_ICONS[p.icon]}</span>
               <p className="mt-[14px] text-[16px] font-bold tracking-[-0.02em] !text-ink max-pc:text-[14px]">{p.title}</p>

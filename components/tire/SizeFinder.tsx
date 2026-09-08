@@ -53,7 +53,7 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
       url = `/product/tire/sizelist?find_ftsize=${toCode(front)}`;
     }
     if (tinfo) url += `&tinfo=${tinfo}`;
-    router.push(url);
+    router.push(url + "#results");
   }
 
   return (
@@ -66,29 +66,40 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
         </div>
 
         <div className="min-w-0 flex-1">
-          {/* 1줄: 앞(또는 전체) 사이즈 + 검색 버튼 + 보는 방법 (모두 38px 높이로 정렬) */}
+          {/*
+           * PC: [FRONT 셀렉트 3개][타이어 찾기][보는 방법] / (줄바꿈) / [REAR 셀렉트 3개]
+           * 모바일: 버튼 두 개를 order-last 로 맨 뒤로 보내 [FRONT][REAR][버튼] 순서가 된다
+           */}
           <div className="flex flex-wrap items-center gap-[8px]">
             {frchk && <span className="eyebrow w-[44px] !text-faint max-pc:w-full">Front</span>}
             <SizeSelects idx={1} value={front} onChange={setFront} />
-            <button type="button" onClick={findSize} className="btn-fill ml-[6px] !h-[38px] w-[130px] !px-0 max-pc:ml-0 max-pc:w-full">
+            {/* 모바일: 버튼 위 가로선 — 차종/사이즈 검색 공통 버튼임을 표시 */}
+            {/* 선 위아래 간격 = 카드 하단 여백(16px): flex gap 8 + margin 8 */}
+            <span className="hidden basis-full border-t border-line max-pc:order-[98] max-pc:mt-[8px] max-pc:block" />
+            <button type="button" onClick={findSize} className="btn-fill ml-[6px] !h-[38px] w-[130px] !px-0 max-pc:order-[99] max-pc:mt-[8px] max-pc:ml-0 max-pc:w-full">
               타이어 찾기
             </button>
             <button
               type="button"
-              onClick={() => setHelpOpen(true)}
-              className="ml-[6px] inline-flex h-[38px] items-center gap-[6px] border border-line px-[14px] text-[12px] text-graphite transition-colors hover:border-ink hover:text-ink max-pc:ml-0 max-pc:w-full max-pc:justify-center"
+              onClick={() => {
+                const el = document.getElementById("size-guide");
+                if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+                else setHelpOpen(true);
+              }}
+              className="ml-[6px] inline-flex h-[38px] items-center gap-[6px] border border-line px-[14px] text-[12px] text-graphite transition-colors hover:border-ink hover:text-ink max-pc:order-[99] max-pc:ml-0 max-pc:w-full max-pc:justify-center"
             >
               <span className="flex h-[16px] w-[16px] items-center justify-center rounded-full border border-current text-[10px] font-bold leading-none">?</span>
               사이즈 보는 방법
             </button>
+            {frchk && (
+              <>
+                {/* 줄바꿈 (PC 에서 REAR 를 다음 줄로) */}
+                <span className="h-0 basis-full" />
+                <span className="eyebrow w-[44px] !text-faint max-pc:w-full">Rear</span>
+                <SizeSelects idx={2} value={rear} onChange={setRear} />
+              </>
+            )}
           </div>
-          {/* 2줄: 뒤 사이즈 (체크 시에만) */}
-          {frchk && (
-            <div className="mt-[8px] flex flex-wrap items-center gap-[8px]">
-              <span className="eyebrow w-[44px] !text-faint max-pc:w-full">Rear</span>
-              <SizeSelects idx={2} value={rear} onChange={setRear} />
-            </div>
-          )}
           {/* 3줄: 앞뒤 사이즈가 다른 경우 */}
           <label className="mt-[8px] flex cursor-pointer items-center gap-[6px] text-[12px] text-graphite">
             <input type="checkbox" name="frchk" value="2" checked={frchk} onChange={(e) => onFrchk(e.target.checked)} className="accent-black" />

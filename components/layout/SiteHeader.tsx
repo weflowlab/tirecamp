@@ -17,7 +17,7 @@ export default function SiteHeader() {
     <header className="w-full font-sans">
       <div className="mx-auto w-[900px] max-pc:w-full max-pc:px-[16px]">
         {/* 상단 작은 유틸 링크 */}
-        <div className="h-[34px] flex justify-end items-center max-pc:h-[30px]">
+        <div className="h-[34px] flex justify-end items-center max-pc:hidden">
           <ul className="flex gap-[20px] text-[11px] tracking-[0.04em]">
             {[
               { href: "/", label: "HOME" },
@@ -34,9 +34,9 @@ export default function SiteHeader() {
         </div>
 
         {/* 로고 / 사이즈검색 / 전화 */}
-        <div className="flex h-[96px] items-center max-pc:h-auto max-pc:flex-wrap max-pc:justify-between max-pc:pb-[14px]">
-          <div className="w-[250px] max-pc:w-[56%] max-pc:order-1">
-            <Link href="/" className="inline-block hover:!no-underline">
+        <div className="flex h-[96px] items-center max-pc:h-auto max-pc:flex-wrap max-pc:justify-between max-pc:items-center max-pc:pb-[14px] max-pc:pt-[24px]">
+          <div className="w-[250px] max-pc:order-1 max-pc:w-[56%] max-pc:self-center">
+            <Link href="/" className="inline-flex flex-col hover:!no-underline">
               <span className="block text-[26px] font-bold leading-[1] tracking-[-0.04em] !text-ink">{SITE.name}</span>
               <span className="eyebrow mt-[6px] block !text-faint">{SITE.nameEn}</span>
             </Link>
@@ -45,7 +45,7 @@ export default function SiteHeader() {
           <div className="flex flex-1 justify-center max-pc:w-full max-pc:order-3 max-pc:pt-[10px]">
             <QuickSizeSearch />
           </div>
-          <div className="w-[250px] flex flex-col items-end justify-center max-pc:w-[40%] max-pc:order-2">
+          <div className="w-[250px] flex flex-col items-end justify-center max-pc:relative max-pc:-top-[5px] max-pc:order-2 max-pc:w-[40%] max-pc:self-center">
             {/* 문의하기 — 검정 버튼 위로 빛이 지나감 */}
             <Link href="/contact" className="btn-fill btn-shine !h-[44px] w-[140px] rounded-full !px-0 hover:!no-underline max-pc:w-full">
               문의하기 →

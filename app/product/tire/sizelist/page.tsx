@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { getSizeList, parseSizeListQuery } from "@/lib/sizelist";
 import Link from "next/link";
 import { buildSizeListHref, formatSize } from "@/lib/sizelistQuery";
-import tinfoJson from "@/data/tinfo.json";
-import type { Tinfo } from "@/lib/tinfo";
+import { getTire } from "@/lib/tires";
 import PageTitle from "@/components/layout/PageTitle";
 import SizeListFilter from "@/components/tire/sizelist/SizeListFilter";
 import SizeListTabs from "@/components/tire/sizelist/SizeListTabs";
@@ -27,7 +26,7 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
   const result = await getSizeList(query);
 
   /* 타이어소개에서 넘어온 "선택한 타이어" — 결과에 있으면 맨 위에 강조, 없으면 안내 */
-  const picked = query.tinfo ? (tinfoJson as Record<string, Tinfo>)[query.tinfo] : undefined;
+  const picked = query.tinfo ? await getTire(query.tinfo) : undefined;
   const pickedTires = picked ? result.tires.filter((t) => t.tinfoseq === query.tinfo) : [];
   const otherTires = picked ? result.tires.filter((t) => t.tinfoseq !== query.tinfo) : result.tires;
   const sizeLabel =
@@ -40,8 +39,8 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
       {/* 사이즈 재검색 / 정렬 / 제조사 */}
       <SizeListFilter query={query} />
 
-      {/* 구분 탭 + 결과 카드 목록 */}
-      <div className="mt-[36px]">
+      {/* 구분 탭 + 결과 카드 목록 — 차종 검색 "타이어 보기"/"타이어 찾기" 로 들어오면 #results 로 부드럽게 스크롤 */}
+      <div id="results" className="mt-[36px] scroll-mt-[16px]">
         <SizeListTabs query={query} total={result.total} />
 
         {picked && (

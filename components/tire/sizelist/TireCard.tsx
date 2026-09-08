@@ -12,9 +12,6 @@ function money(n: number): string {
   return n.toLocaleString("ko-KR");
 }
 
-/* 수량 select 0~8 */
-const QTY_OPTIONS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
 type Props = { tire: TireItem };
 
 /**
@@ -57,40 +54,53 @@ export default function TireCard({ tire }: Props) {
   const sizeRow = (b: SizeBlock, head: string | null, qty: number, setQty: (n: number) => void) => (
     <div className="border-t border-line pt-[12px] mt-[12px]">
       {head && <p className="eyebrow mb-[6px]">{head}</p>}
+      {/* 모든 항목을 32px 높이 상자 안에서 세로 가운데 정렬 (select 대신 − / + 스테퍼라 모바일 16px 강제 규칙 영향 없음) */}
       <div className="flex flex-wrap items-center gap-x-[20px] gap-y-[8px]">
-        <div className="min-w-[130px]">
-          <span className="text-[16px] font-semibold text-ink" style={NUM}>
+        <div className="flex h-[32px] min-w-[130px] items-center">
+          <span className="text-[16px] font-semibold leading-none text-ink" style={NUM}>
             {b.size}
           </span>
           {b.speedGrade && (
-            <span className="ml-[6px] text-[11px] text-muted" title={b.speedTitle} style={NUM}>
+            <span className="ml-[6px] text-[11px] leading-none text-muted" title={b.speedTitle} style={NUM}>
               {b.speedGrade}
             </span>
           )}
         </div>
-        <div className="flex items-baseline gap-[10px]">
-          <span className="text-[12px] text-faint line-through" style={NUM}>
+        <div className="flex h-[32px] items-baseline gap-[10px] pt-[7px]">
+          <span className="text-[12px] leading-none text-faint line-through" style={NUM}>
             {money(b.marketPrice)}
           </span>
-          <span className="text-[17px] font-bold text-ink" style={NUM}>
+          <span className="text-[17px] font-bold leading-none text-ink" style={NUM}>
             {money(b.salePrice)}
             <span className="ml-[2px] text-[12px] font-normal text-graphite">원</span>
           </span>
-          {b.discountText && <span className="text-[11px] text-muted">{b.discountText.replace(/^↓/, "")}</span>}
+          {b.discountText && <span className="text-[11px] leading-none text-muted">{b.discountText.replace(/^↓/, "")}</span>}
         </div>
-        <label className="ml-auto flex items-center gap-[6px] text-[12px] text-muted max-pc:ml-0">
+        {/* 수량: − 숫자 + 스테퍼 (0~8) */}
+        <div className="ml-auto flex h-[32px] items-center gap-[8px] text-[12px] text-muted max-pc:ml-0">
           수량
-          <select
-            name={head?.startsWith("Rear") ? "selordercnt2" : "selordercnt1"}
-            value={qty}
-            onChange={(e) => setQty(parseInt(e.target.value, 10))}
-            className="field !h-[32px] !w-[60px] !px-[6px] !text-[13px]"
-          >
-            {QTY_OPTIONS.map((n) => (
-              <option key={n} value={n}>{n}</option>
-            ))}
-          </select>
-        </label>
+          <div className="flex h-[32px] items-center border border-line">
+            <button
+              type="button"
+              aria-label="수량 줄이기"
+              onClick={() => setQty(Math.max(0, qty - 1))}
+              className="flex h-full w-[30px] items-center justify-center text-graphite hover:bg-surface hover:text-ink"
+            >
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M2 6h8" /></svg>
+            </button>
+            <span className="w-[28px] text-center text-[14px] font-semibold leading-none text-ink" style={NUM}>
+              {qty}
+            </span>
+            <button
+              type="button"
+              aria-label="수량 늘리기"
+              onClick={() => setQty(Math.min(8, qty + 1))}
+              className="flex h-full w-[30px] items-center justify-center text-graphite hover:bg-surface hover:text-ink"
+            >
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M2 6h8M6 2v8" /></svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -112,11 +122,6 @@ export default function TireCard({ tire }: Props) {
           <span className="mt-[2px] block text-[19px] font-bold tracking-[-0.01em] !text-ink">{tire.model}</span>
         </a>
         {tire.desc && <p className="mt-[8px] text-[13px] leading-[21px] text-graphite">{tire.desc}</p>}
-        {tire.strength && (
-          <p className="mt-[6px] text-[12px] text-muted">
-            주장점 <span className="text-ink">{tire.strength}</span>
-          </p>
-        )}
         {tire.comment && <p className="mt-[6px] text-[12px] text-graphite">{tire.comment}</p>}
 
         {sizeRow(tire.front, tire.rear ? "Front · 앞" : null, qty1, setQty1)}

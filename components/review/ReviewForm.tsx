@@ -42,6 +42,8 @@ export default function ReviewForm() {
       setContent("");
       setMsg({ ok: true, text: "후기가 등록되었습니다. 감사합니다." });
       router.refresh();
+      /* 새 후기가 맨 위에 붙으므로 페이지 상단으로 (부드럽게) */
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err) {
       setMsg({ ok: false, text: err instanceof Error ? err.message : "등록에 실패했습니다." });
     } finally {

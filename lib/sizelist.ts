@@ -1,17 +1,15 @@
 /*
- * 타이어 사이즈 검색 결과(/product/tire/sizelist) 데이터 계층 — 완전 오프라인
- * - 원본: http://tirekongjang.com/product/tire/sizelist.aspx (form POST 결과 HTML) 을
- *   scripts/scrape-sizelist.mjs 가 사이즈별로 전수 파싱해 둔 data/sizelist/<code>.json 을 읽는다.
+ * 타이어 사이즈 검색 결과(/product/tire/sizelist) 데이터 계층
+ * - 사이즈별 가격/제품 정보는 lib/tires.ts (DB, 없으면 data/sizelist/*.json + tinfo.json) 에서 읽는다.
+ *   관리자 > 타이어 관리에서 고친 이름/사진/가격이 그대로 반영된다.
  * - 탭(seltireg) / 제조사(brandop) / 정렬(sorttireop) / 페이지(lpage) / 앞뒤 사이즈 조합(frchk) 은
  *   원본 서버의 동작을 그대로 흉내내어 여기서 처리한다. 런타임 네트워크 호출은 없다.
- * - 서버 전용 (fs/path 사용). 클라이언트 컴포넌트는 lib/sizelistQuery.ts 만 import 할 것
+ * - 서버 전용. 클라이언트 컴포넌트는 lib/sizelistQuery.ts 만 import 할 것
  */
 
-import { promises as fs } from "fs";
-import path from "path";
 import { BRANDS } from "./tireSizeOptions";
-import type { Tinfo } from "./tinfo";
-import tinfoJson from "@/data/tinfo.json";
+import type { TireRecord } from "./tireTypes";
+import { getSizeCards, getTireMap } from "./tires";
 
 /* 타입/URL query 유틸은 클라이언트 공용 모듈(lib/sizelistQuery.ts)에서 가져와 재노출 */
 import type { SizeListQuery, SizeListResult, TireItem, PageLink } from "./sizelistQuery";
@@ -22,43 +20,24 @@ export { parseSizeListHtml, buildPostBody } from "./sizelistParser";
 /* 원본 한 페이지 목록 카드 수 (23개 → 2페이지) */
 export const PAGE_SIZE = 20;
 
-/* data/sizelist/<code>.json 의 형태 (베스트 섹션 중복 카드는 저장하지 않음) */
-type SizeFile = { size: string; total: number; tires: TireItem[] };
+/* ---------- 제품 정보 (탭 필터/정렬에 필요한 등급·타입·점수) ---------- */
 
-const TINFO = tinfoJson as Record<string, Tinfo>;
-
-/* ---------- 정적 파일 로드 ---------- */
-
-/* 사이즈 코드 → 저장된 목록 (없거나 형식이 아니면 빈 목록). 프로세스 내 메모리 캐시 */
-const fileCache = new Map<string, TireItem[]>();
-async function loadSizeFile(code: string): Promise<TireItem[]> {
-  if (!/^\d{7}$/.test(code)) return [];
-  const hit = fileCache.get(code);
-  if (hit) return hit;
-  let tires: TireItem[] = [];
-  try {
-    const raw = await fs.readFile(path.join(process.cwd(), "data", "sizelist", `${code}.json`), "utf8");
-    tires = (JSON.parse(raw) as SizeFile).tires ?? [];
-  } catch {
-    /* 결과 없는 사이즈 (파일 없음) */
-  }
-  fileCache.set(code, tires);
-  return tires;
-}
+/* getSizeList 가 요청마다 채운다 (관리자 수정 반영). 모듈 레벨 헬퍼들이 참조 */
+let TIRES: Map<string, TireRecord> = new Map();
 
 /* ---------- 탭 / 제조사 필터 ---------- */
 
-/* 상세 팝업의 "타입 / 등급" 문구 ("승용차용 / 프리미엄") 에서 등급 코드 추출 — 원본 sellevel 코드와 동일 */
+/* 등급 코드 (프리미엄 10 / 최고급형 15 / 고급형 20 / 일반형 25) — 원본 sellevel 코드와 동일 */
 const LEVEL_CODES: Record<string, string> = { 프리미엄: "10", 최고급형: "15", 고급형: "20", 일반형: "25" };
 function levelCode(seq: string): string {
-  const tl = TINFO[seq]?.typeLevel ?? "";
-  const label = tl.split("/").pop()?.trim() ?? "";
-  return LEVEL_CODES[label] ?? "";
+  const t = TIRES.get(seq);
+  if (!t) return "";
+  return t.levelCode || LEVEL_CODES[t.levelLabel] || "";
 }
 
 /* 겨울용(스노우) 타입 여부 */
 function isWinter(seq: string): boolean {
-  return (TINFO[seq]?.typeLevel ?? "").includes("겨울");
+  return (TIRES.get(seq)?.typeLabel ?? "").includes("겨울");
 }
 
 /* 원본 탭(seltireg): all 전체 / main 베스트(추천) / 10 프리미엄 / 15 최고급 / 20 고급 / 25 일반 / snow 겨울용 */
@@ -88,7 +67,7 @@ function brandCode(t: TireItem): string {
 
 /* 팝업 성능 그래프 점수 (width = 점수 × 12px). 없으면 0 */
 function score(seq: string, label: string): number {
-  const s = TINFO[seq]?.scores.find((x) => x.label === label);
+  const s = TIRES.get(seq)?.scores.find((x) => x.label === label);
   return s ? Math.round(s.width / 12) : 0;
 }
 
@@ -191,7 +170,7 @@ function buildPages(total: number, lpage: number): PageLink[] {
 
 /*
  * 검색 상태 → 결과 (정적 데이터만 사용)
- *  1. 앞 사이즈 파일 로드 (앞≠뒤면 뒤 사이즈도 로드해 tinfoseq 로 결합)
+ *  1. 앞 사이즈 가격 행 로드 (앞≠뒤면 뒤 사이즈도 로드해 tinfoseq 로 결합)
  *  2. 탭 → 제조사 필터 → 정렬
  *  3. 페이지 자르기 (20장). 1페이지 상단에는 isBest 카드를 주황 테두리(bestSection) 로 한 번 더 출력 (원본 "베스트 타이어")
  *  4. 알 수 없는 사이즈/조건은 total 0 의 빈 결과 (원본도 "총 : 0 개" 에 카드 없음)
@@ -201,9 +180,10 @@ export async function getSizeList(q: SizeListQuery): Promise<SizeListResult> {
   const empty: SizeListResult = { query, total: 0, tires: [], pages: [], source: "static" };
   if (!query.ftsize) return empty;
 
-  let list = await loadSizeFile(query.ftsize);
+  TIRES = await getTireMap();
+  let list = await getSizeCards(query.ftsize);
   if (query.rtsize !== query.ftsize) {
-    list = combineFrontRear(list, await loadSizeFile(query.rtsize));
+    list = combineFrontRear(list, await getSizeCards(query.rtsize));
   }
 
   list = list.filter((t) => matchTab(t, query.seltireg || "all"));

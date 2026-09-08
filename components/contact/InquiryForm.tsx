@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { INQUIRY_TYPES } from "@/lib/inquiries";
 
@@ -10,32 +10,32 @@ import { INQUIRY_TYPES } from "@/lib/inquiries";
  * - 이름 / 연락처 / 문의 유형 / 차종·사이즈(선택) / 내용 / 개인정보 동의
  */
 export default function InquiryForm() {
+  /*
+   * 미리 채움 (초기값으로 한 번만 계산 — effect 안에서 setState 하지 않는다)
+   * - 타이어 상세 "이 타이어로 문의하기": ?tire=브랜드 모델 → 유형 "타이어 견적"
+   * - 검색 결과 "예약하기": ?tire=…&size=225/45R18 4개&type=교체 예약 → 유형 "교체 예약", 차종/사이즈 칸에 사이즈
+   */
+  const sp = useSearchParams();
+  const tireParam = sp.get("tire") ?? "";
+  const sizeParam = sp.get("size") ?? "";
+  const typeParam = sp.get("type") ?? "";
+  const initialType: (typeof INQUIRY_TYPES)[number] = !tireParam
+    ? INQUIRY_TYPES[0]
+    : (INQUIRY_TYPES as readonly string[]).includes(typeParam)
+      ? (typeParam as (typeof INQUIRY_TYPES)[number])
+      : "타이어 견적";
+  const initialContent = !tireParam ? "" : sizeParam ? `[${tireParam}] ${sizeParam} 예약 문의드립니다.\n희망 날짜: ` : `[${tireParam}] 문의드립니다.\n`;
+
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [type, setType] = useState<(typeof INQUIRY_TYPES)[number]>(INQUIRY_TYPES[0]);
-  const [car, setCar] = useState("");
-  const [content, setContent] = useState("");
+  const [type, setType] = useState<(typeof INQUIRY_TYPES)[number]>(initialType);
+  const [car, setCar] = useState(tireParam ? sizeParam : "");
+  const [content, setContent] = useState(initialContent);
   const [agree, setAgree] = useState(false);
   const [website, setWebsite] = useState(""); // 스팸 방지용 숨김 필드
   const [policyOpen, setPolicyOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
-
-  /*
-   * 미리 채움
-   * - 타이어 상세 "이 타이어로 문의하기": ?tire=브랜드 모델 → 유형 "타이어 견적"
-   * - 검색 결과 "예약하기": ?tire=…&size=225/45R18 4개&type=교체 예약 → 유형 "교체 예약", 차종/사이즈 칸에 사이즈
-   */
-  const sp = useSearchParams();
-  useEffect(() => {
-    const tire = sp.get("tire");
-    if (!tire) return;
-    const size = sp.get("size");
-    const t = sp.get("type");
-    setType((INQUIRY_TYPES as readonly string[]).includes(t ?? "") ? (t as (typeof INQUIRY_TYPES)[number]) : "타이어 견적");
-    if (size) setCar((c) => c || size);
-    setContent((c) => (c ? c : size ? `[${tire}] ${size} 예약 문의드립니다.\n희망 날짜: ` : `[${tire}] 문의드립니다.\n`));
-  }, [sp]);
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -105,14 +105,17 @@ export default function InquiryForm() {
       </div>
       <input type="text" name="website" value={website} onChange={(e) => setWebsite(e.target.value)} tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
+      {/* 체크박스 + 문구 + 내용 보기 를 한 줄에 (좁으면 문구만 줄바꿈, "내용 보기"는 문구 끝에 붙음) */}
       <div className="mt-[14px] flex items-start gap-[8px] text-[12px] leading-[18px] text-graphite">
         <input id="agree" type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} className="mt-[2px] accent-black" />
-        <label htmlFor="agree" className="cursor-pointer">
-          문의 답변을 위한 개인정보(이름, 연락처) 수집·이용에 동의합니다.
-        </label>
-        <button type="button" onClick={() => setPolicyOpen(true)} className="!text-muted underline underline-offset-4 hover:!text-ink">
-          내용 보기
-        </button>
+        <p className="text-[12px] text-graphite">
+          <label htmlFor="agree" className="cursor-pointer">
+            문의 답변을 위한 개인정보(이름, 연락처) 수집·이용에 동의합니다.
+          </label>{" "}
+          <button type="button" onClick={() => setPolicyOpen(true)} className="whitespace-nowrap !text-muted underline underline-offset-4 hover:!text-ink">
+            내용 보기
+          </button>
+        </p>
       </div>
 
       {/* 개인정보 수집·이용 요약 (모달) — 새 창으로 전문을 보내지 않고 핵심만 보여준다 */}
