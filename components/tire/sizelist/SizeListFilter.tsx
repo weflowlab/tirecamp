@@ -108,19 +108,19 @@ export default function SizeListFilter({ query }: Props) {
     suffix: string,
   ) => (
     <div className="flex gap-[6px]">
-      <select name={`selwsize${suffix}`} className="field !h-[38px] !w-[92px] !px-[8px] !text-[13px]" value={w} onChange={(e) => setW(e.target.value)}>
+      <select name={`selwsize${suffix}`} className="field !h-[38px] !w-[104px] !pl-[10px] !pr-[30px] !text-[13px]" value={w} onChange={(e) => setW(e.target.value)}>
         <option value="NO">단면폭</option>
         {WIDTHS.map((v) => (
           <option key={v} value={String(v)}>{v}</option>
         ))}
       </select>
-      <select name={`seltsize${suffix}`} className="field !h-[38px] !w-[86px] !px-[8px] !text-[13px]" value={r} onChange={(e) => setR(e.target.value)}>
+      <select name={`seltsize${suffix}`} className="field !h-[38px] !w-[98px] !pl-[10px] !pr-[30px] !text-[13px]" value={r} onChange={(e) => setR(e.target.value)}>
         <option value="NO">편평비</option>
         {RATIOS.map((v) => (
           <option key={v} value={String(v)}>{v}</option>
         ))}
       </select>
-      <select name={`selinch${suffix}`} className="field !h-[38px] !w-[76px] !px-[8px] !text-[13px]" value={i} onChange={(e) => setI(e.target.value)}>
+      <select name={`selinch${suffix}`} className="field !h-[38px] !w-[88px] !pl-[10px] !pr-[30px] !text-[13px]" value={i} onChange={(e) => setI(e.target.value)}>
         <option value="NO">인치</option>
         {INCHES.map((v) => (
           <option key={v} value={String(v)}>{v}</option>

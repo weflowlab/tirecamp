@@ -15,6 +15,7 @@ export type SizeListQuery = {
   brandop: string[]; // 제조사 코드 목록 (빈 배열 = 전체브랜드)
   spage: number; // 페이지 블럭 시작 (원본 MovePage 의 spage)
   lpage: number; // 현재 페이지
+  tinfo?: string; // 타이어소개에서 넘어온 "선택한 타이어" seq (결과 맨 위에 강조 표시)
 };
 
 /* 카드 안의 사이즈 1개(앞 또는 뒤) 가격/규격 블럭 */
@@ -94,7 +95,8 @@ export function parseSizeListQuery(sp: RawSearchParams): SizeListQuery {
   const brandop = rawBrand.filter((b) => /^\d+$/.test(b));
   const lpage = Math.max(1, parseInt(first(sp.lpage), 10) || 1);
   const spage = Math.max(1, parseInt(first(sp.spage), 10) || 1);
-  return { ftsize, rtsize, seltireg, sorttireop, brandop, spage, lpage };
+  const tinfo = /^\d+$/.test(first(sp.tinfo)) ? first(sp.tinfo) : undefined;
+  return { ftsize, rtsize, seltireg, sorttireop, brandop, spage, lpage, tinfo };
 }
 
 /* SizeListQuery → /product/tire/sizelist?... (기본값은 생략해 URL 을 짧게 유지) */
@@ -107,5 +109,6 @@ export function buildSizeListHref(q: SizeListQuery): string {
   for (const b of q.brandop) p.append("brandop", b);
   if (q.spage > 1) p.set("spage", String(q.spage));
   if (q.lpage > 1) p.set("lpage", String(q.lpage));
+  if (q.tinfo) p.set("tinfo", q.tinfo);
   return `/product/tire/sizelist?${p.toString()}`;
 }

@@ -90,6 +90,15 @@ textarea.field {
   padding: 12px;
   line-height: 1.6;
 }
+/* select: 브라우저 기본 화살표(맨 끝에 붙음) 대신 오른쪽 12px 안쪽에 얇은 셰브론 */
+select.field {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 34px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234a4a4a' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
 .field::placeholder {
   color: var(--color-faint);
 }
@@ -107,6 +116,25 @@ textarea.field {
     margin: 0;
     box-sizing: border-box;
     font-family: "Nanum Gothic", "Cambria", "Hoefler Text", Times, serif;
+  }
+
+  html {
+    scroll-behavior: smooth; /* #앵커 이동 시 부드럽게 (후기 작성하기 버튼 등) */
+  }
+
+  /* 누를 수 있는 것은 전부 손가락 커서 (링크는 브라우저 기본이 이미 pointer) */
+  button,
+  [role="button"],
+  summary,
+  select,
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="submit"],
+  label[for] {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
   }
 
   body {
@@ -279,4 +307,81 @@ select.sel10 {
   .insbox1 {
     height: 34px;
   }
+}
+
+/* 무한 루프 사진 슬라이드 (트랙을 2벌 이어 붙이고 절반만큼 흘려보냄) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee var(--marquee-duration, 60s) linear infinite;
+  will-change: transform;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* 검정 버튼 위로 빛이 주기적으로 지나가는 효과 (헤더 문의하기 버튼) */
+@keyframes shine {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  35%,
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.35) 50%, transparent 100%);
+  animation: shine 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* 스티키 버튼 흔들림 — 4초 주기 중 앞 0.7초만 좌우로 흔들리고 나머지는 정지. 두 번째 버튼은 2초 늦게 */
+@keyframes wiggle {
+  0%,
+  18%,
+  100% {
+    transform: rotate(0);
+  }
+  3% {
+    transform: rotate(-12deg);
+  }
+  6% {
+    transform: rotate(10deg);
+  }
+  9% {
+    transform: rotate(-8deg);
+  }
+  12% {
+    transform: rotate(6deg);
+  }
+  15% {
+    transform: rotate(-3deg);
+  }
+}
+.float-wiggle {
+  animation: wiggle 4s ease-in-out infinite;
+}
+.float-wiggle-2 {
+  animation-delay: 2s;
+}
+/* 손이 올라가면 흔들림 중단 (기울어진 채 멈추지 않게 애니메이션 자체를 끔) */
+.float-wiggle:hover {
+  animation: none;
 }

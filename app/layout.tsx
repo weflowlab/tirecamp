@@ -23,7 +23,7 @@ export const metadata: Metadata = {
  */
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko">
+    <html lang="ko" data-scroll-behavior="smooth">
       <body className="min-h-full flex flex-col items-center">
         <SiteChrome>{children}</SiteChrome>
       </body>

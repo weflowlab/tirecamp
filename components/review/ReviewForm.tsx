@@ -2,15 +2,17 @@
 
 import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
+import { VEHICLE_TYPES } from "@/lib/reviewTypes";
 
 /**
  * 후기 작성 폼 → POST /api/reviews
- * - 이름 / 차종(선택) / 별점 / 내용
+ * - 이름 / 차량 유형(드롭다운, 필수) / 차종(선택) / 별점 / 내용
  * - 성공 시 폼 초기화 + router.refresh() 로 목록 갱신
  */
 export default function ReviewForm() {
   const router = useRouter();
   const [name, setName] = useState("");
+  const [vehicle, setVehicle] = useState<(typeof VEHICLE_TYPES)[number]>(VEHICLE_TYPES[0]);
   const [car, setCar] = useState("");
   const [rating, setRating] = useState(5);
   const [content, setContent] = useState("");
@@ -29,11 +31,12 @@ export default function ReviewForm() {
       const res = await fetch("/api/reviews", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, car, rating, content, website }),
+        body: JSON.stringify({ name, vehicle, car, rating, content, website }),
       });
       const data = (await res.json()) as { ok: boolean; error?: string };
       if (!res.ok || !data.ok) throw new Error(data.error || "등록에 실패했습니다.");
       setName("");
+      setVehicle(VEHICLE_TYPES[0]);
       setCar("");
       setRating(5);
       setContent("");
@@ -48,9 +51,18 @@ export default function ReviewForm() {
 
   return (
     <form onSubmit={onSubmit} className="font-sans">
-      <div className="grid grid-cols-3 gap-[12px] max-pc:grid-cols-1">
+      <div className="grid grid-cols-4 gap-[12px] max-pc:grid-cols-1">
         <Field label="이름" required>
           <input type="text" className="field" value={name} maxLength={20} onChange={(e) => setName(e.target.value)} />
+        </Field>
+        <Field label="차량 유형" required>
+          <select className="field" value={vehicle} onChange={(e) => setVehicle(e.target.value as (typeof VEHICLE_TYPES)[number])}>
+            {VEHICLE_TYPES.map((v) => (
+              <option key={v} value={v}>
+                {v}
+              </option>
+            ))}
+          </select>
         </Field>
         <Field label="차종">
           <input type="text" className="field" value={car} maxLength={30} placeholder="예: 아반떼 CN7" onChange={(e) => setCar(e.target.value)} />

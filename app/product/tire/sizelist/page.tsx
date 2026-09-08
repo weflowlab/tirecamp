@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { getSizeList, parseSizeListQuery } from "@/lib/sizelist";
-import { formatSize } from "@/lib/sizelistQuery";
+import Link from "next/link";
+import { buildSizeListHref, formatSize } from "@/lib/sizelistQuery";
+import tinfoJson from "@/data/tinfo.json";
+import type { Tinfo } from "@/lib/tinfo";
 import PageTitle from "@/components/layout/PageTitle";
 import SizeListFilter from "@/components/tire/sizelist/SizeListFilter";
 import SizeListTabs from "@/components/tire/sizelist/SizeListTabs";
@@ -22,6 +25,11 @@ export async function generateMetadata({ searchParams }: PageProps<"/product/tir
 export default async function SizeListPage({ searchParams }: PageProps<"/product/tire/sizelist">) {
   const query = parseSizeListQuery(await searchParams);
   const result = await getSizeList(query);
+
+  /* 타이어소개에서 넘어온 "선택한 타이어" — 결과에 있으면 맨 위에 강조, 없으면 안내 */
+  const picked = query.tinfo ? (tinfoJson as Record<string, Tinfo>)[query.tinfo] : undefined;
+  const pickedTires = picked ? result.tires.filter((t) => t.tinfoseq === query.tinfo) : [];
+  const otherTires = picked ? result.tires.filter((t) => t.tinfoseq !== query.tinfo) : result.tires;
   const sizeLabel =
     query.rtsize && query.rtsize !== query.ftsize ? `${formatSize(query.ftsize)} · 뒤 ${formatSize(query.rtsize)}` : formatSize(query.ftsize);
 
@@ -35,10 +43,31 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
       {/* 구분 탭 + 결과 카드 목록 */}
       <div className="mt-[36px]">
         <SizeListTabs query={query} total={result.total} />
+
+        {picked && (
+          <div className="mt-[16px]">
+            <div className="flex items-center justify-between gap-[12px]">
+              <p className="eyebrow">Selected · {picked.brandName} {picked.model}</p>
+              <Link href={buildSizeListHref({ ...query, tinfo: undefined })} className="text-[12px] !text-muted underline underline-offset-4 hover:!text-ink">
+                선택 해제
+              </Link>
+            </div>
+            {pickedTires.length === 0 && (
+              <p className="mt-[8px] border border-dashed border-line px-[18px] py-[16px] text-[13px] text-muted">
+                {picked.brandName} {picked.model}는 이 사이즈에 가격 정보가 없습니다. 아래 다른 타이어를 확인하시거나 문의해 주세요.
+              </p>
+            )}
+            {pickedTires.map((t, i) => (
+              <TireCard key={`picked-${t.tinfoseq}-${i}`} tire={{ ...t, bestSection: true }} />
+            ))}
+            {otherTires.length > 0 && <p className="eyebrow mt-[28px]">Other tires</p>}
+          </div>
+        )}
+
         {result.tires.length === 0 && (
           <p className="border-b border-line py-[48px] text-center text-[13px] text-muted">조건에 맞는 타이어가 없습니다. 제조사나 구분을 바꿔 보세요.</p>
         )}
-        {result.tires.map((t, i) => (
+        {otherTires.map((t, i) => (
           <TireCard key={`${t.tinfoseq}-${i}`} tire={t} />
         ))}
       </div>

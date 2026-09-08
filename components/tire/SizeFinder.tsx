@@ -16,7 +16,7 @@ const EMPTY: SizeSel = { w: "NO", t: "NO", i: "NO" };
  * - 검색 버튼: 원본과 동일한 alert 검증 후 /product/tire/sizelist?find_ftsize=..(&find_rtsize=..) 로 이동
  * - tsizehelp.gif 버튼: "타이어사이즈 확인방법" 모달 열기
  */
-export default function SizeFinder() {
+export default function SizeFinder({ tinfo }: { tinfo?: string }) {
   const router = useRouter();
   const [front, setFront] = useState<SizeSel>(EMPTY);
   const [rear, setRear] = useState<SizeSel>(EMPTY);
@@ -52,6 +52,7 @@ export default function SizeFinder() {
       }
       url = `/product/tire/sizelist?find_ftsize=${toCode(front)}`;
     }
+    if (tinfo) url += `&tinfo=${tinfo}`;
     router.push(url);
   }
 
@@ -110,7 +111,7 @@ function SizeSelects({ idx, value, onChange }: { idx: 1 | 2; value: SizeSel; onC
     <>
       <select
         name={`selwsize${idx}`}
-        className="field !h-[38px] !px-[8px] !text-[13px] !w-auto"
+        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[13px] !w-auto"
         value={value.w}
         onChange={(e) => onChange({ ...value, w: e.target.value })}
       >
@@ -123,7 +124,7 @@ function SizeSelects({ idx, value, onChange }: { idx: 1 | 2; value: SizeSel; onC
       </select>{" "}
       <select
         name={`seltsize${idx}`}
-        className="field !h-[38px] !px-[8px] !text-[13px] !w-auto"
+        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[13px] !w-auto"
         value={value.t}
         onChange={(e) => onChange({ ...value, t: e.target.value })}
       >
@@ -136,7 +137,7 @@ function SizeSelects({ idx, value, onChange }: { idx: 1 | 2; value: SizeSel; onC
       </select>{" "}
       <select
         name={`selinch${idx}`}
-        className="field !h-[38px] !px-[8px] !text-[13px] !w-auto"
+        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[13px] !w-auto"
         value={value.i}
         onChange={(e) => onChange({ ...value, i: e.target.value })}
       >

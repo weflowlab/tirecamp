@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import { INQUIRY_TYPES } from "@/lib/inquiries";
 
 /**
@@ -16,8 +17,25 @@ export default function InquiryForm() {
   const [content, setContent] = useState("");
   const [agree, setAgree] = useState(false);
   const [website, setWebsite] = useState(""); // 스팸 방지용 숨김 필드
+  const [policyOpen, setPolicyOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
+
+  /*
+   * 미리 채움
+   * - 타이어 상세 "이 타이어로 문의하기": ?tire=브랜드 모델 → 유형 "타이어 견적"
+   * - 검색 결과 "예약하기": ?tire=…&size=225/45R18 4개&type=교체 예약 → 유형 "교체 예약", 차종/사이즈 칸에 사이즈
+   */
+  const sp = useSearchParams();
+  useEffect(() => {
+    const tire = sp.get("tire");
+    if (!tire) return;
+    const size = sp.get("size");
+    const t = sp.get("type");
+    setType((INQUIRY_TYPES as readonly string[]).includes(t ?? "") ? (t as (typeof INQUIRY_TYPES)[number]) : "타이어 견적");
+    if (size) setCar((c) => c || size);
+    setContent((c) => (c ? c : size ? `[${tire}] ${size} 예약 문의드립니다.\n희망 날짜: ` : `[${tire}] 문의드립니다.\n`));
+  }, [sp]);
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -67,7 +85,7 @@ export default function InquiryForm() {
                 key={t}
                 type="button"
                 onClick={() => setType(t)}
-                className={`flex-1 border border-line -ml-px first:ml-0 text-[13px] transition-colors max-pc:h-[40px] max-pc:basis-1/2 max-pc:[&:nth-child(3)]:ml-0 ${
+                className={`flex-1 border border-line -ml-px first:ml-0 px-[4px] text-[12px] tracking-[-0.01em] transition-colors max-pc:h-[40px] max-pc:basis-1/2 max-pc:[&:nth-child(3)]:ml-0 ${
                   type === t ? "border-ink bg-ink text-white z-10" : "bg-white text-graphite hover:text-ink"
                 }`}
               >
@@ -87,15 +105,54 @@ export default function InquiryForm() {
       </div>
       <input type="text" name="website" value={website} onChange={(e) => setWebsite(e.target.value)} tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
-      <label className="mt-[14px] flex cursor-pointer items-start gap-[8px] text-[12px] leading-[18px] text-graphite">
-        <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} className="mt-[2px] accent-black" />
-        <span>
-          문의 답변을 위한 개인정보(이름, 연락처) 수집·이용에 동의합니다.{" "}
-          <Link href="/cscenter/personal_info" className="!text-muted underline underline-offset-4 hover:!text-ink" target="_blank">
-            내용 보기
-          </Link>
-        </span>
-      </label>
+      <div className="mt-[14px] flex items-start gap-[8px] text-[12px] leading-[18px] text-graphite">
+        <input id="agree" type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} className="mt-[2px] accent-black" />
+        <label htmlFor="agree" className="cursor-pointer">
+          문의 답변을 위한 개인정보(이름, 연락처) 수집·이용에 동의합니다.
+        </label>
+        <button type="button" onClick={() => setPolicyOpen(true)} className="!text-muted underline underline-offset-4 hover:!text-ink">
+          내용 보기
+        </button>
+      </div>
+
+      {/* 개인정보 수집·이용 요약 (모달) — 새 창으로 전문을 보내지 않고 핵심만 보여준다 */}
+      {policyOpen && (
+        <>
+          <div className="fixed inset-0 z-[1000] bg-black/40" onClick={() => setPolicyOpen(false)} />
+          <div role="dialog" aria-modal="true" aria-label="개인정보 수집·이용 안내" className="fixed left-1/2 top-1/2 z-[1001] w-[460px] -translate-x-1/2 -translate-y-1/2 bg-white p-[28px] font-sans shadow-[0_20px_60px_-20px_rgba(0,0,0,0.4)] max-pc:w-[calc(100%-24px)] max-pc:p-[20px]">
+            <p className="eyebrow">Privacy</p>
+            <h3 className="mt-[4px] text-[18px] font-bold tracking-[-0.02em] text-ink">개인정보 수집·이용 안내</h3>
+            <dl className="mt-[16px] border-t border-line text-[13px]">
+              {[
+                ["수집 항목", "이름, 연락처 (차종은 선택)"],
+                ["이용 목적", "문의 확인 및 답변 연락"],
+                ["보유 기간", "답변 완료 후 지체 없이 파기"],
+                ["동의 거부", "거부할 수 있으나, 거부 시 문의 접수가 어렵습니다"],
+              ].map(([k, v]) => (
+                <div key={k} className="grid grid-cols-[84px_1fr] gap-[12px] border-b border-line py-[10px]">
+                  <dt className="text-muted">{k}</dt>
+                  <dd className="text-ink">{v}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="mt-[16px] flex items-center justify-between gap-[12px]">
+              <Link href="/cscenter/personal_info" target="_blank" className="text-[12px] !text-muted underline underline-offset-4 hover:!text-ink">
+                개인정보처리방침 전문 보기
+              </Link>
+              <button
+                type="button"
+                onClick={() => {
+                  setAgree(true);
+                  setPolicyOpen(false);
+                }}
+                className="btn-fill !h-[38px] !px-[20px]"
+              >
+                확인하고 동의
+              </button>
+            </div>
+          </div>
+        </>
+      )}
 
       <div className="mt-[20px] flex items-center justify-between gap-[12px] max-pc:flex-col max-pc:items-stretch">
         <p className={`text-[12px] ${msg ? (msg.ok ? "text-ink" : "text-[#B3261E]") : "text-muted"}`}>{msg ? msg.text : "* 표시는 필수 입력 항목입니다."}</p>

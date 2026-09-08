@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-/* 고객센터 좌측 서브메뉴 (고객 확정: 공지 / FAQ) */
+/* 고객센터 좌측 서브메뉴: 공지 / FAQ / 개인정보처리방침 */
 const ITEMS = [
   { href: "/cscenter/news", label: "공지사항", match: "/cscenter/news" },
   { href: "/cscenter/tfaq", label: "자주 묻는 질문", match: "/cscenter/tfaq" },
+  { href: "/cscenter/personal_info", label: "개인정보처리방침", match: "/cscenter/personal_info" },
 ];
 
 /**

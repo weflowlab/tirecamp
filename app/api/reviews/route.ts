@@ -1,10 +1,10 @@
 import type { Review } from "@/lib/reviews";
-import { REVIEWS_FILE } from "@/lib/reviews";
+import { REVIEWS_FILE, VEHICLE_TYPES } from "@/lib/reviews";
 import { appendItem, clean, todayKST } from "@/lib/store";
 
 /**
  * POST /api/reviews — 고객 후기 등록 (data/reviews.json 에 추가)
- * body: { name, car?, rating(1~5), content, website(스팸 방지, 비어 있어야 함) }
+ * body: { name, vehicle, car?, rating(1~5), content, website(스팸 방지, 비어 있어야 함) }
  */
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -18,6 +18,8 @@ export async function POST(request: Request) {
   if (clean(body.website, 100) !== "") return Response.json({ ok: true });
 
   const name = clean(body.name, 20);
+  const vehicleRaw = clean(body.vehicle, 20);
+  const vehicle = (VEHICLE_TYPES as readonly string[]).includes(vehicleRaw) ? (vehicleRaw as Review["vehicle"]) : "기타";
   const car = clean(body.car, 30);
   const content = clean(body.content, 1000);
   const rating = Math.min(5, Math.max(1, Math.round(Number(body.rating) || 5)));
@@ -28,6 +30,7 @@ export async function POST(request: Request) {
   const item: Review = {
     id: Date.now(),
     name,
+    vehicle,
     car,
     rating,
     content,

@@ -1,17 +1,9 @@
 import { readList } from "@/lib/store";
+import type { Review } from "@/lib/reviewTypes";
 
-/* 고객 후기 1건 (data/reviews.json) */
-export type Review = {
-  id: number;
-  name: string;
-  /** 차종 (선택) */
-  car: string;
-  /** 별점 1~5 */
-  rating: number;
-  content: string;
-  date: string;
-  createdAt: string;
-};
+/* 서버 전용 (fs 사용). 타입/상수는 lib/reviewTypes.ts 에서 re-export */
+export { VEHICLE_TYPES } from "@/lib/reviewTypes";
+export type { Review } from "@/lib/reviewTypes";
 
 export const REVIEWS_FILE = "reviews";
 

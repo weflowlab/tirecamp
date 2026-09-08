@@ -13,7 +13,7 @@ import type { CarName, TireSizeRow } from "@/lib/carfind";
  * - 각 단계의 select 는 데이터가 도착하기 전까지 숨김 (원본 display:none 과 동일)
  * - 상위 단계를 바꾸면 하위 단계는 모두 초기화 (deleteCarYears/deleteCarNames/cftblvisible_off)
  */
-export default function CarFinder() {
+export default function CarFinder({ tinfo }: { tinfo?: string }) {
   const [maker, setMaker] = useState("NO");
   const [years, setYears] = useState<string[]>([]);
   const [year, setYear] = useState("NO");
@@ -116,7 +116,7 @@ export default function CarFinder() {
                     {/* 자동차회사 select (원본 selmaker, 150px) */}
                     <select
                       name="selmaker"
-                      className={`field !h-[38px] !w-[160px] !px-[8px] !text-[13px] ${SEL_MOBILE}`}
+                      className={`field !h-[38px] !w-[160px] !pl-[10px] !pr-[30px] !text-[13px] ${SEL_MOBILE}`}
 
                       value={maker}
                       onChange={(e) => onMakerChange(e.target.value)}
@@ -131,7 +131,7 @@ export default function CarFinder() {
                     {/* 연식 select (원본 selsyear, 80px) — 데이터 도착 후 표시 */}
                     <select
                       name="selsyear"
-                      className={`field !h-[38px] !w-[96px] !px-[8px] !text-[13px] ${SEL_MOBILE}`}
+                      className={`field !h-[38px] !w-[96px] !pl-[10px] !pr-[30px] !text-[13px] ${SEL_MOBILE}`}
                       style={{ display: years.length ? "" : "none" }}
                       value={year}
                       onChange={(e) => onYearChange(e.target.value)}
@@ -146,7 +146,7 @@ export default function CarFinder() {
                     {/* 차종 select (원본 selcar, 200px, 앞 &nbsp;&nbsp; 간격은 ml 로) — 데이터 도착 후 표시 */}
                     <select
                       name="selcar"
-                      className={`field !h-[38px] !w-[210px] !px-[8px] !text-[13px] ml-[4px] max-pc:ml-0 ${SEL_MOBILE}`}
+                      className={`field !h-[38px] !w-[210px] !pl-[10px] !pr-[30px] !text-[13px] ml-[4px] max-pc:ml-0 ${SEL_MOBILE}`}
                       style={{ display: cars.length ? "" : "none" }}
                       value={car}
                       onChange={(e) => onCarChange(e.target.value)}
@@ -187,7 +187,7 @@ export default function CarFinder() {
                         <table width={306} style={{ height: 35 }} cellSpacing={0} cellPadding={0} className="m-fluid">
                           <tbody>
                             {sizes.map((s, i) => (
-                              <SizeRow key={`${s.ftsize}-${s.rtsize}-${s.oesize}-${i}`} row={s} />
+                              <SizeRow key={`${s.ftsize}-${s.rtsize}-${s.oesize}-${i}`} row={s} tinfo={tinfo} />
                             ))}
                           </tbody>
                         </table>
@@ -208,11 +208,12 @@ export default function CarFinder() {
  * 타이어사이즈 한 줄 (원본: hover 시 배경 #E4E4E4, 앞뒤 다르면 "F:.. • R:.." 표시)
  * seetirebut 버튼 → /product/tire/sizelist?find_ftsize=..(&find_rtsize=.. 앞뒤 다를 때만)
  */
-function SizeRow({ row }: { row: TireSizeRow }) {
+function SizeRow({ row, tinfo }: { row: TireSizeRow; tinfo?: string }) {
   const differ = row.frtype === "2";
   const href =
     `/product/tire/sizelist?find_ftsize=${encodeURIComponent(row.ftsize)}` +
-    (differ ? `&find_rtsize=${encodeURIComponent(row.rtsize)}` : "");
+    (differ ? `&find_rtsize=${encodeURIComponent(row.rtsize)}` : "") +
+    (tinfo ? `&tinfo=${tinfo}` : "");
 
   return (
     <tr className="border-b border-line font-sans hover:bg-surface">

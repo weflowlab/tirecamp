@@ -3,7 +3,7 @@ import FindTireBox from "@/components/tire/FindTireBox";
 import OrderSteps from "@/components/tire/OrderSteps";
 import { Purposes, Strengths } from "@/components/home/Features";
 import InfoCards from "@/components/home/InfoCards";
-import { NEWS, newsViewHref } from "@/lib/news";
+import { getNews, newsViewHref } from "@/lib/news";
 import { MAP_LINKS, PHONE_TEL, SITE } from "@/lib/site";
 
 /**
@@ -11,8 +11,11 @@ import { MAP_LINKS, PHONE_TEL, SITE } from "@/lib/site";
  * 차콜 히어로(절제된 타이포 + 얇은 링 모티프) → 검색 카드 → 매장 정보 3칸(얇은 선) → 최근 공지
  * (고객 요청 "잡다한 이미지 지양" 에 따라 배너 이미지는 두지 않는다)
  */
-export default function HomePage() {
-  const recent = NEWS.slice(0, 3);
+/* 공지는 요청 시마다 data/news.json 을 읽는다 (관리자 수정 즉시 반영) */
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const recent = (await getNews()).slice(0, 3);
 
   return (
     <div className="w-full font-sans">

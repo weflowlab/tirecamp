@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { adjacentNews, findNews, newsViewHref, sanitizeHtml } from "@/lib/news";
+import { adjacentNews, getNews, newsViewHref, sanitizeHtml } from "@/lib/news";
 import { pageTitle } from "@/lib/site";
+
+/* 요청 시마다 data/news.json 을 읽는다 (관리자 수정 즉시 반영) */
+export const dynamic = "force-dynamic";
 
 type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -10,7 +13,7 @@ type Props = {
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const sp = await searchParams;
-  const item = findNews(parseInt(String(sp.seq ?? ""), 10));
+  const item = (await getNews()).find((n) => n.seq === parseInt(String(sp.seq ?? ""), 10));
   return { title: pageTitle(item?.title ?? "공지사항") };
 }
 
@@ -23,10 +26,11 @@ export default async function NewsViewPage({ searchParams }: Props) {
   const seq = parseInt(String(sp.seq ?? ""), 10);
   const spage = parseInt(String(sp.spage ?? "1"), 10) || 1;
   const lpage = parseInt(String(sp.lpage ?? "1"), 10) || 1;
-  const item = findNews(seq);
+  const list = await getNews();
+  const item = list.find((n) => n.seq === seq);
   if (!item) notFound();
 
-  const { prev, next } = adjacentNews(seq);
+  const { prev, next } = adjacentNews(list, seq);
   const listHref = `/cscenter/news?spage=${spage}&lpage=${lpage}`;
 
   return (
@@ -44,7 +48,7 @@ export default async function NewsViewPage({ searchParams }: Props) {
       />
 
       {/* 이전글 / 다음글 */}
-      <ul className="mt-[8px] text-[13px]">
+      <ul className="text-[13px]">
         <li className="flex gap-[16px] border-b border-line py-[12px]">
           <span className="w-[52px] shrink-0 text-muted">이전글</span>
           {prev ? (

@@ -13,13 +13,12 @@ export default function InfoCards() {
         <SizeGuideCard />
       </div>
 
-      {/* 취급 브랜드 */}
-      <div className="mt-[28px] border-y border-line py-[24px]">
-        {/* 한 줄 고정: 각 칸이 폭을 나눠 갖고 로고는 칸 안에서 비율 유지 (모바일은 가로 스크롤) */}
-        <ul className="flex flex-nowrap items-center gap-[12px] max-pc:overflow-x-auto max-pc:[scrollbar-width:none]">
-          {BRANDS.map((b) => (
-            <li key={b.code} className="flex min-w-0 flex-1 items-center justify-center max-pc:flex-none">
-              <img src={`/images/companylogo/${b.code}.gif`} alt={b.name} className="img-fixed h-[22px] w-auto max-w-full object-contain max-pc:h-[20px]" />
+      {/* 취급 브랜드 — 로고가 천천히 흐르는 마퀴 (트랙 2벌, 마우스 올리면 멈춤) */}
+      <div className="marquee mt-[28px] overflow-hidden border-y border-line py-[22px]">
+        <ul className="marquee-track flex w-max items-center" style={{ ["--marquee-duration" as string]: "40s" }}>
+          {[...BRANDS, ...BRANDS].map((b, i) => (
+            <li key={`${b.code}-${i}`} className="shrink-0 px-[22px]" aria-hidden={i >= BRANDS.length}>
+              <img src={`/images/companylogo/${b.code}.gif`} alt={i < BRANDS.length ? b.name : ""} className="img-fixed h-[22px] w-auto" />
             </li>
           ))}
         </ul>

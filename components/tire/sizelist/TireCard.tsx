@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { openTireInfo } from "@/components/tire/tireInfoWin";
 import type { SizeBlock, TireItem } from "@/lib/sizelistQuery";
-import { SITE } from "@/lib/site";
 
 const NUM = { fontFamily: "var(--font-num)" } as const;
 
@@ -21,12 +21,13 @@ type Props = { tire: TireItem };
  * 타이어 결과 카드 1개 — [이미지 | 브랜드·모델·설명·사이즈별 가격/수량 | 합계·예약]
  *  - bestSection: 베스트 섹션 카드 (얇은 잉크색 테두리 + BEST 라벨)
  *  - 이미지/이름 클릭 → 상세 팝업, 수량 변경 → 총수량/총금액 갱신
- *  - 예약 버튼 → 수량 검증/confirm 후 전화 안내 (온라인 예약은 미구현)
+ *  - 예약 버튼 → 수량 검증 후 문의 폼으로 이동 (타이어 · 사이즈 · 수량 미리 채움)
  */
 export default function TireCard({ tire }: Props) {
   const best = tire.bestSection;
   const [qty1, setQty1] = useState(tire.front.defaultQty);
   const [qty2, setQty2] = useState(tire.rear ? tire.rear.defaultQty : 0);
+  const router = useRouter();
 
   const totalCnt = qty1 + (tire.rear ? qty2 : 0);
   const totalCard = tire.front.salePrice * qty1 + (tire.rear ? tire.rear.salePrice * qty2 : 0);
@@ -46,9 +47,10 @@ export default function TireCard({ tire }: Props) {
       alert("앞쪽 또는 뒤쪽타이어의 구매하실 수량을 선택하세요.");
       return;
     }
-    if (confirm("구매수량을 확인 하셨나요?\n\n예약 하시겠습니까?")) {
-      alert(`온라인 예약 접수는 준비 중입니다.\n예약 및 택배 문의는 전화 ${SITE.phone} 로 연락 주세요.`);
-    }
+    /* 문의 폼으로 이동 — 타이어명 · 사이즈 · 수량을 미리 채운다 (교체 예약 유형) */
+    const sizes = tire.rear ? `앞 ${tire.front.size} ${qty1}개 · 뒤 ${tire.rear.size} ${qty2}개` : `${tire.front.size} ${qty1}개`;
+    const q = new URLSearchParams({ tire: `${tire.brand} ${tire.model}`, size: sizes, type: "교체 예약" });
+    router.push(`/contact?${q.toString()}`);
   }
 
   /* 사이즈 1줄: 사이즈 · 속도등급 | 시중가/할인가 | 수량 */

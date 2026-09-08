@@ -23,7 +23,7 @@ export default function QuickSizeSearch() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="w-[300px] font-sans max-pc:w-full">
+    <form onSubmit={onSubmit} className="w-[360px] font-sans max-pc:w-full">
       <div className="flex h-[40px] border border-line focus-within:border-ink">
         <input
           type="text"

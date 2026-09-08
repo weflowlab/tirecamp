@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import faqData from "@/data/faq.json";
+import { getFaqs } from "@/lib/faq";
 import { pageTitle, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: pageTitle("자주 묻는 질문"),
 };
 
-type Faq = { q: string; a: string };
-const FAQS = faqData as Faq[];
+/* 요청 시마다 data/faq.json 을 읽는다 (관리자 수정 즉시 반영) */
+export const dynamic = "force-dynamic";
 
 /**
  * 자주 묻는 질문 (/cscenter/tfaq)
- * - 번호 + 질문 아코디언(details). 내용은 data/faq.json (관리자 페이지에서 수정 예정)
+ * - 번호 + 질문 아코디언(details). 내용은 data/faq.json (관리자 페이지 > FAQ 관리에서 수정)
  */
-export default function FaqPage() {
+export default async function FaqPage() {
+  const FAQS = await getFaqs();
   return (
     <div className="w-full font-sans">
       <p className="eyebrow">FAQ</p>
@@ -24,10 +25,10 @@ export default function FaqPage() {
         {FAQS.map((f, i) => (
           <li key={i} className="border-b border-line">
             <details className="group">
-              <summary className="flex cursor-pointer list-none items-start gap-[20px] py-[18px] text-[15px] font-medium text-ink hover:text-graphite [&::-webkit-details-marker]:hidden max-pc:gap-[14px] max-pc:text-[14px]">
-                <span className="eyebrow shrink-0 pt-[4px] !text-faint">{String(i + 1).padStart(2, "0")}</span>
+              <summary className="flex cursor-pointer list-none items-center gap-[20px] py-[18px] text-[15px] font-medium text-ink hover:text-graphite [&::-webkit-details-marker]:hidden max-pc:gap-[14px] max-pc:text-[14px]">
+                <span className="eyebrow relative -top-px shrink-0 leading-none !text-faint">{String(i + 1).padStart(2, "0")}</span>
                 <span className="flex-1 leading-[24px]">{f.q}</span>
-                <span className="shrink-0 pt-[2px] text-[18px] font-light text-faint transition-transform group-open:rotate-45">+</span>
+                <span className="shrink-0 text-[18px] font-light leading-none text-faint transition-transform group-open:rotate-45">+</span>
               </summary>
               <div className="pb-[22px] pl-[40px] pr-[30px] text-[14px] leading-[25px] text-graphite max-pc:pl-[34px] max-pc:pr-0">
                 <p className="whitespace-pre-line text-[14px] text-graphite">{f.a}</p>

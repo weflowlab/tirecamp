@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BoardPager from "@/components/board/BoardPager";
-import { NEWS, NEWS_PAGE_SIZE, newsViewHref } from "@/lib/news";
+import { getNews, NEWS_PAGE_SIZE, newsPreview, newsViewHref } from "@/lib/news";
 import { pageTitle } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: pageTitle("공지사항"),
 };
+
+/* 요청 시마다 data/news.json 을 읽는다 (관리자 수정 즉시 반영) */
+export const dynamic = "force-dynamic";
 
 type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -19,6 +22,7 @@ type Props = {
  */
 export default async function NewsListPage({ searchParams }: Props) {
   const sp = await searchParams;
+  const NEWS = await getNews();
   const page = Math.max(1, parseInt(String(sp.spage ?? "1"), 10) || 1);
   const lpage = Math.max(1, parseInt(String(sp.lpage ?? "1"), 10) || 1);
   const totalPages = Math.max(1, Math.ceil(NEWS.length / NEWS_PAGE_SIZE));
@@ -35,17 +39,18 @@ export default async function NewsListPage({ searchParams }: Props) {
           <li key={n.seq} className="border-b border-line">
             <Link href={newsViewHref(n.seq, page, lpage)} className="flex gap-[20px] py-[20px] hover:!no-underline group">
               {n.thumb && (
-                <img src={n.thumb} width={100} height={150} alt="" className="img-fixed h-[120px] w-[80px] shrink-0 object-cover grayscale" />
+                <img src={n.thumb} width={100} height={150} alt="" className="img-fixed h-[120px] w-[80px] shrink-0 object-cover" />
               )}
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-[10px]">
                   {n.notice && <span className="eyebrow shrink-0 !text-ink">Notice</span>}
                   <span className="truncate text-[15px] font-medium !text-ink group-hover:!text-graphite">{n.title}</span>
                 </div>
-                <p className="mt-[4px] text-[12px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
+                {/* 본문 첫 줄 미리보기 (뒤에 내용이 더 있으면 …) */}
+                <p className="mt-[6px] truncate text-[13px] leading-[21px] text-muted">{newsPreview(n.content)}</p>
+                <p className="mt-[6px] text-[12px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
                   {n.date} · 조회 {n.views}
                 </p>
-                {n.summary && <p className="mt-[8px] text-[13px] leading-[21px] text-muted">{n.summary}</p>}
               </div>
             </Link>
           </li>
