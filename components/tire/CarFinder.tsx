@@ -20,6 +20,7 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
   const [cars, setCars] = useState<CarName[]>([]);
   const [car, setCar] = useState("NO");
   const [sizes, setSizes] = useState<TireSizeRow[]>([]);
+  const [carImg, setCarImg] = useState<string | null>(null); // 차종 사진 (/siteimg/..., 없으면 null)
 
   /* 늦게 도착한 이전 요청 응답을 무시하기 위한 카운터 */
   const reqSeq = useRef(0);
@@ -37,6 +38,7 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
   }
   function resetSizes() {
     setSizes([]);
+    setCarImg(null);
   }
 
   /* 자동차회사 변경 → 연식 목록 조회 (원본 populateCarYears) */
@@ -79,9 +81,10 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
     const seq = ++reqSeq.current;
     try {
       const res = await fetch(`/api/car/sizes?makercode=${maker}&syear=${year}&carcode=${c}`);
-      const data = (await res.json()) as { sizes: TireSizeRow[] };
+      const data = (await res.json()) as { carimg?: string | null; sizes: TireSizeRow[] };
       if (seq !== reqSeq.current) return;
       setSizes(data.sizes ?? []);
+      setCarImg(data.carimg ?? null);
     } catch {
       /* 무시 */
     }
@@ -91,7 +94,7 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
   const showCarTable = car !== "NO";
 
   /* 모바일: select 를 한 줄씩 블록으로 (폭은 셀 폭에 맞춤) */
-  const SEL_MOBILE = "max-pc:block max-pc:w-full max-pc:mb-[6px]";
+  const SEL_MOBILE = "max-pc:block max-pc:!w-[160px] max-pc:mb-[6px]"; // 모바일: 세 드롭다운 폭을 제조사 칸(160px)에 맞춤
 
   return (
     /* 모바일(.m-stack): 타이틀 → select 들 → 차량사진 → 사이즈 목록 순으로 세로 배치 */
@@ -171,9 +174,14 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
               <table width={621} cellSpacing={0} cellPadding={0} className="m-stack">
                 <tbody>
                   <tr>
-                    {/* 차량사진 칸은 뺌 — 원본 서버 이미지(/siteimg/carimg)는 수집하지 않았고 저작권상 쓰지 않는다 */}
+                    {/* 차량사진 (public/siteimg/…, 수집 시 사진이 없던 차종은 칸을 비운다) */}
+                    {carImg && (
+                      <td width={151} align="left" valign="top" className="pt-[10px] pr-[14px] max-pc:pr-0 max-pc:pb-[8px]">
+                        <img src={carImg} alt="" width={137} className="block border border-line bg-white p-[4px] max-pc:w-[120px]" onError={() => setCarImg(null)} />
+                      </td>
+                    )}
                     {/* 타이어사이즈 목록 (원본 idsizelisttd, tsizeCallback 이 생성하는 table) */}
-                    <td width={621} align="left" valign="top" className="pt-[10px]">
+                    <td width={carImg ? 470 : 621} align="left" valign="top" className="pt-[10px]">
                       {sizes.length > 0 && (
                         <table width={470} style={{ height: 35 }} cellSpacing={0} cellPadding={0} className="m-fluid border-t border-line">
                           <tbody>
