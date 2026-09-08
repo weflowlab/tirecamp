@@ -13,6 +13,7 @@ const MENUS = [
   { href: "/admin", label: "대시보드", exact: true },
   { href: "/admin/inquiries", label: "문의 관리" },
   { href: "/admin/tires", label: "타이어 관리" },
+  { href: "/admin/cars", label: "차량 데이터 관리" },
   { href: "/admin/news", label: "공지사항 관리" },
   { href: "/admin/faq", label: "FAQ 관리" },
   { href: "/admin/popups", label: "팝업창 관리" },

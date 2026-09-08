@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { MAKERS } from "@/lib/tireSizeOptions";
-import type { CarName, TireSizeRow } from "@/lib/carfind";
+import type { CarName, TireSizeRow } from "@/lib/carTypes";
 
 
 /**
