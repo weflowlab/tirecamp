@@ -207,15 +207,10 @@ export type Stats = {
   bounceRate: number;
   /** 평균 체류시간(초), 측정된 페이지뷰 기준 */
   avgDurationSec: number;
-  /** 평균 스크롤 도달률(%) */
-  avgScroll: number;
   daily: { day: string; visitors: number; pageViews: number }[];
   hourly: number[];
   sources: Bucket[];
   devices: Bucket[];
-  pages: Bucket[];
-  keywords: Bucket[];
-  referrers: Bucket[];
   /** 방문자가 마지막으로 보고 떠난 페이지 */
   exitPages: Bucket[];
   /** 광고(cpc/paid) 로 들어온 방문자 수 */
@@ -276,9 +271,6 @@ export function aggregate(rows: PageView[], days: string[]): Stats {
   const hourly = new Array<number>(24).fill(0);
   const sources = new Map<string, number>();
   const devices = new Map<string, number>();
-  const pages = new Map<string, number>();
-  const keywords = new Map<string, number>();
-  const referrers = new Map<string, number>();
   const exits = new Map<string, number>();
   let paid = 0;
 
@@ -291,7 +283,6 @@ export function aggregate(rows: PageView[], days: string[]): Stats {
     }
     const kstHour = new Date(new Date(r.ts).getTime() + 9 * 3600 * 1000).getUTCHours();
     hourly[kstHour] += 1;
-    pages.set(r.path, (pages.get(r.path) ?? 0) + 1);
   }
 
   let bounced = 0;
@@ -302,20 +293,11 @@ export function aggregate(rows: PageView[], days: string[]): Stats {
     exits.set(last.path, (exits.get(last.path) ?? 0) + 1);
     sources.set(first.source, (sources.get(first.source) ?? 0) + 1);
     devices.set(first.device, (devices.get(first.device) ?? 0) + 1);
-    if (first.campaign) keywords.set(first.campaign, (keywords.get(first.campaign) ?? 0) + 1);
-    if (first.referrer && first.source !== "direct") {
-      let host = first.referrer;
-      try {
-        host = new URL(first.referrer).hostname.replace(/^www\./, "");
-      } catch {}
-      referrers.set(host, (referrers.get(host) ?? 0) + 1);
-    }
     if (views.some((v) => v.medium === "cpc" || v.medium === "paid")) paid += 1;
     if (views.length === 1) bounced += 1;
   }
 
   const measured = rows.filter((r) => typeof r.durationMs === "number" && r.durationMs > 0);
-  const scrolled = rows.filter((r) => typeof r.maxScroll === "number");
   const avg = (arr: number[]) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0);
 
   return {
@@ -323,14 +305,10 @@ export function aggregate(rows: PageView[], days: string[]): Stats {
     pageViews: rows.length,
     bounceRate: sessions.size ? Math.round((bounced / sessions.size) * 100) : 0,
     avgDurationSec: Math.round(avg(measured.map((r) => r.durationMs!)) / 1000),
-    avgScroll: Math.round(avg(scrolled.map((r) => r.maxScroll!))),
     daily: [...dailyMap.values()].map((d) => ({ day: d.day, visitors: d.visitors.size, pageViews: d.pageViews })),
     hourly,
     sources: top(sources, (k) => SOURCE_LABEL[k] ?? k),
     devices: top(devices, (k) => DEVICE_LABEL[k as PageView["device"]] ?? k),
-    pages: top(pages, (k) => PAGE_LABEL[k] ?? k),
-    keywords: top(keywords, (k) => k),
-    referrers: top(referrers, (k) => k),
     exitPages: top(exits, (k) => PAGE_LABEL[k] ?? k),
     paidVisitors: paid,
   };

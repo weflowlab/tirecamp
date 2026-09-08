@@ -22,7 +22,7 @@ export default async function HomePage() {
       {/* 히어로 — 흑백 타이어 트레드 사진 위에 어두운 그라데이션, 첫 화면에 검색 카드와 이용 절차까지 보이도록 높이 절제 */}
       <section
         className="relative w-full overflow-hidden bg-charcoal bg-cover bg-[position:70%_center] px-[48px] py-[44px] text-white max-pc:px-[24px] max-pc:py-[36px]"
-        style={{ backgroundImage: "url(/images/hero-tire.jpg)" }}
+        style={{ backgroundImage: "url(/images/hero-tire.webp)" }}
       >
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(14,14,14,0.92)_0%,rgba(14,14,14,0.78)_45%,rgba(14,14,14,0.35)_100%)]" />
 

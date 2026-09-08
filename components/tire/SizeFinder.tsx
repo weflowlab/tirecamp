@@ -14,7 +14,7 @@ const EMPTY: SizeSel = { w: "NO", t: "NO", i: "NO" };
  * 사이즈검색 (원본 form name="frmtsize" + findSize()/frtypechk())
  * - 단면폭/편평비/인치 select 3개, "앞뒤사이즈가 다른경우" 체크 시 두번째 줄 표시
  * - 검색 버튼: 원본과 동일한 alert 검증 후 /product/tire/sizelist?find_ftsize=..(&find_rtsize=..) 로 이동
- * - tsizehelp.gif 버튼: "타이어사이즈 확인방법" 모달 열기
+ * - "타이어사이즈 확인방법" 버튼: 사이즈 읽는 법 모달 열기
  */
 export default function SizeFinder({ tinfo }: { tinfo?: string }) {
   const router = useRouter();

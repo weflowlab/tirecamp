@@ -19,8 +19,3 @@ export type Inquiry = {
 export const INQUIRY_TYPES = ["타이어 견적", "교체 예약", "중고 타이어", "기타"] as const;
 
 export const INQUIRIES_FILE = "inquiries";
-
-export const INQUIRY_STATUS_LABEL: Record<Inquiry["status"], string> = {
-  new: "신규",
-  done: "처리완료",
-};

@@ -228,10 +228,10 @@ select.sel10 {
   line-height: 20px;
 }
 
-/* 점선 구분선 (원본 /images/findsize/dotline.gif 배경) */
+/* 점선 구분선 (원본 /images/findsize/dotline.gif 를 webp 로 변환한 배경) */
 .dotline {
   height: 10px;
-  background: url("/images/findsize/dotline.gif") repeat-x left center;
+  background: url("/images/findsize/dotline.webp") repeat-x left center;
 }
 
 /* =====================================================================

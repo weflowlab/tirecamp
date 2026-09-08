@@ -257,10 +257,6 @@ function ensureSeeded(): Promise<void> {
  * 캐시는 "요청 1건 안에서만" (React cache). 프로세스 전역 캐시를 두면 개발 서버에서 API 라우트와 페이지가
  * 서로 다른 모듈 인스턴스를 갖게 되어, 관리자에서 고친 뒤에도 페이지가 옛 값을 보여준다.
  */
-export function invalidateTireCache() {
-  /* 요청 단위 캐시라 비울 것이 없다 (호출부 호환용) */
-}
-
 /* ---------- 읽기 ---------- */
 
 const loadAllTires = cache(async (): Promise<TireRecord[]> => {
@@ -388,7 +384,6 @@ export async function saveTire(t: TireRecord): Promise<void> {
       updated_at = now()`,
     [row],
   );
-  invalidateTireCache();
 }
 
 export async function nextTireSeq(): Promise<string> {
@@ -402,7 +397,6 @@ export async function deleteTire(seq: string): Promise<boolean> {
   const sql = getSql();
   await sql`DELETE FROM tire_prices WHERE tire_seq = ${seq}`;
   const rows = await sql`DELETE FROM tires WHERE seq = ${seq} RETURNING seq`;
-  invalidateTireCache();
   return rows.length > 0;
 }
 
@@ -423,5 +417,4 @@ export async function savePrices(seq: string, items: TirePrice[], deleted: strin
       [rows],
     );
   }
-  invalidateTireCache();
 }

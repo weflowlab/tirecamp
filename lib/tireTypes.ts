@@ -7,7 +7,7 @@ import type { TinfoScore } from "@/lib/tinfo";
 /** 타이어 제품 1개 (관리자 > 타이어 관리에서 편집) */
 export type TireRecord = {
   seq: string;
-  brandCode: string; // /images/companylogo/<code>.gif, 검색 필터 brandop 코드
+  brandCode: string; // /images/companylogo/<code>.webp, 검색 필터 brandop 코드
   brandName: string;
   model: string;
   /** 대표 이미지 (목록 카드/상세 첫 장) */
@@ -91,11 +91,6 @@ export function priceRangeOf(prices: { salePrice: number }[]): string {
   const max = Math.max(...v);
   const f = (n: number) => n.toLocaleString("ko-KR");
   return min === max ? f(min) : `${f(min)} ~ ${f(max)}`;
-}
-
-/** 원본 팝업의 "타입 / 등급" 한 줄 (검색 결과 탭 필터가 사용) */
-export function typeLevelOf(t: Pick<TireRecord, "typeLabel" | "levelLabel">): string {
-  return [t.typeLabel, t.levelLabel].filter(Boolean).join(" / ");
 }
 
 /** HTML 태그 제거 (카드용 평문 설명) */

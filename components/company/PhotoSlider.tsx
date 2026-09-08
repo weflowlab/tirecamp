@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 /* 매장 사진 (네이버 플레이스 등록 사진, 1400px 리사이즈 + EXIF 제거) */
 /* 순서: 외관(02,03) → 진열대(09,10) → 나머지 */
-const PHOTOS = ["02", "03", "09", "10", "04", "05", "06", "01"].map((n) => `/images/company/gallery-${n}.jpg`);
+const PHOTOS = ["02", "03", "09", "10", "04", "05", "06", "01"].map((n) => `/images/company/gallery-${n}.webp`);
 
 const AUTOPLAY_MS = 4000;
 

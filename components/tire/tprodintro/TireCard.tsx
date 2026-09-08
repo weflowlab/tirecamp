@@ -20,7 +20,7 @@ export default function TireCard({ item }: { item: TireListItem }) {
           <img src={item.image} alt="" className="max-h-full w-auto transition-transform duration-500 group-hover:scale-[1.04]" />
         </div>
         <div className="border-t border-line px-[14px] py-[12px]">
-          <img src={`/images/companylogo/${item.brandCode}.gif`} alt={item.brandName} className="img-fixed h-[18px] w-auto" />
+          <img src={`/images/companylogo/${item.brandCode}.webp`} alt={item.brandName} className="img-fixed h-[18px] w-auto" />
           <p className="mt-[8px] text-[12px] text-muted">
             {item.typeLabel} · {item.levelLabel}
           </p>

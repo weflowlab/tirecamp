@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 /**
  * "타이어사이즈 확인방법" 모달 (원본 #pdspop_tiresize jQuery UI dialog, width 620, modal)
- * - 타이틀바 + 본문(600x430, 배경 /images/popup/tiresizetxt.gif) + 닫기 버튼
+ * - 타이틀바 + 본문(600x430, 배경 /images/popup/tiresizetxt.webp) + 닫기 버튼
  * - 오버레이 클릭 / ESC / 닫기 버튼으로 닫힘 (jQuery 없이 직접 구현)
  */
 export default function TireSizeHelpDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -51,7 +51,7 @@ export default function TireSizeHelpDialog({ open, onClose }: { open: boolean; o
           <div
             className="w-[600px] h-[430px] max-pc:w-full max-pc:h-auto max-pc:aspect-[600/430]"
             style={{
-              backgroundImage: "url(/images/popup/tiresizetxt.gif)",
+              backgroundImage: "url(/images/popup/tiresizetxt.webp)",
               backgroundRepeat: "no-repeat",
               backgroundSize: "100% auto",
             }}

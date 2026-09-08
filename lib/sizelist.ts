@@ -209,6 +209,3 @@ export async function getSizeList(q: SizeListQuery): Promise<SizeListResult> {
     source: "static",
   };
 }
-
-/* 이전 이름 호환 (원격 fetch 시절의 이름) */
-export const fetchSizeList = getSizeList;
