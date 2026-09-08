@@ -38,17 +38,16 @@ export default async function NewsListPage({ searchParams }: Props) {
         {rows.map((n) => (
           <li key={n.seq} className="border-b border-line">
             <Link href={newsViewHref(n.seq, page, lpage)} className="flex gap-[20px] py-[20px] hover:!no-underline group">
-              {n.thumb && (
-                <img src={n.thumb} width={100} height={150} alt="" className="img-fixed h-[120px] w-[80px] shrink-0 object-cover" />
-              )}
-              <div className="min-w-0 flex-1">
+              {/* 썸네일: 가로·세로 어떤 비율이든 3:2 상자에 맞춰 가운데를 잘라 보여준다 */}
+              {n.thumb && <img src={n.thumb} alt="" className="img-fixed h-[100px] w-[150px] shrink-0 border border-line object-cover max-pc:h-[72px] max-pc:w-[108px]" />}
+              {/* 썸네일이 있으면 칸이 높아지므로 날짜·조회수는 맨 아래로 붙이고, 미리보기는 최대 3줄 */}
+              <div className="flex min-w-0 flex-1 flex-col">
                 <div className="flex items-center gap-[10px]">
                   {n.notice && <span className="eyebrow shrink-0 !text-ink">Notice</span>}
                   <span className="truncate text-[15px] font-medium !text-ink group-hover:!text-graphite">{n.title}</span>
                 </div>
-                {/* 본문 첫 줄 미리보기 (뒤에 내용이 더 있으면 …) */}
-                <p className="mt-[6px] truncate text-[13px] leading-[21px] text-muted">{newsPreview(n.content)}</p>
-                <p className="mt-[6px] text-[12px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
+                <p className="mt-[6px] line-clamp-3 whitespace-pre-line text-[13px] leading-[21px] text-muted max-pc:line-clamp-2">{newsPreview(n.content)}</p>
+                <p className="mt-auto pt-[8px] text-[12px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
                   {n.date} · 조회 {n.views}
                 </p>
               </div>

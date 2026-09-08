@@ -90,7 +90,7 @@ export default function LayerPopup() {
   return (
     <div role="dialog" aria-modal="true" aria-label={`${popup.title} 팝업`} className="fixed inset-0 z-[1900] flex items-center justify-center px-[16px] font-sans">
       <button type="button" aria-label="팝업 닫기" onClick={closeCurrent} className="absolute inset-0 bg-black/60" />
-      <div className="relative w-fit max-w-[min(640px,92vw)] overflow-hidden bg-white shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)]">
+      <div className="relative w-fit max-w-[min(640px,92vw)] overflow-hidden rounded-[14px] bg-white shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)]">
         {popup.linkUrl ? (
           <a href={popup.linkUrl} target={popup.newWindow ? "_blank" : "_self"} rel={popup.newWindow ? "noreferrer noopener" : undefined} className="block hover:!no-underline">
             {img}

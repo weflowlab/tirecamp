@@ -33,19 +33,20 @@ export function newsViewHref(seq: number, spage = 1, lpage = 1): string {
 }
 
 /**
- * 본문 첫 줄 미리보기 (목록용)
- * - HTML 을 줄 단위(<br>, </p>, 줄바꿈)로 나눠 태그를 벗기고, 첫 번째 비어 있지 않은 줄을 돌려준다
- * - 뒤에 내용이 더 있으면 "..." 을 붙인다 (유니코드 … 는 한글 폰트에서 가운데 높이로 찍혀서 마침표 세 개 사용)
+ * 본문 미리보기 (목록용)
+ * - 태그를 벗기고 줄바꿈(<br>, 문단 끝)은 "\n" 으로 남긴 앞부분(max 글자)을 돌려준다.
+ *   화면에서는 whitespace-pre-line + line-clamp 로 줄바꿈을 살린 채 몇 줄만 보여준다.
  */
-export function newsPreview(html: string): string {
-  const lines = html
+export function newsPreview(html: string, max = 240): string {
+  const text = html
     .replace(/<br\s*\/?>/gi, "\n")
-    .replace(/<\/p>/gi, "\n")
+    .replace(/<\/(p|div|li|h\d|tr)>/gi, "\n")
     .replace(/<[^>]+>/g, "")
     .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
     .split("\n")
-    .map((l) => l.trim())
-    .filter(Boolean);
-  if (lines.length === 0) return "";
-  return lines.length > 1 ? `${lines[0]}...` : lines[0];
+    .map((l) => l.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .join("\n");
+  return text.length > max ? `${text.slice(0, max)}...` : text;
 }

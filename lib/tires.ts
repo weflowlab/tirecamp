@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { cache } from "react";
 import { ensureSchema, getSql, hasDb } from "@/lib/db";
 import type { Tinfo } from "@/lib/tinfo";
 import type { TireList } from "@/lib/tprodintro";
@@ -252,31 +253,26 @@ function ensureSeeded(): Promise<void> {
   return seeded;
 }
 
-/* 같은 프로세스 안에서 30초 캐시 (공개 페이지 요청마다 DB 를 치지 않도록). 관리자 수정 시 즉시 비운다 */
-const TTL = 30_000;
-let tiresCache: { at: number; list: TireRecord[] } | null = null;
-let priceCountCache: { at: number; map: Map<string, TirePrice[]> } | null = null;
-
+/*
+ * 캐시는 "요청 1건 안에서만" (React cache). 프로세스 전역 캐시를 두면 개발 서버에서 API 라우트와 페이지가
+ * 서로 다른 모듈 인스턴스를 갖게 되어, 관리자에서 고친 뒤에도 페이지가 옛 값을 보여준다.
+ */
 export function invalidateTireCache() {
-  tiresCache = null;
-  priceCountCache = null;
+  /* 요청 단위 캐시라 비울 것이 없다 (호출부 호환용) */
 }
 
 /* ---------- 읽기 ---------- */
 
+const loadAllTires = cache(async (): Promise<TireRecord[]> => {
+  if (!hasDb()) return (await fromFiles()).tires;
+  await ensureSeeded();
+  const rows = (await getSql()`SELECT * FROM tires ORDER BY sort_order ASC, seq::int ASC`) as TireRow[];
+  return rows.map(rowToTire);
+});
+
 /** 전체 타이어 (관리자는 숨김 포함, 공개 페이지는 visible 만) — sortOrder, seq 순 */
 export async function getTires(includeHidden = false): Promise<TireRecord[]> {
-  let list: TireRecord[];
-  if (!hasDb()) {
-    list = (await fromFiles()).tires;
-  } else if (tiresCache && Date.now() - tiresCache.at < TTL) {
-    list = tiresCache.list;
-  } else {
-    await ensureSeeded();
-    const rows = (await getSql()`SELECT * FROM tires ORDER BY sort_order ASC, seq::int ASC`) as TireRow[];
-    list = rows.map(rowToTire);
-    tiresCache = { at: Date.now(), list };
-  }
+  const list = await loadAllTires();
   return includeHidden ? list : list.filter((t) => t.visible);
 }
 
@@ -288,24 +284,20 @@ export async function getTireMap(includeHidden = false): Promise<Map<string, Tir
   return new Map((await getTires(includeHidden)).map((t) => [t.seq, t]));
 }
 
-/** 타이어별 가격 행 전체 (관리자 목록/가격대 계산용) */
-async function getAllPrices(): Promise<Map<string, TirePrice[]>> {
+/** 타이어별 가격 행 전체 (관리자 목록/가격대 계산용, 요청당 1회 조회) */
+export const getAllPrices = cache(async (): Promise<Map<string, TirePrice[]>> => {
+  let prices: TirePrice[];
   if (!hasDb()) {
-    const map = new Map<string, TirePrice[]>();
-    for (const p of (await fromFiles()).prices) (map.get(p.tireSeq) ?? map.set(p.tireSeq, []).get(p.tireSeq)!).push(p);
-    return map;
+    prices = (await fromFiles()).prices;
+  } else {
+    await ensureSeeded();
+    const rows = (await getSql()`SELECT * FROM tire_prices ORDER BY size ASC, sale_price ASC`) as PriceRow[];
+    prices = rows.map(rowToPrice);
   }
-  if (priceCountCache && Date.now() - priceCountCache.at < TTL) return priceCountCache.map;
-  await ensureSeeded();
-  const rows = (await getSql()`SELECT * FROM tire_prices ORDER BY size ASC, sale_price ASC`) as PriceRow[];
   const map = new Map<string, TirePrice[]>();
-  for (const r of rows) {
-    const p = rowToPrice(r);
-    (map.get(p.tireSeq) ?? map.set(p.tireSeq, []).get(p.tireSeq)!).push(p);
-  }
-  priceCountCache = { at: Date.now(), map };
+  for (const p of prices) (map.get(p.tireSeq) ?? map.set(p.tireSeq, []).get(p.tireSeq)!).push(p);
   return map;
-}
+});
 
 /** 특정 타이어의 가격 행 (사이즈순) */
 export async function getTirePrices(seq: string): Promise<TirePrice[]> {
@@ -348,7 +340,7 @@ export function toTireItem(p: TirePrice, t: TireRecord): TireItem {
       marketPrice: p.marketPrice,
       salePrice: p.salePrice,
       cashPrice: p.cashPrice,
-      discountText: discountText(p.marketPrice, p.cashPrice),
+      discountText: discountText(p.marketPrice, p.salePrice),
       defaultQty: 4,
     },
     rear: null,

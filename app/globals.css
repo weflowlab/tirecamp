@@ -387,3 +387,9 @@ select.sel10 {
 .float-wiggle:hover {
   animation: none;
 }
+
+/* 관리자 본문 편집기(contentEditable) 빈 상태 안내 문구 */
+.rich-editor:empty::before {
+  content: attr(data-placeholder);
+  color: var(--color-faint);
+}

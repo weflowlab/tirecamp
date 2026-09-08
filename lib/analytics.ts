@@ -216,12 +216,14 @@ export type Stats = {
   pages: Bucket[];
   keywords: Bucket[];
   referrers: Bucket[];
+  /** 방문자가 마지막으로 보고 떠난 페이지 */
+  exitPages: Bucket[];
   /** 광고(cpc/paid) 로 들어온 방문자 수 */
   paidVisitors: number;
 };
 
 export const SOURCE_LABEL: Record<string, string> = {
-  direct: "직접 방문·즐겨찾기",
+  direct: "직접 방문",
   naver: "네이버",
   google: "구글",
   kakao: "카카오톡",
@@ -277,6 +279,7 @@ export function aggregate(rows: PageView[], days: string[]): Stats {
   const pages = new Map<string, number>();
   const keywords = new Map<string, number>();
   const referrers = new Map<string, number>();
+  const exits = new Map<string, number>();
   let paid = 0;
 
   for (const r of rows) {
@@ -293,7 +296,10 @@ export function aggregate(rows: PageView[], days: string[]): Stats {
 
   let bounced = 0;
   for (const [, views] of sessions) {
-    const first = views.slice().sort((a, b) => a.ts.localeCompare(b.ts))[0];
+    const ordered = views.slice().sort((a, b) => a.ts.localeCompare(b.ts));
+    const first = ordered[0];
+    const last = ordered[ordered.length - 1];
+    exits.set(last.path, (exits.get(last.path) ?? 0) + 1);
     sources.set(first.source, (sources.get(first.source) ?? 0) + 1);
     devices.set(first.device, (devices.get(first.device) ?? 0) + 1);
     if (first.campaign) keywords.set(first.campaign, (keywords.get(first.campaign) ?? 0) + 1);
@@ -325,6 +331,7 @@ export function aggregate(rows: PageView[], days: string[]): Stats {
     pages: top(pages, (k) => PAGE_LABEL[k] ?? k),
     keywords: top(keywords, (k) => k),
     referrers: top(referrers, (k) => k),
+    exitPages: top(exits, (k) => PAGE_LABEL[k] ?? k),
     paidVisitors: paid,
   };
 }

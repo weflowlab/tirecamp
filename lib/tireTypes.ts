@@ -77,10 +77,10 @@ export function speedTitle(grade: string): string {
   return km ? `속도등급:${g} (${km}km까지)` : `속도등급:${g}`;
 }
 
-/** "↓최대55% 할인" — 시중가 대비 최대 할인가 기준 (원본과 같은 계산) */
-export function discountText(marketPrice: number, cashPrice: number): string {
-  if (marketPrice <= 0 || cashPrice <= 0 || cashPrice >= marketPrice) return "";
-  return `↓최대${Math.round((1 - cashPrice / marketPrice) * 100)}% 할인`;
+/** "↓최대55% 할인" — 정가(시중가) 대비 판매가 기준 */
+export function discountText(marketPrice: number, salePrice: number): string {
+  if (marketPrice <= 0 || salePrice <= 0 || salePrice >= marketPrice) return "";
+  return `↓최대 ${Math.round((1 - salePrice / marketPrice) * 100)}% 할인`;
 }
 
 /** 가격 행들로 "78,000 ~ 120,000" 가격대 문구 (할인가 기준) */
