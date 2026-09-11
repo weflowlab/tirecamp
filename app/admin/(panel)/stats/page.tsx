@@ -1,24 +1,14 @@
 import type { Metadata } from "next";
+import PeriodBar from "@/components/admin/PeriodBar";
 import { BarRows, ChartCard, DailyChart, HourlyChart, Icons, Insight, StatTile } from "@/components/admin/StatsCharts";
-import { Chip, NUM, PageHead } from "@/components/admin/ui";
+import { NUM, PageHead } from "@/components/admin/ui";
 import { aggregate, firstRecordedDay, listDays, readRange } from "@/lib/analytics";
+import { resolvePeriod, shiftDay } from "@/lib/period";
 import { kstDate } from "@/lib/store";
 
 export const metadata: Metadata = { title: "방문자 통계" };
 
 type Props = { searchParams: Promise<{ range?: string; from?: string; to?: string }> };
-
-const RANGES = [
-  ["today", "오늘"],
-  ["7d", "최근 7일"],
-  ["30d", "최근 30일"],
-  ["month", "이번 달"],
-  ["all", "전체"],
-] as const;
-
-function shift(day: string, n: number): string {
-  return new Date(new Date(`${day}T00:00:00Z`).getTime() + n * 86400000).toISOString().slice(0, 10);
-}
 
 /**
  * 방문자 통계 · 유입 관리 (/admin/stats?range=today | from=&to=) — 기본 오늘
@@ -27,32 +17,15 @@ function shift(day: string, n: number): string {
 export default async function AdminStats({ searchParams }: Props) {
   const sp = await searchParams;
   const today = kstDate();
-  const DATE = /^\d{4}-\d{2}-\d{2}$/;
-
-  let range = RANGES.some(([k]) => k === sp.range) ? sp.range! : "";
-  let from: string;
-  let to = today;
-  if (sp.from && sp.to && DATE.test(sp.from) && DATE.test(sp.to)) {
-    from = sp.from <= sp.to ? sp.from : sp.to;
-    to = sp.from <= sp.to ? sp.to : sp.from;
-    range = "";
-  } else {
-    if (!range) range = "today";
-    if (range === "today") from = today;
-    else if (range === "7d") from = shift(today, -6);
-    else if (range === "30d") from = shift(today, -29);
-    else if (range === "month") from = `${today.slice(0, 7)}-01`;
-    else from = await firstRecordedDay();
-  }
-
+  const period = resolvePeriod(sp, today, "today", await firstRecordedDay());
+  const { from, to } = period;
   const days = listDays(from, to);
   const rows = await readRange(from, to);
   const s = aggregate(rows, days);
 
   /* 날짜별 방문자는 선택 기간과 상관없이 항상 최근 14일 (날이 지나면 왼쪽부터 밀려난다) */
-  const days14 = listDays(shift(today, -13), today);
+  const days14 = listDays(shiftDay(today, -13), today);
   const daily14 = aggregate(await readRange(days14[0], today), days14).daily;
-  const fmt = (d: string) => d.replace(/-/g, ".");
   const mins = (sec: number) => (sec >= 60 ? `${Math.floor(sec / 60)}분 ${sec % 60}초` : `${sec}초`);
   const bounced = Math.round((s.visitors * s.bounceRate) / 100);
   const topSource = s.sources[0];
@@ -62,27 +35,7 @@ export default async function AdminStats({ searchParams }: Props) {
     <div>
       <PageHead eyebrow="Analytics" title="방문자 통계 · 유입 관리" desc="홈페이지에 들어온 방문자를 기기 기준 하루 1명으로 셉니다." />
 
-      {/* 기간 */}
-      <div className="mb-[20px] flex items-center justify-between gap-[12px] max-pc:flex-col max-pc:items-stretch">
-        <div className="flex flex-wrap gap-[6px]">
-          {RANGES.map(([k, label]) => (
-            <Chip key={k} href={`/admin/stats?range=${k}`} active={range === k}>
-              {label}
-            </Chip>
-          ))}
-        </div>
-        <form method="get" className="flex items-center gap-[6px]">
-          <input type="date" name="from" defaultValue={from} max={today} className="field !h-[30px] !w-[140px] !text-[12px] max-pc:!h-[36px] max-pc:min-w-0 max-pc:flex-1 max-pc:!w-auto" />
-          <span className="shrink-0 text-[12px] text-faint">~</span>
-          <input type="date" name="to" defaultValue={to} max={today} className="field !h-[30px] !w-[140px] !text-[12px] max-pc:!h-[36px] max-pc:min-w-0 max-pc:flex-1 max-pc:!w-auto" />
-          <button type="submit" className="btn-outline !h-[30px] shrink-0 whitespace-nowrap !px-[12px] !text-[12px] text-ink hover:bg-ink hover:text-white max-pc:!h-[36px]">
-            조회
-          </button>
-        </form>
-      </div>
-      <p className="mb-[12px] text-[12px] text-muted" style={NUM}>
-        {fmt(from)} ~ {fmt(to)} · {days.length}일
-      </p>
+      <PeriodBar basePath="/admin/stats" period={period} today={today} />
 
       {/* 숫자 타일 4개 */}
       <div className="grid grid-cols-4 gap-[12px] max-pc:grid-cols-2">

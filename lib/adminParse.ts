@@ -1,5 +1,4 @@
 import type { NewsItem } from "@/lib/news";
-import type { Popup } from "@/lib/popups";
 import { clean, todayKST } from "@/lib/store";
 
 /*
@@ -22,30 +21,4 @@ export function parseNews(body: Record<string, unknown>): Partial<NewsItem> & { 
     thumb: clean(body.thumb, 300),
     summary: clean(body.summary, 300),
   };
-}
-
-const DATE = /^\d{4}-\d{2}-\d{2}$/;
-
-export function parsePopup(body: Record<string, unknown>, requireImage: boolean): Partial<Popup> & { error?: string } {
-  const title = clean(body.title, 60);
-  const start = clean(body.start, 10);
-  const end = clean(body.end, 10);
-  const pcImage = clean(body.pcImage, 300);
-  if (!title) return { error: "팝업 제목을 입력해 주세요." };
-  if (!DATE.test(start) || !DATE.test(end)) return { error: "노출 기간을 선택해 주세요." };
-  if (start > end) return { error: "종료일이 시작일보다 앞설 수 없습니다." };
-  if (requireImage && !pcImage) return { error: "PC 이미지를 업로드해 주세요." };
-  const out: Partial<Popup> = {
-    title,
-    start,
-    end,
-    linkUrl: clean(body.linkUrl, 300),
-    newWindow: body.newWindow === true,
-    hideToday: body.hideToday !== false,
-    enabled: body.enabled !== false,
-    scope: body.scope === "all" ? "all" : "home",
-    mobImage: clean(body.mobImage, 300),
-  };
-  if (pcImage) out.pcImage = pcImage;
-  return out;
 }

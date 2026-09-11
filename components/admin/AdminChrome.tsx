@@ -16,7 +16,6 @@ const MENUS = [
   { href: "/admin/cars", label: "차량 데이터 관리" },
   { href: "/admin/news", label: "공지사항 관리" },
   { href: "/admin/faq", label: "FAQ 관리" },
-  { href: "/admin/popups", label: "팝업창 관리" },
   { href: "/admin/stats", label: "방문자 통계 · 유입" },
 ];
 

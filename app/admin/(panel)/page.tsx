@@ -1,26 +1,30 @@
 import Link from "next/link";
+import PeriodBar from "@/components/admin/PeriodBar";
 import { Badge, Card, Empty, NUM, Stat, TABLE, TD, TH, TR_HOVER } from "@/components/admin/ui";
-import { aggregate, readRange } from "@/lib/analytics";
+import { aggregate, firstRecordedDay, listDays, readRange } from "@/lib/analytics";
 import { INQUIRIES_FILE, type Inquiry } from "@/lib/inquiries";
-import { POPUPS_FILE, popupState, type Popup } from "@/lib/popups";
+import { inPeriod, periodParams, resolvePeriod } from "@/lib/period";
 import { kstDate, readList } from "@/lib/store";
 import { getTires } from "@/lib/tires";
 
+type Props = { searchParams: Promise<{ range?: string; from?: string; to?: string }> };
+
 /**
- * 관리자 대시보드 (/admin) — 오늘 숫자 4개 + 최근 문의 + 노출 중 팝업
+ * 관리자 대시보드 (/admin?range=today …) — 기간 선택 → 숫자 타일 4개 → 기간 내 문의 목록
+ * 기본 기간은 전체. 타일과 문의 목록이 모두 선택한 기간 기준으로 바뀐다 (노출 중 타이어만 현재 상태).
  */
-export default async function AdminHome() {
+export default async function AdminHome({ searchParams }: Props) {
+  const sp = await searchParams;
   const today = kstDate();
-  const [inquiries, tires, popups, todayViews] = await Promise.all([
-    readList<Inquiry>(INQUIRIES_FILE),
-    getTires(true),
-    readList<Popup>(POPUPS_FILE),
-    readRange(today, today),
-  ]);
-  const stats = aggregate(todayViews, [today]);
-  const newCount = inquiries.filter((i) => i.status === "new").length;
-  const recent = inquiries.slice().sort((a, b) => b.id - a.id).slice(0, 6);
-  const activePopups = popups.filter((p) => popupState(p, today) === "active");
+  const [inquiries, tires, firstVisitDay] = await Promise.all([readList<Inquiry>(INQUIRIES_FILE), getTires(true), firstRecordedDay()]);
+  const firstInquiryDay = inquiries.length ? inquiries.reduce((m, i) => (i.date.replace(/\./g, "-") < m ? i.date.replace(/\./g, "-") : m), today) : today;
+  const period = resolvePeriod(sp, today, "all", firstVisitDay < firstInquiryDay ? firstVisitDay : firstInquiryDay);
+
+  const stats = aggregate(await readRange(period.from, period.to), listDays(period.from, period.to));
+  const inRange = inquiries.filter((i) => inPeriod(i.date, period)).sort((a, b) => b.id - a.id);
+  const newCount = inRange.filter((i) => i.status === "new").length;
+  const recent = inRange.slice(0, 10);
+  const listHref = `/admin/inquiries?${new URLSearchParams(periodParams(period)).toString()}`;
 
   return (
     <div>
@@ -32,25 +36,27 @@ export default async function AdminHome() {
         </p>
       </div>
 
+      <PeriodBar basePath="/admin" period={period} today={today} />
+
       <div className="grid grid-cols-4 gap-[10px] max-pc:grid-cols-2">
-        <Stat label="미처리 문의" value={newCount} unit="건" sub={`전체 ${inquiries.length}건`} />
-        <Stat label="처리 완료 문의" value={inquiries.length - newCount} unit="건" sub={`전체 ${inquiries.length}건`} />
-        <Stat label="오늘 방문자" value={stats.visitors} unit="명" sub={`페이지뷰 ${stats.pageViews}`} />
+        <Stat label="접수 문의" value={inRange.length} unit="건" sub="선택 기간에 들어온 문의" />
+        <Stat label="미처리 문의" value={newCount} unit="건" sub={`처리 완료 ${inRange.length - newCount}건`} />
+        <Stat label="방문자" value={stats.visitors} unit="명" sub={`페이지뷰 ${stats.pageViews}`} />
         <Stat label="노출 중 타이어" value={tires.filter((t) => t.visible).length} unit="종" sub={`등록 ${tires.length}종`} />
       </div>
 
-      <div className="mt-[24px] grid grid-cols-[1fr_320px] gap-[16px] max-pc:grid-cols-1">
+      <div className="mt-[24px]">
         <Card
           eyebrow="Inquiries"
           title="최근 문의"
           action={
-            <Link href="/admin/inquiries" className="text-[12px] tracking-[0.04em] !text-muted hover:!text-ink hover:!no-underline">
+            <Link href={listHref} className="text-[12px] tracking-[0.04em] !text-muted hover:!text-ink hover:!no-underline">
               전체보기 →
             </Link>
           }
         >
           {recent.length === 0 ? (
-            <Empty>아직 접수된 문의가 없습니다.</Empty>
+            <Empty>이 기간에 접수된 문의가 없습니다.</Empty>
           ) : (
             <div className="overflow-x-auto">
               <table className={TABLE}>
@@ -86,62 +92,6 @@ export default async function AdminHome() {
             </div>
           )}
         </Card>
-
-        <div className="flex flex-col gap-[16px]">
-          <Card
-            eyebrow="Popup"
-            title="노출 중 팝업"
-            action={
-              <Link href="/admin/popups" className="text-[12px] tracking-[0.04em] !text-muted hover:!text-ink hover:!no-underline">
-                관리 →
-              </Link>
-            }
-          >
-            {activePopups.length === 0 ? (
-              <p className="text-[13px] text-muted">지금 노출 중인 팝업이 없습니다.</p>
-            ) : (
-              <ul className="flex flex-col gap-[10px]">
-                {activePopups.map((p) => (
-                  <li key={p.id} className="flex items-center gap-[10px]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.pcImage} alt="" className="h-[44px] w-[60px] shrink-0 border border-line object-cover" />
-                    <div className="min-w-0">
-                      <p className="truncate text-[13px] font-semibold text-ink">{p.title}</p>
-                      <p className="text-[11px] text-faint" style={NUM}>
-                        ~ {p.end.replace(/-/g, ".")}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </Card>
-
-          <Card
-            eyebrow="Today"
-            title="오늘 유입"
-            action={
-              <Link href="/admin/stats" className="text-[12px] tracking-[0.04em] !text-muted hover:!text-ink hover:!no-underline">
-                통계 자세히 →
-              </Link>
-            }
-          >
-            {stats.sources.length === 0 ? (
-              <p className="text-[13px] text-muted">아직 오늘 방문 기록이 없습니다.</p>
-            ) : (
-              <ul className="flex flex-col gap-[8px] text-[13px]">
-                {stats.sources.slice(0, 5).map((s) => (
-                  <li key={s.key} className="flex items-center justify-between gap-[10px]">
-                    <span className="truncate text-graphite">{s.label}</span>
-                    <span className="shrink-0 text-ink" style={NUM}>
-                      {s.count}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </Card>
-        </div>
       </div>
     </div>
   );

@@ -2,11 +2,11 @@ import { denyUnlessAdmin } from "@/lib/adminAuth";
 import { extOf, saveUpload } from "@/lib/files";
 
 /**
- * POST /api/admin/upload?dir=popup|news|tire|car — 이미지 업로드 (multipart, 필드명 file)
+ * POST /api/admin/upload?dir=news|tire|car — 이미지 업로드 (multipart, 필드명 file)
  * 저장 위치는 lib/files.ts 가 결정한다 (DB 가 있으면 files 테이블, 없으면 public/uploads/<dir>/).
  * 응답: { url } — 그대로 <img src> 에 쓰는 경로
  */
-const DIRS = new Set(["popup", "news", "tire", "car"]);
+const DIRS = new Set(["news", "tire", "car"]);
 const MAX_BYTES = 5 * 1024 * 1024;
 
 export async function POST(request: Request) {

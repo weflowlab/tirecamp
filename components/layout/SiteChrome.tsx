@@ -6,7 +6,6 @@ import SiteFooter from "./SiteFooter";
 import TireDetailModal from "@/components/tire/TireDetailModal";
 import FloatingButtons from "./FloatingButtons";
 import PageTracker from "./PageTracker";
-import LayerPopup from "./LayerPopup";
 
 /**
  * 공통 크롬(헤더/본문 폭/푸터) 스위치
@@ -16,7 +15,7 @@ import LayerPopup from "./LayerPopup";
  * 맨 페이지다. app/layout.tsx 는 모든 라우트에 적용되므로, 여기서 pathname 을 보고
  *   - /product/tinfo/ 로 시작하면 children 만 그대로 (팝업)
  *   - /admin 이하는 관리자 셸이 자체 레이아웃을 그리므로 children 만 그대로
- *   - 그 외에는 SiteHeader → <main 900px> → SiteFooter (+ 방문 추적, 레이어 팝업)
+ *   - 그 외에는 SiteHeader → <main 900px> → SiteFooter (+ 방문 추적)
  * 로 분기한다. (다른 페이지 폴더를 route group 으로 옮기지 않기 위한 방식)
  */
 export default function SiteChrome({ children }: { children: React.ReactNode }) {
@@ -27,7 +26,7 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
     return <>{children}</>;
   }
 
-  // 관리자: 셸(사이드바/상단바)은 app/admin 레이아웃이 담당. 방문 추적/팝업도 제외
+  // 관리자: 셸(사이드바/상단바)은 app/admin 레이아웃이 담당. 방문 추적도 제외
   if (pathname.startsWith("/admin")) {
     return <>{children}</>;
   }
@@ -44,8 +43,6 @@ export default function SiteChrome({ children }: { children: React.ReactNode }) 
       <FloatingButtons />
       {/* 방문자 통계 수집 (관리자 > 방문자 통계) */}
       <PageTracker />
-      {/* 관리자가 등록한 레이어 팝업 */}
-      <LayerPopup />
     </>
   );
 }
