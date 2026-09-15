@@ -21,12 +21,12 @@ export default function TireCard({ item }: { item: TireListItem }) {
         </div>
         <div className="border-t border-line px-[14px] py-[12px]">
           <img src={`/images/companylogo/${item.brandCode}.webp`} alt={item.brandName} className="img-fixed h-[18px] w-auto" />
-          <p className="mt-[8px] text-[12px] text-muted">
+          <p className="mt-[8px] text-[13px] text-muted">
             {item.typeLabel} · {item.levelLabel}
           </p>
-          <p className="mt-[2px] text-[13px] font-semibold text-ink" style={{ fontFamily: "var(--font-num)" }}>
+          <p className="mt-[2px] text-[14px] font-semibold text-ink" style={{ fontFamily: "var(--font-num)" }}>
             {item.price}
-            <span className="ml-[2px] text-[11px] font-normal text-graphite">원</span>
+            <span className="ml-[2px] text-[12px] font-normal text-graphite">원</span>
           </p>
         </div>
       </a>

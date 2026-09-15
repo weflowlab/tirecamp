@@ -30,7 +30,7 @@ export default function SizeListTabs({ query, total }: Props) {
             <li key={t.g}>
               <Link
                 href={href(t.g)}
-                className={`relative block px-[16px] pb-[12px] pt-[4px] text-[14px] whitespace-nowrap hover:!no-underline max-pc:px-[12px] ${
+                className={`relative block px-[16px] pb-[12px] pt-[4px] text-[15px] whitespace-nowrap hover:!no-underline max-pc:px-[12px] ${
                   active ? "font-bold !text-ink" : "!text-muted hover:!text-ink"
                 }`}
               >
@@ -41,7 +41,7 @@ export default function SizeListTabs({ query, total }: Props) {
           );
         })}
       </ul>
-      <p className="pb-[12px] text-[12px] text-muted max-pc:pt-[8px]" style={{ fontFamily: "var(--font-num)" }}>
+      <p className="pb-[12px] text-[13px] text-muted max-pc:pt-[8px]" style={{ fontFamily: "var(--font-num)" }}>
         총 <b className="text-ink">{total}</b>개
       </p>
     </div>

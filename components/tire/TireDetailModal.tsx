@@ -79,8 +79,8 @@ export default function TireDetailModal() {
         </button>
 
         <div className="min-h-0 flex-1 overflow-y-auto">
-          {loading && <p className="p-[60px] text-center text-[13px] text-muted">불러오는 중...</p>}
-          {!loading && !data && <p className="p-[60px] text-center text-[13px] text-muted">제품 정보를 찾을 수 없습니다.</p>}
+          {loading && <p className="p-[60px] text-center text-[14px] text-muted">불러오는 중...</p>}
+          {!loading && !data && <p className="p-[60px] text-center text-[14px] text-muted">제품 정보를 찾을 수 없습니다.</p>}
           {data && <TireDetailContent data={data} />}
         </div>
       </div>
@@ -107,7 +107,7 @@ export function TireDetailContent({ data: d }: { data: TireDetail }) {
               <>
                 <Arrow dir="prev" onClick={() => go(-1)} />
                 <Arrow dir="next" onClick={() => go(1)} />
-                <span className="absolute bottom-[14px] right-[16px] text-[12px] text-muted" style={{ fontFamily: "var(--font-num)" }}>
+                <span className="absolute bottom-[14px] right-[16px] text-[13px] text-muted" style={{ fontFamily: "var(--font-num)" }}>
                   {i + 1} / {n}
                 </span>
               </>
@@ -135,11 +135,11 @@ export function TireDetailContent({ data: d }: { data: TireDetail }) {
           <h2 className="mt-[8px] text-[28px] font-bold leading-[1.2] tracking-[-0.02em] text-ink max-pc:text-[22px]" style={{ fontFamily: "var(--font-num)" }}>
             {d.model}
           </h2>
-          <p className="mt-[8px] text-[14px] font-medium text-graphite">{d.tagline}</p>
-          {d.desc && <p className="mt-[14px] text-[13px] leading-[22px] text-muted">{d.desc}</p>}
+          <p className="mt-[8px] text-[15px] font-medium text-graphite">{d.tagline}</p>
+          {d.desc && <p className="mt-[14px] text-[14px] leading-[22px] text-muted">{d.desc}</p>}
 
           {/* 스펙 (객관 정보만) */}
-          <dl className="mt-[22px] border-t border-line text-[13px]">
+          <dl className="mt-[22px] border-t border-line text-[14px]">
             <Spec k="타입 · 등급" v={d.typeLevel || "-"} />
             <Spec k="속도등급" v={d.speedRating || "-"} />
             <Spec k="트레드웨어" v={d.treadwear ? `${d.treadwear}` : "-"} />

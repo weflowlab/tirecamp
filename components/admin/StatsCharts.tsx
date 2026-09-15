@@ -75,13 +75,13 @@ export function StatTile({ icon, label, value, unit, desc }: { icon: React.React
     <div className="border border-line border-t-2 border-t-ink bg-white px-[22px] py-[20px]">
       <div className="flex items-center gap-[10px]">
         <span className="flex h-[36px] w-[36px] items-center justify-center border border-line bg-surface text-ink">{icon}</span>
-        <span className="text-[13px] font-medium text-graphite">{label}</span>
+        <span className="text-[14px] font-medium text-graphite">{label}</span>
       </div>
       <p className="mt-[14px] text-[34px] font-bold leading-none tracking-[-0.03em] text-ink" style={NUM}>
         {value}
-        {unit && <span className="ml-[2px] text-[18px] font-semibold">{unit}</span>}
+        {unit && <span className="ml-[2px] text-[19px] font-semibold">{unit}</span>}
       </p>
-      <p className="mt-[10px] text-[12px] text-muted">{desc}</p>
+      <p className="mt-[10px] text-[13px] text-muted">{desc}</p>
     </div>
   );
 }
@@ -91,7 +91,7 @@ export function Insight({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-[14px] border border-line bg-white px-[20px] py-[16px] text-graphite">
       <span className="flex h-[40px] w-[40px] shrink-0 items-center justify-center bg-ink text-white">{Icons.trend}</span>
-      <p className="leading-[26px] [&_b]:text-[16px]" style={{ fontSize: 16, fontWeight: 700 }}>
+      <p className="leading-[26px] [&_b]:text-[17px]" style={{ fontSize: 16, fontWeight: 700 }}>
         {children}
       </p>
     </div>
@@ -105,8 +105,8 @@ export function ChartCard({ icon, title, sub, className = "", children }: { icon
       <div className="flex items-start gap-[12px]">
         <span className="flex h-[40px] w-[40px] shrink-0 items-center justify-center border border-line bg-surface text-ink">{icon}</span>
         <div>
-          <h2 className="text-[16px] font-bold leading-[20px] tracking-[-0.01em] text-ink">{title}</h2>
-          <p className="mt-[4px] text-[12px] text-muted">{sub}</p>
+          <h2 className="text-[17px] font-bold leading-[20px] tracking-[-0.01em] text-ink">{title}</h2>
+          <p className="mt-[4px] text-[13px] text-muted">{sub}</p>
         </div>
       </div>
       <div className="mt-[20px]">{children}</div>
@@ -116,22 +116,22 @@ export function ChartCard({ icon, title, sub, className = "", children }: { icon
 
 /* ---------- 항목별 가로 막대 (라벨 · 막대 · N명 (P%)) ---------- */
 export function BarRows({ items, total, unit = "명", empty, showPct = true }: { items: Bucket[]; total: number; unit?: string; empty: string; showPct?: boolean }) {
-  if (items.length === 0) return <p className="py-[16px] text-center text-[13px] text-muted">{empty}</p>;
+  if (items.length === 0) return <p className="py-[16px] text-center text-[14px] text-muted">{empty}</p>;
   const max = Math.max(1, ...items.map((i) => i.count));
   return (
     <ul className="flex flex-col gap-[14px]">
       {items.map((it) => {
         const pct = total ? Math.round((it.count / total) * 100) : 0;
         return (
-          <li key={it.key} className="grid grid-cols-[minmax(0,120px)_1fr_auto] items-center gap-[14px] text-[13px]" title={`${it.label} · ${it.count}${unit}`}>
+          <li key={it.key} className="grid grid-cols-[minmax(0,120px)_1fr_auto] items-center gap-[14px] text-[14px]" title={`${it.label} · ${it.count}${unit}`}>
             <span className="truncate text-graphite">{it.label}</span>
             <div className="h-[14px] overflow-hidden rounded-[4px] bg-surface">
               <div className="h-full rounded-[4px] bg-ink" style={{ width: `${Math.max(2, Math.round((it.count / max) * 100))}%` }} />
             </div>
-            <span className="min-w-[92px] whitespace-nowrap text-right text-[14px] font-bold text-ink" style={NUM}>
+            <span className="min-w-[92px] whitespace-nowrap text-right text-[15px] font-bold text-ink" style={NUM}>
               {it.count}
               <span className="font-semibold">{unit}</span>
-              {showPct && <span className="ml-[4px] text-[12px] font-semibold text-muted">({pct}%)</span>}
+              {showPct && <span className="ml-[4px] text-[13px] font-semibold text-muted">({pct}%)</span>}
             </span>
           </li>
         );
@@ -147,7 +147,7 @@ export function DailyChart({ daily }: { daily: { day: string; visitors: number; 
   const total = daily.reduce((a, d) => a + d.visitors, 0);
   const label = (day: string) => `${Number(day.slice(5, 7))}/${Number(day.slice(8, 10))}`;
 
-  if (total === 0) return <p className="py-[24px] text-center text-[13px] text-muted">이 기간에는 방문 기록이 없습니다.</p>;
+  if (total === 0) return <p className="py-[24px] text-center text-[14px] text-muted">이 기간에는 방문 기록이 없습니다.</p>;
 
   return (
     /* 좁은 화면에서는 가로 스크롤, 처음엔 오른쪽 끝(오늘)이 보인다. 막대 하나당 최소 44px 확보 */
@@ -158,12 +158,12 @@ export function DailyChart({ daily }: { daily: { day: string; visitors: number; 
           return (
             <div key={d.day} className="group flex min-w-0 flex-1 flex-col items-center justify-end" title={`${d.day.replace(/-/g, ".")} · 방문자 ${d.visitors}명 · 페이지뷰 ${d.pageViews}회`}>
               {!many && (
-                <span className="mb-[6px] text-[12px] font-bold leading-none text-ink" style={NUM}>
+                <span className="mb-[6px] text-[13px] font-bold leading-none text-ink" style={NUM}>
                   {d.visitors || ""}
                 </span>
               )}
               <div className="w-full max-w-[34px] rounded-t-[4px] bg-ink transition-colors group-hover:bg-graphite" style={{ height: `${Math.max(h, d.visitors ? 3 : 0)}px` }} />
-              <span className={`mt-[8px] text-[11px] leading-none text-muted ${many ? "hidden" : ""}`} style={NUM}>
+              <span className={`mt-[8px] text-[12px] leading-none text-muted ${many ? "hidden" : ""}`} style={NUM}>
                 {label(d.day)}
               </span>
             </div>
@@ -171,7 +171,7 @@ export function DailyChart({ daily }: { daily: { day: string; visitors: number; 
         })}
       </div>
       {many && (
-        <div className="mt-[6px] flex justify-between text-[11px] text-muted" style={NUM}>
+        <div className="mt-[6px] flex justify-between text-[12px] text-muted" style={NUM}>
           <span>{label(daily[0].day)}</span>
           <span>{label(daily[daily.length - 1].day)}</span>
         </div>
@@ -184,7 +184,7 @@ export function DailyChart({ daily }: { daily: { day: string; visitors: number; 
 export function HourlyChart({ hourly }: { hourly: number[] }) {
   const max = Math.max(1, ...hourly);
   const total = hourly.reduce((a, b) => a + b, 0);
-  if (total === 0) return <p className="py-[24px] text-center text-[13px] text-muted">이 기간에는 방문 기록이 없습니다.</p>;
+  if (total === 0) return <p className="py-[24px] text-center text-[14px] text-muted">이 기간에는 방문 기록이 없습니다.</p>;
   const peak = hourly.indexOf(max);
 
   return (
@@ -196,7 +196,7 @@ export function HourlyChart({ hourly }: { hourly: number[] }) {
           </div>
         ))}
       </div>
-      <div className="mt-[8px] flex justify-between text-[11px] text-muted" style={NUM}>
+      <div className="mt-[8px] flex justify-between text-[12px] text-muted" style={NUM}>
         <span>0시</span>
         <span>6시</span>
         <span>12시</span>

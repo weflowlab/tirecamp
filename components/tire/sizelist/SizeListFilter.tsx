@@ -108,19 +108,19 @@ export default function SizeListFilter({ query }: Props) {
     suffix: string,
   ) => (
     <div className="flex gap-[6px]">
-      <select name={`selwsize${suffix}`} className="field !h-[38px] !w-[104px] !pl-[10px] !pr-[30px] !text-[13px]" value={w} onChange={(e) => setW(e.target.value)}>
+      <select name={`selwsize${suffix}`} className="field !h-[38px] !w-[104px] !pl-[10px] !pr-[30px] !text-[14px]" value={w} onChange={(e) => setW(e.target.value)}>
         <option value="NO">단면폭</option>
         {WIDTHS.map((v) => (
           <option key={v} value={String(v)}>{v}</option>
         ))}
       </select>
-      <select name={`seltsize${suffix}`} className="field !h-[38px] !w-[98px] !pl-[10px] !pr-[30px] !text-[13px]" value={r} onChange={(e) => setR(e.target.value)}>
+      <select name={`seltsize${suffix}`} className="field !h-[38px] !w-[98px] !pl-[10px] !pr-[30px] !text-[14px]" value={r} onChange={(e) => setR(e.target.value)}>
         <option value="NO">편평비</option>
         {RATIOS.map((v) => (
           <option key={v} value={String(v)}>{v}</option>
         ))}
       </select>
-      <select name={`selinch${suffix}`} className="field !h-[38px] !w-[88px] !pl-[10px] !pr-[30px] !text-[13px]" value={i} onChange={(e) => setI(e.target.value)}>
+      <select name={`selinch${suffix}`} className="field !h-[38px] !w-[88px] !pl-[10px] !pr-[30px] !text-[14px]" value={i} onChange={(e) => setI(e.target.value)}>
         <option value="NO">인치</option>
         {INCHES.map((v) => (
           <option key={v} value={String(v)}>{v}</option>
@@ -138,7 +138,7 @@ export default function SizeListFilter({ query }: Props) {
             {sizeSelects(w1, r1, i1, setW1, setR1, setI1, "1")}
             {frchk && sizeSelects(w2, r2, i2, setW2, setR2, setI2, "2")}
           </div>
-          <label className="flex cursor-pointer items-center gap-[6px] text-[12px] text-graphite">
+          <label className="flex cursor-pointer items-center gap-[6px] text-[13px] text-graphite">
             <input type="checkbox" name="frchk" checked={frchk} onChange={(e) => frtypechk(e.target.checked)} className="accent-black" />
             앞뒤 사이즈가 다르면
           </label>
@@ -185,7 +185,7 @@ function Row({ label, title, last, children }: { label: string; title: string; l
     <div className={`grid grid-cols-[140px_1fr] gap-[16px] px-[24px] py-[16px] max-pc:grid-cols-1 max-pc:gap-[8px] max-pc:px-[14px] ${last ? "" : "border-b border-line"}`}>
       <div>
         <p className="eyebrow">{label}</p>
-        <p className="mt-[2px] text-[14px] font-medium text-ink">{title}</p>
+        <p className="mt-[2px] text-[15px] font-medium text-ink">{title}</p>
       </div>
       <div className="min-w-0">{children}</div>
     </div>
@@ -199,7 +199,7 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`h-[32px] border px-[12px] text-[12px] transition-colors ${
+      className={`h-[32px] border px-[12px] text-[13px] transition-colors ${
         active ? "border-ink bg-ink text-white" : "border-line bg-white text-graphite hover:border-graphite hover:text-ink"
       }`}
     >

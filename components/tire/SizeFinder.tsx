@@ -62,7 +62,7 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
       <div className="flex items-start font-sans max-pc:flex-col">
         <div className="w-[212px] shrink-0 pt-[4px] max-pc:mb-[10px] max-pc:w-auto">
           <p className="eyebrow">By Size</p>
-          <p className="mt-[2px] text-[15px] font-semibold tracking-[-0.01em] text-ink">타이어사이즈로 검색</p>
+          <p className="mt-[2px] text-[16px] font-semibold tracking-[-0.01em] text-ink">타이어사이즈로 검색</p>
         </div>
 
         <div className="min-w-0 flex-1">
@@ -86,9 +86,9 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
                 if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
                 else setHelpOpen(true);
               }}
-              className="ml-[6px] inline-flex h-[38px] items-center gap-[6px] border border-line px-[14px] text-[12px] text-graphite transition-colors hover:border-ink hover:text-ink max-pc:order-[99] max-pc:ml-0 max-pc:w-full max-pc:justify-center"
+              className="ml-[6px] inline-flex h-[38px] items-center gap-[6px] border border-line px-[14px] text-[13px] text-graphite transition-colors hover:border-ink hover:text-ink max-pc:order-[99] max-pc:ml-0 max-pc:w-full max-pc:justify-center"
             >
-              <span className="flex h-[16px] w-[16px] items-center justify-center rounded-full border border-current text-[10px] font-bold leading-none">?</span>
+              <span className="flex h-[16px] w-[16px] items-center justify-center rounded-full border border-current text-[11px] font-bold leading-none">?</span>
               사이즈 보는 방법
             </button>
             {frchk && (
@@ -101,7 +101,7 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
             )}
           </div>
           {/* 3줄: 앞뒤 사이즈가 다른 경우 */}
-          <label className="mt-[8px] flex cursor-pointer items-center gap-[6px] text-[12px] text-graphite">
+          <label className="mt-[8px] flex cursor-pointer items-center gap-[6px] text-[13px] text-graphite">
             <input type="checkbox" name="frchk" value="2" checked={frchk} onChange={(e) => onFrchk(e.target.checked)} className="accent-black" />
             앞뒤 사이즈가 다른 경우
           </label>
@@ -122,7 +122,7 @@ function SizeSelects({ idx, value, onChange }: { idx: 1 | 2; value: SizeSel; onC
     <>
       <select
         name={`selwsize${idx}`}
-        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[13px] !w-auto"
+        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[14px] !w-auto"
         value={value.w}
         onChange={(e) => onChange({ ...value, w: e.target.value })}
       >
@@ -135,7 +135,7 @@ function SizeSelects({ idx, value, onChange }: { idx: 1 | 2; value: SizeSel; onC
       </select>{" "}
       <select
         name={`seltsize${idx}`}
-        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[13px] !w-auto"
+        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[14px] !w-auto"
         value={value.t}
         onChange={(e) => onChange({ ...value, t: e.target.value })}
       >
@@ -148,7 +148,7 @@ function SizeSelects({ idx, value, onChange }: { idx: 1 | 2; value: SizeSel; onC
       </select>{" "}
       <select
         name={`selinch${idx}`}
-        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[13px] !w-auto"
+        className="field !h-[38px] !pl-[10px] !pr-[30px] !text-[14px] !w-auto"
         value={value.i}
         onChange={(e) => onChange({ ...value, i: e.target.value })}
       >

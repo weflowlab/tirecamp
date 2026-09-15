@@ -33,12 +33,12 @@ export default async function SearchBySizePage({ searchParams }: { searchParams:
           <img src={picked.image} alt="" className="img-fixed h-[44px] w-auto" />
           <div className="min-w-0 flex-1">
             <p className="eyebrow">Selected</p>
-            <p className="text-[14px] font-semibold text-ink">
+            <p className="text-[15px] font-semibold text-ink">
               {picked.brandName} {picked.model}
             </p>
           </div>
-          <p className="text-[12px] text-muted">차종이나 사이즈를 고르면 이 타이어의 가격을 먼저 보여드립니다.</p>
-          <Link href="/product/tire/searchbysize" className="text-[12px] !text-muted underline underline-offset-4 hover:!text-ink">
+          <p className="text-[13px] text-muted">차종이나 사이즈를 고르면 이 타이어의 가격을 먼저 보여드립니다.</p>
+          <Link href="/product/tire/searchbysize" className="text-[13px] !text-muted underline underline-offset-4 hover:!text-ink">
             선택 해제
           </Link>
         </div>

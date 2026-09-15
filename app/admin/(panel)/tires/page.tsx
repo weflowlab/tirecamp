@@ -25,7 +25,7 @@ export default async function AdminTires() {
         }
       />
       {!hasDb() && (
-        <p className="mb-[16px] border border-dashed border-line bg-white px-[18px] py-[12px] text-[13px] text-muted">
+        <p className="mb-[16px] border border-dashed border-line bg-white px-[18px] py-[12px] text-[14px] text-muted">
           DATABASE_URL 이 설정되지 않아 읽기 전용입니다. .env.local 에 DB 연결 문자열을 넣으면 수정할 수 있습니다.
         </p>
       )}

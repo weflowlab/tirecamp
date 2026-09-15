@@ -33,18 +33,19 @@ export default function ContactPage() {
 
 
       {/* 폼 + 안내 */}
-      <div className="grid grid-cols-[260px_1fr] gap-[12px] max-pc:grid-cols-1">
+      <div className="grid grid-cols-[220px_1fr] gap-[12px] max-pc:grid-cols-1">
         <aside className="flex flex-col gap-[12px] max-pc:hidden">
           <div className="flex flex-1 flex-col border border-line bg-white px-[24px] py-[32px] max-pc:flex-none max-pc:p-[18px]">
             <p className="eyebrow">How it works</p>
-            <h3 className="mt-[4px] text-[16px] font-bold tracking-[-0.01em] text-ink">이렇게 진행돼요</h3>
+            <h3 className="mt-[4px] text-[17px] font-bold tracking-[-0.01em] text-ink">이렇게 진행돼요</h3>
             <ol className="mt-[10px] flex flex-1 flex-col">
               {STEPS.map(([t, d], i) => (
                 <li key={t} className="flex flex-1 items-center gap-[12px] border-t border-line py-[12px] first:border-t-0">
                   <span className="eyebrow mt-[3px] shrink-0 !text-faint">{String(i + 1).padStart(2, "0")}</span>
                   <div>
-                    <p className="text-[14px] font-semibold text-ink">{t}</p>
-                    <p className="mt-[2px] whitespace-nowrap text-[11px] leading-[17px] tracking-[-0.02em] text-muted">{d}</p>
+                    <p className="text-[15px] font-semibold text-ink">{t}</p>
+                    {/* 왼쪽 칸이 좁아 한 줄 고정을 풀고 폭에 맞춰 접히게 둔다 */}
+                    <p className="mt-[2px] text-[12px] leading-[17px] tracking-[-0.02em] text-muted">{d}</p>
                   </div>
                 </li>
               ))}
@@ -58,8 +59,8 @@ export default function ContactPage() {
                 {CHANNELS.map((c) => (
                   <li key={c.key} className="border-t border-line first:border-t-0">
                     <a href={c.url} target="_blank" rel="noreferrer" className="flex items-center justify-between py-[10px] hover:!no-underline">
-                      <span className="text-[13px] font-medium !text-ink">{c.label}</span>
-                      <span className="text-[11px] !text-muted">{c.desc} →</span>
+                      <span className="text-[14px] font-medium !text-ink">{c.label}</span>
+                      <span className="text-[12px] !text-muted">{c.desc} →</span>
                     </a>
                   </li>
                 ))}
@@ -67,18 +68,16 @@ export default function ContactPage() {
             </div>
           )}
 
-          <div className="bg-surface p-[24px] text-[12px] leading-[19px] text-graphite max-pc:p-[18px]">
+          <div className="bg-surface p-[24px] text-[13px] leading-[19px] text-graphite max-pc:p-[18px]">
             급하신 경우 전화가 가장 빠릅니다.
             <br />
-            영업시간 외 문의는 다음 영업일에
-            <br />
-            순서대로 연락드립니다.
+            영업시간 외 문의는 다음 영업일에 순서대로 연락드립니다.
           </div>
         </aside>
 
         <section className="border border-line bg-white p-[32px] max-pc:p-[18px]">
           <p className="eyebrow">Message</p>
-          <h2 className="mt-[4px] mb-[20px] text-[20px] font-bold tracking-[-0.02em] text-ink">문의 남기기</h2>
+          <h2 className="mt-[4px] mb-[20px] text-[21px] font-bold tracking-[-0.02em] text-ink">문의 남기기</h2>
           {/* useSearchParams(?tire= 미리 채움) 사용 → Suspense 경계 필요 */}
           <Suspense fallback={null}>
             <InquiryForm />
@@ -95,11 +94,11 @@ export default function ContactPage() {
             <a href={PHONE_TEL} className="mt-[8px] block text-[26px] font-semibold leading-[34px] tracking-[-0.01em] !text-white hover:!no-underline max-pc:text-[24px]" style={{ fontFamily: "var(--font-num)" }}>
               {SITE.phone}
             </a>
-            <p className="mt-[8px] text-[12px] text-[#B8B8B8]">견적 · 예약 · 중고 타이어 문의</p>
+            <p className="mt-[8px] text-[13px] text-[#B8B8B8]">견적 · 예약 · 중고 타이어 문의</p>
           </div>
           <div className="border-l border-[#333] px-[32px] py-[30px] max-pc:border-l-0 max-pc:border-t max-pc:px-[20px] max-pc:py-[22px]">
             <p className="eyebrow !text-[#8C8C8C]">Hours</p>
-            <ul className="mt-[8px] text-[13px] leading-[22px] pt-[2px]">
+            <ul className="mt-[8px] text-[14px] leading-[22px] pt-[2px]">
               {SITE.hours.map((h) => (
                 <li key={h.label} className="flex gap-[14px]">
                   <span className="w-[44px] text-[#B8B8B8]">{h.label}</span>
@@ -110,8 +109,8 @@ export default function ContactPage() {
           </div>
           <div className="border-l border-[#333] px-[32px] py-[30px] max-pc:border-l-0 max-pc:border-t max-pc:px-[20px] max-pc:py-[22px]">
             <p className="eyebrow !text-[#8C8C8C]">Location</p>
-            <p className="mt-[8px] text-[15px] font-medium leading-[34px] text-white">{SITE.address}</p>
-            <p className="mt-[8px] flex gap-[14px] text-[12px]">
+            <p className="mt-[8px] text-[16px] font-medium leading-[34px] text-white">{SITE.address}</p>
+            <p className="mt-[8px] flex gap-[14px] text-[13px]">
               <a href={MAP_LINKS.naver} target="_blank" rel="noreferrer" className="!text-[#B8B8B8] underline underline-offset-4 hover:!text-white">
                 네이버지도
               </a>

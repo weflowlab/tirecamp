@@ -57,7 +57,7 @@ function NavList({ pathname, onNavigate, onLogout }: { pathname: string; onNavig
               <Link
                 href={m.href}
                 onClick={onNavigate}
-                className={`block px-[14px] py-[11px] text-[14px] tracking-[-0.01em] transition-colors hover:!no-underline ${
+                className={`block px-[14px] py-[11px] text-[15px] tracking-[-0.01em] transition-colors hover:!no-underline ${
                   active ? "bg-ink !text-white" : "!text-graphite hover:bg-surface hover:!text-ink"
                 }`}
               >
@@ -67,7 +67,7 @@ function NavList({ pathname, onNavigate, onLogout }: { pathname: string; onNavig
           );
         })}
       </ul>
-      <div className="mt-auto flex flex-col gap-[2px] border-t border-line px-[14px] py-[14px] text-[13px]">
+      <div className="mt-auto flex flex-col gap-[2px] border-t border-line px-[14px] py-[14px] text-[14px]">
         <Link href="/" target="_blank" onClick={onNavigate} className="flex items-center gap-[10px] px-[14px] py-[9px] !text-muted hover:bg-surface hover:!text-ink hover:!no-underline">
           <SiteIcon />
           <span className="relative top-[1px] leading-none">사이트 보기</span>
@@ -84,7 +84,7 @@ function NavList({ pathname, onNavigate, onLogout }: { pathname: string; onNavig
 function Brand({ small }: { small?: boolean }) {
   return (
     <Link href="/admin" className="flex flex-col justify-center hover:!no-underline">
-      <span className={`block font-bold leading-none tracking-[-0.04em] !text-ink ${small ? "text-[18px]" : "text-[22px]"}`}>{SITE.name}</span>
+      <span className={`block font-bold leading-none tracking-[-0.04em] !text-ink ${small ? "text-[19px]" : "text-[22px]"}`}>{SITE.name}</span>
       <span className={`eyebrow block leading-none !text-faint ${small ? "mt-[4px]" : "mt-[5px]"}`}>Admin</span>
     </Link>
   );
@@ -131,7 +131,7 @@ export default function AdminChrome({ children }: { children: React.ReactNode })
             <div className="absolute inset-y-0 left-0 flex w-[260px] flex-col bg-white shadow-[8px_0_30px_rgba(0,0,0,0.2)]">
               <div className="flex h-[56px] items-center justify-between border-b border-line px-[20px]">
                 <Brand small />
-                <button type="button" aria-label="메뉴 닫기" onClick={() => setOpen(false)} className="text-[18px] text-muted hover:text-ink">
+                <button type="button" aria-label="메뉴 닫기" onClick={() => setOpen(false)} className="text-[19px] text-muted hover:text-ink">
                   ✕
                 </button>
               </div>

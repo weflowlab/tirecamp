@@ -101,7 +101,7 @@ export default function FaqManager({ initial }: { initial: Faq[] }) {
     <div>
       {/* 모바일에서는 개수 문구와 버튼 줄을 위아래로 나눠 글자가 꺾이지 않게 */}
       <div className="mb-[14px] flex items-center justify-between gap-[12px] max-pc:flex-col max-pc:items-stretch max-pc:gap-[10px]">
-        <p className="text-[12px] text-muted">
+        <p className="text-[13px] text-muted">
           총 <span style={{ fontFamily: "var(--font-num)" }}>{items.length}</span>개{dirty && <span className="ml-[8px] text-ink">· 저장하지 않은 변경이 있습니다</span>}
         </p>
         <div className="flex shrink-0 gap-[6px] whitespace-nowrap max-pc:justify-end">
@@ -129,7 +129,7 @@ export default function FaqManager({ initial }: { initial: Faq[] }) {
               <li key={i} className="scroll-mt-[72px] border-b border-line">
                 <div className={`flex items-center gap-[14px] px-[18px] py-[14px] max-pc:px-[12px] ${isOpen ? "bg-surface" : "hover:bg-surface"}`}>
                   <span className="eyebrow w-[24px] shrink-0 !text-faint">{String(i + 1).padStart(2, "0")}</span>
-                  <button type="button" className="min-w-0 flex-1 truncate text-left text-[14px] font-medium text-ink" onClick={() => setOpen(isOpen ? -1 : i)}>
+                  <button type="button" className="min-w-0 flex-1 truncate text-left text-[15px] font-medium text-ink" onClick={() => setOpen(isOpen ? -1 : i)}>
                     {f.q || <span className="text-faint">(질문을 입력하세요)</span>}
                   </button>
                   <div className="flex shrink-0 items-center gap-[10px]">
@@ -154,11 +154,11 @@ export default function FaqManager({ initial }: { initial: Faq[] }) {
                 {isOpen && (
                   <div className="border-t border-line bg-surface px-[18px] py-[16px] pl-[56px] max-pc:px-[12px]">
                     <label className="block">
-                      <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">질문</span>
+                      <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">질문</span>
                       <input className={FIELD} value={f.q} maxLength={200} onChange={(e) => update(i, { q: e.target.value })} />
                     </label>
                     <label className="mt-[12px] block">
-                      <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">답변</span>
+                      <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">답변</span>
                       <textarea className={`${TEXTAREA} h-[120px]`} value={f.a} maxLength={2000} onChange={(e) => update(i, { a: e.target.value })} />
                     </label>
                   </div>

@@ -53,10 +53,10 @@ export default function NewsTable({ rows }: { rows: NewsItem[] }) {
                 </button>
               </td>
               <td className={`${TD} max-w-[420px]`}>
-                <Link href={`/admin/news/edit?seq=${n.seq}`} className="block truncate text-[14px] font-medium !text-ink hover:!text-graphite">
+                <Link href={`/admin/news/edit?seq=${n.seq}`} className="block truncate text-[15px] font-medium !text-ink hover:!text-graphite">
                   {n.title}
                 </Link>
-                <span className="mt-[2px] block truncate text-[12px] text-muted">{newsPreview(n.content).replace(/\n/g, " ")}</span>
+                <span className="mt-[2px] block truncate text-[13px] text-muted">{newsPreview(n.content).replace(/\n/g, " ")}</span>
               </td>
               <td className={`${TD} whitespace-nowrap text-faint`} style={NUM}>
                 {n.date}

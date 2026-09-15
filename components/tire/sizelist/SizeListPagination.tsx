@@ -15,7 +15,7 @@ export default function SizeListPagination({ query, pages }: Props) {
         <Link
           key={`${p.spage}-${p.lpage}`}
           href={buildSizeListHref({ ...query, spage: p.spage, lpage: p.lpage })}
-          className={`flex h-[34px] min-w-[34px] items-center justify-center px-[8px] text-[13px] hover:!no-underline ${
+          className={`flex h-[34px] min-w-[34px] items-center justify-center px-[8px] text-[14px] hover:!no-underline ${
             p.current ? "border-b-2 border-ink font-bold !text-ink" : "!text-muted hover:!text-ink"
           }`}
         >

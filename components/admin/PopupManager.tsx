@@ -29,7 +29,7 @@ function ImagePick({
 }) {
   return (
     <div>
-      <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">
+      <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">
         {label}
         {required && <span className="ml-[2px] text-ink">*</span>}
         <span className="ml-[6px] text-faint">{hint}</span>
@@ -180,7 +180,7 @@ export default function PopupManager({ popups, today }: { popups: Popup[]; today
                 </select>
               </Field>
             </div>
-            <div className="mt-[14px] flex flex-wrap gap-[20px] text-[13px] text-ink">
+            <div className="mt-[14px] flex flex-wrap gap-[20px] text-[14px] text-ink">
               <label className="flex cursor-pointer items-center gap-[8px]">
                 <input type="checkbox" className="accent-black" checked={draft.newWindow} onChange={(e) => set("newWindow", e.target.checked)} />
                 링크를 새 창으로 열기
@@ -234,13 +234,13 @@ export default function PopupManager({ popups, today }: { popups: Popup[]; today
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-[8px]">
                     <Badge tone={state === "active" ? "ink" : state === "waiting" ? "outline" : "faint"}>{POPUP_STATE_LABEL[state]}</Badge>
-                    <span className="text-[11px] text-faint">{p.scope === "all" ? "모든 페이지" : "홈"}</span>
+                    <span className="text-[12px] text-faint">{p.scope === "all" ? "모든 페이지" : "홈"}</span>
                   </div>
-                  <p className="mt-[6px] truncate text-[14px] font-semibold text-ink">{p.title}</p>
-                  <p className="mt-[3px] text-[12px] text-muted" style={NUM}>
+                  <p className="mt-[6px] truncate text-[15px] font-semibold text-ink">{p.title}</p>
+                  <p className="mt-[3px] text-[13px] text-muted" style={NUM}>
                     {p.start.replace(/-/g, ".")} ~ {p.end.replace(/-/g, ".")}
                   </p>
-                  {p.linkUrl && <p className="mt-[2px] truncate text-[11px] text-faint">{p.linkUrl}</p>}
+                  {p.linkUrl && <p className="mt-[2px] truncate text-[12px] text-faint">{p.linkUrl}</p>}
                   <div className="mt-[10px] flex gap-[12px]">
                     <button type="button" className={BTN_TEXT} onClick={() => startEdit(p)}>
                       수정

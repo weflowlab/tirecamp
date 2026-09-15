@@ -71,7 +71,7 @@ export default function ReviewForm() {
         </Field>
         <Field label="별점">
           {/* 별 5개 클릭 선택 */}
-          <div className="flex h-[44px] items-center gap-[4px] text-[20px]" role="radiogroup" aria-label="별점">
+          <div className="flex h-[44px] items-center gap-[4px] text-[21px]" role="radiogroup" aria-label="별점">
             {[1, 2, 3, 4, 5].map((n) => (
               <button
                 key={n}
@@ -84,7 +84,7 @@ export default function ReviewForm() {
                 ★
               </button>
             ))}
-            <span className="ml-[8px] text-[12px] text-muted" style={{ fontFamily: "var(--font-num)" }}>
+            <span className="ml-[8px] text-[13px] text-muted" style={{ fontFamily: "var(--font-num)" }}>
               {rating}/5
             </span>
           </div>
@@ -99,7 +99,7 @@ export default function ReviewForm() {
       <input type="text" name="website" value={website} onChange={(e) => setWebsite(e.target.value)} tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
       <div className="mt-[16px] flex items-center justify-between gap-[12px] max-pc:flex-col max-pc:items-stretch">
-        <p className={`text-[12px] ${msg ? (msg.ok ? "text-ink" : "text-[#B3261E]") : "text-muted"}`}>
+        <p className={`text-[13px] ${msg ? (msg.ok ? "text-ink" : "text-[#B3261E]") : "text-muted"}`}>
           {msg ? msg.text : "이름은 가운데 글자가 *로 가려져 표시됩니다."}
         </p>
         <button type="submit" disabled={busy} className="btn-fill">
@@ -113,7 +113,7 @@ export default function ReviewForm() {
 function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">
+      <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">
         {label}
         {required && <span className="ml-[2px] text-ink">*</span>}
       </span>

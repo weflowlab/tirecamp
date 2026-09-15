@@ -23,7 +23,7 @@ export default async function TinfoViewPage({ searchParams }: { searchParams: Pr
 
   const t = await getTire(seq);
   if (!t || !t.model) {
-    return <div className="w-[960px] self-start p-[40px] font-sans text-[13px] text-muted max-pc:w-full">해당 제품 정보를 찾을 수 없습니다.</div>;
+    return <div className="w-[960px] self-start p-[40px] font-sans text-[14px] text-muted max-pc:w-full">해당 제품 정보를 찾을 수 없습니다.</div>;
   }
 
   return (

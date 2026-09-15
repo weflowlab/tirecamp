@@ -83,14 +83,24 @@ function TprodIntroInner({ items, models }: Props) {
 
   return (
     <div className="w-full font-sans">
-      <PageTitle eyebrow="Tires" title="타이어소개" sub="취급하는 타이어를 제조사·타입·등급별로 살펴보세요. 이미지를 누르면 상세 정보가 열립니다." />
+      <PageTitle
+        eyebrow="Tires"
+        title="타이어소개"
+        sub={
+          <>
+            취급하는 타이어를 제조사·타입·등급별로 살펴보세요.
+            {/* 모바일에서만 두 문장을 갈라 놓는다 (PC 는 한 줄에 다 들어간다) */}
+            <br className="hidden max-pc:block" /> 이미지를 누르면 상세 정보가 열립니다.
+          </>
+        }
+      />
 
       {/* 제조사별 / 타입별 / 등급별 필터 */}
       <FilterBox filter={filter} onBrand={selBrand} onType={(c) => reset({ type: c })} onLevel={(c) => reset({ level: c })} />
 
       {/* 상품수/페이지 + 모델명 검색 */}
       <div className="mt-[28px] flex items-center justify-between gap-[12px] border-b border-line pb-[12px] max-pc:flex-col max-pc:items-stretch">
-        <p className="text-[12px] text-muted" style={{ fontFamily: "var(--font-num)" }}>
+        <p className="text-[13px] text-muted" style={{ fontFamily: "var(--font-num)" }}>
           {filtered.length} tires · {page}/{totalPages}
         </p>
         <input
@@ -105,13 +115,13 @@ function TprodIntroInner({ items, models }: Props) {
               reset({ q: (e.target as HTMLInputElement).value });
             }
           }}
-          className="field !h-[36px] !w-[220px] !text-[13px] max-pc:!w-full"
+          className="field !h-[36px] !w-[220px] !text-[14px] max-pc:!w-full"
         />
       </div>
 
       {/* 카드 그리드 (4열 / 모바일 2열) */}
       {pageItems.length === 0 ? (
-        <p className="border-b border-line py-[48px] text-center text-[13px] text-muted">조건에 맞는 타이어가 없습니다.</p>
+        <p className="border-b border-line py-[48px] text-center text-[14px] text-muted">조건에 맞는 타이어가 없습니다.</p>
       ) : (
         <ul className="grid grid-cols-4 gap-[16px] pt-[20px] max-pc:grid-cols-2 max-pc:gap-[10px]">
           {pageItems.map((it) => (

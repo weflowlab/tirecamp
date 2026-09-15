@@ -57,27 +57,27 @@ export default function TireCard({ tire }: Props) {
       {/* 모든 항목을 32px 높이 상자 안에서 세로 가운데 정렬 (select 대신 − / + 스테퍼라 모바일 16px 강제 규칙 영향 없음) */}
       <div className="flex flex-wrap items-center gap-x-[20px] gap-y-[8px]">
         <div className="flex h-[32px] min-w-[130px] items-center">
-          <span className="text-[16px] font-semibold leading-none text-ink" style={NUM}>
+          <span className="text-[17px] font-semibold leading-none text-ink" style={NUM}>
             {b.size}
           </span>
           {b.speedGrade && (
-            <span className="ml-[6px] text-[11px] leading-none text-muted" title={b.speedTitle} style={NUM}>
+            <span className="ml-[6px] text-[12px] leading-none text-muted" title={b.speedTitle} style={NUM}>
               {b.speedGrade}
             </span>
           )}
         </div>
         <div className="flex h-[32px] items-baseline gap-[10px] pt-[7px]">
-          <span className="text-[12px] leading-none text-faint line-through" style={NUM}>
+          <span className="text-[13px] leading-none text-faint line-through" style={NUM}>
             {money(b.marketPrice)}
           </span>
-          <span className="text-[17px] font-bold leading-none text-ink" style={NUM}>
+          <span className="text-[18px] font-bold leading-none text-ink" style={NUM}>
             {money(b.salePrice)}
-            <span className="ml-[2px] text-[12px] font-normal text-graphite">원</span>
+            <span className="ml-[2px] text-[13px] font-normal text-graphite">원</span>
           </span>
-          {b.discountText && <span className="text-[11px] leading-none text-muted">{b.discountText.replace(/^↓/, "")}</span>}
+          {b.discountText && <span className="text-[12px] leading-none text-muted">{b.discountText.replace(/^↓/, "")}</span>}
         </div>
         {/* 수량: − 숫자 + 스테퍼 (0~8) */}
-        <div className="ml-auto flex h-[32px] items-center gap-[8px] text-[12px] text-muted max-pc:ml-0">
+        <div className="ml-auto flex h-[32px] items-center gap-[8px] text-[13px] text-muted max-pc:ml-0">
           수량
           <div className="flex h-[32px] items-center border border-line">
             <button
@@ -88,7 +88,7 @@ export default function TireCard({ tire }: Props) {
             >
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><path d="M2 6h8" /></svg>
             </button>
-            <span className="w-[28px] text-center text-[14px] font-semibold leading-none text-ink" style={NUM}>
+            <span className="w-[28px] text-center text-[15px] font-semibold leading-none text-ink" style={NUM}>
               {qty}
             </span>
             <button
@@ -118,11 +118,11 @@ export default function TireCard({ tire }: Props) {
       {/* 중: 브랜드/모델, 설명, 사이즈별 가격 */}
       <div className="min-w-0">
         <a href="#" onClick={openInfo} className="inline-block hover:!no-underline">
-          <span className="text-[12px] tracking-[0.04em] !text-muted">{tire.brand}</span>
-          <span className="mt-[2px] block text-[19px] font-bold tracking-[-0.01em] !text-ink">{tire.model}</span>
+          <span className="text-[13px] tracking-[0.04em] !text-muted">{tire.brand}</span>
+          <span className="mt-[2px] block text-[20px] font-bold tracking-[-0.01em] !text-ink">{tire.model}</span>
         </a>
-        {tire.desc && <p className="mt-[8px] text-[13px] leading-[21px] text-graphite">{tire.desc}</p>}
-        {tire.comment && <p className="mt-[6px] text-[12px] text-graphite">{tire.comment}</p>}
+        {tire.desc && <p className="mt-[8px] text-[14px] leading-[21px] text-graphite">{tire.desc}</p>}
+        {tire.comment && <p className="mt-[6px] text-[13px] text-graphite">{tire.comment}</p>}
 
         {sizeRow(tire.front, tire.rear ? "Front · 앞" : null, qty1, setQty1)}
         {tire.rear && sizeRow(tire.rear, "Rear · 뒤", qty2, setQty2)}
@@ -132,16 +132,16 @@ export default function TireCard({ tire }: Props) {
       <div className="flex flex-col justify-between border-l border-line pl-[24px] max-pc:border-l-0 max-pc:border-t max-pc:pl-0 max-pc:pt-[16px]">
         <div>
           <p className="eyebrow">Total</p>
-          <p className="mt-[6px] flex items-baseline justify-between text-[13px] text-graphite">
+          <p className="mt-[6px] flex items-baseline justify-between text-[14px] text-graphite">
             <span>총수량</span>
             <span className="text-ink" style={NUM}>
-              <b className="text-[16px]">{totalCnt}</b>개
+              <b className="text-[17px]">{totalCnt}</b>개
             </span>
           </p>
-          <p className="mt-[4px] flex items-baseline justify-between text-[13px] text-graphite">
+          <p className="mt-[4px] flex items-baseline justify-between text-[14px] text-graphite">
             <span>총금액</span>
             <span className="text-ink" style={NUM}>
-              <b className="text-[20px]">{money(totalCard)}</b>원
+              <b className="text-[21px]">{money(totalCard)}</b>원
             </span>
           </p>
         </div>
@@ -149,7 +149,7 @@ export default function TireCard({ tire }: Props) {
           <button type="button" onClick={bookingSave} className="btn-fill w-full">
             예약하기
           </button>
-          <p className="mt-[8px] text-center text-[11px] text-muted">택배 문의는 전화로 주세요</p>
+          <p className="mt-[8px] text-center text-[12px] text-muted">택배 문의는 전화로 주세요</p>
         </div>
       </div>
     </article>

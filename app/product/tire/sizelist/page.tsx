@@ -47,12 +47,12 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
           <div className="mt-[16px]">
             <div className="flex items-center justify-between gap-[12px]">
               <p className="eyebrow">Selected · {picked.brandName} {picked.model}</p>
-              <Link href={buildSizeListHref({ ...query, tinfo: undefined })} className="text-[12px] !text-muted underline underline-offset-4 hover:!text-ink">
+              <Link href={buildSizeListHref({ ...query, tinfo: undefined })} className="text-[13px] !text-muted underline underline-offset-4 hover:!text-ink">
                 선택 해제
               </Link>
             </div>
             {pickedTires.length === 0 && (
-              <p className="mt-[8px] border border-dashed border-line px-[18px] py-[16px] text-[13px] text-muted">
+              <p className="mt-[8px] border border-dashed border-line px-[18px] py-[16px] text-[14px] text-muted">
                 {picked.brandName} {picked.model}는 이 사이즈에 가격 정보가 없습니다. 아래 다른 타이어를 확인하시거나 문의해 주세요.
               </p>
             )}
@@ -64,7 +64,7 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
         )}
 
         {result.tires.length === 0 && (
-          <p className="border-b border-line py-[48px] text-center text-[13px] text-muted">조건에 맞는 타이어가 없습니다. 제조사나 구분을 바꿔 보세요.</p>
+          <p className="border-b border-line py-[48px] text-center text-[14px] text-muted">조건에 맞는 타이어가 없습니다. 제조사나 구분을 바꿔 보세요.</p>
         )}
         {otherTires.map((t, i) => (
           <TireCard key={`${t.tinfoseq}-${i}`} tire={t} />

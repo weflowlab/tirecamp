@@ -42,7 +42,7 @@ export default async function ReviewPage({ searchParams }: Props) {
         <div>
           <p className="eyebrow">Reviews</p>
           <h1 className="mt-[10px] text-[30px] font-bold tracking-[-0.03em] text-ink leading-[1.2] max-pc:text-[24px]">고객 후기</h1>
-          <p className="mt-[10px] text-[14px] leading-[24px] text-muted max-pc:text-[13px]">타이어캠프를 이용하신 고객님들의 이야기입니다. 이용 후 소중한 후기를 남겨 주세요.</p>
+          <p className="mt-[10px] text-[15px] leading-[24px] text-muted max-pc:text-[14px]">타이어캠프를 이용하신 고객님들의 이야기입니다. 이용 후 소중한 후기를 남겨 주세요.</p>
         </div>
         <a href="#write" className="btn-fill shrink-0 !h-[42px] max-pc:w-full">
           후기 작성하기
@@ -63,7 +63,7 @@ export default async function ReviewPage({ searchParams }: Props) {
 
       {/* 후기 카드 3열 */}
       {reviews.length === 0 ? (
-        <p className="border border-dashed border-line py-[48px] text-center text-[13px] text-muted">
+        <p className="border border-dashed border-line py-[48px] text-center text-[14px] text-muted">
           {selected ? `${selected} 후기가 아직 없습니다.` : "아직 등록된 후기가 없습니다. 첫 번째 후기를 남겨 주세요."}
         </p>
       ) : (
@@ -82,7 +82,7 @@ export default async function ReviewPage({ searchParams }: Props) {
               key={p}
               href={pageHref(p)}
               scroll={false}
-              className={`flex h-[34px] min-w-[34px] items-center justify-center px-[8px] text-[13px] hover:!no-underline ${
+              className={`flex h-[34px] min-w-[34px] items-center justify-center px-[8px] text-[14px] hover:!no-underline ${
                 p === page ? "border-b-2 border-ink font-bold !text-ink" : "!text-muted hover:!text-ink"
               }`}
             >
@@ -97,7 +97,7 @@ export default async function ReviewPage({ searchParams }: Props) {
         <div className="grid grid-cols-[180px_1fr] gap-[24px] max-pc:grid-cols-1 max-pc:gap-[12px]">
           <div>
             <p className="eyebrow">Write</p>
-            <h2 className="mt-[4px] text-[20px] font-bold tracking-[-0.02em] text-ink">후기 작성</h2>
+            <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">후기 작성</h2>
           </div>
           <ReviewForm />
         </div>
@@ -111,7 +111,7 @@ function Chip({ href, active, children }: { href: string; active: boolean; child
     <Link
       href={href}
       scroll={false}
-      className={`inline-flex h-[32px] items-center border px-[12px] text-[12px] transition-colors hover:!no-underline ${
+      className={`inline-flex h-[32px] items-center border px-[12px] text-[13px] transition-colors hover:!no-underline ${
         active ? "border-ink bg-ink !text-white" : "border-line bg-white !text-graphite hover:border-graphite hover:!text-ink"
       }`}
     >

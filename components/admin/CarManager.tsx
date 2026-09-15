@@ -127,7 +127,7 @@ export default function CarManager() {
           <div className="grid grid-cols-[minmax(0,1fr)_104px_104px] items-end gap-[8px] max-pc:grid-cols-2">
             <div className="grid grid-cols-2 gap-[8px] max-pc:col-span-2">
               <label className="block">
-                <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">제조사</span>
+                <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">제조사</span>
                 <select className={FIELD} value={maker} onChange={(e) => onMaker(e.target.value)}>
                   <option value="">제조사 선택</option>
                   {MAKERS.map((m) => (
@@ -138,7 +138,7 @@ export default function CarManager() {
                 </select>
               </label>
               <label className="block">
-                <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">연식</span>
+                <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">연식</span>
                 <select
                   className={FIELD}
                   value={year}
@@ -183,7 +183,7 @@ export default function CarManager() {
         </Card>
 
         {results ? (
-          <Card eyebrow="Search" title={`"${q.trim()}" 검색 결과`} action={<span className="text-[12px] text-muted">{results.length >= 200 ? "200건 이상 (검색어를 더 넣어 주세요)" : `${results.length}건`}</span>}>
+          <Card eyebrow="Search" title={`"${q.trim()}" 검색 결과`} action={<span className="text-[13px] text-muted">{results.length >= 200 ? "200건 이상 (검색어를 더 넣어 주세요)" : `${results.length}건`}</span>}>
             {results.length === 0 ? (
               <Empty>맞는 차종이 없습니다. 제조사명·연식·차종명을 띄어쓰기로 섞어 검색해 보세요.</Empty>
             ) : (
@@ -214,12 +214,12 @@ export default function CarManager() {
             )}
           </Card>
         ) : !maker || !year ? (
-          <div className="border border-dashed border-line bg-white px-[20px] py-[40px] text-center text-[13px] leading-[22px] text-muted">
+          <div className="border border-dashed border-line bg-white px-[20px] py-[40px] text-center text-[14px] leading-[22px] text-muted">
             제조사와 연식을 고르거나,
             <br />위 검색칸에 차종명을 입력하세요.
           </div>
         ) : (
-          <Card eyebrow="Cars" title={`${makerName(maker)} ${year} 차종`} action={<span className="text-[12px] text-muted">{loadingCars ? "불러오는 중" : `${cars.length}종`}</span>}>
+          <Card eyebrow="Cars" title={`${makerName(maker)} ${year} 차종`} action={<span className="text-[13px] text-muted">{loadingCars ? "불러오는 중" : `${cars.length}종`}</span>}>
             {cars.length === 0 ? (
               <Empty>{loadingCars ? "불러오는 중..." : "이 연식에 등록된 차종이 없습니다. [새 차종 등록] 으로 추가하세요."}</Empty>
             ) : (
@@ -244,7 +244,7 @@ export default function CarManager() {
                           </td>
                           <td className={`${TD} whitespace-nowrap text-center`}>
                             {c.hasPhoto ? (
-                              <span className="text-[12px] text-muted">있음</span>
+                              <span className="text-[13px] text-muted">있음</span>
                             ) : (
                               <span className="inline-flex justify-center">
                                 <Badge tone="outline">없음</Badge>
@@ -276,7 +276,7 @@ export default function CarManager() {
         ) : sel ? (
           <CarEditor key={`${sel.maker}-${sel.year}-${sel.code}`} maker={sel.maker} year={sel.year} code={sel.code} onDone={refresh} onClose={() => setSel(null)} />
         ) : (
-          <div className="border border-dashed border-line bg-white px-[20px] py-[40px] text-center text-[13px] leading-[22px] text-muted">
+          <div className="border border-dashed border-line bg-white px-[20px] py-[40px] text-center text-[14px] leading-[22px] text-muted">
             왼쪽 목록에서 차종을 누르면
             <br />
             여기서 이름·사진·사이즈를 수정할 수 있습니다.
@@ -393,7 +393,7 @@ function CarEditor({ maker, year, code, onDone, onClose }: { maker: string; year
       }
     >
       {!isNew && !detail ? (
-        <p className="py-[20px] text-center text-[13px] text-muted">불러오는 중...</p>
+        <p className="py-[20px] text-center text-[14px] text-muted">불러오는 중...</p>
       ) : (
         <div className="flex flex-col gap-[14px]">
           <Field label="차종 이름" required hint={detail && detail.baseName && detail.baseName !== name ? `(원본: ${detail.baseName})` : undefined}>
@@ -401,11 +401,11 @@ function CarEditor({ maker, year, code, onDone, onClose }: { maker: string; year
           </Field>
 
           <div>
-            <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">차 사진</span>
+            <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">차 사진</span>
             <div className="flex items-start gap-[12px]">
               <div className="flex h-[90px] w-[130px] shrink-0 items-center justify-center border border-line bg-white">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                {carimg ? <img src={carimg} alt="" className="max-h-full max-w-full object-contain p-[4px]" /> : <span className="text-[11px] text-faint">사진 없음</span>}
+                {carimg ? <img src={carimg} alt="" className="max-h-full max-w-full object-contain p-[4px]" /> : <span className="text-[12px] text-faint">사진 없음</span>}
               </div>
               <div className="flex flex-col gap-[6px]">
                 <button type="button" disabled={busy} className={BTN_OUTLINE} onClick={() => fileRef.current?.click()}>
@@ -427,7 +427,7 @@ function CarEditor({ maker, year, code, onDone, onClose }: { maker: string; year
               </div>
             </div>
             {!isNew && imgTouched && (detail?.yearsWithCode.length ?? 0) > 1 && (
-              <label className="mt-[8px] flex cursor-pointer items-center gap-[8px] text-[12px] text-ink">
+              <label className="mt-[8px] flex cursor-pointer items-center gap-[8px] text-[13px] text-ink">
                 <input type="checkbox" className="accent-black" checked={applyAll} onChange={(e) => setApplyAll(e.target.checked)} />
                 같은 차종의 다른 연식 {detail!.yearsWithCode.length - 1}개에도 이 사진 적용
               </label>
@@ -436,9 +436,9 @@ function CarEditor({ maker, year, code, onDone, onClose }: { maker: string; year
 
           <div>
             <div className="mb-[6px] flex items-end justify-between gap-[10px]">
-              <span className="text-[12px] tracking-[0.02em] text-muted">
+              <span className="text-[13px] tracking-[0.02em] text-muted">
                 순정 타이어 사이즈
-                <span className="mt-[2px] block text-[11px] text-faint">(앞뒤가 다르면 뒤 칸도 입력)</span>
+                <span className="mt-[2px] block text-[12px] text-faint">(앞뒤가 다르면 뒤 칸도 입력)</span>
               </span>
               <button type="button" className={`${BTN_TEXT} shrink-0 whitespace-nowrap`} onClick={() => setSizes((l) => [...l, { front: "", rear: "" }])}>
                 + 사이즈 추가
@@ -458,7 +458,7 @@ function CarEditor({ maker, year, code, onDone, onClose }: { maker: string; year
           </div>
 
           {!isNew && (
-            <label className="flex cursor-pointer items-center gap-[8px] text-[13px] text-ink">
+            <label className="flex cursor-pointer items-center gap-[8px] text-[14px] text-ink">
               <input type="checkbox" className="accent-black" checked={hidden} onChange={(e) => setHidden(e.target.checked)} />
               사이트 차량검색에서 숨김
             </label>

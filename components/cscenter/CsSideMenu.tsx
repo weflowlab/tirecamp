@@ -25,7 +25,7 @@ export default function CsSideMenu() {
           <li key={item.href} className="mb-[2px] max-pc:mb-0">
             <Link
               href={item.href}
-              className={`block border-l-2 py-[9px] pl-[14px] text-[14px] tracking-[-0.01em] hover:!no-underline max-pc:border-l-0 max-pc:border-b-2 max-pc:px-0 max-pc:py-[6px] ${
+              className={`block border-l-2 py-[9px] pl-[14px] text-[15px] tracking-[-0.01em] hover:!no-underline max-pc:border-l-0 max-pc:border-b-2 max-pc:px-0 max-pc:py-[6px] ${
                 active ? "border-ink !text-ink font-bold" : "border-transparent !text-muted hover:!text-ink"
               }`}
             >

@@ -19,17 +19,17 @@ export default function CompanyPage() {
       {/* 소개 — 좌: 큰 문장(가늘게/굵게) + 짧은 세로선 / 우: 본문 (첫 문장 강조, 줄바꿈 고정) */}
       <section className="grid grid-cols-[300px_1fr] gap-[48px] max-pc:grid-cols-1 max-pc:gap-[20px]">
         <div>
-          <p className="eyebrow">Our Promise</p>
+          <p className="eyebrow">우리의 약속</p>
           <h2 className="mt-[10px] text-[28px] font-light leading-[1.35] tracking-[-0.03em] text-ink max-pc:text-[22px]">
             타이어의 모든 것을
             <br />
             <span className="font-bold">한 곳에서 경험하세요.</span>
           </h2>
-          <p className="mt-[10px] text-[12px] tracking-[0.04em] text-muted">{SITE.name}</p>
+          <p className="mt-[10px] text-[13px] tracking-[0.04em] text-muted">{SITE.name}</p>
         </div>
         {/* 첫 문장의 베이스라인(글자 밑선)이 왼쪽 제목 첫 줄 베이스라인과 같은 높이가 되도록 보정 */}
-        <div className="pt-[23px] text-[14px] leading-[26px] text-graphite max-pc:pt-0 max-pc:[&_br]:hidden">
-          <p className="text-[16px] font-semibold leading-[38px] text-ink max-pc:leading-[28px]">
+        <div className="pt-[23px] text-[15px] leading-[26px] text-graphite max-pc:pt-0 max-pc:[&_br]:hidden">
+          <p className="text-[17px] font-semibold leading-[38px] text-ink max-pc:leading-[28px]">
             {SITE.name}는 소형 타이어 전문 업체로, 고객님께 최상의 선택을 제안합니다.
           </p>
           <p className="mt-[6px]">
@@ -56,8 +56,8 @@ export default function CompanyPage() {
         ].map(([e, t, d], i) => (
           <li key={e} className={`px-[24px] py-[22px] max-pc:px-[12px] ${i < 3 ? "border-r border-line" : ""} max-pc:[&:nth-child(2)]:border-r-0 max-pc:[&:nth-child(-n+2)]:border-b max-pc:[&:nth-child(-n+2)]:border-line`}>
             <p className="eyebrow">{e}</p>
-            <p className="mt-[6px] text-[18px] font-bold tracking-[-0.02em] text-ink max-pc:text-[16px]">{t}</p>
-            <p className="mt-[2px] text-[12px] text-muted">{d}</p>
+            <p className="mt-[6px] text-[19px] font-bold tracking-[-0.02em] text-ink max-pc:text-[17px]">{t}</p>
+            <p className="mt-[2px] text-[13px] text-muted">{d}</p>
           </li>
         ))}
       </ul>
@@ -71,9 +71,9 @@ export default function CompanyPage() {
       <section className="mt-[56px] grid grid-cols-[280px_1fr] gap-[40px] max-pc:grid-cols-1 max-pc:gap-[12px]">
         <div>
           <p className="eyebrow">Store</p>
-          <h2 className="mt-[4px] text-[20px] font-bold tracking-[-0.02em] text-ink">매장 정보</h2>
+          <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">매장 정보</h2>
         </div>
-        <dl className="border-t border-line text-[14px]">
+        <dl className="border-t border-line text-[15px]">
           <Row label="상호">{SITE.name}</Row>
           <Row label="주소">{SITE.address}</Row>
           <Row label="전화">
@@ -88,16 +88,21 @@ export default function CompanyPage() {
               </span>
             ))}
           </Row>
-          <Row label="취급 품목">국산·수입 신품 타이어, 중고 타이어, 타이어 교체 · 펑크 수리 · 위치 교환</Row>
+          {/* 품목 / 서비스를 두 줄로 나눠 읽기 쉽게 (PC · 모바일 공통) */}
+          <Row label="취급 품목">
+            국산·수입 신품 타이어, 중고 타이어,
+            <br />
+            타이어 교체 · 펑크 수리 · 위치 교환
+          </Row>
         </dl>
       </section>
 
-      {/* 오시는 길 */}
-      <section className="mt-[56px]">
+      {/* 오시는 길 — 홈 히어로의 "지도 보기" 버튼이 /company#location 으로 여기까지 스크롤한다 */}
+      <section id="location" className="mt-[56px] scroll-mt-[24px]">
         <div className="mb-[16px] flex items-end justify-between max-pc:flex-col max-pc:items-start max-pc:gap-[12px]">
           <div>
             <p className="eyebrow">Location</p>
-            <h2 className="mt-[4px] text-[20px] font-bold tracking-[-0.02em] text-ink">오시는 길</h2>
+            <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">오시는 길</h2>
           </div>
           <div className="flex gap-[8px]">
             <a href={MAP_LINKS.naver} target="_blank" rel="noreferrer" className="btn-outline !h-[38px] !px-[16px] !text-ink hover:bg-ink hover:!text-white hover:!no-underline">
@@ -118,9 +123,9 @@ export default function CompanyPage() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-        <p className="mt-[12px] flex items-center gap-[12px] text-[14px] text-ink">
+        <p className="mt-[12px] flex items-center gap-[12px] text-[15px] text-ink">
           <span>{SITE.address}</span>
-          <span className="text-[12px] leading-none text-muted">매장 앞 주차 가능</span>
+          <span className="text-[13px] leading-none text-muted">매장 앞 주차 가능</span>
         </p>
       </section>
     </div>
@@ -130,8 +135,8 @@ export default function CompanyPage() {
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="grid grid-cols-[140px_1fr] border-b border-line py-[12px] max-pc:grid-cols-[100px_1fr]">
-      <dt className="text-[12px] tracking-[0.02em] text-muted">{label}</dt>
-      <dd className="text-[14px] leading-[22px] text-ink">{children}</dd>
+      <dt className="text-[13px] tracking-[0.02em] text-muted">{label}</dt>
+      <dd className="text-[15px] leading-[22px] text-ink">{children}</dd>
     </div>
   );
 }

@@ -68,9 +68,9 @@ export default function PersonalInfoPage() {
   return (
     <div className="w-full font-sans">
       <p className="eyebrow">Privacy</p>
-      <h1 className="mt-[4px] mb-[20px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:text-[20px]">개인정보처리방침</h1>
+      <h1 className="mt-[4px] mb-[20px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:text-[21px]">개인정보처리방침</h1>
 
-      <p className="text-[14px] leading-[25px] text-graphite">
+      <p className="text-[15px] leading-[25px] text-graphite">
         {SITE.name}(이하 &quot;회사&quot;)는 이용자가 홈페이지(이하 &quot;서비스&quot;)를 이용하며 제공한 개인정보가 안전하게 보호되도록 개인정보 보호법 등 관련 법령을
         준수합니다. 이 방침은 회사가 어떤 정보를 왜 수집하고 어떻게 관리하는지 알려드리기 위한 것이며, 법령이나 회사 방침이 바뀌면 수정될 수 있습니다.
       </p>
@@ -78,13 +78,13 @@ export default function PersonalInfoPage() {
       <ol className="mt-[32px] border-t border-line">
         {SECTIONS.map((s, i) => (
           <li key={s.title} className="grid grid-cols-[200px_1fr] gap-[20px] border-b border-line py-[22px] max-pc:grid-cols-1 max-pc:gap-[8px]">
-            <h2 className="flex items-start gap-[10px] text-[15px] font-bold tracking-[-0.01em] text-ink">
+            <h2 className="flex items-start gap-[10px] text-[16px] font-bold tracking-[-0.01em] text-ink">
               <span className="eyebrow mt-[3px] shrink-0 !text-faint">{String(i + 1).padStart(2, "0")}</span>
               {s.title}
             </h2>
-            <div className="text-[13px] leading-[23px] text-graphite">
+            <div className="text-[14px] leading-[23px] text-graphite">
               {s.body.map((p, k) => (
-                <p key={k} className={`whitespace-pre-line text-[13px] text-graphite ${k > 0 ? "mt-[10px]" : ""}`}>
+                <p key={k} className={`whitespace-pre-line text-[14px] text-graphite ${k > 0 ? "mt-[10px]" : ""}`}>
                   {p}
                 </p>
               ))}
@@ -93,7 +93,7 @@ export default function PersonalInfoPage() {
         ))}
       </ol>
 
-      <p className="mt-[20px] text-[12px] text-muted">시행일: 2026년 9월 8일</p>
+      <p className="mt-[20px] text-[13px] text-muted">시행일: 2026년 9월 8일</p>
     </div>
   );
 }

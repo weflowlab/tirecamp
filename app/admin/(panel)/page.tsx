@@ -30,8 +30,8 @@ export default async function AdminHome({ searchParams }: Props) {
     <div>
       <div className="mb-[24px] border-b border-line pb-[18px]">
         <p className="eyebrow">Overview</p>
-        <h1 className="mt-[4px] text-[24px] font-bold leading-[1.2] tracking-[-0.03em] text-ink max-pc:text-[20px]">대시보드</h1>
-        <p className="mt-[8px] text-[13px] text-muted" style={NUM}>
+        <h1 className="mt-[4px] text-[24px] font-bold leading-[1.2] tracking-[-0.03em] text-ink max-pc:text-[21px]">대시보드</h1>
+        <p className="mt-[8px] text-[14px] text-muted" style={NUM}>
           {today.replace(/-/g, ".")}
         </p>
       </div>
@@ -50,7 +50,7 @@ export default async function AdminHome({ searchParams }: Props) {
           eyebrow="Inquiries"
           title="최근 문의"
           action={
-            <Link href={listHref} className="text-[12px] tracking-[0.04em] !text-muted hover:!text-ink hover:!no-underline">
+            <Link href={listHref} className="text-[13px] tracking-[0.04em] !text-muted hover:!text-ink hover:!no-underline">
               전체보기 →
             </Link>
           }

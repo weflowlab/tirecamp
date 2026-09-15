@@ -31,10 +31,10 @@ export default async function NewsListPage({ searchParams }: Props) {
   return (
     <div className="w-full font-sans">
       <p className="eyebrow">Notice</p>
-      <h1 className="mt-[4px] mb-[24px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:text-[20px]">공지사항</h1>
+      <h1 className="mt-[4px] mb-[24px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:text-[21px]">공지사항</h1>
 
       <ul className="border-t border-line">
-        {rows.length === 0 && <li className="py-[48px] text-center text-[13px] text-muted">등록된 공지사항이 없습니다.</li>}
+        {rows.length === 0 && <li className="py-[48px] text-center text-[14px] text-muted">등록된 공지사항이 없습니다.</li>}
         {rows.map((n) => (
           <li key={n.seq} className="border-b border-line">
             <Link href={newsViewHref(n.seq, page, lpage)} className="flex gap-[20px] py-[20px] hover:!no-underline group">
@@ -44,10 +44,10 @@ export default async function NewsListPage({ searchParams }: Props) {
               <div className="flex min-w-0 flex-1 flex-col">
                 <div className="flex items-center gap-[10px]">
                   {n.notice && <span className="eyebrow shrink-0 !text-ink">Notice</span>}
-                  <span className="truncate text-[15px] font-medium !text-ink group-hover:!text-graphite">{n.title}</span>
+                  <span className="truncate text-[16px] font-medium !text-ink group-hover:!text-graphite">{n.title}</span>
                 </div>
-                <p className="mt-[6px] line-clamp-3 whitespace-pre-line text-[13px] leading-[21px] text-muted max-pc:line-clamp-2">{newsPreview(n.content)}</p>
-                <p className="mt-auto pt-[8px] text-[12px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
+                <p className="mt-[6px] line-clamp-3 whitespace-pre-line text-[14px] leading-[21px] text-muted max-pc:line-clamp-2">{newsPreview(n.content)}</p>
+                <p className="mt-auto pt-[8px] text-[13px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
                   {n.date} · 조회 {n.views}
                 </p>
               </div>

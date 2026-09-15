@@ -32,7 +32,7 @@ export default function SiteNav() {
             <li key={m.href} className="flex-1 max-pc:flex-none">
               <Link
                 href={m.href}
-                className={`relative flex h-full w-full items-center justify-center font-sans text-[14px] tracking-[-0.01em] hover:!no-underline max-pc:px-[14px] max-pc:whitespace-nowrap ${
+                className={`relative flex h-full w-full items-center justify-center font-sans text-[15px] tracking-[-0.01em] hover:!no-underline max-pc:px-[14px] max-pc:whitespace-nowrap ${
                   active ? "!text-ink font-bold" : "!text-graphite font-medium hover:!text-ink"
                 }`}
               >

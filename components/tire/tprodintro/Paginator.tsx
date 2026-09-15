@@ -16,7 +16,7 @@ export default function Paginator({ page, totalPages, onMove }: { page: number; 
             e.preventDefault();
             onMove(p);
           }}
-          className={`flex h-[34px] min-w-[34px] items-center justify-center px-[8px] text-[13px] hover:!no-underline ${
+          className={`flex h-[34px] min-w-[34px] items-center justify-center px-[8px] text-[14px] hover:!no-underline ${
             p === page ? "border-b-2 border-ink font-bold !text-ink" : "!text-muted hover:!text-ink"
           }`}
         >

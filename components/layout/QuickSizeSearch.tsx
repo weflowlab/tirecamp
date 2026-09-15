@@ -31,10 +31,10 @@ export default function QuickSizeSearch() {
           value={size}
           placeholder="사이즈 검색  예) 225/45R18"
           onChange={(e) => setSize(e.target.value)}
-          className="min-w-0 flex-1 bg-transparent px-[12px] text-[14px] text-ink outline-none placeholder:text-faint"
+          className="min-w-0 flex-1 bg-transparent px-[12px] text-[15px] text-ink outline-none placeholder:text-faint"
           style={{ fontFamily: "var(--font-num)" }}
         />
-        <button type="submit" className="w-[52px] shrink-0 bg-ink text-[12px] font-medium text-white hover:bg-[#333]">
+        <button type="submit" className="w-[52px] shrink-0 bg-ink text-[13px] font-medium text-white hover:bg-[#333]">
           검색
         </button>
       </div>

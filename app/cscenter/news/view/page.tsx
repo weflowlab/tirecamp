@@ -36,19 +36,19 @@ export default async function NewsViewPage({ searchParams }: Props) {
   return (
     <div className="w-full font-sans">
       <p className="eyebrow">Notice</p>
-      <h1 className="mt-[4px] text-[22px] font-bold leading-[1.4] tracking-[-0.02em] text-ink max-pc:text-[19px]">{item.title}</h1>
-      <p className="mt-[8px] mb-[20px] text-[12px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
+      <h1 className="mt-[4px] text-[22px] font-bold leading-[1.4] tracking-[-0.02em] text-ink max-pc:text-[20px]">{item.title}</h1>
+      <p className="mt-[8px] mb-[20px] text-[13px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
         {item.date} · 조회 {item.views + 1}
       </p>
 
       {/* 본문 (관리자 입력 HTML) */}
       <div
-        className="news-content border-y border-line py-[28px] text-[14px] leading-[26px] text-graphite [&_img]:inline [&_img]:h-auto [&_img]:max-w-full [&_center]:text-center [&_p]:text-[14px] [&_p]:text-graphite [&_hr]:my-[16px] [&_hr]:border-0 [&_hr]:border-t [&_hr]:border-line [&_b]:text-ink [&_strong]:text-ink max-pc:[&_table]:max-w-full max-pc:[&_table]:!w-auto max-pc:overflow-x-auto"
+        className="news-content border-y border-line py-[28px] text-[15px] leading-[26px] text-graphite [&_img]:inline [&_img]:h-auto [&_img]:max-w-full [&_center]:text-center [&_p]:text-[15px] [&_p]:text-graphite [&_hr]:my-[16px] [&_hr]:border-0 [&_hr]:border-t [&_hr]:border-line [&_b]:text-ink [&_strong]:text-ink max-pc:[&_table]:max-w-full max-pc:[&_table]:!w-auto max-pc:overflow-x-auto"
         dangerouslySetInnerHTML={{ __html: sanitizeHtml(item.content) }}
       />
 
       {/* 이전글 / 다음글 */}
-      <ul className="text-[13px]">
+      <ul className="text-[14px]">
         <li className="flex gap-[16px] border-b border-line py-[12px]">
           <span className="w-[52px] shrink-0 text-muted">이전글</span>
           {prev ? (

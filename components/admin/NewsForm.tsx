@@ -96,10 +96,10 @@ export default function NewsForm({ item }: { item: NewsItem | null }) {
     <form onSubmit={submit} className="grid grid-cols-[1fr_300px] gap-[16px] max-pc:grid-cols-1">
       <Card>
         <Field label="제목" required>
-          <input className={`${FIELD} !h-[44px] !text-[15px] font-medium`} value={title} maxLength={120} onChange={(e) => setTitle(e.target.value)} />
+          <input className={`${FIELD} !h-[44px] !text-[16px] font-medium`} value={title} maxLength={120} onChange={(e) => setTitle(e.target.value)} />
         </Field>
         <div className="mt-[16px]">
-          <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">
+          <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">
             내용<span className="ml-[2px] text-ink">*</span>
             <span className="ml-[6px] text-faint">보이는 그대로 저장됩니다. Enter 로 줄바꿈, 사진은 [이미지 넣기]</span>
           </span>
@@ -110,7 +110,7 @@ export default function NewsForm({ item }: { item: NewsItem | null }) {
       {/* 우측(게시 설정 + 저장 버튼)은 스크롤해도 따라 내려온다 (PC) */}
       <div className="flex flex-col gap-[16px] pc:sticky pc:top-[24px] pc:self-start">
         <Card eyebrow="Options" title="게시 설정">
-          <label className="flex cursor-pointer items-center gap-[8px] text-[13px] text-ink">
+          <label className="flex cursor-pointer items-center gap-[8px] text-[14px] text-ink">
             <input type="checkbox" checked={notice} onChange={(e) => setNotice(e.target.checked)} className="accent-black" />
             공지로 표시 (목록에 Notice 라벨)
           </label>
@@ -120,9 +120,9 @@ export default function NewsForm({ item }: { item: NewsItem | null }) {
             </Field>
           </div>
           <div className="mt-[14px]">
-            <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">
+            <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">
               썸네일 <span className="text-faint">(선택)</span>
-              <span className="mt-[2px] block text-[11px] text-faint">가로·세로 상관없이 목록 왼쪽에 맞춰 보입니다</span>
+              <span className="mt-[2px] block text-[12px] text-faint">가로·세로 상관없이 목록 왼쪽에 맞춰 보입니다</span>
             </span>
             {thumb ? (
               <div className="flex items-start gap-[10px]">
@@ -142,10 +142,10 @@ export default function NewsForm({ item }: { item: NewsItem | null }) {
         </Card>
 
         <div className="flex flex-col gap-[8px]">
-          <button type="submit" disabled={busy} className={`${BTN} w-full !h-[44px] !text-[13px]`}>
+          <button type="submit" disabled={busy} className={`${BTN} w-full !h-[44px] !text-[14px]`}>
             {busy ? "저장 중..." : item ? "수정 저장" : "등록"}
           </button>
-          <Link href="/admin/news" className={`${BTN_OUTLINE} w-full !h-[44px] !text-[13px] !no-underline`}>
+          <Link href="/admin/news" className={`${BTN_OUTLINE} w-full !h-[44px] !text-[14px] !no-underline`}>
             목록으로
           </Link>
           <Msg msg={msg} />

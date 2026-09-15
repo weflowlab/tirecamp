@@ -5,12 +5,12 @@ import { SITE } from "@/lib/site";
 
 /* 타이어캠프의 장점 6 */
 const STRENGTHS: { icon: string; title: string; desc: string }[] = [
-  { icon: "compare", title: "브랜드 비교 견적", desc: "전 브랜드 비교 가능" },
+  { icon: "tag", title: "합리적 가격", desc: "박리다매 판매" },
   { icon: "warehouse", title: "대량 재고 보유", desc: "빠른 출고 가능" },
   { icon: "truck", title: "빠른 출고 · 장착", desc: "당일 장착 상담" },
-  { icon: "stack", title: "신품 · 이월 · 중고", desc: "상황별 선택 가능" },
+  { icon: "compare", title: "브랜드 비교 견적", desc: "전 브랜드 비교 가능" },
   { icon: "ruler", title: "다양한 규격", desc: "사이즈 다양" },
-  { icon: "tag", title: "합리적 가격", desc: "박리다매 판매" },
+  { icon: "stack", title: "신품 · 이월 · 중고", desc: "상황별 선택 가능" },
 ];
 
 /* 용도에 맞는 타이어 찾기 6 */
@@ -31,8 +31,8 @@ export function Strengths() {
         {STRENGTHS.map((s, i) => (
           <li key={s.title} className={`flex flex-col items-center px-[8px] py-[28px] text-center max-pc:px-[2px] max-pc:py-[18px] ${i < 5 ? "border-r border-line" : ""} max-pc:[&:nth-child(3)]:border-r-0 max-pc:[&:nth-child(-n+3)]:border-b max-pc:[&:nth-child(-n+3)]:border-line`}>
             <span className="flex h-[96px] items-center text-ink max-pc:[&>svg]:h-[72px] max-pc:[&>svg]:w-[72px]">{HOME_ICONS[s.icon]}</span>
-            <p className="mt-[14px] whitespace-nowrap text-[16px] font-bold tracking-[-0.02em] text-ink max-pc:mt-[10px] max-pc:text-[12.5px] max-pc:tracking-[-0.04em]">{s.title}</p>
-            <p className="mt-[4px] whitespace-nowrap text-[13px] text-muted max-pc:text-[10.5px] max-pc:tracking-[-0.03em]">{s.desc}</p>
+            <p className="mt-[14px] whitespace-nowrap text-[17px] font-bold tracking-[-0.02em] text-ink max-pc:mt-[10px] max-pc:text-[13.5px] max-pc:tracking-[-0.04em]">{s.title}</p>
+            <p className="mt-[4px] whitespace-nowrap text-[14px] text-muted max-pc:text-[11.5px] max-pc:tracking-[-0.03em]">{s.desc}</p>
           </li>
         ))}
       </ul>
@@ -51,8 +51,8 @@ export function Purposes() {
           <li key={p.title} className="max-pc:w-[68%] max-pc:shrink-0 max-pc:snap-start">
             <Link href={p.href} className="group flex h-full flex-col items-center border border-line px-[10px] py-[26px] text-center transition-colors hover:border-ink hover:!no-underline">
               <span className="flex h-[96px] items-center !text-ink transition-transform group-hover:scale-[1.06] max-pc:[&>svg]:h-[72px] max-pc:[&>svg]:w-[72px]">{HOME_ICONS[p.icon]}</span>
-              <p className="mt-[14px] text-[16px] font-bold tracking-[-0.02em] !text-ink max-pc:text-[14px]">{p.title}</p>
-              <p className="mt-[8px] whitespace-pre-line text-[12px] leading-[18px] !text-muted">{p.desc}</p>
+              <p className="mt-[14px] text-[17px] font-bold tracking-[-0.02em] !text-ink max-pc:text-[15px]">{p.title}</p>
+              <p className="mt-[8px] whitespace-pre-line text-[13px] leading-[18px] !text-muted">{p.desc}</p>
             </Link>
           </li>
         ))}

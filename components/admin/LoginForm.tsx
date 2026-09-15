@@ -30,9 +30,9 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={onSubmit}>
-      <input type="password" className={`${FIELD} !h-[44px] !text-[15px]`} value={pw} autoFocus autoComplete="current-password" placeholder="비밀번호" onChange={(e) => setPw(e.target.value)} />
-      <p className="mt-[8px] h-[18px] text-[12px] text-[#B3261E]">{error}</p>
-      <button type="submit" disabled={busy} className={`${BTN} mt-[10px] w-full !h-[44px] !text-[13px]`}>
+      <input type="password" className={`${FIELD} !h-[44px] !text-[16px]`} value={pw} autoFocus autoComplete="current-password" placeholder="비밀번호" onChange={(e) => setPw(e.target.value)} />
+      <p className="mt-[8px] h-[18px] text-[13px] text-[#B3261E]">{error}</p>
+      <button type="submit" disabled={busy} className={`${BTN} mt-[10px] w-full !h-[44px] !text-[14px]`}>
         {busy ? "확인 중..." : "로그인"}
       </button>
     </form>

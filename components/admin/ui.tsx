@@ -6,17 +6,17 @@ import Link from "next/link";
  */
 
 /** 입력창: 사이트 .field 를 관리자 높이(38px)로 */
-export const FIELD = "field !h-[38px] !text-[13px]";
-export const TEXTAREA = "field !text-[13px]";
+export const FIELD = "field !h-[38px] !text-[14px]";
+export const TEXTAREA = "field !text-[14px]";
 /** 검정 채움 버튼 (작게) */
-export const BTN = "btn-fill !h-[36px] !px-[16px] !text-[12px] disabled:cursor-not-allowed";
+export const BTN = "btn-fill !h-[36px] !px-[16px] !text-[13px] disabled:cursor-not-allowed";
 /** 얇은 테두리 버튼 (작게) */
-export const BTN_OUTLINE = "btn-outline !h-[36px] !px-[14px] !text-[12px] text-ink hover:bg-ink hover:text-white hover:!no-underline disabled:opacity-40";
+export const BTN_OUTLINE = "btn-outline !h-[36px] !px-[14px] !text-[13px] text-ink hover:bg-ink hover:text-white hover:!no-underline disabled:opacity-40";
 /** 표 안의 아주 작은 텍스트 버튼 */
-export const BTN_TEXT = "text-[12px] text-muted underline underline-offset-4 hover:text-ink disabled:opacity-40";
+export const BTN_TEXT = "text-[13px] text-muted underline underline-offset-4 hover:text-ink disabled:opacity-40";
 /** 위험(삭제) 텍스트 버튼 */
-export const BTN_DANGER = "text-[12px] text-muted underline underline-offset-4 hover:text-[#B3261E] disabled:opacity-40";
-export const LABEL = "mb-[6px] block text-[12px] tracking-[0.02em] text-muted";
+export const BTN_DANGER = "text-[13px] text-muted underline underline-offset-4 hover:text-[#B3261E] disabled:opacity-40";
+export const LABEL = "mb-[6px] block text-[13px] tracking-[0.02em] text-muted";
 
 /** 페이지 머리: eyebrow + 제목 + 설명, 우측 액션 */
 export function PageHead({
@@ -50,8 +50,8 @@ export function PageHead({
         )}
         <div>
           <p className="eyebrow">{eyebrow}</p>
-          <h1 className="mt-[4px] text-[24px] font-bold leading-[1.2] tracking-[-0.03em] text-ink max-pc:text-[20px]">{title}</h1>
-          {desc && <p className="mt-[8px] text-[13px] leading-[20px] text-muted">{desc}</p>}
+          <h1 className="mt-[4px] text-[24px] font-bold leading-[1.2] tracking-[-0.03em] text-ink max-pc:text-[21px]">{title}</h1>
+          {desc && <p className="mt-[8px] text-[14px] leading-[20px] text-muted">{desc}</p>}
         </div>
       </div>
       {action && <div className="shrink-0 max-pc:w-full">{action}</div>}
@@ -80,7 +80,7 @@ export function Card({
         <div className="flex items-end justify-between gap-[12px] border-b border-line px-[22px] py-[14px] max-pc:flex-col max-pc:items-stretch max-pc:px-[16px]">
           <div>
             {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-            {title && <h2 className="whitespace-nowrap text-[15px] font-bold tracking-[-0.01em] text-ink">{title}</h2>}
+            {title && <h2 className="whitespace-nowrap text-[16px] font-bold tracking-[-0.01em] text-ink">{title}</h2>}
           </div>
           {/* 모바일에서는 제목 아래 줄로 내려가고, 버튼들은 줄바꿈되지 않는다 */}
           {action && <div className="shrink-0 whitespace-nowrap [&_button]:whitespace-nowrap max-pc:flex max-pc:justify-end">{action}</div>}
@@ -99,18 +99,18 @@ export function Badge({ tone = "muted", children }: { tone?: "ink" | "muted" | "
     muted: "border-line bg-surface text-graphite",
     faint: "border-line text-faint",
   }[tone];
-  return <span className={`inline-flex h-[20px] shrink-0 items-center whitespace-nowrap border px-[7px] text-[11px] leading-none tracking-[0.02em] ${cls}`}>{children}</span>;
+  return <span className={`inline-flex h-[20px] shrink-0 items-center whitespace-nowrap border px-[7px] text-[12px] leading-none tracking-[0.02em] ${cls}`}>{children}</span>;
 }
 
 /** 표 — 얇은 선, 머리글은 작은 대문자 느낌의 회색 */
-export const TABLE = "w-full text-[13px] text-graphite";
-export const TH = "border-b border-ink px-[10px] py-[10px] text-left text-[11px] font-medium tracking-[0.08em] text-muted whitespace-nowrap";
+export const TABLE = "w-full text-[14px] text-graphite";
+export const TH = "border-b border-ink px-[10px] py-[10px] text-left text-[12px] font-medium tracking-[0.08em] text-muted whitespace-nowrap";
 export const TD = "border-b border-line px-[10px] py-[12px] align-middle";
 export const TR_HOVER = "transition-colors hover:bg-surface";
 
 /** 표가 비었을 때 */
 export function Empty({ children }: { children: React.ReactNode }) {
-  return <p className="border border-dashed border-line py-[40px] text-center text-[13px] text-muted">{children}</p>;
+  return <p className="border border-dashed border-line py-[40px] text-center text-[14px] text-muted">{children}</p>;
 }
 
 /** 숫자 폰트 */
@@ -139,7 +139,7 @@ export function Pager({ page, totalPages, href }: { page: number; totalPages: nu
         <Link
           key={p}
           href={href(p)}
-          className={`flex h-[32px] min-w-[32px] items-center justify-center px-[6px] text-[13px] hover:!no-underline ${p === page ? "border-b-2 border-ink font-bold !text-ink" : "!text-muted hover:!text-ink"}`}
+          className={`flex h-[32px] min-w-[32px] items-center justify-center px-[6px] text-[14px] hover:!no-underline ${p === page ? "border-b-2 border-ink font-bold !text-ink" : "!text-muted hover:!text-ink"}`}
         >
           {p}
         </Link>
@@ -154,7 +154,7 @@ export function Chip({ href, active, children }: { href: string; active: boolean
     <Link
       href={href}
       scroll={false}
-      className={`inline-flex h-[30px] items-center border px-[12px] text-[12px] transition-colors hover:!no-underline ${
+      className={`inline-flex h-[30px] items-center border px-[12px] text-[13px] transition-colors hover:!no-underline ${
         active ? "border-ink bg-ink !text-white" : "border-line bg-white !text-graphite hover:border-graphite hover:!text-ink"
       }`}
     >
@@ -167,12 +167,12 @@ export function Chip({ href, active, children }: { href: string; active: boolean
 export function Stat({ label, value, unit, sub }: { label: string; value: string | number; unit?: string; sub?: string }) {
   return (
     <div className="border border-line bg-white px-[20px] py-[18px]">
-      <p className="text-[12px] tracking-[0.02em] text-muted">{label}</p>
+      <p className="text-[13px] tracking-[0.02em] text-muted">{label}</p>
       <p className="mt-[8px] text-[26px] font-semibold leading-none tracking-[-0.02em] text-ink" style={NUM}>
         {value}
-        {unit && <span className="ml-[3px] text-[13px] font-normal text-muted">{unit}</span>}
+        {unit && <span className="ml-[3px] text-[14px] font-normal text-muted">{unit}</span>}
       </p>
-      {sub && <p className="mt-[8px] text-[11px] text-faint">{sub}</p>}
+      {sub && <p className="mt-[8px] text-[12px] text-faint">{sub}</p>}
     </div>
   );
 }
@@ -180,5 +180,5 @@ export function Stat({ label, value, unit, sub }: { label: string; value: string
 /** 저장/오류 메시지 한 줄 */
 export function Msg({ msg }: { msg: { ok: boolean; text: string } | null }) {
   if (!msg) return null;
-  return <p className={`text-[12px] ${msg.ok ? "text-ink" : "text-[#B3261E]"}`}>{msg.text}</p>;
+  return <p className={`text-[13px] ${msg.ok ? "text-ink" : "text-[#B3261E]"}`}>{msg.text}</p>;
 }

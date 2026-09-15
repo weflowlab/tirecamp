@@ -53,7 +53,7 @@ export default function FloatingButtons() {
         className="float-wiggle group flex h-[64px] items-center rounded-full border border-line bg-white !text-ink shadow-[0_8px_24px_-8px_rgba(0,0,0,0.3)] hover:!no-underline"
       >
         {/* 호버 시 왼쪽으로 펼쳐지는 라벨 (max-width 0 → 펼침) */}
-        <span className="max-w-0 overflow-hidden whitespace-nowrap text-[14px] font-semibold transition-all duration-300 group-hover:max-w-[120px] group-hover:pl-[22px]">전화하기</span>
+        <span className="max-w-0 overflow-hidden whitespace-nowrap text-[15px] font-semibold transition-all duration-300 group-hover:max-w-[120px] group-hover:pl-[22px]">전화하기</span>
         <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center">
           <svg {...ICON}>
             <path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5L16 14l4 1.5V19a1.5 1.5 0 0 1-1.5 1.5C10.5 20.5 3.5 13.5 3.5 5.5A1.5 1.5 0 0 1 5 4Z" />
@@ -65,7 +65,7 @@ export default function FloatingButtons() {
         aria-label="문의하기"
         className="float-wiggle float-wiggle-2 group flex h-[64px] items-center rounded-full bg-ink !text-white shadow-[0_8px_24px_-8px_rgba(0,0,0,0.45)] hover:!bg-[#222] hover:!no-underline"
       >
-        <span className="max-w-0 overflow-hidden whitespace-nowrap text-[14px] font-semibold transition-all duration-300 group-hover:max-w-[120px] group-hover:pl-[22px]">문의하기</span>
+        <span className="max-w-0 overflow-hidden whitespace-nowrap text-[15px] font-semibold transition-all duration-300 group-hover:max-w-[120px] group-hover:pl-[22px]">문의하기</span>
         <span className="flex h-[64px] w-[64px] shrink-0 items-center justify-center">
           <svg {...ICON}>
             <path d="M4 5h16v11H9l-5 4z" />

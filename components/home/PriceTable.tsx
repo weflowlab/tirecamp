@@ -71,7 +71,7 @@ export default function PriceTable() {
             <Tile key={label} label={label} price={price} />
           ))}
         </ul>
-        <p className="mt-[8px] text-[11px] text-faint">스페어 포함 뒤타이어는 TPMS · 밸런스 · 에어밸브 서비스가 제외됩니다.</p>
+        <p className="mt-[8px] text-[12px] text-faint">스페어 포함 뒤타이어는 TPMS · 밸런스 · 에어밸브 서비스가 제외됩니다.</p>
       </Block>
 
       {/* 2. 얼라인먼트 */}
@@ -91,7 +91,7 @@ export default function PriceTable() {
               <p className="eyebrow mb-[6px]">{g.group}</p>
               <ul>
                 {g.items.map(([label, value]) => (
-                  <li key={label} className="flex items-baseline justify-between gap-[12px] border-b border-line py-[10px] text-[13px] last:border-b-0">
+                  <li key={label} className="flex items-baseline justify-between gap-[12px] border-b border-line py-[10px] text-[14px] last:border-b-0">
                     <span className="text-graphite">{label}</span>
                     <span className="shrink-0 text-right font-semibold text-ink" style={NUM}>
                       {value}
@@ -104,7 +104,7 @@ export default function PriceTable() {
         </div>
       </Block>
 
-      <p className="mt-[10px] text-center text-[12px] text-muted">
+      <p className="mt-[10px] text-center text-[13px] text-muted">
         온라인 금액 그대로 판매합니다. 현금 · 카드 동일 금액, 모든 금액은 VAT 포함입니다.
       </p>
     </section>
@@ -118,9 +118,9 @@ export function SectionHead({ eyebrow, title, note }: { eyebrow: string; title: 
     <div className="mb-[16px] flex items-end justify-between">
       <div>
         <p className="eyebrow">{eyebrow}</p>
-        <h2 className="mt-[4px] text-[20px] font-bold tracking-[-0.02em] text-ink">{title}</h2>
+        <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">{title}</h2>
       </div>
-      {note && <p className="text-[12px] text-muted max-pc:hidden">{note}</p>}
+      {note && <p className="text-[13px] text-muted max-pc:hidden">{note}</p>}
     </div>
   );
 }
@@ -130,8 +130,8 @@ function Block({ title, sub, children }: { title: string; sub?: string; children
   return (
     <div className="mt-[10px] border border-line bg-white p-[22px] first-of-type:mt-0 max-pc:p-[14px]">
       <div className="mb-[16px] flex items-baseline justify-between gap-[10px] max-pc:flex-col max-pc:gap-[2px]">
-        <h3 className="text-[16px] font-bold tracking-[-0.01em] text-ink">{title}</h3>
-        {sub && <span className="text-[12px] text-muted">{sub}</span>}
+        <h3 className="text-[17px] font-bold tracking-[-0.01em] text-ink">{title}</h3>
+        {sub && <span className="text-[13px] text-muted">{sub}</span>}
       </div>
       {children}
     </div>
@@ -143,11 +143,11 @@ function Tile({ label, sub, price }: { label: string; sub?: string; price: strin
   const isNum = /^\d/.test(price);
   return (
     <li className="bg-surface px-[12px] py-[14px]">
-      <p className="text-[12px] text-graphite">{label}</p>
-      {sub && <p className="text-[11px] text-faint">{sub}</p>}
-      <p className={`mt-[6px] font-semibold leading-none text-ink ${isNum ? "text-[20px]" : "text-[15px]"}`} style={NUM}>
+      <p className="text-[13px] text-graphite">{label}</p>
+      {sub && <p className="text-[12px] text-faint">{sub}</p>}
+      <p className={`mt-[6px] font-semibold leading-none text-ink ${isNum ? "text-[21px]" : "text-[16px]"}`} style={NUM}>
         {price}
-        {isNum && <span className="ml-[1px] text-[12px] font-normal text-muted">원</span>}
+        {isNum && <span className="ml-[1px] text-[13px] font-normal text-muted">원</span>}
       </p>
     </li>
   );

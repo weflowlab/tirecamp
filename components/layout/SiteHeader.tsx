@@ -18,7 +18,7 @@ export default function SiteHeader() {
       <div className="mx-auto w-[900px] max-pc:w-full max-pc:px-[16px]">
         {/* 상단 작은 유틸 링크 */}
         <div className="h-[34px] flex justify-end items-center max-pc:hidden">
-          <ul className="flex gap-[20px] text-[11px] tracking-[0.04em]">
+          <ul className="flex gap-[20px] text-[12px] tracking-[0.04em]">
             {[
               { href: "/", label: "HOME" },
               { href: "/cscenter/news", label: "고객센터" },

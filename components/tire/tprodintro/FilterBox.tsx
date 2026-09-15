@@ -60,7 +60,7 @@ function Row({ label, title, last, children }: { label: string; title: string; l
     <div className={`grid grid-cols-[140px_1fr] gap-[16px] px-[24px] py-[16px] max-pc:grid-cols-1 max-pc:gap-[8px] max-pc:px-[14px] ${last ? "" : "border-b border-line"}`}>
       <div>
         <p className="eyebrow">{label}</p>
-        <p className="mt-[2px] text-[14px] font-medium text-ink">{title}</p>
+        <p className="mt-[2px] text-[15px] font-medium text-ink">{title}</p>
       </div>
       <div className="flex flex-wrap gap-[6px]">{children}</div>
     </div>
@@ -73,7 +73,7 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`h-[32px] border px-[12px] text-[12px] transition-colors ${
+      className={`h-[32px] border px-[12px] text-[13px] transition-colors ${
         active ? "border-ink bg-ink text-white" : "border-line bg-white text-graphite hover:border-graphite hover:text-ink"
       }`}
     >

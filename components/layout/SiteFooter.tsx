@@ -11,21 +11,28 @@ export default function SiteFooter() {
       <div className="mx-auto w-[900px] py-[40px] max-pc:w-full max-pc:px-[16px] max-pc:py-[28px]">
         <div className="flex items-start max-pc:flex-col max-pc:gap-[18px]">
           <div className="w-[262px] max-pc:w-auto">
-            <span className="block text-[18px] font-bold tracking-[-0.03em] text-white">{SITE.name}</span>
+            <span className="block text-[19px] font-bold tracking-[-0.03em] text-white">{SITE.name}</span>
             <span className="eyebrow mt-[4px] block !text-[#6F6F6F]">{SITE.nameEn}</span>
           </div>
-          <div className="flex-1 text-[12px] leading-[22px] text-[#9A9A9A]">
-            <p className="text-[12px] text-[#9A9A9A]">
-              대표 {SITE.ceo} &nbsp;·&nbsp; 사업자등록번호 {SITE.bizNo} &nbsp;·&nbsp;{" "}
+          <div className="flex-1 text-[13px] leading-[22px] text-[#9A9A9A]">
+            {/* 항목마다 무엇인지 라벨을 붙이고(굵게 + 한 톤 밝게), 짧은 것끼리 한 줄에 둘씩 묶는다 */}
+            <p className="text-[13px] text-[#9A9A9A]">
+              <L>대표</L> {SITE.ceo} &nbsp;·&nbsp; <L>사업자등록번호</L> {SITE.bizNo}
+            </p>
+            <p className="text-[13px] text-[#9A9A9A]">
+              <L>전화</L>{" "}
               <a href={PHONE_TEL} className="!text-[#DADADA]" style={{ fontFamily: "var(--font-num)" }}>
                 {SITE.phone}
-              </a>
+              </a>{" "}
+              &nbsp;·&nbsp; <L>주소</L> {SITE.address}
             </p>
-            <p className="text-[12px] text-[#9A9A9A]">
-              {SITE.address} &nbsp;·&nbsp; {SITE.email}
+            <p className="text-[13px] text-[#9A9A9A]">
+              <L>이메일</L> {SITE.email}
             </p>
-            <p className="text-[12px] text-[#9A9A9A]">{SITE.hours.map((h) => `${h.label} ${h.value}`).join(" · ")}</p>
-            <p className="mt-[12px] flex items-center gap-[14px] text-[11px] text-[#6F6F6F]" style={{ fontFamily: "var(--font-num)" }}>
+            <p className="text-[13px] text-[#9A9A9A]">
+              <L>영업시간</L> {SITE.hours.map((h) => `${h.label} ${h.value}`).join(" · ")}
+            </p>
+            <p className="mt-[12px] flex items-center gap-[14px] text-[12px] text-[#6F6F6F]" style={{ fontFamily: "var(--font-num)" }}>
               <span>© {SITE.nameEn}. All rights reserved.</span>
               <Link href="/cscenter/personal_info" className="!text-[#9A9A9A] hover:!text-white">
                 개인정보처리방침
@@ -36,4 +43,9 @@ export default function SiteFooter() {
       </div>
     </footer>
   );
+}
+
+/* 푸터 항목 라벨 (대표 · 사업자등록번호 · 전화 …) — 내용과 구분되게 굵게 + 한 톤 밝게 */
+function L({ children }: { children: React.ReactNode }) {
+  return <b className="font-bold text-[#CFCFCF]">{children}</b>;
 }

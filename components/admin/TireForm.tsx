@@ -260,7 +260,7 @@ export default function TireForm({ tire, prices }: { tire: TireRecord | null; pr
               // eslint-disable-next-line @next/next/no-img-element
               <img src={d.image} alt="" className="max-h-[360px] max-w-full object-contain p-[8px]" />
             ) : (
-              <span className="text-[12px] text-faint">사진 없음</span>
+              <span className="text-[13px] text-faint">사진 없음</span>
             )}
           </div>
           <div className="mt-[10px] flex gap-[12px]">
@@ -393,7 +393,7 @@ export default function TireForm({ tire, prices }: { tire: TireRecord | null; pr
               <input className={FIELD} value={d.priceRange} maxLength={40} placeholder="156,000 ~ 700,000" onChange={(e) => set("priceRange", e.target.value)} />
             </Field>
           </div>
-          <label className="mt-[14px] flex cursor-pointer items-center gap-[8px] text-[13px] text-ink">
+          <label className="mt-[14px] flex cursor-pointer items-center gap-[8px] text-[14px] text-ink">
             <input type="checkbox" className="accent-black" checked={d.visible} onChange={(e) => set("visible", e.target.checked)} />
             사이트에 노출<span className="text-muted max-pc:hidden"> (끄면 타이어소개·검색 결과·상세에서 모두 숨김)</span>
           </label>
@@ -426,7 +426,7 @@ export default function TireForm({ tire, prices }: { tire: TireRecord | null; pr
             aria-label="타이어 상세 미리보기"
             className="fixed left-1/2 top-1/2 z-[1001] flex max-h-[90vh] w-[960px] -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden bg-white font-sans shadow-[0_30px_80px_-24px_rgba(0,0,0,0.5)] max-pc:h-[92vh] max-pc:w-[calc(100%-20px)]"
           >
-            <div className="flex h-[40px] shrink-0 items-center justify-between bg-ink px-[16px] text-[12px] text-white">
+            <div className="flex h-[40px] shrink-0 items-center justify-between bg-ink px-[16px] text-[13px] text-white">
               <span className="tracking-[0.04em]">미리보기 · 저장 전 입력값으로 보여줍니다</span>
               <button type="button" onClick={() => setPreview(false)} className="font-semibold hover:underline">
                 닫기 ✕
@@ -451,7 +451,7 @@ export default function TireForm({ tire, prices }: { tire: TireRecord | null; pr
           title="사이즈별 판매 가격"
           action={
             <div className="flex items-center gap-[12px]">
-              {pricesDirty && <span className="text-[12px] text-ink max-pc:hidden">저장하지 않은 변경이 있습니다</span>}
+              {pricesDirty && <span className="text-[13px] text-ink max-pc:hidden">저장하지 않은 변경이 있습니다</span>}
               <button type="button" className={`${BTN_OUTLINE} shrink-0`} onClick={addRow}>
                 + 사이즈 추가
               </button>
@@ -461,11 +461,11 @@ export default function TireForm({ tire, prices }: { tire: TireRecord | null; pr
             </div>
           }
         >
-          <p className="mb-[14px] text-[13px] leading-[21px] text-graphite">
+          <p className="mb-[14px] text-[14px] leading-[21px] text-graphite">
             이 타이어를 파는 사이즈와 사이즈마다의 가격입니다. 고객이 사이즈로 검색하면 여기 적힌 줄이 카드 한 장씩으로 나오고, 정가는 줄을 그어 작게, 판매가는 크게 보입니다.
           </p>
           {rows.length === 0 ? (
-            <p className="border border-dashed border-line py-[28px] text-center text-[13px] text-muted">등록된 사이즈가 없습니다. [사이즈 추가] 로 시작하세요.</p>
+            <p className="border border-dashed border-line py-[28px] text-center text-[14px] text-muted">등록된 사이즈가 없습니다. [사이즈 추가] 로 시작하세요.</p>
           ) : (
             <div className="overflow-x-auto">
               <table className={`${TABLE} min-w-[860px]`}>
@@ -550,7 +550,7 @@ export default function TireForm({ tire, prices }: { tire: TireRecord | null; pr
                           }
                         />
                       </td>
-                      <td className={`${TD} whitespace-nowrap text-[12px] text-muted`}>{discountText(n(r.marketPrice), n(r.salePrice)).replace(/^↓/, "") || "-"}</td>
+                      <td className={`${TD} whitespace-nowrap text-[13px] text-muted`}>{discountText(n(r.marketPrice), n(r.salePrice)).replace(/^↓/, "") || "-"}</td>
                       <td className={`${TD} !px-[6px]`}>
                         <input
                           className={`${FIELD} !h-[32px] !w-[150px]`}
@@ -587,7 +587,7 @@ export default function TireForm({ tire, prices }: { tire: TireRecord | null; pr
               </table>
             </div>
           )}
-          <ul className="mt-[14px] flex flex-col gap-[2px] text-[12px] leading-[18px] text-muted">
+          <ul className="mt-[14px] flex flex-col gap-[2px] text-[13px] leading-[18px] text-muted">
             <li>· 정가를 비우면 판매가와 같게 저장돼 할인 표시가 없어집니다.</li>
             <li>· 비고 문구는 흡음재·런플랫처럼 같은 사이즈 안에서 구분이 필요할 때만 적으세요.</li>
             <li>· 베스트는 검색 결과 맨 위 추천 칸에 한 번 더 나옵니다.</li>

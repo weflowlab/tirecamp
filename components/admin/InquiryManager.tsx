@@ -87,7 +87,7 @@ export default function InquiryManager({ rows, openId }: { rows: Inquiry[]; open
                   <td className={`${TD} whitespace-nowrap`}>{i.type}</td>
                   <td className={`${TD} max-w-[360px]`}>
                     <span className="block truncate">{i.content}</span>
-                    {i.memo && <span className="mt-[2px] block truncate text-[11px] text-faint">메모: {i.memo}</span>}
+                    {i.memo && <span className="mt-[2px] block truncate text-[12px] text-faint">메모: {i.memo}</span>}
                   </td>
                   <td className={`${TD} whitespace-nowrap text-faint`} style={NUM}>
                     {i.date}
@@ -100,7 +100,7 @@ export default function InquiryManager({ rows, openId }: { rows: Inquiry[]; open
                     <td colSpan={6} className="border-b border-line bg-surface px-[10px] py-[20px]">
                       <div className="grid grid-cols-[1fr_360px] gap-[24px] max-pc:grid-cols-1">
                         <div className="flex flex-col">
-                          <dl className="grid grid-cols-[80px_1fr] gap-x-[12px] gap-y-[8px] text-[13px]">
+                          <dl className="grid grid-cols-[80px_1fr] gap-x-[12px] gap-y-[8px] text-[14px]">
                             <dt className="text-muted">차종/사이즈</dt>
                             <dd className="text-ink">{i.car || "-"}</dd>
                             <dt className="text-muted">접수 시각</dt>
@@ -132,7 +132,7 @@ export default function InquiryManager({ rows, openId }: { rows: Inquiry[]; open
                           </div>
                         </div>
                         <div className="flex flex-col">
-                          <p className="mb-[6px] text-[12px] tracking-[0.02em] text-muted">관리자 메모</p>
+                          <p className="mb-[6px] text-[13px] tracking-[0.02em] text-muted">관리자 메모</p>
                           <textarea
                             className={`${TEXTAREA} h-[110px] flex-1`}
                             value={memo[i.id] ?? i.memo ?? ""}

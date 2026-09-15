@@ -18,7 +18,7 @@ export default async function AdminLoginPage() {
       <div className="w-[380px] max-w-full border border-line bg-white px-[36px] py-[40px] max-pc:px-[24px] max-pc:py-[32px]">
         <p className="eyebrow">Admin</p>
         <h1 className="mt-[6px] text-[24px] font-bold leading-none tracking-[-0.04em] text-ink">{SITE.name}</h1>
-        <p className="mt-[12px] text-[13px] leading-[20px] text-muted">관리자 비밀번호를 입력해 주세요.</p>
+        <p className="mt-[12px] text-[14px] leading-[20px] text-muted">관리자 비밀번호를 입력해 주세요.</p>
         <div className="mt-[24px]">
           <LoginForm />
         </div>

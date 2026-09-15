@@ -19,18 +19,18 @@ export default function ReviewCard({ review: r }: { review: Review }) {
         <Stars n={r.rating} />
         <span className="eyebrow !text-faint">{r.vehicle}</span>
       </div>
-      <p className={`mt-[12px] flex-1 whitespace-pre-line text-[14px] leading-[24px] text-graphite ${long && !open ? "line-clamp-5" : ""}`}>{r.content}</p>
+      <p className={`mt-[12px] flex-1 whitespace-pre-line text-[15px] leading-[24px] text-graphite ${long && !open ? "line-clamp-5" : ""}`}>{r.content}</p>
       {long && (
-        <button type="button" onClick={() => setOpen((v) => !v)} className="mt-[6px] self-end text-[12px] text-muted underline underline-offset-4 hover:text-ink">
+        <button type="button" onClick={() => setOpen((v) => !v)} className="mt-[6px] self-end text-[13px] text-muted underline underline-offset-4 hover:text-ink">
           {open ? "접기" : "더보기"}
         </button>
       )}
       <div className="mt-[16px] flex items-end justify-between gap-[10px] border-t border-line pt-[12px]">
         <p className="min-w-0">
-          <span className="text-[14px] font-semibold text-ink">{maskName(r.name)}</span>
-          {r.car && <span className="ml-[6px] text-[12px] text-muted">{r.car}</span>}
+          <span className="text-[15px] font-semibold text-ink">{maskName(r.name)}</span>
+          {r.car && <span className="ml-[6px] text-[13px] text-muted">{r.car}</span>}
         </p>
-        <span className="shrink-0 text-[11px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
+        <span className="shrink-0 text-[12px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
           {r.date}
         </span>
       </div>
@@ -41,7 +41,7 @@ export default function ReviewCard({ review: r }: { review: Review }) {
 /* 별점 (잉크색 ★ / 연회색 ★) */
 function Stars({ n }: { n: number }) {
   return (
-    <span className="text-[13px] tracking-[2px]" aria-label={`별점 ${n}점`}>
+    <span className="text-[14px] tracking-[2px]" aria-label={`별점 ${n}점`}>
       {[1, 2, 3, 4, 5].map((i) => (
         <span key={i} className={i <= n ? "text-ink" : "text-line"}>
           ★

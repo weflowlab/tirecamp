@@ -70,8 +70,8 @@ export default async function AdminInquiries({ searchParams }: Props) {
         </div>
         <form method="get" className="flex gap-[6px]">
           {Object.entries({ ...pp, status }).map(([k, v]) => v && <input key={k} type="hidden" name={k} value={v} />)}
-          <input type="search" name="q" defaultValue={q} placeholder="이름·연락처·내용 검색" className="field !h-[30px] !w-[220px] !text-[12px] max-pc:!h-[36px] max-pc:min-w-0 max-pc:flex-1 max-pc:!w-auto" />
-          <button type="submit" className="btn-outline !h-[30px] shrink-0 whitespace-nowrap !px-[12px] !text-[12px] text-ink hover:bg-ink hover:text-white max-pc:!h-[36px]">
+          <input type="search" name="q" defaultValue={q} placeholder="이름·연락처·내용 검색" className="field !h-[30px] !w-[220px] !text-[13px] max-pc:!h-[36px] max-pc:min-w-0 max-pc:flex-1 max-pc:!w-auto" />
+          <button type="submit" className="btn-outline !h-[30px] shrink-0 whitespace-nowrap !px-[12px] !text-[13px] text-ink hover:bg-ink hover:text-white max-pc:!h-[36px]">
             검색
           </button>
         </form>

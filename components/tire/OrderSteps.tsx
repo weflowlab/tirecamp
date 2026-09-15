@@ -57,9 +57,9 @@ export default function OrderSteps() {
       <div className="mb-[16px] flex items-end justify-between">
         <div>
           <p className="eyebrow">How it works</p>
-          <h2 className="mt-[4px] text-[20px] font-bold tracking-[-0.02em] text-ink">이용 절차</h2>
+          <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">이용 절차</h2>
         </div>
-        <p className="text-[12px] text-muted max-pc:hidden">검색부터 장착까지 다섯 단계</p>
+        <p className="text-[13px] text-muted max-pc:hidden">검색부터 장착까지 다섯 단계</p>
       </div>
       <ol className="grid grid-cols-5 gap-[10px] max-pc:grid-cols-2">
         {STEPS.map((s, i) => (
@@ -71,8 +71,8 @@ export default function OrderSteps() {
             <span className="flex h-[64px] w-[64px] items-center justify-center rounded-full bg-surface text-ink transition-colors group-hover:bg-ink group-hover:text-white">
               {ICONS[s.icon]}
             </span>
-            <p className="mt-[14px] text-[15px] font-semibold tracking-[-0.01em] text-ink">{s.title}</p>
-            <p className="mt-[4px] whitespace-nowrap text-[11.5px] leading-[18px] tracking-[-0.02em] text-muted">{s.desc}</p>
+            <p className="mt-[14px] text-[16px] font-semibold tracking-[-0.01em] text-ink">{s.title}</p>
+            <p className="mt-[4px] whitespace-nowrap text-[12.5px] leading-[18px] tracking-[-0.02em] text-muted">{s.desc}</p>
             {/* 다음 단계로 잇는 짧은 선 (카드 사이 간격 위에) */}
             {i < STEPS.length - 1 && <span className="absolute right-[-11px] top-[49px] h-px w-[12px] bg-line max-pc:hidden" />}
           </li>

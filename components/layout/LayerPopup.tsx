@@ -98,7 +98,7 @@ export default function LayerPopup() {
         ) : (
           img
         )}
-        <div className="flex h-[40px] items-center justify-between bg-ink px-[16px] text-[12px] text-white">
+        <div className="flex h-[40px] items-center justify-between bg-ink px-[16px] text-[13px] text-white">
           {popup.hideToday ? (
             <button type="button" onClick={hideToday} className="tracking-[0.02em] text-[#C4C4C4] hover:text-white">
               오늘 하루 열지 않기

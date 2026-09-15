@@ -48,7 +48,7 @@ export default function TireTable({ rows }: { rows: Row[] }) {
               key={b}
               type="button"
               onClick={() => setBrand(b)}
-              className={`inline-flex h-[30px] items-center border px-[12px] text-[12px] transition-colors ${brand === b ? "border-ink bg-ink text-white" : "border-line bg-white text-graphite hover:border-graphite hover:text-ink"}`}
+              className={`inline-flex h-[30px] items-center border px-[12px] text-[13px] transition-colors ${brand === b ? "border-ink bg-ink text-white" : "border-line bg-white text-graphite hover:border-graphite hover:text-ink"}`}
             >
               {b || "전체"}
               <span className="ml-[4px] opacity-60" style={NUM}>
@@ -57,7 +57,7 @@ export default function TireTable({ rows }: { rows: Row[] }) {
             </button>
           ))}
         </div>
-        <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="브랜드·모델명 검색" className="field !h-[30px] !w-[220px] !text-[12px] max-pc:!w-full" />
+        <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="브랜드·모델명 검색" className="field !h-[30px] !w-[220px] !text-[13px] max-pc:!w-full" />
       </div>
 
       {list.length === 0 ? (
@@ -88,10 +88,10 @@ export default function TireTable({ rows }: { rows: Row[] }) {
                   </td>
                   <td className={`${TD} whitespace-nowrap text-muted`}>{t.brandName}</td>
                   <td className={`${TD} min-w-[200px]`}>
-                    <Link href={`/admin/tires/edit?seq=${t.seq}`} className="text-[14px] font-semibold !text-ink hover:!text-graphite" style={NUM}>
+                    <Link href={`/admin/tires/edit?seq=${t.seq}`} className="text-[15px] font-semibold !text-ink hover:!text-graphite" style={NUM}>
                       {t.model}
                     </Link>
-                    {t.tagline && <span className="mt-[2px] block truncate text-[12px] text-muted">{t.tagline}</span>}
+                    {t.tagline && <span className="mt-[2px] block truncate text-[13px] text-muted">{t.tagline}</span>}
                   </td>
                   <td className={`${TD} whitespace-nowrap`}>
                     {t.typeLabel}

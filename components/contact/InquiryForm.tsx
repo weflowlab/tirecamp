@@ -85,7 +85,7 @@ export default function InquiryForm() {
                 key={t}
                 type="button"
                 onClick={() => setType(t)}
-                className={`flex-1 border border-line -ml-px first:ml-0 px-[4px] text-[12px] tracking-[-0.01em] transition-colors max-pc:h-[40px] max-pc:basis-1/2 max-pc:[&:nth-child(3)]:ml-0 ${
+                className={`flex-1 border border-line -ml-px first:ml-0 px-[4px] text-[13px] tracking-[-0.01em] transition-colors max-pc:h-[40px] max-pc:basis-1/2 max-pc:[&:nth-child(3)]:ml-0 ${
                   type === t ? "border-ink bg-ink text-white z-10" : "bg-white text-graphite hover:text-ink"
                 }`}
               >
@@ -106,9 +106,9 @@ export default function InquiryForm() {
       <input type="text" name="website" value={website} onChange={(e) => setWebsite(e.target.value)} tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
 
       {/* 체크박스 + 문구 + 내용 보기 를 한 줄에 (좁으면 문구만 줄바꿈, "내용 보기"는 문구 끝에 붙음) */}
-      <div className="mt-[14px] flex items-start gap-[8px] text-[12px] leading-[18px] text-graphite">
+      <div className="mt-[14px] flex items-start gap-[8px] text-[13px] leading-[18px] text-graphite">
         <input id="agree" type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} className="mt-[2px] accent-black" />
-        <p className="text-[12px] text-graphite">
+        <p className="text-[13px] text-graphite">
           <label htmlFor="agree" className="cursor-pointer">
             문의 답변을 위한 개인정보(이름, 연락처) 수집·이용에 동의합니다.
           </label>{" "}
@@ -124,8 +124,8 @@ export default function InquiryForm() {
           <div className="fixed inset-0 z-[1000] bg-black/40" onClick={() => setPolicyOpen(false)} />
           <div role="dialog" aria-modal="true" aria-label="개인정보 수집·이용 안내" className="fixed left-1/2 top-1/2 z-[1001] w-[460px] -translate-x-1/2 -translate-y-1/2 bg-white p-[28px] font-sans shadow-[0_20px_60px_-20px_rgba(0,0,0,0.4)] max-pc:w-[calc(100%-24px)] max-pc:p-[20px]">
             <p className="eyebrow">Privacy</p>
-            <h3 className="mt-[4px] text-[18px] font-bold tracking-[-0.02em] text-ink">개인정보 수집·이용 안내</h3>
-            <dl className="mt-[16px] border-t border-line text-[13px]">
+            <h3 className="mt-[4px] text-[19px] font-bold tracking-[-0.02em] text-ink">개인정보 수집·이용 안내</h3>
+            <dl className="mt-[16px] border-t border-line text-[14px]">
               {[
                 ["수집 항목", "이름, 연락처 (차종은 선택)"],
                 ["이용 목적", "문의 확인 및 답변 연락"],
@@ -139,7 +139,7 @@ export default function InquiryForm() {
               ))}
             </dl>
             <div className="mt-[16px] flex items-center justify-between gap-[12px]">
-              <Link href="/cscenter/personal_info" target="_blank" className="text-[12px] !text-muted underline underline-offset-4 hover:!text-ink">
+              <Link href="/cscenter/personal_info" target="_blank" className="text-[13px] !text-muted underline underline-offset-4 hover:!text-ink">
                 개인정보처리방침 전문 보기
               </Link>
               <button
@@ -158,7 +158,7 @@ export default function InquiryForm() {
       )}
 
       <div className="mt-[20px] flex items-center justify-between gap-[12px] max-pc:flex-col max-pc:items-stretch">
-        <p className={`text-[12px] ${msg ? (msg.ok ? "text-ink" : "text-[#B3261E]") : "text-muted"}`}>{msg ? msg.text : "* 표시는 필수 입력 항목입니다."}</p>
+        <p className={`text-[13px] ${msg ? (msg.ok ? "text-ink" : "text-[#B3261E]") : "text-muted"}`}>{msg ? msg.text : "* 표시는 필수 입력 항목입니다."}</p>
         <button type="submit" disabled={busy} className="btn-fill">
           {busy ? "접수 중..." : "문의 접수"}
         </button>
@@ -170,7 +170,7 @@ export default function InquiryForm() {
 function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-[6px] block text-[12px] tracking-[0.02em] text-muted">
+      <span className="mb-[6px] block text-[13px] tracking-[0.02em] text-muted">
         {label}
         {required && <span className="ml-[2px] text-ink">*</span>}
       </span>

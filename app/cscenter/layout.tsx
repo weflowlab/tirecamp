@@ -10,7 +10,7 @@ export default function CsCenterLayout({ children }: LayoutProps<"/cscenter">) {
     <div className="flex w-full min-h-[480px] font-sans max-pc:flex-col">
       <aside className="w-[200px] shrink-0 border-r border-line pr-[24px] pt-[8px] max-pc:w-full max-pc:border-r-0 max-pc:pr-0 max-pc:pt-0">
         <p className="eyebrow">Customer Center</p>
-        <h2 className="mb-[24px] mt-[6px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:mb-[12px] max-pc:text-[20px]">고객센터</h2>
+        <h2 className="mb-[24px] mt-[6px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:mb-[12px] max-pc:text-[21px]">고객센터</h2>
         <CsSideMenu />
       </aside>
       <section className="flex-1 min-w-0 pl-[40px] pt-[8px] max-pc:pl-0 max-pc:pt-[20px]">{children}</section>
