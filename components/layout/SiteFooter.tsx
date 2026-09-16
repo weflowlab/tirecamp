@@ -45,7 +45,7 @@ export default function SiteFooter() {
             href="https://weflowlab.kr/"
             target="_blank"
             rel="noreferrer"
-            className="ml-[16px] inline-flex h-[32px] shrink-0 items-center gap-[7px] rounded-full border border-white/25 px-[15px] text-[13px] !text-[#9A9A9A] transition-colors hover:border-white/60 hover:!text-white hover:!no-underline max-pc:ml-0 max-pc:self-start"
+            className="ml-[16px] inline-flex h-[32px] shrink-0 items-center gap-[7px] rounded-full border border-white bg-white px-[15px] text-[13px] !text-ink transition-colors hover:border-white/60 hover:bg-transparent hover:!text-white hover:!no-underline max-pc:ml-0 max-pc:self-start"
           >
             홈페이지 제작 <b className="font-bold">WEFLOW</b>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
