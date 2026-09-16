@@ -28,6 +28,12 @@ export const SITE = {
   },
 } as const;
 
+/**
+ * 사이트 주소 — 공유 미리보기 이미지·사이트맵·robots.txt 가 절대 주소를 만들 때 쓴다.
+ * 도메인이 바뀌면 배포 환경변수 NEXT_PUBLIC_SITE_URL 만 바꾸면 된다.
+ */
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tirecamp365.co.kr";
+
 /** 전화 링크 (tel:) 용 숫자만 */
 export const PHONE_TEL = `tel:${SITE.phone.replace(/-/g, "")}`;
 

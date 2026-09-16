@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
-import { SITE, TITLE_SUFFIX } from "@/lib/site";
+import { SITE, SITE_URL, TITLE_SUFFIX } from "@/lib/site";
 
-/* 사이트 메타 정보 (타이어캠프)
- * openGraph.images 는 절대 주소여야 카카오톡·페이스북 등이 읽어간다.
- * 정식 도메인이 생기면 배포 환경변수 NEXT_PUBLIC_SITE_URL 만 바꾸면 된다. */
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tirecamp365.co.kr";
-
+/* 사이트 메타 정보 (타이어캠프) — openGraph.images 는 절대 주소여야 카카오톡·페이스북 등이 읽어간다 */
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: TITLE_SUFFIX,
@@ -20,6 +16,10 @@ export const metadata: Metadata = {
     description: "타이어 교체를 투명한 가격으로",
     /* 홈 히어로와 같은 매장 진열대 사진. webp 를 못 읽는 공유 미리보기(카카오톡 등)가 있어 jpg 로 둔다 */
     images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: `${SITE.name} 매장` }],
+  },
+  /* 네이버 서치어드바이저 사이트 소유확인 (구글은 DNS TXT 로 확인했으므로 여기 없음) */
+  verification: {
+    other: { "naver-site-verification": "2ddb9a6002c84ab61345b9e43af0b2eb1782e8e3" },
   },
 };
 
