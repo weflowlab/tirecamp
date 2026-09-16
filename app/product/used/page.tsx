@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 export default function UsedPage() {
   return (
     <div className="flex w-full flex-col items-center py-[72px] text-center font-sans max-pc:py-[48px]">
-      <p className="eyebrow">Used</p>
       <h1 className="mt-[10px] text-[30px] font-bold leading-[1.2] tracking-[-0.03em] text-ink max-pc:text-[24px]">중고제품</h1>
       <p className="mt-[16px] max-w-[520px] text-[15px] leading-[25px] text-graphite max-pc:text-[14px] max-pc:leading-[22px]">
         꼼꼼히 선별한 중고 타이어와 중고 휠을<br className="hidden max-pc:inline" /> 합리적인 가격에 판매합니다.

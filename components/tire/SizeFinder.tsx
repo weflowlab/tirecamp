@@ -61,7 +61,6 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
       {/* [타이틀 212px | select 줄(+뒤 사이즈 줄) + 체크박스 | 검색 버튼 | 사이즈 보는 방법] — 모바일은 세로 */}
       <div className="flex items-start font-sans max-pc:flex-col">
         <div className="w-[212px] shrink-0 pt-[4px] max-pc:mb-[10px] max-pc:w-auto">
-          <p className="eyebrow">By Size</p>
           <p className="mt-[2px] text-[16px] font-semibold tracking-[-0.01em] text-ink">타이어사이즈로 검색</p>
         </div>
 
@@ -71,7 +70,7 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
            * 모바일: 버튼 두 개를 order-last 로 맨 뒤로 보내 [FRONT][REAR][버튼] 순서가 된다
            */}
           <div className="flex flex-wrap items-center gap-[8px]">
-            {frchk && <span className="eyebrow w-[44px] !text-faint max-pc:w-full">Front</span>}
+            {frchk && <span className="eyebrow w-[44px] !text-faint max-pc:w-full">앞</span>}
             <SizeSelects idx={1} value={front} onChange={setFront} />
             {/* 모바일: 버튼 위 가로선 — 차종/사이즈 검색 공통 버튼임을 표시 */}
             {/* 선 위아래 간격 = 카드 하단 여백(16px): flex gap 8 + margin 8 */}
@@ -95,7 +94,7 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
               <>
                 {/* 줄바꿈 (PC 에서 REAR 를 다음 줄로) */}
                 <span className="h-0 basis-full" />
-                <span className="eyebrow w-[44px] !text-faint max-pc:w-full">Rear</span>
+                <span className="eyebrow w-[44px] !text-faint max-pc:w-full">뒤</span>
                 <SizeSelects idx={2} value={rear} onChange={setRear} />
               </>
             )}

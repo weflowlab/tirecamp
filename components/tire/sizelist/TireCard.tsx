@@ -109,7 +109,7 @@ export default function TireCard({ tire }: Props) {
     <article className={`mt-[16px] grid grid-cols-[180px_1fr_200px] gap-[24px] p-[24px] max-pc:grid-cols-1 max-pc:gap-[16px] max-pc:p-[16px] ${best ? "border border-ink" : "border border-line"}`}>
       {/* 좌: 이미지 */}
       <div className="relative flex items-start justify-center">
-        {best && <span className="eyebrow absolute left-0 top-0 !text-ink">Best</span>}
+        {best && <span className="eyebrow absolute left-0 top-0 !text-ink">추천</span>}
         <a href="#" onClick={openInfo} className="block pt-[16px]">
           <img src={tire.imageUrl} alt={`${tire.brand} ${tire.model}`} width={140} className="block" />
         </a>
@@ -131,7 +131,7 @@ export default function TireCard({ tire }: Props) {
       {/* 우: 합계 + 예약 */}
       <div className="flex flex-col justify-between border-l border-line pl-[24px] max-pc:border-l-0 max-pc:border-t max-pc:pl-0 max-pc:pt-[16px]">
         <div>
-          <p className="eyebrow">Total</p>
+          <p className="eyebrow">합계</p>
           <p className="mt-[6px] flex items-baseline justify-between text-[14px] text-graphite">
             <span>총수량</span>
             <span className="text-ink" style={NUM}>

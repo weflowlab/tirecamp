@@ -21,7 +21,7 @@ export default function FilterBox({ filter, onBrand, onType, onLevel }: Props) {
 
   return (
     <div className="border border-line">
-      <Row label="Brand" title="제조사별">
+      <Row title="제조사별">
         <Chip active={allChecked} onClick={() => onBrand("all")}>
           전체
         </Chip>
@@ -31,7 +31,7 @@ export default function FilterBox({ filter, onBrand, onType, onLevel }: Props) {
           </Chip>
         ))}
       </Row>
-      <Row label="Type" title="타입별">
+      <Row title="타입별">
         <Chip active={filter.type === ""} onClick={() => onType("")}>
           전체
         </Chip>
@@ -41,7 +41,7 @@ export default function FilterBox({ filter, onBrand, onType, onLevel }: Props) {
           </Chip>
         ))}
       </Row>
-      <Row label="Grade" title="등급별" last>
+      <Row title="등급별" last>
         <Chip active={filter.level === ""} onClick={() => onLevel("")}>
           전체
         </Chip>
@@ -55,12 +55,11 @@ export default function FilterBox({ filter, onBrand, onType, onLevel }: Props) {
   );
 }
 
-function Row({ label, title, last, children }: { label: string; title: string; last?: boolean; children: React.ReactNode }) {
+function Row({ title, last, children }: { title: string; last?: boolean; children: React.ReactNode }) {
   return (
     <div className={`grid grid-cols-[140px_1fr] gap-[16px] px-[24px] py-[16px] max-pc:grid-cols-1 max-pc:gap-[8px] max-pc:px-[14px] ${last ? "" : "border-b border-line"}`}>
       <div>
-        <p className="eyebrow">{label}</p>
-        <p className="mt-[2px] text-[15px] font-medium text-ink">{title}</p>
+        <p className="text-[15px] font-medium text-ink">{title}</p>
       </div>
       <div className="flex flex-wrap gap-[6px]">{children}</div>
     </div>

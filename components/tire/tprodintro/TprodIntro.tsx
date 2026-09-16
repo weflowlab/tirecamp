@@ -84,7 +84,6 @@ function TprodIntroInner({ items, models }: Props) {
   return (
     <div className="w-full font-sans">
       <PageTitle
-        eyebrow="Tires"
         title="타이어소개"
         sub={
           <>

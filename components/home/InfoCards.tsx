@@ -8,7 +8,7 @@ export default function InfoCards() {
   return (
     <section className="w-full font-sans">
       <div className="grid grid-cols-3 gap-[10px] max-pc:grid-cols-1">
-        <DarkCard eyebrow="재고" title="재고 대량 보유" desc={"신품 · 이월 · 중고 타이어를 대량 보유하여\n빠른 출고와 장착을 한 번에 만나볼 수 있습니다."} image="/images/home/stock.webp" />
+        <DarkCard eyebrow="재고" title="재고 대량 보유" desc="신품, 이월, 중고 타이어를 대량으로 보유하여 빠르게 교체, 출고할 수 있습니다." image="/images/home/stock.webp" />
         {/* 이 카드만 컬러 사진(하늘색) — 사진 오른쪽 하늘이 잘리지 않도록 가운데가 아닌 오른쪽 기준으로 맞춘다 */}
         <DarkCard eyebrow="서비스" title="전문 장착 & 휠 밸런스" desc={"숙련된 전문가의 정확한 장착과\n휠 밸런스 작업으로 안전한 드라이빙을 보장합니다."} image="/images/home/wheel-sky.webp" position="bg-[position:65%_center]" />
         <SizeGuideCard />
@@ -28,15 +28,19 @@ export default function InfoCards() {
   );
 }
 
+/* 사진 위 라벨 칩 — 흰 바탕 + 잉크색 글자, 한글이라 자간은 좁게 */
+const CHIP = "relative inline-flex w-fit items-center rounded-[4px] bg-white px-[8px] py-[3px] text-[12px] font-bold tracking-[-0.02em] leading-[16px] text-ink";
+
 /* 흑백 스톡 사진 위에 아래로 갈수록 진해지는 그라데이션 → 글자는 하단에 */
 function DarkCard({ eyebrow, title, desc, image, position = "bg-center" }: { eyebrow: string; title: string; desc: string; image: string; position?: string }) {
   return (
     <div className={`relative flex min-h-[260px] flex-col justify-end overflow-hidden bg-charcoal bg-cover ${position} p-[24px] text-white`} style={{ backgroundImage: `url(${image})` }}>
       {/* 컬러 사진이라 위쪽은 옅게 — 글자가 놓이는 아래쪽만 진하게 덮는다 */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(14,14,14,0.08)_0%,rgba(14,14,14,0.45)_45%,rgba(14,14,14,0.90)_100%)]" />
-      <p className="eyebrow relative !text-[#8C8C8C]">{eyebrow}</p>
-      <p className="relative mt-[6px] text-[20px] font-bold tracking-[-0.02em] text-white">{title}</p>
-      <p className="relative mt-[8px] whitespace-pre-line text-[12.5px] leading-[18px] tracking-[-0.02em] text-[#B8B8B8]">{desc}</p>
+      {/* 사진 위라 라벨이 묻혀서 흰 박스로 감싼다. .eyebrow 는 자간 0.22em 짜리 영문용이라 한글에는 쓰지 않는다 */}
+      <span className={CHIP}>{eyebrow}</span>
+      <p className="relative mt-[8px] text-[20px] font-bold tracking-[-0.02em] text-white">{title}</p>
+      <p className="relative mt-[8px] text-[12.5px] leading-[18px] tracking-[-0.02em] text-[#B8B8B8]">{desc}</p>
     </div>
   );
 }
@@ -68,7 +72,7 @@ export function SizeGuideCard({ className = "" }: { className?: string }) {
         ))}
       </div>
       <div className="relative">
-        <p className="eyebrow !text-[#8C8C8C]">사이즈 가이드</p>
+        <span className={CHIP}>사이즈 가이드</span>
         <p className="mt-[6px] text-[20px] font-bold tracking-[-0.02em] text-white">타이어 사이즈 보는 방법</p>
         <p className="mt-[8px] text-[13px] leading-[19px] text-[#B8B8B8]">타이어 옆면의 숫자와 문자로 사이즈 정보를 쉽게 확인하세요.</p>
       </div>

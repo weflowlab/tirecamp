@@ -1,5 +1,8 @@
-hero-store.webp — 타이어캠프 간판 사진(사장님 제공, company/store-02.webp 원본). 컬러 유지, 오른쪽 옆 가게 간판을 잘라낸 가로 밴드(1075x420 → 1600 확대). 현재 홈 히어로 배경.
+hero-store.webp — 타이어캠프 매장 진열대 사진(사장님 제공, company/store-05.webp 원본). 컬러 유지, 가로 밴드(1200x500 → 1600 확대). 현재 홈 히어로 배경.
 hero-tire.jpg — Unsplash (https://unsplash.com/photos/close-up-of-a-rugged-tire-tread-CTwQiFlpgrM), Rob Wingate. Unsplash License (상업적 사용 가능, 저작자 표시 불필요). 흑백 변환 + 와이드 크롭.
-home/stock.webp — 타이어캠프 매장 진열대 사진(사장님 제공, company/store-05.webp 원본). 컬러 원본 그대로 4:3 (선반의 하늘색이 사이트 포인트 색이라 흑백 변환하지 않는다).
+home/stock.webp — 타이어캠프 간판 사진(사장님 제공, company/store-02.webp 원본). 컬러 유지, 4:3 크롭(1100x825 → 1400 확대). 홈 "재고 대량 보유" 카드 배경.
+home/price-tire.webp — 자체 제작 가격표. 원본 그림을 그대로 두고 `node scripts/recolor-price-tire.mjs` 로 색·문구만 덧입힌다 (git 의 원본에서 다시 시작).
+  · 원본 보존본은 scripts/assets/price-tire.base.webp (절대 덮어쓰지 말 것). 스크립트가 매번 여기서 다시 시작한다.
+home/price-align.webp — 자체 제작 가격표(얼라이먼트·위치 교환·휠 밸런스). 아직 생성 스크립트 없음.
 home/service.jpg — Unsplash (https://unsplash.com/photos/atQQaZYC4z0). Unsplash License. 흑백 변환 + 3:2 크롭.
 home/wheel-sky.webp — Pexels (https://www.pexels.com/photo/photo-of-white-suv-parked-on-dirt-road-14649121/). Pexels License (상업적 사용 무료, 저작자 표시 불필요). 4000x4000 원본에서 4:3 크롭(바퀴 + 오른쪽 하늘), 컬러 유지.

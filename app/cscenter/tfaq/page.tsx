@@ -18,7 +18,6 @@ export default async function FaqPage() {
   const FAQS = await getFaqs();
   return (
     <div className="w-full font-sans">
-      <p className="eyebrow">FAQ</p>
       <h1 className="mt-[4px] mb-[24px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:text-[21px]">자주 묻는 질문</h1>
 
       <ul className="border-t border-line">

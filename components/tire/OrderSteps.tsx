@@ -37,44 +37,36 @@ const ICONS: Record<string, ReactNode> = {
   ),
 };
 
-/* 이용 절차 5단계 */
-const STEPS: { icon: keyof typeof ICONS; title: string; desc: string }[] = [
-  { icon: "search", title: "타이어 검색", desc: "차종 또는 사이즈로 검색" },
-  { icon: "calendar", title: "예약", desc: "수량 선택 후 예약" },
-  { icon: "phone", title: "해피콜", desc: "예약 확인 후 연락" },
-  { icon: "store", title: "매장 방문", desc: "예약일에 매장 방문" },
-  { icon: "card", title: "장착 · 결제", desc: "장착 완료 후 매장에서 결제" },
+/* 이용 절차 5단계 (한 줄로 줄이면서 단계별 설명은 뺐다) */
+const STEPS: { icon: keyof typeof ICONS; title: string }[] = [
+  { icon: "search", title: "타이어 검색" },
+  { icon: "calendar", title: "예약" },
+  { icon: "phone", title: "해피콜" },
+  { icon: "store", title: "매장 방문" },
+  { icon: "card", title: "장착 · 결제" },
 ];
 
 /**
- * 이용 절차 섹션 — 아이콘 카드 5개 (좌측 정렬, 원형 배경 안에 선 아이콘, 우상단 번호)
- * - 카드 사이 얇은 선으로 흐름을 잇는다
- * - 모바일: 2열 + 마지막 1개 전체폭
+ * 이용 절차 섹션 — 박스 하나 안에 [아이콘 + 단계 이름]을 화살표로 이은 한 줄
+ * (아주 중요한 정보는 아니어서 자리를 최소로 쓴다. 단계별 설명 문구는 두지 않는다)
+ * - 모바일: 줄을 바꾸면 다시 높아지므로 가로로 밀어서 본다
  */
 export default function OrderSteps() {
   return (
     <section className="w-full font-sans">
-      <div className="mb-[16px] flex items-end justify-between">
-        <div>
-          <p className="eyebrow">How it works</p>
-          <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">이용 절차</h2>
-        </div>
-        <p className="text-[13px] text-muted max-pc:hidden">검색부터 장착까지 다섯 단계</p>
-      </div>
-      <ol className="grid grid-cols-5 gap-[10px] max-pc:grid-cols-2">
+      <h2 className="mb-[10px] text-[21px] font-bold tracking-[-0.02em] text-ink">이용 절차</h2>
+      <ol className="flex items-center justify-center border border-line bg-white px-[20px] py-[14px] max-pc:justify-start max-pc:overflow-x-auto max-pc:px-[12px] max-pc:[scrollbar-width:none]">
         {STEPS.map((s, i) => (
-          <li
-            key={s.title}
-            className="group relative border border-line bg-white p-[18px] transition-colors hover:border-ink max-pc:last:col-span-2"
-          >
-            <span className="eyebrow absolute right-[14px] top-[14px] !text-faint">{String(i + 1).padStart(2, "0")}</span>
-            <span className="flex h-[64px] w-[64px] items-center justify-center rounded-full bg-surface text-ink transition-colors group-hover:bg-ink group-hover:text-white">
-              {ICONS[s.icon]}
+          <li key={s.title} className="flex shrink-0 items-center">
+            <span className="flex items-center gap-[8px] whitespace-nowrap text-[15px] font-semibold tracking-[-0.01em] text-ink max-pc:gap-[5px] max-pc:text-[13px]">
+              <span className="[&>svg]:h-[24px] [&>svg]:w-[24px] max-pc:[&>svg]:h-[20px] max-pc:[&>svg]:w-[20px]">{ICONS[s.icon]}</span>
+              {s.title}
             </span>
-            <p className="mt-[14px] text-[16px] font-semibold tracking-[-0.01em] text-ink">{s.title}</p>
-            <p className="mt-[4px] whitespace-nowrap text-[12.5px] leading-[18px] tracking-[-0.02em] text-muted">{s.desc}</p>
-            {/* 다음 단계로 잇는 짧은 선 (카드 사이 간격 위에) */}
-            {i < STEPS.length - 1 && <span className="absolute right-[-11px] top-[49px] h-px w-[12px] bg-line max-pc:hidden" />}
+            {i < STEPS.length - 1 && (
+              <span aria-hidden className="mx-[14px] text-[15px] text-faint max-pc:mx-[8px]">
+                →
+              </span>
+            )}
           </li>
         ))}
       </ol>

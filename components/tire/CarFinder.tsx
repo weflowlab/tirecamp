@@ -104,7 +104,6 @@ export default function CarFinder({ tinfo }: { tinfo?: string }) {
         <tr>
           <td height={50} width={212} align="left" valign="middle" className="max-pc:pb-[8px]">
             <div className="font-sans">
-              <p className="eyebrow">By Car</p>
               <p className="mt-[2px] text-[16px] font-semibold tracking-[-0.01em] text-ink">차종으로 타이어 검색</p>
             </div>
           </td>

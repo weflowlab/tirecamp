@@ -30,7 +30,6 @@ export default async function NewsListPage({ searchParams }: Props) {
 
   return (
     <div className="w-full font-sans">
-      <p className="eyebrow">Notice</p>
       <h1 className="mt-[4px] mb-[24px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:text-[21px]">공지사항</h1>
 
       <ul className="border-t border-line">
@@ -43,7 +42,7 @@ export default async function NewsListPage({ searchParams }: Props) {
               {/* 썸네일이 있으면 칸이 높아지므로 날짜·조회수는 맨 아래로 붙이고, 미리보기는 최대 3줄 */}
               <div className="flex min-w-0 flex-1 flex-col">
                 <div className="flex items-center gap-[10px]">
-                  {n.notice && <span className="eyebrow shrink-0 !text-ink">Notice</span>}
+                  {n.notice && <span className="eyebrow shrink-0 !text-ink">공지</span>}
                   <span className="truncate text-[16px] font-medium !text-ink group-hover:!text-graphite">{n.title}</span>
                 </div>
                 <p className="mt-[6px] line-clamp-3 whitespace-pre-line text-[14px] leading-[21px] text-muted max-pc:line-clamp-2">{newsPreview(n.content)}</p>

@@ -67,7 +67,6 @@ const SECTIONS: { title: string; body: string[] }[] = [
 export default function PersonalInfoPage() {
   return (
     <div className="w-full font-sans">
-      <p className="eyebrow">Privacy</p>
       <h1 className="mt-[4px] mb-[20px] text-[24px] font-bold tracking-[-0.03em] text-ink max-pc:text-[21px]">개인정보처리방침</h1>
 
       <p className="text-[15px] leading-[25px] text-graphite">

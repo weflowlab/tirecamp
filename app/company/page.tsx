@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function CompanyPage() {
   return (
     <div className="w-full font-sans">
-      <PageTitle eyebrow="About Us" title="회사소개" sub={`${SITE.slogan}. 소형 타이어와 중고 타이어를 전문으로 하는 양주의 타이어 매장입니다.`} />
+      <PageTitle title="회사소개" sub={`${SITE.slogan}. 소형 타이어와 중고 타이어를 전문으로 하는 양주의 타이어 매장입니다.`} />
 
       {/* 소개 — 좌: 큰 문장(가늘게/굵게) + 짧은 세로선 / 우: 본문 (첫 문장 강조, 줄바꿈 고정) */}
       <section className="grid grid-cols-[300px_1fr] gap-[48px] max-pc:grid-cols-1 max-pc:gap-[20px]">
@@ -55,7 +55,6 @@ export default function CompanyPage() {
           ["Price", "정직한 가격", "온라인 금액 그대로 판매"],
         ].map(([e, t, d], i) => (
           <li key={e} className={`px-[24px] py-[22px] max-pc:px-[12px] ${i < 3 ? "border-r border-line" : ""} max-pc:[&:nth-child(2)]:border-r-0 max-pc:[&:nth-child(-n+2)]:border-b max-pc:[&:nth-child(-n+2)]:border-line`}>
-            <p className="eyebrow">{e}</p>
             <p className="mt-[6px] text-[19px] font-bold tracking-[-0.02em] text-ink max-pc:text-[17px]">{t}</p>
             <p className="mt-[2px] text-[13px] text-muted">{d}</p>
           </li>
@@ -70,7 +69,6 @@ export default function CompanyPage() {
       {/* 매장 정보 */}
       <section className="mt-[56px] grid grid-cols-[280px_1fr] gap-[40px] max-pc:grid-cols-1 max-pc:gap-[12px]">
         <div>
-          <p className="eyebrow">Store</p>
           <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">매장 정보</h2>
         </div>
         <dl className="border-t border-line text-[15px]">
@@ -81,7 +79,7 @@ export default function CompanyPage() {
               {SITE.phone}
             </a>
           </Row>
-          <Row label="영업시간">
+          <Row label="영업 시간">
             {SITE.hours.map((h) => (
               <span key={h.label} className="block">
                 {h.label} {h.value}
@@ -101,7 +99,6 @@ export default function CompanyPage() {
       <section id="location" className="mt-[56px] scroll-mt-[24px]">
         <div className="mb-[16px] flex items-end justify-between max-pc:flex-col max-pc:items-start max-pc:gap-[12px]">
           <div>
-            <p className="eyebrow">Location</p>
             <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">오시는 길</h2>
           </div>
           <div className="flex gap-[8px]">

@@ -25,14 +25,13 @@ export default async function SearchBySizePage({ searchParams }: { searchParams:
 
   return (
     <div className="w-full font-sans">
-      <PageTitle eyebrow="Tire Search" title="타이어검색" sub="차종을 선택하거나 타이어 옆면의 사이즈(예: 205/55R16)를 입력해 가격을 확인하세요." />
+      <PageTitle title="타이어검색" sub="차종을 선택하거나 타이어 옆면의 사이즈(예: 205/55R16)를 입력해 가격을 확인하세요." />
 
       {/* 타이어소개에서 "내 차 사이즈로 가격 검색" 으로 넘어온 경우 */}
       {picked && (
         <div className="mb-[12px] flex items-center gap-[14px] border border-ink px-[18px] py-[12px] max-pc:flex-wrap">
           <img src={picked.image} alt="" className="img-fixed h-[44px] w-auto" />
           <div className="min-w-0 flex-1">
-            <p className="eyebrow">Selected</p>
             <p className="text-[15px] font-semibold text-ink">
               {picked.brandName} {picked.model}
             </p>

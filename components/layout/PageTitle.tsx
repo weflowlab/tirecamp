@@ -1,5 +1,6 @@
 /**
- * 페이지 공통 타이틀 — 영문 eyebrow → 제목 → 부제 → 얇은 선
+ * 페이지 공통 타이틀 — (한글) 라벨 → 제목 → 부제 → 얇은 선
+ * 영문 라벨은 전부 걷어냈다. eyebrow 는 한글 라벨이 필요할 때만 넘긴다.
  */
 /* sub 는 문자열 외에 <br className="hidden max-pc:block" /> 같은 조각도 받는다 (모바일 줄바꿈 고정용) */
 export default function PageTitle({ eyebrow, title, sub }: { eyebrow?: string; title: string; sub?: React.ReactNode }) {

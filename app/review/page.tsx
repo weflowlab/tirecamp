@@ -40,7 +40,6 @@ export default async function ReviewPage({ searchParams }: Props) {
       {/* 타이틀 + 작성 버튼 */}
       <div className="mb-[28px] flex items-end justify-between gap-[16px] border-b border-line pb-[24px] pt-[8px] max-pc:mb-[20px] max-pc:flex-col max-pc:items-start max-pc:pb-[18px]">
         <div>
-          <p className="eyebrow">Reviews</p>
           <h1 className="mt-[10px] text-[30px] font-bold tracking-[-0.03em] text-ink leading-[1.2] max-pc:text-[24px]">고객 후기</h1>
           <p className="mt-[10px] text-[15px] leading-[24px] text-muted max-pc:text-[14px]">타이어캠프를 이용하신 고객님들의 이야기입니다. 이용 후 소중한 후기를 남겨 주세요.</p>
         </div>
@@ -96,7 +95,6 @@ export default async function ReviewPage({ searchParams }: Props) {
       <section id="write" className="mt-[64px] scroll-mt-[24px] border-t border-line pt-[40px] max-pc:mt-[44px] max-pc:pt-[28px]">
         <div className="grid grid-cols-[180px_1fr] gap-[24px] max-pc:grid-cols-1 max-pc:gap-[12px]">
           <div>
-            <p className="eyebrow">Write</p>
             <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">후기 작성</h2>
           </div>
           <ReviewForm />

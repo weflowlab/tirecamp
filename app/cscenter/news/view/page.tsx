@@ -35,7 +35,6 @@ export default async function NewsViewPage({ searchParams }: Props) {
 
   return (
     <div className="w-full font-sans">
-      <p className="eyebrow">Notice</p>
       <h1 className="mt-[4px] text-[22px] font-bold leading-[1.4] tracking-[-0.02em] text-ink max-pc:text-[20px]">{item.title}</h1>
       <p className="mt-[8px] mb-[20px] text-[13px] text-faint" style={{ fontFamily: "var(--font-num)" }}>
         {item.date} · 조회 {item.views + 1}

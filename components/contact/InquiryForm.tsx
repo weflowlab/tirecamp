@@ -60,7 +60,7 @@ export default function InquiryForm() {
       setCar("");
       setContent("");
       setAgree(false);
-      setMsg({ ok: true, text: "문의가 접수되었습니다. 영업시간 내에 연락드리겠습니다." });
+      setMsg({ ok: true, text: "문의가 접수되었습니다. 영업 시간 내에 연락드리겠습니다." });
     } catch (err) {
       setMsg({ ok: false, text: err instanceof Error ? err.message : "접수에 실패했습니다." });
     } finally {
@@ -123,7 +123,6 @@ export default function InquiryForm() {
         <>
           <div className="fixed inset-0 z-[1000] bg-black/40" onClick={() => setPolicyOpen(false)} />
           <div role="dialog" aria-modal="true" aria-label="개인정보 수집·이용 안내" className="fixed left-1/2 top-1/2 z-[1001] w-[460px] -translate-x-1/2 -translate-y-1/2 bg-white p-[28px] font-sans shadow-[0_20px_60px_-20px_rgba(0,0,0,0.4)] max-pc:w-[calc(100%-24px)] max-pc:p-[20px]">
-            <p className="eyebrow">Privacy</p>
             <h3 className="mt-[4px] text-[19px] font-bold tracking-[-0.02em] text-ink">개인정보 수집·이용 안내</h3>
             <dl className="mt-[16px] border-t border-line text-[14px]">
               {[

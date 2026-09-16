@@ -19,22 +19,20 @@ export default async function HomePage() {
 
   return (
     <div className="w-full font-sans">
-      {/* 히어로 — 실제 매장 간판 사진(파란 하늘 + 타이어캠프 간판). 왼쪽 하늘 위에 글자가 놓이므로
-          그라데이션은 왼쪽만 눌러 덮고 오른쪽 간판은 살린다 (검정 대신 하늘과 같은 계열의 짙은 남색).
+      {/* 히어로 — 실제 매장 진열대 사진(민트색 선반 + 타이어). 왼쪽에 글자가 놓이므로
+          그라데이션은 왼쪽만 눌러 덮고 오른쪽 진열대는 살린다 (검정 대신 짙은 남색).
           첫 화면에 검색 카드와 이용 절차까지 보이도록 높이는 계속 절제 */}
       <section
-        className="relative w-full overflow-hidden bg-charcoal bg-cover bg-center px-[48px] py-[44px] text-white max-pc:px-[24px] max-pc:py-[36px]"
+        /* 테두리는 어두운 사진과 흰 바탕 사이에 놓여서 옅은 회색으로는 보이지 않는다 → 매장 선반과 같은 청록색 2px */
+        className="relative w-full overflow-hidden rounded-[14px] border-2 border-[#2E7D90] bg-charcoal bg-cover bg-center px-[48px] py-[44px] text-white max-pc:rounded-[10px] max-pc:px-[24px] max-pc:py-[36px]"
         style={{ backgroundImage: "url(/images/hero-store.webp)" }}
       >
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,44,0.86)_0%,rgba(6,26,44,0.66)_45%,rgba(6,26,44,0.22)_100%)]" />
 
         <div className="relative">
           <p className="eyebrow !text-[#9A9A9A]">{SITE.name} · 양주</p>
-          <h1 className="mt-[12px] text-[30px] font-light leading-[1.3] tracking-[-0.02em] text-white max-pc:text-[24px]">
-            타이어의 모든것을 <span className="font-bold">한곳에서 투명하게</span>
-          </h1>
-          <p className="mt-[12px] whitespace-nowrap text-[14px] leading-[22px] tracking-[-0.01em] text-[#C4C4C4]">타이어 교체를 투명한 가격으로</p>
-          <div className="mt-[20px] flex items-center gap-[10px] max-pc:justify-center">
+          <h1 className="mt-[12px] text-[30px] font-bold leading-[1.3] tracking-[-0.02em] text-white max-pc:text-[24px]">타이어 교체를 투명한 가격으로</h1>
+          <div className="mt-[20px] flex items-center gap-[10px]">
             <Link href="/contact" className="btn-fill !bg-white !text-ink hover:!bg-[#E8E8E8] max-pc:flex-1 max-pc:!px-0">
               문의하기
             </Link>
@@ -45,11 +43,11 @@ export default async function HomePage() {
 
           {/* 매장 정보 한 줄 요약 (영업시간 · 전화 문의 · 오시는 길)
               히어로 안쪽 맨 아래 — 흰 띠를 만들지 않아 아래 검색 카드의 겹침 연출을 유지한다.
-              모바일은 한 줄에 다 안 들어가서 영업시간 보조 문구를 접고 줄바꿈을 허용한다 */}
-          <div className="mt-[24px] flex items-center gap-[10px] border-t border-white/15 pt-[14px] text-[13px] leading-[22px] text-[#C4C4C4] max-pc:mt-[18px] max-pc:flex-wrap max-pc:justify-center max-pc:gap-x-[8px] max-pc:gap-y-[6px] max-pc:pt-[12px] max-pc:text-[12px]">
+              모바일은 한 줄에 다 안 들어가서 영업 시간 보조 문구를 접고 줄바꿈을 허용한다 (정렬은 PC·모바일 모두 왼쪽) */}
+          <div className="mt-[24px] flex items-center gap-[10px] border-t border-white/15 pt-[14px] text-[13px] leading-[22px] text-[#C4C4C4] max-pc:mt-[18px] max-pc:flex-wrap max-pc:justify-start max-pc:gap-x-[8px] max-pc:gap-y-[6px] max-pc:pt-[12px] max-pc:text-[12px]">
             {/* 각 항목은 그룹 안에서 줄이 끊기지 않도록 whitespace-nowrap */}
             <span className="flex shrink-0 items-center gap-[8px] whitespace-nowrap">
-              <b className="font-bold text-white">영업시간</b>
+              <b className="font-bold text-white">영업 시간</b>
               {/* 숫자 폰트는 같은 px 에서 한글보다 작아 보여 한 단계 크게 */}
               <span className={NUM} style={{ fontFamily: "var(--font-num)" }}>
                 09:00 – 19:00
@@ -93,7 +91,6 @@ export default async function HomePage() {
           고칠 때는 이미지를 새로 그려서 같은 파일명으로 덮어쓴다 */}
       <section className="mt-[64px] max-pc:mt-[44px]">
         <div className="mb-[16px]">
-          <p className="eyebrow">Service Price</p>
           <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">서비스 가격 안내</h2>
         </div>
         <div className="flex flex-col gap-[10px]">
@@ -121,7 +118,6 @@ export default async function HomePage() {
       <section className="mt-[56px] max-pc:mt-[40px]">
         <div className="flex items-end justify-between pb-[14px]">
           <div>
-            <p className="eyebrow">Notice</p>
             <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">공지사항</h2>
           </div>
           <Link href="/cscenter/news" className="text-[13px] tracking-[0.04em] !text-muted hover:!text-ink hover:!no-underline">
@@ -133,7 +129,7 @@ export default async function HomePage() {
           {recent.map((n) => (
             <li key={n.seq} className="flex items-center justify-between gap-[16px] border-b border-line py-[16px]">
               <Link href={newsViewHref(n.seq)} className="flex min-w-0 items-center gap-[12px] text-[15px] !text-graphite hover:!text-ink hover:!no-underline">
-                {n.notice && <span className="eyebrow shrink-0 !text-ink">Notice</span>}
+                {n.notice && <span className="eyebrow shrink-0 !text-ink">공지</span>}
                 <span className="truncate">{n.title}</span>
               </Link>
               <span className="shrink-0 text-[13px] text-faint" style={{ fontFamily: "var(--font-num)" }}>

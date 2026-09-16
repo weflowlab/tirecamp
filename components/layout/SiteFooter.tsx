@@ -30,7 +30,7 @@ export default function SiteFooter() {
               <L>이메일</L> {SITE.email}
             </p>
             <p className="text-[13px] text-[#9A9A9A]">
-              <L>영업시간</L> {SITE.hours.map((h) => `${h.label} ${h.value}`).join(" · ")}
+              <L>영업 시간</L> {SITE.hours.map((h) => `${h.label} ${h.value}`).join(" · ")}
             </p>
             <p className="mt-[12px] flex items-center gap-[14px] text-[12px] text-[#6F6F6F]" style={{ fontFamily: "var(--font-num)" }}>
               <span>© {SITE.nameEn}. All rights reserved.</span>

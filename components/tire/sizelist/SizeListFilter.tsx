@@ -132,7 +132,7 @@ export default function SizeListFilter({ query }: Props) {
   return (
     <div className="border border-line">
       {/* (1) 사이즈 재검색 */}
-      <Row label="Size" title="사이즈 재검색">
+      <Row title="사이즈 재검색">
         <div className="flex flex-wrap items-center gap-x-[16px] gap-y-[8px]">
           <div className="flex flex-col gap-[6px]">
             {sizeSelects(w1, r1, i1, setW1, setR1, setI1, "1")}
@@ -153,7 +153,7 @@ export default function SizeListFilter({ query }: Props) {
       </Row>
 
       {/* (2) 정렬 */}
-      <Row label="Sort" title="정렬">
+      <Row title="정렬">
         <div className="flex flex-wrap gap-[6px]">
           {SORTS.map(([v, label]) => (
             <Chip key={v} active={query.sorttireop === v} onClick={() => go({ sorttireop: v })}>
@@ -164,7 +164,7 @@ export default function SizeListFilter({ query }: Props) {
       </Row>
 
       {/* (3) 제조사 */}
-      <Row label="Brand" title="제조사" last>
+      <Row title="제조사" last>
         <div className="flex flex-wrap gap-[6px]">
           <Chip active={query.brandop.length === 0} onClick={() => selbrand("all")}>
             전체
@@ -180,12 +180,11 @@ export default function SizeListFilter({ query }: Props) {
   );
 }
 
-function Row({ label, title, last, children }: { label: string; title: string; last?: boolean; children: React.ReactNode }) {
+function Row({ title, last, children }: { title: string; last?: boolean; children: React.ReactNode }) {
   return (
     <div className={`grid grid-cols-[140px_1fr] gap-[16px] px-[24px] py-[16px] max-pc:grid-cols-1 max-pc:gap-[8px] max-pc:px-[14px] ${last ? "" : "border-b border-line"}`}>
       <div>
-        <p className="eyebrow">{label}</p>
-        <p className="mt-[2px] text-[15px] font-medium text-ink">{title}</p>
+        <p className="text-[15px] font-medium text-ink">{title}</p>
       </div>
       <div className="min-w-0">{children}</div>
     </div>

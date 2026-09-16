@@ -34,7 +34,7 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
 
   return (
     <div className="w-full font-sans">
-      <PageTitle eyebrow="Tire List" title={sizeLabel} sub="선택한 사이즈에 맞는 타이어입니다. 정렬과 제조사를 바꿔 비교해 보세요." />
+      <PageTitle title={sizeLabel} sub="선택한 사이즈에 맞는 타이어입니다. 정렬과 제조사를 바꿔 비교해 보세요." />
 
       {/* 사이즈 재검색 / 정렬 / 제조사 */}
       <SizeListFilter query={query} />
@@ -46,7 +46,7 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
         {picked && (
           <div className="mt-[16px]">
             <div className="flex items-center justify-between gap-[12px]">
-              <p className="eyebrow">Selected · {picked.brandName} {picked.model}</p>
+              <p className="eyebrow">선택 · {picked.brandName} {picked.model}</p>
               <Link href={buildSizeListHref({ ...query, tinfo: undefined })} className="text-[13px] !text-muted underline underline-offset-4 hover:!text-ink">
                 선택 해제
               </Link>
@@ -59,7 +59,6 @@ export default async function SizeListPage({ searchParams }: PageProps<"/product
             {pickedTires.map((t, i) => (
               <TireCard key={`picked-${t.tinfoseq}-${i}`} tire={{ ...t, bestSection: true }} />
             ))}
-            {otherTires.length > 0 && <p className="eyebrow mt-[28px]">Other tires</p>}
           </div>
         )}
 

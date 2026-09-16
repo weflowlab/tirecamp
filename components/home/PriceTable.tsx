@@ -55,7 +55,7 @@ const OTHERS: { group: string; items: [string, string][] }[] = [
 export default function PriceTable() {
   return (
     <section className="w-full font-sans">
-      <SectionHead eyebrow="Service Price" title="서비스 가격 안내" note="VAT 포함 · 현금 · 카드 동일 금액" />
+      <SectionHead title="서비스 가격 안내" note="VAT 포함 · 현금 · 카드 동일 금액" />
 
       {/* 1. 타이어 교체 공임 — 인치별 타일 */}
       <Block title="타이어 교체 공임" sub="개당 · TPMS · 밸런스 · 에어밸브 무료 포함">
@@ -113,12 +113,11 @@ export default function PriceTable() {
 
 /* ---------- 공용 조각 ---------- */
 
-export function SectionHead({ eyebrow, title, note }: { eyebrow: string; title: string; note?: string }) {
+export function SectionHead({ title, note }: { title: string; note?: string }) {
   return (
     <div className="mb-[16px] flex items-end justify-between">
       <div>
-        <p className="eyebrow">{eyebrow}</p>
-        <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">{title}</h2>
+        <h2 className="text-[21px] font-bold tracking-[-0.02em] text-ink">{title}</h2>
       </div>
       {note && <p className="text-[13px] text-muted max-pc:hidden">{note}</p>}
     </div>
