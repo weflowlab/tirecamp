@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
+import BusinessJsonLd from "@/components/layout/BusinessJsonLd";
 import { SITE, SITE_URL, TITLE_SUFFIX } from "@/lib/site";
 
 /* 사이트 메타 정보 (타이어캠프) — openGraph.images 는 절대 주소여야 카카오톡·페이스북 등이 읽어간다 */
@@ -32,6 +33,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ko" data-scroll-behavior="smooth">
       <body className="min-h-full flex flex-col items-center">
+        {/* 업체 정보 구조화 데이터 — 화면에는 안 보이고 검색엔진만 읽는다 */}
+        <BusinessJsonLd />
         <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
