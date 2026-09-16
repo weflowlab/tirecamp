@@ -20,19 +20,19 @@ export default async function HomePage() {
   return (
     <div className="w-full font-sans">
       {/* 히어로 — 실제 매장 진열대 사진(민트색 선반 + 타이어).
-          사장님 요청으로 사진을 덮는 그라데이션을 아예 없앴다(원본색). 흰 글자가 밝은 부분과 겹치면
-          읽기 어려워지므로 가독성은 글자 그림자로만 받친다 — 다시 덮으려면 아래 주석의 그라데이션을 되살릴 것.
+          사진 색을 최대한 살리되, 흰 글자가 읽힐 만큼만 왼쪽을 덮는다 (글자 그림자는 쓰지 않는다).
           첫 화면에 검색 카드와 이용 절차까지 보이도록 높이는 계속 절제 */}
       <section
         /* 테두리는 어두운 사진과 흰 바탕 사이에 놓여서 옅은 회색으로는 보이지 않는다 → 매장 선반과 같은 청록색 2px */
         className="relative w-full overflow-hidden rounded-[14px] border-2 border-[#2E7D90] bg-charcoal bg-cover bg-center px-[48px] py-[44px] text-white max-pc:rounded-[10px] max-pc:px-[24px] max-pc:py-[36px]"
         style={{ backgroundImage: "url(/images/hero-store.webp)" }}
       >
-        {/* 덮개 없음(원본색). 되살리려면 아래 한 줄의 주석을 풀 것
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,44,0.62)_0%,rgba(6,26,44,0.30)_50%,rgba(6,26,44,0.04)_100%)]" /> */}
+        {/* 글자가 읽힐 만큼만 덮는다 — 글자가 놓인 왼쪽만 눌러 주고 오른쪽 사진은 거의 원본색.
+            더 밝게/어둡게는 아래 세 숫자(0.66 → 0.36 → 0.08)만 올리거나 내리면 된다 */}
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,44,0.66)_0%,rgba(6,26,44,0.36)_50%,rgba(6,26,44,0.08)_100%)]" />
 
         <div className="relative">
-          <p className="eyebrow !text-[#9A9A9A]">{SITE.name} · 양주</p>
+          <p className="eyebrow !text-white">{SITE.name} · 양주</p>
           <h1 className="mt-[12px] text-[30px] font-bold leading-[1.3] tracking-[-0.02em] text-white max-pc:text-[24px]">타이어 교체를 투명한 가격으로</h1>
           <div className="mt-[20px] flex items-center gap-[10px]">
             <Link href="/contact" className="btn-fill !bg-white !text-ink hover:!bg-[#E8E8E8] max-pc:flex-1 max-pc:!px-0">
@@ -46,7 +46,7 @@ export default async function HomePage() {
           {/* 매장 정보 한 줄 요약 (영업시간 · 전화 문의 · 오시는 길)
               히어로 안쪽 맨 아래 — 흰 띠를 만들지 않아 아래 검색 카드의 겹침 연출을 유지한다.
               모바일은 한 줄에 다 안 들어가서 영업 시간 보조 문구를 접고 줄바꿈을 허용한다 (정렬은 PC·모바일 모두 왼쪽) */}
-          <div className="mt-[24px] flex items-center gap-[10px] border-t border-white/15 pt-[14px] text-[13px] leading-[22px] text-[#C4C4C4] max-pc:mt-[18px] max-pc:flex-wrap max-pc:justify-start max-pc:gap-x-[8px] max-pc:gap-y-[6px] max-pc:pt-[12px] max-pc:text-[12px]">
+          <div className="mt-[24px] flex items-center gap-[10px] border-t border-white/15 pt-[14px] text-[13px] leading-[22px] text-white max-pc:mt-[18px] max-pc:flex-wrap max-pc:justify-start max-pc:gap-x-[8px] max-pc:gap-y-[6px] max-pc:pt-[12px] max-pc:text-[12px]">
             {/* 각 항목은 그룹 안에서 줄이 끊기지 않도록 whitespace-nowrap */}
             <span className="flex shrink-0 items-center gap-[8px] whitespace-nowrap">
               <b className="font-bold text-white">영업 시간</b>
@@ -54,12 +54,12 @@ export default async function HomePage() {
               <span className={NUM} style={{ fontFamily: "var(--font-num)" }}>
                 09:00 – 19:00
               </span>
-              <span className="text-[#8F8F8F] max-pc:hidden">평일 · 토 09:00 – 18:00 · 일 휴무</span>
+              <span className="text-white max-pc:hidden">평일 · 토 09:00 – 18:00 · 일 휴무</span>
             </span>
             <Bar />
             <span className="flex shrink-0 items-center gap-[8px] whitespace-nowrap">
               <b className="font-bold text-white">전화 문의</b>
-              <a href={PHONE_TEL} className={`${NUM} !text-[#DADADA] hover:!text-white hover:!no-underline`} style={{ fontFamily: "var(--font-num)" }}>
+              <a href={PHONE_TEL} className={`${NUM} !text-white hover:!no-underline`} style={{ fontFamily: "var(--font-num)" }}>
                 {SITE.phone}
               </a>
             </span>
@@ -71,7 +71,7 @@ export default async function HomePage() {
               {/* 회사소개 페이지 아래쪽 "오시는 길"(지도 + 길찾기) 섹션으로 이동 */}
               <Link
                 href="/company#location"
-                className="ml-[2px] inline-flex h-[20px] shrink-0 items-center rounded-full border border-white/35 px-[9px] text-[10.5px] !text-[#DADADA] hover:border-white hover:bg-white hover:!text-ink hover:!no-underline"
+                className="ml-[2px] inline-flex h-[20px] shrink-0 items-center rounded-full border border-white/50 px-[9px] text-[10.5px] !text-white hover:border-white hover:bg-white hover:!text-ink hover:!no-underline"
               >
                 지도 보기
               </Link>
