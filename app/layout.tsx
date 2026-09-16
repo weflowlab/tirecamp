@@ -6,18 +6,18 @@ import { SITE, TITLE_SUFFIX } from "@/lib/site";
 /* 사이트 메타 정보 (타이어캠프)
  * openGraph.images 는 절대 주소여야 카카오톡·페이스북 등이 읽어간다.
  * 정식 도메인이 생기면 배포 환경변수 NEXT_PUBLIC_SITE_URL 만 바꾸면 된다. */
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tirecamp.vercel.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tirecamp365.co.kr";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: TITLE_SUFFIX,
-  description:
-    "양주 타이어 전문점 타이어캠프. 한국, 금호, 넥센, 미쉐린, 피렐리, 콘티넨탈 등 국산·수입 전 브랜드 신품 타이어와 중고 타이어를 합리적인 가격에 판매합니다.",
+  /* 검색 결과에 보이는 설명 — 한글 80자쯤에서 잘리므로 그 안에 담는다 */
+  description: "양주 타이어 전문점 타이어캠프. 신품·이월·중고 타이어를 정직한 가격에, 타이어 교체와 얼라이먼트까지 당일 장착해 드립니다.",
   keywords: "양주타이어, 타이어캠프, 중고타이어, 소형타이어, 한국타이어, 금호타이어, 넥센타이어, 미쉐린타이어, 타이어가격, 타이어교체",
   openGraph: {
     type: "website",
     title: `${SITE.name} | 양주 타이어 전문점`,
-    description: "국산·수입 전 브랜드 신품 타이어와 중고 타이어를 합리적인 가격에 판매하는 양주 타이어 전문점입니다.",
+    description: "타이어 교체를 투명한 가격으로",
     /* 홈 히어로와 같은 매장 진열대 사진. webp 를 못 읽는 공유 미리보기(카카오톡 등)가 있어 jpg 로 둔다 */
     images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: `${SITE.name} 매장` }],
   },
