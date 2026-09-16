@@ -102,7 +102,8 @@ export default function SizeFinder({ tinfo }: { tinfo?: string }) {
           {/* 3줄: 앞뒤 사이즈가 다른 경우 */}
           <label className="mt-[8px] flex cursor-pointer items-center gap-[6px] text-[13px] text-graphite">
             <input type="checkbox" name="frchk" value="2" checked={frchk} onChange={(e) => onFrchk(e.target.checked)} className="accent-black" />
-            앞뒤 사이즈가 다른 경우
+            {/* 모바일에서 글자가 체크박스보다 살짝 위로 보여 1px 내린다 */}
+            <span className="max-pc:relative max-pc:top-px">앞뒤 사이즈가 다른 경우</span>
           </label>
         </div>
       </div>

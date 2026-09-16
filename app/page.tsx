@@ -19,15 +19,17 @@ export default async function HomePage() {
 
   return (
     <div className="w-full font-sans">
-      {/* 히어로 — 실제 매장 진열대 사진(민트색 선반 + 타이어). 왼쪽에 글자가 놓이므로
-          그라데이션은 왼쪽만 눌러 덮고 오른쪽 진열대는 살린다 (검정 대신 짙은 남색).
+      {/* 히어로 — 실제 매장 진열대 사진(민트색 선반 + 타이어).
+          사장님 요청으로 사진을 덮는 그라데이션을 아예 없앴다(원본색). 흰 글자가 밝은 부분과 겹치면
+          읽기 어려워지므로 가독성은 글자 그림자로만 받친다 — 다시 덮으려면 아래 주석의 그라데이션을 되살릴 것.
           첫 화면에 검색 카드와 이용 절차까지 보이도록 높이는 계속 절제 */}
       <section
         /* 테두리는 어두운 사진과 흰 바탕 사이에 놓여서 옅은 회색으로는 보이지 않는다 → 매장 선반과 같은 청록색 2px */
         className="relative w-full overflow-hidden rounded-[14px] border-2 border-[#2E7D90] bg-charcoal bg-cover bg-center px-[48px] py-[44px] text-white max-pc:rounded-[10px] max-pc:px-[24px] max-pc:py-[36px]"
         style={{ backgroundImage: "url(/images/hero-store.webp)" }}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,44,0.86)_0%,rgba(6,26,44,0.66)_45%,rgba(6,26,44,0.22)_100%)]" />
+        {/* 덮개 없음(원본색). 되살리려면 아래 한 줄의 주석을 풀 것
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(6,26,44,0.62)_0%,rgba(6,26,44,0.30)_50%,rgba(6,26,44,0.04)_100%)]" /> */}
 
         <div className="relative">
           <p className="eyebrow !text-[#9A9A9A]">{SITE.name} · 양주</p>
@@ -61,14 +63,15 @@ export default async function HomePage() {
                 {SITE.phone}
               </a>
             </span>
-            <Bar />
-            <span className="flex min-w-0 items-center gap-[8px] whitespace-nowrap">
+            {/* 모바일에서는 오시는 길을 다음 줄 맨 왼쪽으로 내린다 (구분선 없이) */}
+            <Bar className="max-pc:hidden" />
+            <span className="flex min-w-0 items-center gap-[8px] whitespace-nowrap max-pc:basis-full">
               <b className="shrink-0 font-bold text-white">오시는 길</b>
               <span className="truncate">{SITE.address.replace(/^경기\s*/, "")}</span>
               {/* 회사소개 페이지 아래쪽 "오시는 길"(지도 + 길찾기) 섹션으로 이동 */}
               <Link
                 href="/company#location"
-                className="ml-[2px] inline-flex h-[23px] shrink-0 items-center rounded-full border border-white/35 px-[10px] text-[11px] !text-[#DADADA] hover:border-white hover:bg-white hover:!text-ink hover:!no-underline"
+                className="ml-[2px] inline-flex h-[20px] shrink-0 items-center rounded-full border border-white/35 px-[9px] text-[10.5px] !text-[#DADADA] hover:border-white hover:bg-white hover:!text-ink hover:!no-underline"
               >
                 지도 보기
               </Link>
@@ -94,10 +97,11 @@ export default async function HomePage() {
           <h2 className="mt-[4px] text-[21px] font-bold tracking-[-0.02em] text-ink">서비스 가격 안내</h2>
         </div>
         <div className="flex flex-col gap-[10px]">
-          {/* 2배(1800px)로 뽑은 이미지라 h-auto 필수 — globals.css 가 img{height:revert-layer} 로 되돌려 놔서
+          {/* ?v= 는 캐시 깨기용 — 이미지를 고치면 숫자를 올린다 (파일명이 같으면 브라우저가 옛 그림을 계속 쓴다)
+              2배(1800px)로 뽑은 이미지라 h-auto 필수 — globals.css 가 img{height:revert-layer} 로 되돌려 놔서
               h-auto 가 없으면 height 속성값(1096 등)이 그대로 세로 길이가 되어 이미지가 늘어난다 */}
-          <img src="/images/home/price-tire.webp" alt="타이어 교체 서비스 가격표 (VAT 포함) — 승용 · SUV 17인치 이하 15,000원, 18~20인치 20,000원, 21인치 이상 25,000원" width={1800} height={1045} className="block h-auto w-full" />
-          <img src="/images/home/price-align.webp" alt="얼라이먼트 · 위치 교환 · 휠 밸런스 (VAT 포함) — 얼라이먼트 경형 30,000원 · 중소형 40,000원 · 중대형 50,000원, 위치 교환 20,000원, 휠 밸런스 짝당 5,000원" width={1800} height={1486} className="block h-auto w-full" />
+          <img src="/images/home/price-tire.webp?v=2" alt="타이어 교체 서비스 가격표 (VAT 포함) — 승용 · SUV 17인치 이하 15,000원, 18~20인치 20,000원, 21인치 이상 25,000원" width={1800} height={1045} className="block h-auto w-full" />
+          <img src="/images/home/price-align.webp?v=2" alt="얼라이먼트 · 위치 교환 · 휠 밸런스 (VAT 포함) — 얼라이먼트 경형 30,000원 · 중소형 40,000원 · 중대형 50,000원, 위치 교환 20,000원, 휠 밸런스 짝당 5,000원" width={1800} height={1486} className="block h-auto w-full" />
         </div>
       </section>
 
@@ -147,6 +151,6 @@ export default async function HomePage() {
 const NUM = "text-[14px] max-pc:text-[13px]";
 
 /* 매장 정보 한 줄 요약의 항목 사이 세로 구분선 (히어로 위라 흰색 반투명) */
-function Bar() {
-  return <span aria-hidden className="mx-[6px] h-[12px] w-px shrink-0 bg-white/20 max-pc:mx-[2px]" />;
+function Bar({ className = "" }: { className?: string }) {
+  return <span aria-hidden className={`mx-[6px] h-[12px] w-px shrink-0 bg-white/20 max-pc:mx-[2px] ${className}`} />;
 }

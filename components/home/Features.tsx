@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { HOME_ICONS } from "./icons";
-import { SectionHead } from "./PriceTable";
 import { SITE } from "@/lib/site";
+
+/** 섹션 제목 줄 — 제목 + (선택) 오른쪽 보조 문구 */
+function SectionHead({ title, note }: { title: string; note?: string }) {
+  return (
+    <div className="mb-[16px] flex items-end justify-between">
+      <h2 className="text-[21px] font-bold tracking-[-0.02em] text-ink">{title}</h2>
+      {note && <p className="text-[13px] text-muted max-pc:hidden">{note}</p>}
+    </div>
+  );
+}
 
 /* 타이어캠프의 장점 6 */
 const STRENGTHS: { icon: string; title: string; desc: string }[] = [
